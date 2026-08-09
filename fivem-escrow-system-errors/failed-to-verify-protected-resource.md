@@ -1,6 +1,7 @@
 ---
 title: "Escrow errors"
 description: "Solutions for common errors caused by the FiveM asset escrow system"
+icon: "lock-hashtag"
 ---
 
 <Danger>
