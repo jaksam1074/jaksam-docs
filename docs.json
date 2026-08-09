@@ -107,7 +107,8 @@
                 ]
               },
               "jaksam-inventory/hooks"
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "FiveM Escrow Errors",
