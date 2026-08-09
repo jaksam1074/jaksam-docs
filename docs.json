@@ -78,7 +78,6 @@
               {
                 "group": "Guides",
                 "pages": [
-                  "jaksam-inventory/guides/commands",
                   "jaksam-inventory/guides/customize-theme",
                   "jaksam-inventory/guides/admin-inventory",
                   "jaksam-inventory/guides/metadata",
@@ -93,6 +92,7 @@
               {
                 "group": "Functions",
                 "pages": [
+                  "jaksam-inventory/guides/commands",
                   "jaksam-inventory/functions/client",
                   "jaksam-inventory/functions/shared",
                   "jaksam-inventory/functions/server"
