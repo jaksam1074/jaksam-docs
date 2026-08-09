@@ -61,7 +61,7 @@
             "pages": [
               "index",
               "jaksams-scripts/how-to-update-the-scripts",
-              "troubleshooting",
+              "jaksams-scripts/troubleshooting",
               "jaksams-scripts/common-faq",
               "jaksams-scripts/nexus-terms",
               "jaksams-scripts/license"
