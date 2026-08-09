@@ -69,6 +69,45 @@
             ]
           },
           {
+            "group": "Inventory",
+            "icon": "boxes-stacked",
+            "root": "jaksam-inventory/home",
+            "pages": [
+              "jaksam-inventory/installation",
+              "jaksam-inventory/how-to-update",
+              {
+                "group": "Guides",
+                "pages": [
+                  "jaksam-inventory/guides/commands",
+                  "jaksam-inventory/guides/customize-theme",
+                  "jaksam-inventory/guides/admin-inventory",
+                  "jaksam-inventory/guides/metadata",
+                  "jaksam-inventory/guides/context-actions",
+                  "jaksam-inventory/guides/action-buttons",
+                  "jaksam-inventory/guides/weapon-attachments",
+                  "jaksam-inventory/guides/block-police-weapon-rob",
+                  "jaksam-inventory/guides/crafting"
+                ]
+              },
+              {
+                "group": "Functions",
+                "pages": [
+                  "jaksam-inventory/functions/client",
+                  "jaksam-inventory/functions/shared",
+                  "jaksam-inventory/functions/server"
+                ]
+              },
+              {
+                "group": "Events",
+                "icon": "alarm-clock",
+                "pages": [
+                  "jaksam-inventory/events/server"
+                ]
+              },
+              "jaksam-inventory/hooks"
+            ]
+          },
+          {
             "group": "FiveM Escrow Errors",
             "icon": "triangle-exclamation",
             "root": "fivem-escrow-system-errors/home",
@@ -726,51 +765,6 @@
         ]
       },
       {
-        "tab": "Inventory",
-        "icon": "boxes-stacked",
-        "groups": [
-          {
-            "group": "Jaksam Inventory",
-            "icon": "boxes-stacked",
-            "root": "jaksam-inventory/home",
-            "pages": [
-              "jaksam-inventory/installation",
-              "jaksam-inventory/how-to-update",
-              {
-                "group": "Guides",
-                "pages": [
-                  "jaksam-inventory/guides/commands",
-                  "jaksam-inventory/guides/customize-theme",
-                  "jaksam-inventory/guides/admin-inventory",
-                  "jaksam-inventory/guides/metadata",
-                  "jaksam-inventory/guides/context-actions",
-                  "jaksam-inventory/guides/action-buttons",
-                  "jaksam-inventory/guides/weapon-attachments",
-                  "jaksam-inventory/guides/block-police-weapon-rob",
-                  "jaksam-inventory/guides/crafting"
-                ]
-              },
-              {
-                "group": "Functions",
-                "pages": [
-                  "jaksam-inventory/functions/client",
-                  "jaksam-inventory/functions/shared",
-                  "jaksam-inventory/functions/server"
-                ]
-              },
-              {
-                "group": "Events",
-                "pages": [
-                  "jaksam-inventory/events/server"
-                ],
-                "icon": "alarm-clock"
-              },
-              "jaksam-inventory/hooks"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Other",
         "icon": "ellipsis",
         "groups": [
@@ -884,6 +878,10 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Inventory",
+        "icon": "boxes-stacked"
       }
     ]
   },
