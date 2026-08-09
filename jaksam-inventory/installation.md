@@ -1,5 +1,6 @@
 ---
 title: "installation"
+icon: "table-rows-add-below"
 ---
 
 # Installation

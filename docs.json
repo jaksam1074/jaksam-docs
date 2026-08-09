@@ -87,7 +87,8 @@
                   "jaksam-inventory/guides/weapon-attachments",
                   "jaksam-inventory/guides/block-police-weapon-rob",
                   "jaksam-inventory/guides/crafting"
-                ]
+                ],
+                "icon": "hire-a-helper"
               },
               {
                 "group": "Functions",

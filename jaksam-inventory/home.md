@@ -1,5 +1,6 @@
 ---
 title: "home"
+icon: "house-blank"
 ---
 
 # Jaksam Inventory
