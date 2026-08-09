@@ -1,8 +1,15 @@
+---
+title: "hooks"
+icon: "webhook"
+---
+
 # Hooks
+
 Hooks are a way to modify the behavior of the inventory system. They are registered on the server and can be used to modify the behavior of the inventory system, for example to prevent players from moving items to a specific inventory. There are some examples of hooks in `jaksam_inventory/_hooks` folder
 
 ## Use Case Examples
-- Prevent players from stealing items that have the 'sole_owner' metadata field (e.g., VIP items)
+
+- Prevent players from stealing items that have the 'sole\_owner' metadata field (e.g., VIP items)
 - Prevent players from moving police weapons into their personal inventory
 - Allow only one backpack per player inventory
 - Crafting items by dragging a specific item over another item (for example dragging bread on meat can make a sandwich)
@@ -15,33 +22,40 @@ Hooks are a way to modify the behavior of the inventory system. They are registe
 ## API Functions
 
 ### Register a Hook
+
 ```lua
 exports['jaksam_inventory']:registerHook(eventName, callback, options, priority)
 ```
 
 **Parameters:**
+
 - `eventName` (string): The name of the hook event to listen for (list of available events below)
 - `callback` (function): The function to execute when the hook is triggered
 - `options` (table, optional): Filters and configuration options (list of available options below)
 - `priority` (number, optional): Execution priority (higher numbers execute first, default: 0)
 
 **Returns:**
+
 - `hookId` (string): Unique identifier for the registered hook (used to unregister the hook)
 
 ### Unregister a Hook
+
 ```lua
 exports['jaksam_inventory']:unregisterHook(hookId)
 ```
 
 **Parameters:**
+
 - `hookId` (string): The unique identifier returned when registering the hook
 
 ### Unregister All Resource Hooks
+
 ```lua
 exports['jaksam_inventory']:unregisterResourceHooks(resourceName)
 ```
 
 **Parameters:**
+
 - `resourceName` (string): Name of the resource to unregister all hooks for
 
 ## Options Parameter
@@ -49,6 +63,7 @@ exports['jaksam_inventory']:unregisterResourceHooks(resourceName)
 The options parameter accepts a table with filters to optimize performance:
 
 ### Common Filters (All Events)
+
 ```lua
 local options = {
     -- Debug: Print to console when hook triggers
@@ -69,6 +84,7 @@ local options = {
 ```
 
 ### Inventory Filters (onItemAdded, onItemRemoved, onInventoryCreated)
+
 ```lua
 local options = {
     -- Filter by inventory type (recommended)
@@ -86,6 +102,7 @@ local options = {
 ```
 
 ### Transfer Filters (onItemTransferred only)
+
 ```lua
 local options = {
     -- Filter source inventory by type
@@ -114,9 +131,11 @@ local options = {
 ## Available Hook Events
 
 ### onItemAdded
+
 Triggered when an item is added to an inventory.
 
 **Payload:**
+
 ```lua
 payload = {
     inventoryId = "player:1",
@@ -128,9 +147,11 @@ payload = {
 ```
 
 ### onItemRemoved
+
 Triggered when an item is removed from an inventory.
 
 **Payload:**
+
 ```lua
 payload = {
     inventoryId = "player:1",
@@ -142,9 +163,11 @@ payload = {
 ```
 
 ### onItemTransferred
+
 Triggered when an item is transferred between inventories (including intra-inventory moves)
 
 **Payload:**
+
 ```lua
 payload = {
     playerId = 1,
@@ -159,11 +182,13 @@ payload = {
 ```
 
 ### onPreUseItem
+
 Triggered BEFORE an item is used (before consume, animations, and delays). This hook can cancel item usage
 
 **Execution Order:** After `STATIC_ITEM.canUse` and `oxServerExport 'usingItem'`, before consume
 
 **Payload:**
+
 ```lua
 payload = {
     playerId = 1,
@@ -177,11 +202,13 @@ payload = {
 **Note:** This hook can prevent item usage by returning `false`. Useful for global item usage restrictions (e.g., handcuffed players, vehicle restrictions, zone restrictions)
 
 ### onPostUseItem
+
 Triggered AFTER an item has been used (after consume, animations, delays, and all callbacks)
 
 **Execution Order:** At the very end of the item usage process, after `oxServerExport 'usedItem'`
 
 **Payload:**
+
 ```lua
 payload = {
     playerId = 1,
@@ -195,9 +222,11 @@ payload = {
 **Note:** This hook is notification-only and cannot cancel item usage. Useful for logging, statistics, achievements, and triggering external systems
 
 ### onInventoryCreated
+
 Triggered when a new inventory is created
 
 **Payload:**
+
 ```lua
 payload = {
     inventoryId = "stash_police",
@@ -212,6 +241,7 @@ payload = {
 **Note:** This hook is notification-only and cannot cancel inventory creation. Useful for adding starter items, pre-populating inventories with random loot, or logging inventory creation. Use exports to add items to the inventory within the callback
 
 **Available Filters:**
+
 - `inventoryTypeFilter`: Filter by inventory type (player, stash, trunk, dumpster, etc.)
 - `inventoryFilter`: Filter by specific inventory ID patterns
 
@@ -227,6 +257,7 @@ payload = {
 ## Quick Examples
 
 ### Block Police Weapons in Player Inventory
+
 ```lua
 exports['jaksam_inventory']:registerHook("onItemTransferred", function(payload)
     local item = exports["jaksam_inventory"]:getStaticItem(payload.itemName)
@@ -240,6 +271,7 @@ end, {
 ```
 
 ### One Backpack Per Player
+
 ```lua
 exports['jaksam_inventory']:registerHook("onItemAdded", function(payload)
     local backpackCount = exports["jaksam_inventory"]:getTotalItemAmount(payload.inventoryId, "backpack")
@@ -253,6 +285,7 @@ end, {
 ```
 
 ### Simple Crafting (Drag Items Together)
+
 ```lua
 exports['jaksam_inventory']:registerHook("onItemTransferred", function(payload)
     local sourceItem = exports["jaksam_inventory"]:getItemFromSlot(payload.inventoryIdFrom, payload.slotIdFrom)
@@ -269,6 +302,7 @@ end, {intraInventoryOnly = true})
 ```
 
 ### Filter by Specific Inventory Name
+
 ```lua
 -- Only trigger when items are added to police stash
 exports['jaksam_inventory']:registerHook("onItemAdded", function(payload)
@@ -279,6 +313,7 @@ end, {
 ```
 
 ### Block Item Usage When Handcuffed
+
 ```lua
 exports['jaksam_inventory']:registerHook("onPreUseItem", function(payload)
     if IsPlayerHandcuffed(payload.playerId) then
@@ -288,6 +323,7 @@ end)
 ```
 
 ### Block Food Usage in Vehicles
+
 ```lua
 exports['jaksam_inventory']:registerHook("onPreUseItem", function(payload)
     local ped = GetPlayerPed(payload.playerId)
@@ -300,6 +336,7 @@ end, {
 ```
 
 ### Log All Item Usage
+
 ```lua
 exports['jaksam_inventory']:registerHook("onPostUseItem", function(payload)
     print(("Player %d used %s"):format(payload.playerId, payload.itemName))
@@ -308,6 +345,7 @@ end)
 ```
 
 ### Track Food Consumption Statistics
+
 ```lua
 local foodStats = {}
 
@@ -320,6 +358,7 @@ end, {
 ```
 
 ### Add Starter Items to New Player Inventories
+
 ```lua
 exports['jaksam_inventory']:registerHook("onInventoryCreated", function(payload)
     exports["jaksam_inventory"]:addItem(payload.inventoryId, "bread", 5)
@@ -331,7 +370,9 @@ end, {
 ```
 
 ### Populate Dumpsters with Random Loot
-Note that an existent hook is already provided in _hooks folder of jaksam inventory
+
+Note that an existent hook is already provided in \_hooks folder of jaksam inventory
+
 ```lua
 -- Loot table: each entry has itemName, minAmount, maxAmount
 local lootTable = {

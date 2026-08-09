@@ -1,3 +1,8 @@
+---
+title: "server"
+icon: "server"
+---
+
 # Server Events
 
 The inventory system triggers various events when items are added, removed, or transferred. You can listen to these events to implement custom logic
@@ -9,7 +14,7 @@ Triggered when an item is successfully added to an inventory
 ### Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --- | --- | --- |
 | inventoryId | string | The inventory identifier. For players, this is the character identifier |
 | itemName | string | The name of the item added |
 | amount | number | The quantity added |
@@ -50,7 +55,7 @@ Triggered when an item is successfully removed from an inventory
 ### Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --- | --- | --- |
 | inventoryId | string | The inventory identifier. For players, this is the character identifier |
 | itemName | string | The name of the item removed |
 | amount | number | The quantity removed |
@@ -99,7 +104,7 @@ Triggered when an item is successfully transferred from one inventory to another
 ### Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --- | --- | --- |
 | inventoryIdFrom | string | The source inventory identifier. For players, this is the character identifier |
 | inventoryIdTo | string | The destination inventory identifier. For players, this is the character identifier |
 | itemName | string | The name of the item transferred |
