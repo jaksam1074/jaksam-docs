@@ -1,12 +1,20 @@
-# Compatibility
-This script works with other popular inventory systems, like es_extended, qb-inventory, and ox_inventory
+---
+title: "server"
+icon: "server"
+---
 
-For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
+# Compatibility
+
+This script works with other popular inventory systems, like es\_extended, qb-inventory, and ox\_inventory
+
+For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox\_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
 
 # Server functions
+
 Here there are built-in exports of jaksam's inventory
 
 ## addItem
+
 Adds items to an inventory with support for metadata and specific slot placement
 
 ```lua
@@ -51,6 +59,7 @@ local success, result = exports['jaksam_inventory']:addItem(1, 'bread', 1, nil, 
 ```
 
 ## addItemToTrunk
+
 Adds items to a vehicle trunk using only the vehicle plate, automatically resolving the full inventory ID
 
 ```lua
@@ -75,7 +84,7 @@ exports['jaksam_inventory']:addItemToTrunk(plate, itemName, amount, metadata, sl
 - `success`: boolean
   - true if items were added successfully
 - `resultCode`: string
-  - Error message if the operation failed (e.g., "vehicle_not_found")
+  - Error message if the operation failed (e.g., "vehicle\_not\_found")
 - `notificationType`: string
   - Type of notification to show to the user
 
@@ -104,6 +113,7 @@ local success = exports['jaksam_inventory']:addItemToTrunk("ABC 123", 'phone', 1
 - For owned vehicles, inventory is persistent (saved to database)
 
 ## addItemToGlovebox
+
 Adds items to a vehicle glovebox using only the vehicle plate, automatically resolving the full inventory ID
 
 ```lua
@@ -128,7 +138,7 @@ exports['jaksam_inventory']:addItemToGlovebox(plate, itemName, amount, metadata,
 - `success`: boolean
   - true if items were added successfully
 - `resultCode`: string
-  - Error message if the operation failed (e.g., "vehicle_not_found")
+  - Error message if the operation failed (e.g., "vehicle\_not\_found")
 - `notificationType`: string
   - Type of notification to show to the user
 
@@ -151,6 +161,7 @@ local success = exports['jaksam_inventory']:addItemToGlovebox("XYZ 789", 'money'
 - For owned vehicles, inventory is persistent (saved to database)
 
 ## removeItemFromTrunk
+
 Removes items from a vehicle trunk using only the vehicle plate, automatically resolving the full inventory ID
 
 ```lua
@@ -193,9 +204,10 @@ local success = exports['jaksam_inventory']:removeItemFromTrunk("ABC 123", 'weap
 ### Notes
 
 - Vehicle must exist (owned vehicle in database or NPC vehicle currently spawned)
-- Returns false with "vehicle_not_found" if vehicle doesn't exist
+- Returns false with "vehicle\_not\_found" if vehicle doesn't exist
 
 ## removeItemFromGlovebox
+
 Removes items from a vehicle glovebox using only the vehicle plate, automatically resolving the full inventory ID
 
 ```lua
@@ -239,9 +251,10 @@ end
 ### Notes
 
 - Vehicle must exist (owned vehicle in database or NPC vehicle currently spawned)
-- Returns false with "vehicle_not_found" if vehicle doesn't exist
+- Returns false with "vehicle\_not\_found" if vehicle doesn't exist
 
 ## getInventoryIdFromPlate
+
 Resolves the full inventory ID for a vehicle compartment using only the vehicle plate
 
 ```lua
@@ -289,6 +302,7 @@ local gloveboxId = exports['jaksam_inventory']:getInventoryIdFromPlate("ABC 123"
 - Works even if vehicle is not currently spawned (garage)
 
 ## canCarryItem
+
 Checks if an inventory has space for additional items, considering both weight and slot limits
 
 ```lua
@@ -324,6 +338,7 @@ end
 ```
 
 ## canSwapItem
+
 Checks if swapping firstItem (removing firstItemCount) with testItem (adding testItemCount) is possible
 
 ```lua
@@ -364,6 +379,7 @@ end
 ```
 
 ## clearInventory
+
 Removes all items from an inventory, with optional exclusion of specific items
 
 ```lua
@@ -405,6 +421,7 @@ local success = exports['jaksam_inventory']:clearInventory('police_stash_1')
 ```
 
 ## createInventory
+
 Creates a new inventory in both database and memory (depending on options). If an inventory with the same ID already exists, returns the existing one without modifying it
 
 ```lua
@@ -557,6 +574,7 @@ local inventory = exports['jaksam_inventory']:createInventory(
 - Use `temporary = true` for ephemeral inventories (lootboxes, event rewards) to avoid database bloat
 
 ## forceOpenInventory
+
 Forces an inventory to be opened for a specific player without permission checks
 
 ```lua
@@ -594,6 +612,7 @@ end)
 ```
 
 ## getInventory
+
 Gets complete data about an inventory including its items, weight limits, and metadata
 
 ```lua
@@ -643,6 +662,7 @@ end
 ```
 
 ## getItemFromSlot
+
 Gets an item from a specific slot in an inventory
 
 ```lua
@@ -691,6 +711,7 @@ local stashItem = exports['jaksam_inventory']:getItemFromSlot('police_stash_1', 
 ```
 
 ## getItemByName
+
 Gets the first item found in an inventory by its name, with optional metadata filtering
 
 ```lua
@@ -749,6 +770,7 @@ end
 ```
 
 ## getItemsByName
+
 Gets all items from an inventory by name, with optional metadata filtering
 
 ```lua
@@ -818,11 +840,13 @@ end
 ```
 
 ### Notes
+
 - Each item includes the `slot` field indicating where it was found
 - Use this when you need to process multiple stacks of the same item
 - For single item lookups, prefer `getItemByName` for better performance
 
 ## getItemLabel
+
 Gets the display label of an item
 
 ```lua
@@ -854,6 +878,7 @@ end
 ```
 
 ## getTotalItemAmount
+
 Returns the total amount of a specific item in an inventory, including items in containers
 
 ```lua
@@ -894,6 +919,7 @@ local total, totalNoContainers = exports['jaksam_inventory']:getTotalItemAmount(
 ```
 
 ## hasItem
+
 Checks if an inventory has a specific item
 
 ```lua
@@ -929,8 +955,8 @@ end
 ```
 
 ## registerUsableItem
-Registers a callback function that will be called when an item is used
-Framework specific registering item will work anyway, as ESX.RegisterUsableItem and QBCore one
+
+Registers a callback function that will be called when an item is used Framework specific registering item will work anyway, as ESX.RegisterUsableItem and QBCore one
 
 ```lua
 exports['jaksam_inventory']:registerUsableItem(itemName, callback)
@@ -975,6 +1001,7 @@ end)
 ```
 
 ## registerStash
+
 Dynamically registers a new stash and creates its server inventory during runtime
 
 ```lua
@@ -995,7 +1022,7 @@ exports['jaksam_inventory']:registerStash(options)
   - `allowedJobs` (table, optional): Table of job names that can access the stash. If nil, stash is public. Example: `{police = true, sheriff = true}`
   - `temporary` (boolean, optional): If true, stash won't be saved to database and lost on script restart. Default: false
   - `startingItems` (table, optional): Items to add when the stash is first created. Format: `{{itemName, amount, metadata}, {itemName2, amount2, metadata2}, ...}`
-  - `runtimeOnly` (boolean, optional): If true (default), stash can only be opened programmatically. If false and coords are provided, creates client-side interaction points (jaksam_inventory will handle also stash opening point itself) Default: true
+  - `runtimeOnly` (boolean, optional): If true (default), stash can only be opened programmatically. If false and coords are provided, creates client-side interaction points (jaksam\_inventory will handle also stash opening point itself) Default: true
 
 ### Returns
 
@@ -1085,6 +1112,7 @@ end)
 ```
 
 ## registerItem
+
 Registers a new item definition at runtime (in-memory only, not saved to file). Only safe, declarative fields are accepted everything else is rejected at any depth.
 
 Items registered this way will be lost on resource restart. Use this to let external scripts define their own items without editing `_data/items.lua`.
@@ -1102,7 +1130,7 @@ exports['jaksam_inventory']:registerItem(itemName, itemData)
   - Item definition table. Only the following safe fields are accepted; any other field is silently stripped:
   - **Required fields:**
     - `label` (string): Display name
-    - `weight` (number): Item weight (>= 0)
+    - `weight` (number): Item weight (\>= 0)
     - `stackable` (boolean): Whether the item can stack
   - **Optional fields:**
     - `description` (string): Item description text
@@ -1120,9 +1148,9 @@ exports['jaksam_inventory']:registerItem(itemName, itemData)
     - `isGrenadeType` (boolean): Grenade-like throwable
     - `separateWeight` (boolean): Container weight not counted in parent
     - `universal` (boolean): Universal ammo
-    - `oxClientEvent` (string): ox_inventory client event compatibility
-    - `oxClientExport` (string): ox_inventory client export compatibility
-    - `oxServerExport` (string): ox_inventory server export compatibility
+    - `oxClientEvent` (string): ox\_inventory client event compatibility
+    - `oxClientExport` (string): ox\_inventory client export compatibility
+    - `oxServerExport` (string): ox\_inventory server export compatibility
   - **Optional table fields** (validated recursively — no functions allowed inside):
     - `metadata` (table): Default metadata for new instances
     - `status` (table): Status effects on use (e.g. `{ hunger = 10, thirst = 5 }`)
@@ -1194,6 +1222,7 @@ local success, err = exports['jaksam_inventory']:registerItem('custom_bag', {
 - Table fields (like `metadata`, `useOptions`, etc.) are deep-copied, so changes to the original table after registration have no effect.
 
 ## removeItem
+
 Removes items from an inventory
 
 ```lua
@@ -1237,6 +1266,7 @@ local success, result = exports['jaksam_inventory']:removeItem(1, 'bread', 1, ni
 ```
 
 ## saveDirtyInventories
+
 Saves all modified inventories to the database
 
 ```lua
@@ -1244,6 +1274,7 @@ exports['jaksam_inventory']:saveDirtyInventories()
 ```
 
 ### Parameters
+
 None
 
 ### Returns
@@ -1266,6 +1297,7 @@ end)
 ```
 
 ## saveDirtyInventory
+
 Saves a specific inventory to the database if it has been modified
 
 ```lua
@@ -1296,6 +1328,7 @@ end
 ```
 
 ## setInventoryMaxWeight
+
 Sets the maximum weight capacity for an inventory
 
 ```lua
@@ -1325,6 +1358,7 @@ exports['jaksam_inventory']:setInventoryMaxWeight('police_stash_1', 500)
 ```
 
 ## setItemMetadataInSlot
+
 Updates the metadata of an item in a specific inventory slot
 
 ```lua
@@ -1363,6 +1397,7 @@ exports['jaksam_inventory']:setItemMetadataInSlot(1, 3, {
 ```
 
 ## setDurability
+
 Sets the durability value of an item in a specific inventory slot
 
 ```lua

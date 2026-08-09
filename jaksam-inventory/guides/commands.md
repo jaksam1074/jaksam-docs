@@ -1,3 +1,8 @@
+---
+title: "commands"
+icon: "slash-forward"
+---
+
 # Admin Commands
 
 All admin commands require ACE permission (Use /inventory to see if you have it)

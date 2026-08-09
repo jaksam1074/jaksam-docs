@@ -1,3 +1,8 @@
+---
+title: "crafting"
+icon: "flask-gear"
+---
+
 # How to add crafting recipes (drag & drop)
 
 > **Want players to craft items by dragging one item over another? This guide shows you how, step-by-step**
@@ -93,4 +98,3 @@ Combine 2 pieces of wood with 1 nail to create a wooden plank:
 - **Quantity checks**: The system automatically checks if you have enough items before crafting
 - **Multiple recipes**: You can add as many recipes as you want to the `CRAFTING_RECIPES` table
 - **One source, multiple targets**: Each source item can only have one recipe. If you need multiple recipes for the same source item, you'll need to use different source items or create separate crafting systems
-

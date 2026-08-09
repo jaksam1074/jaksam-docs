@@ -1,3 +1,8 @@
+---
+title: "block-police-weapon-rob"
+icon: "user-police"
+---
+
 # How to prevent police weapons from being stolen
 
 > **Want to make sure only police officers can move police weapons to their inventory? This guide shows you how, step-by-step**

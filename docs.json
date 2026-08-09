@@ -96,7 +96,8 @@
                   "jaksam-inventory/functions/client",
                   "jaksam-inventory/functions/shared",
                   "jaksam-inventory/functions/server"
-                ]
+                ],
+                "icon": "function"
               },
               {
                 "group": "Events",

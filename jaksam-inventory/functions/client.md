@@ -1,12 +1,20 @@
-# Compatibility
-This script works with other popular inventory systems, like es_extended, qb-inventory, and ox_inventory
+---
+title: "client"
+icon: "user"
+---
 
-For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
+# Compatibility
+
+This script works with other popular inventory systems, like es\_extended, qb-inventory, and ox\_inventory
+
+For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox\_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
 
 # Client functions
+
 Here there are built-in exports of jaksam's inventory that can be used client-side
 
 ## getTotalItemAmount
+
 Gets the total amount of a specific item in the player's inventory
 
 ```lua
@@ -38,6 +46,7 @@ local weaponCount = exports['jaksam_inventory']:getTotalItemAmount('weapon_pisto
 ```
 
 ## openInventory
+
 Opens an inventory alongside the player's inventory
 
 ```lua
@@ -50,6 +59,7 @@ exports['jaksam_inventory']:openInventory(inventoryId)
   - The ID of the inventory to open
 
 ### Returns
+
 None - Opens the inventory UI if successful
 
 ### Example
@@ -63,6 +73,7 @@ exports['jaksam_inventory']:openInventory('car_trunk_123')
 ```
 
 ## closeInventory
+
 Closes the inventory UI. Can either close a specific inventory or close the entire inventory UI
 
 ```lua
@@ -76,6 +87,7 @@ exports['jaksam_inventory']:closeInventory(inventoryId)
   - If nil, closes the entire inventory UI and all open inventories
 
 ### Returns
+
 None
 
 ### Example
@@ -94,6 +106,7 @@ end)
 ```
 
 ## getInventory
+
 Gets the player's self inventory
 
 ```lua
@@ -101,9 +114,11 @@ exports['jaksam_inventory']:getInventory()
 ```
 
 ### Parameters
+
 None
 
 ### Returns
+
 - `inventory`: table
   - The player's self inventory
 
@@ -141,6 +156,7 @@ print(json.encode(inventory, {indent = true}))
 ```
 
 ## getItemByName
+
 Returns the first item found in the player's self inventory by name (order not guaranteed)
 
 ```lua
@@ -148,9 +164,11 @@ exports['jaksam_inventory']:getItemByName(itemName)
 ```
 
 ### Parameters
+
 None
 
 ### Returns
+
 - `item`: table
   - The item found in the player's self inventory
 - `slotId`: number
@@ -175,6 +193,7 @@ SLOT ID: 1
 ```
 
 ## getItemsByName
+
 Returns all items that match a specific item name from the player's inventory. Unlike `getItemByName` which returns only the first match, this function returns all occurrences with their slot numbers
 
 ```lua
@@ -230,6 +249,7 @@ end
 ```
 
 ## getItemFromSlot
+
 Gets an item from a specific slot in the player's inventory
 
 ```lua
@@ -281,6 +301,7 @@ end
 ```
 
 ## showHotbar
+
 Shows the hotbar UI with the first 5 slots of the player's inventory
 
 ```lua
@@ -288,9 +309,11 @@ exports['jaksam_inventory']:showHotbar()
 ```
 
 ### Parameters
+
 None
 
 ### Returns
+
 None - Shows the hotbar UI which automatically hides after 2 seconds
 
 ### Example
@@ -306,12 +329,14 @@ end)
 ```
 
 Notes:
+
 - The hotbar shows slots 1-5 from the player's inventory
 - If `config.dynamicHotbar` is true, empty slots at the end are hidden
 - The hotbar automatically hides after 2 seconds
 - Multiple calls reset the hide timer
 
 ## setHotbarDisabled
+
 Enables or disables the hotbar functionality. Useful for example during minigames. Don't forget to re-enable the hotbar when finished
 
 ```lua
@@ -325,6 +350,7 @@ exports['jaksam_inventory']:setHotbarDisabled(disabled)
   - If false, the hotbar will be enabled and will work normally
 
 ### Returns
+
 None
 
 ### Example
@@ -343,6 +369,7 @@ exports['jaksam_inventory']:setHotbarDisabled(false)
 ```
 
 ## setHotkeysEnabled
+
 Enables or disables the hotkeys functionality (slots 1-5). Useful for example during minigames or cutscenes. Don't forget to re-enable the hotkeys when finished
 
 ```lua
@@ -356,6 +383,7 @@ exports['jaksam_inventory']:setHotkeysEnabled(enabled)
   - If false, the hotkeys will be disabled and pressing 1-5 will be ignored
 
 ### Returns
+
 None
 
 ### Example
@@ -374,6 +402,7 @@ exports['jaksam_inventory']:setHotkeysEnabled(true)
 ```
 
 ## areHotkeysEnabled
+
 Returns whether the hotkeys are currently enabled or disabled
 
 ```lua
@@ -381,6 +410,7 @@ exports['jaksam_inventory']:areHotkeysEnabled()
 ```
 
 ### Parameters
+
 None
 
 ### Returns
@@ -406,6 +436,7 @@ exports['jaksam_inventory']:setHotkeysEnabled(not currentState)
 ```
 
 ## dequipWeapon
+
 Deequips the currently equipped weapon
 
 ```lua
@@ -413,10 +444,12 @@ exports['jaksam_inventory']:dequipWeapon(skipSync)
 ```
 
 ### Parameters
+
 - `skipSync`: boolean (optional)
   - If true, the weapon will be deequipped without syncing the ammo to the server
 
 ### Returns
+
 None - Deequips the currently equipped weapon
 
 ### Example
@@ -430,6 +463,7 @@ exports['jaksam_inventory']:dequipWeapon(true)
 ```
 
 ## setWeaponWheel
+
 Enables or disables the weapon wheel and related weapon settings. Useful for minigames where you want the GTA 5 weapon wheel. Note that this function will prevent using weapons from the inventory, it's mainly for FFA minigames
 
 ```lua
@@ -444,6 +478,7 @@ exports['jaksam_inventory']:setWeaponWheel(state)
   - If nil, uses the current internal state
 
 ### Returns
+
 None - Automatically deequips the current weapon when called
 
 ### Example
@@ -462,6 +497,7 @@ exports['jaksam_inventory']:setWeaponWheel(false) -- Disable GTA5 wheel again, r
 ```
 
 ## setJaksamWeaponWheel
+
 Enables or disables the jaksam custom radial weapon wheel at runtime. Useful when you need to prevent players from switching weapons via the radial wheel during specific scenarios (cutscenes, minigames, etc.)
 
 ```lua
@@ -476,6 +512,7 @@ exports['jaksam_inventory']:setJaksamWeaponWheel(state)
   - If nil, uses the current internal state
 
 ### Returns
+
 None
 
 ### Example
@@ -488,6 +525,7 @@ exports['jaksam_inventory']:setJaksamWeaponWheel(true) -- Re-enable after
 ```
 
 ## registerActionButton
+
 Registers a custom action button in the inventory UI toolbar. Action buttons appear on the right side of the inventory and can trigger any custom logic when clicked
 
 For a complete guide with images and examples, see the [Action Buttons Guide](../guides/action-buttons.md).
@@ -501,7 +539,7 @@ exports['jaksam_inventory']:registerActionButton(id, icon, tooltip, onClick, vis
 - `id`: string
   - Unique identifier for the button. Used to reference the button when showing/hiding/unregistering
 - `icon`: string
-  - Bootstrap Icons class name (e.g. "bi-shield-x", "bi-car-front-fill"). Find icons at https://icons.getbootstrap.com/
+  - Bootstrap Icons class name (e.g. "bi-shield-x", "bi-car-front-fill"). Find icons at [https://icons.getbootstrap.com/](https://icons.getbootstrap.com/)
 - `tooltip`: string | nil
   - Tooltip text shown when hovering the button. Can be nil for no tooltip
 - `onClick`: function
@@ -510,6 +548,7 @@ exports['jaksam_inventory']:registerActionButton(id, icon, tooltip, onClick, vis
   - Whether the button should be visible initially. Default: true
 
 ### Returns
+
 None
 
 ### Example
@@ -539,6 +578,7 @@ exports['jaksam_inventory']:registerActionButton(
 ```
 
 ## unregisterActionButton
+
 Removes a previously registered action button from the inventory UI
 
 ```lua
@@ -551,6 +591,7 @@ exports['jaksam_inventory']:unregisterActionButton(id)
   - The unique identifier of the button to remove (same id used in registerActionButton)
 
 ### Returns
+
 None
 
 ### Example
@@ -568,6 +609,7 @@ end)
 ```
 
 ## showActionButton
+
 Makes a previously hidden action button visible in the inventory UI
 
 ```lua
@@ -580,6 +622,7 @@ exports['jaksam_inventory']:showActionButton(id)
   - The unique identifier of the button to show
 
 ### Returns
+
 None
 
 ### Example
@@ -597,6 +640,7 @@ end)
 ```
 
 ## hideActionButton
+
 Hides an action button from the inventory UI without removing it
 
 ```lua
@@ -609,6 +653,7 @@ exports['jaksam_inventory']:hideActionButton(id)
   - The unique identifier of the button to hide
 
 ### Returns
+
 None
 
 ### Example
@@ -626,19 +671,22 @@ end)
 ```
 
 ## getVehicleInventoryLimits
-Returns the trunk or glovebox limits for a vehicle based on model. Uses the configuration from `_data/vehicles.lua` with priority: `trunkByModel`/`gloveboxByModel` > `trunkByClass`/`gloveboxByClass`. Returns `0, 0` if the vehicle/class is configured to not have trunk/glovebox (`noTrunkVehicles`, `noTrunkClasses`, etc.)
+
+Returns the trunk or glovebox limits for a vehicle based on model. Uses the configuration from `_data/vehicles.lua` with priority: `trunkByModel`/`gloveboxByModel` \> `trunkByClass`/`gloveboxByClass`. Returns `0, 0` if the vehicle/class is configured to not have trunk/glovebox (`noTrunkVehicles`, `noTrunkClasses`, etc.)
 
 ```lua
 exports['jaksam_inventory']:getVehicleInventoryLimits(vehicleModel, inventoryType)
 ```
 
 ### Parameters
+
 - `vehicleModel`: number|string
   - The vehicle model hash (from `GetEntityModel`) or the model name as string
 - `inventoryType`: string
   - Either `"trunk"` or `"glovebox"`
 
 ### Returns
+
 - `maxSlots`: number|nil
   - The maximum slots for the vehicle inventory, or nil if no config found
 - `maxWeight`: number|nil
@@ -661,6 +709,7 @@ local gloveboxSlots, gloveboxWeight = exports['jaksam_inventory']:getVehicleInve
 ```
 
 ## isInventoryOpen
+
 Checks if an inventory is currently open. If no inventory ID is provided, returns whether the inventory UI is currently active (any inventory open). If an inventory ID is provided, checks if that specific inventory is open
 
 ```lua
@@ -707,6 +756,7 @@ end
 ```
 
 ## setInventoryDisabled
+
 Completely disables or re-enables inventory opening. When disabled, all inventory interactions are blocked: hotkeys, keybinds, and direct export/event calls. If the inventory is currently open when disabling, it will be closed and the weapon will be dequipped automatically
 
 This is useful for cutscenes, minigames, progress bars, or any scenario where the player should not be able to open the inventory.
@@ -722,6 +772,7 @@ exports['jaksam_inventory']:setInventoryDisabled(disabled)
   - If false, inventory opening is re-enabled
 
 ### Returns
+
 None
 
 ### Example
@@ -738,9 +789,9 @@ exports['jaksam_inventory']:setInventoryDisabled(true)
 exports['jaksam_inventory']:setInventoryDisabled(false)
 ```
 
-### ox_inventory compatibility
+### ox\_inventory compatibility
 
-If you are migrating from ox_inventory, this export replaces the `invBusy` state bag pattern. Scripts that set `LocalPlayer.state:set('invBusy', true, true)` will continue to work automatically - jaksam_inventory listens for `invBusy` state bag changes and maps them to the same internal flag.
+If you are migrating from ox\_inventory, this export replaces the `invBusy` state bag pattern. Scripts that set `LocalPlayer.state:set('invBusy', true, true)` will continue to work automatically - jaksam\_inventory listens for `invBusy` state bag changes and maps them to the same internal flag.
 
 ```lua
 -- ox_inventory pattern (still works with jaksam_inventory)
@@ -751,6 +802,7 @@ exports['jaksam_inventory']:setInventoryDisabled(true)
 ```
 
 ## isInventoryDisabled
+
 Returns whether inventory opening is currently disabled
 
 ```lua
@@ -758,6 +810,7 @@ exports['jaksam_inventory']:isInventoryDisabled()
 ```
 
 ### Parameters
+
 None
 
 ### Returns
