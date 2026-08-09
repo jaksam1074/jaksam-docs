@@ -426,7 +426,8 @@
                   "doors-creator/server/update-door"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Missions Creator",
@@ -466,7 +467,8 @@
                   "missions-creator/server/get-mission-template"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Blips Creator",
@@ -483,7 +485,8 @@
                   "blips-creator/client/open-menu-manually"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Farming Creator",
@@ -509,7 +512,8 @@
                   "farming-creator/server/item-farmed"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Shops Creator",
@@ -555,7 +559,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Robberies Creator",
@@ -592,7 +597,8 @@
                   "robberies-creator/server/step-completed"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Vehicles Keys",
@@ -660,7 +666,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Dealerships Creator",
@@ -702,7 +709,8 @@
                   "dealerships-creator/server/on-vehicle-resell"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Races Creator",
@@ -732,7 +740,8 @@
                   "races-creator/server/police-alerted"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Trackers Creator",
@@ -760,7 +769,8 @@
                   "trackers-creator/server/player-set-new-private-frequency"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Easy Allowlist",
@@ -799,7 +809,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Billing UI",
@@ -830,7 +841,8 @@
                   "billing-ui/server/on-bill-paid"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Luxury Clothes Theft",
@@ -845,7 +857,8 @@
                   "luxury-clothes-theft/client/replace-default-notifications"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "FiveM Escrow Errors",
