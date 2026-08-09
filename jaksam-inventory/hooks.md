@@ -6,6 +6,22 @@ description: "Intercept and modify inventory behavior with server-side hooks for
 
 Hooks are a way to modify the behavior of the inventory system. They are registered on the server and can be used to modify the behavior of the inventory system, for example to prevent players from moving items to a specific inventory. There are some examples of hooks in the `jaksam_inventory/_hooks` folder.
 
+## Best Practices
+
+<CardGroup cols={3}>
+  <Card title="Use filters" icon="filter">
+    Always use appropriate filters to avoid unnecessary hook executions
+  </Card>
+
+  <Card title="Early returns" icon="right-from-bracket">
+    Use early returns to exit hooks when conditions aren't met
+  </Card>
+
+  <Card title="Performance" icon="gauge-high">
+    Keep hook logic lightweight to avoid impacting inventory performance
+  </Card>
+</CardGroup>
+
 ## Use Case Examples
 
 - Prevent players from stealing items that have the `sole_owner` metadata field (e.g., VIP items)
@@ -435,19 +451,3 @@ payload = {
     ```
   </Accordion>
 </AccordionGroup>
-
-## Best Practices
-
-<CardGroup cols={3}>
-  <Card title="Use filters" icon="filter">
-    Always use appropriate filters to avoid unnecessary hook executions
-  </Card>
-
-  <Card title="Early returns" icon="right-from-bracket">
-    Use early returns to exit hooks when conditions aren't met
-  </Card>
-
-  <Card title="Performance" icon="gauge-high">
-    Keep hook logic lightweight to avoid impacting inventory performance
-  </Card>
-</CardGroup>
