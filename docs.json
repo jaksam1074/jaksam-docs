@@ -386,13 +386,131 @@
               }
             ],
             "expanded": true
-          }
-        ]
-      },
-      {
-        "tab": "Jobs & Economy",
-        "icon": "briefcase",
-        "groups": [
+          },
+          {
+            "group": "Doors Creator",
+            "icon": "door-open",
+            "root": "doors-creator/home",
+            "pages": [
+              "doors-creator/installation",
+              "doors-creator/faq",
+              "doors-creator/modules",
+              "doors-creator/change-doors-icon",
+              "doors-creator/admin-bypass-lock",
+              {
+                "group": "Client",
+                "root": "doors-creator/client/index",
+                "pages": [
+                  "doors-creator/client/replace-default-notifications",
+                  "doors-creator/client/get-closest-door",
+                  "doors-creator/client/toggle-icon-display",
+                  "doors-creator/client/replace-default-police-alert",
+                  "doors-creator/client/get-door-id-from-entity"
+                ]
+              },
+              {
+                "group": "Server",
+                "root": "doors-creator/server/index",
+                "pages": [
+                  "doors-creator/server/refresh-database",
+                  "doors-creator/server/police-alerted",
+                  "doors-creator/server/get-door-id-data",
+                  "doors-creator/server/get-building-id-data",
+                  "doors-creator/server/get-all-buildings-list",
+                  "doors-creator/server/get-all-doors-list",
+                  "doors-creator/server/set-door-id-state-locked-unlocked",
+                  "doors-creator/server/lockpicked-door",
+                  "doors-creator/server/create-building",
+                  "doors-creator/server/create-door",
+                  "doors-creator/server/delete-door",
+                  "doors-creator/server/update-door"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Missions Creator",
+            "icon": "bullseye",
+            "root": "missions-creator/home",
+            "pages": [
+              "missions-creator/installation",
+              "missions-creator/how-to-start",
+              "missions-creator/how-to-add-minigames",
+              {
+                "group": "Client",
+                "root": "missions-creator/client/index",
+                "pages": [
+                  "missions-creator/client/replace-default-police-alert",
+                  "missions-creator/client/on-entity-spawn",
+                  "missions-creator/client/get-mission-template",
+                  {
+                    "group": "Notifications",
+                    "root": "missions-creator/client/notifications/index",
+                    "pages": [
+                      "missions-creator/client/notifications/replace-default-notifications",
+                      "missions-creator/client/notifications/replace-default-help-notifications",
+                      "missions-creator/client/notifications/replace-default-mugshot-notifications"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Server",
+                "root": "missions-creator/server/index",
+                "pages": [
+                  "missions-creator/server/police-alerted",
+                  "missions-creator/server/on-mission-start",
+                  "missions-creator/server/on-mission-failed",
+                  "missions-creator/server/on-mission-completed",
+                  "missions-creator/server/start-mission",
+                  "missions-creator/server/get-mission-template"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Blips Creator",
+            "icon": "location-dot",
+            "root": "blips-creator/home",
+            "pages": [
+              "blips-creator/installation",
+              "blips-creator/faq",
+              "blips-creator/how-to-use-custom-sprites",
+              {
+                "group": "Client",
+                "root": "blips-creator/client/index",
+                "pages": [
+                  "blips-creator/client/open-menu-manually"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Farming Creator",
+            "icon": "tractor",
+            "root": "farming-creator/home",
+            "pages": [
+              "farming-creator/installation",
+              {
+                "group": "Client",
+                "root": "farming-creator/client/index",
+                "pages": [
+                  "farming-creator/client/replace-default-notifications",
+                  "farming-creator/client/progress-bar",
+                  "farming-creator/client/replace-default-help-notifications",
+                  "farming-creator/client/replace-default-police-alert"
+                ]
+              },
+              {
+                "group": "Server",
+                "root": "farming-creator/server/index",
+                "pages": [
+                  "farming-creator/server/police-alerted",
+                  "farming-creator/server/item-farmed"
+                ]
+              }
+            ]
+          },
           {
             "group": "Shops Creator",
             "icon": "cart-shopping",
@@ -440,69 +558,6 @@
             ]
           },
           {
-            "group": "Farming Creator",
-            "icon": "tractor",
-            "root": "farming-creator/home",
-            "pages": [
-              "farming-creator/installation",
-              {
-                "group": "Client",
-                "root": "farming-creator/client/index",
-                "pages": [
-                  "farming-creator/client/replace-default-notifications",
-                  "farming-creator/client/progress-bar",
-                  "farming-creator/client/replace-default-help-notifications",
-                  "farming-creator/client/replace-default-police-alert"
-                ]
-              },
-              {
-                "group": "Server",
-                "root": "farming-creator/server/index",
-                "pages": [
-                  "farming-creator/server/police-alerted",
-                  "farming-creator/server/item-farmed"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Billing UI",
-            "icon": "file-invoice-dollar",
-            "root": "billing-ui/home",
-            "pages": [
-              "billing-ui/installation",
-              {
-                "group": "Client",
-                "root": "billing-ui/client/index",
-                "pages": [
-                  "billing-ui/client/activate-billing-mode",
-                  "billing-ui/client/open-billing-menu",
-                  "billing-ui/client/replace-default-notifications",
-                  "billing-ui/client/pay-a-bill",
-                  "billing-ui/client/send-a-bill",
-                  "billing-ui/client/view-invoices"
-                ]
-              },
-              {
-                "group": "Server",
-                "root": "billing-ui/server/index",
-                "pages": [
-                  "billing-ui/server/create-bill",
-                  "billing-ui/server/delete-bill",
-                  "billing-ui/server/refresh-bill",
-                  "billing-ui/server/on-bill-created",
-                  "billing-ui/server/on-bill-paid"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Criminality",
-        "icon": "user-secret",
-        "groups": [
-          {
             "group": "Robberies Creator",
             "icon": "mask",
             "root": "robberies-creator/home",
@@ -535,69 +590,6 @@
                   "robberies-creator/server/heist-finished",
                   "robberies-creator/server/police-alerted",
                   "robberies-creator/server/step-completed"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Luxury Clothes Theft",
-            "icon": "shirt",
-            "root": "luxury-clothes-theft/home",
-            "pages": [
-              "luxury-clothes-theft/installation",
-              {
-                "group": "Client",
-                "root": "luxury-clothes-theft/client/index",
-                "pages": [
-                  "luxury-clothes-theft/client/replace-default-notifications"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Vehicles & Map",
-        "icon": "car",
-        "groups": [
-          {
-            "group": "Dealerships Creator",
-            "icon": "car",
-            "root": "dealerships-creator/home",
-            "pages": [
-              "dealerships-creator/installation",
-              "dealerships-creator/adding-custom-vehicles-classes",
-              {
-                "group": "Client",
-                "root": "dealerships-creator/client/index",
-                "pages": [
-                  "dealerships-creator/client/on-test-drive-vehicle-spawn",
-                  {
-                    "group": "Notifications",
-                    "root": "dealerships-creator/client/notifications/index",
-                    "pages": [
-                      "dealerships-creator/client/notifications/replace-default-notifications",
-                      "dealerships-creator/client/notifications/replace-default-help-notifications"
-                    ]
-                  },
-                  {
-                    "group": "Showroom",
-                    "root": "dealerships-creator/client/showroom/index",
-                    "pages": [
-                      "dealerships-creator/client/showroom/on-showroom-enter",
-                      "dealerships-creator/client/showroom/on-showroom-exit",
-                      "dealerships-creator/client/showroom/get-is-player-in-showroom",
-                      "dealerships-creator/client/showroom/get-is-player-doing-test-drive"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Server",
-                "root": "dealerships-creator/server/index",
-                "pages": [
-                  "dealerships-creator/server/on-vehicle-given",
-                  "dealerships-creator/server/on-vehicle-resell"
                 ]
               }
             ]
@@ -671,133 +663,43 @@
             ]
           },
           {
-            "group": "Blips Creator",
-            "icon": "location-dot",
-            "root": "blips-creator/home",
+            "group": "Dealerships Creator",
+            "icon": "car",
+            "root": "dealerships-creator/home",
             "pages": [
-              "blips-creator/installation",
-              "blips-creator/faq",
-              "blips-creator/how-to-use-custom-sprites",
+              "dealerships-creator/installation",
+              "dealerships-creator/adding-custom-vehicles-classes",
               {
                 "group": "Client",
-                "root": "blips-creator/client/index",
+                "root": "dealerships-creator/client/index",
                 "pages": [
-                  "blips-creator/client/open-menu-manually"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Doors Creator",
-            "icon": "door-open",
-            "root": "doors-creator/home",
-            "pages": [
-              "doors-creator/installation",
-              "doors-creator/faq",
-              "doors-creator/modules",
-              "doors-creator/change-doors-icon",
-              "doors-creator/admin-bypass-lock",
-              {
-                "group": "Client",
-                "root": "doors-creator/client/index",
-                "pages": [
-                  "doors-creator/client/replace-default-notifications",
-                  "doors-creator/client/get-closest-door",
-                  "doors-creator/client/toggle-icon-display",
-                  "doors-creator/client/replace-default-police-alert",
-                  "doors-creator/client/get-door-id-from-entity"
-                ]
-              },
-              {
-                "group": "Server",
-                "root": "doors-creator/server/index",
-                "pages": [
-                  "doors-creator/server/refresh-database",
-                  "doors-creator/server/police-alerted",
-                  "doors-creator/server/get-door-id-data",
-                  "doors-creator/server/get-building-id-data",
-                  "doors-creator/server/get-all-buildings-list",
-                  "doors-creator/server/get-all-doors-list",
-                  "doors-creator/server/set-door-id-state-locked-unlocked",
-                  "doors-creator/server/lockpicked-door",
-                  "doors-creator/server/create-building",
-                  "doors-creator/server/create-door",
-                  "doors-creator/server/delete-door",
-                  "doors-creator/server/update-door"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Trackers Creator",
-            "icon": "satellite-dish",
-            "root": "trackers-creator/home",
-            "pages": [
-              "trackers-creator/installation",
-              "trackers-creator/faq",
-              "trackers-creator/optimization",
-              {
-                "group": "Client",
-                "root": "trackers-creator/client/index",
-                "pages": [
-                  "trackers-creator/client/replace-default-notifications",
-                  "trackers-creator/client/panic-button-pressed",
-                  "trackers-creator/client/manually-start-panic-button"
-                ]
-              },
-              {
-                "group": "Server",
-                "root": "trackers-creator/server/index",
-                "pages": [
-                  "trackers-creator/server/panic-button-pressed",
-                  "trackers-creator/server/player-lost-signal",
-                  "trackers-creator/server/player-set-new-private-frequency"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Other",
-        "icon": "ellipsis",
-        "groups": [
-          {
-            "group": "Missions Creator",
-            "icon": "bullseye",
-            "root": "missions-creator/home",
-            "pages": [
-              "missions-creator/installation",
-              "missions-creator/how-to-start",
-              "missions-creator/how-to-add-minigames",
-              {
-                "group": "Client",
-                "root": "missions-creator/client/index",
-                "pages": [
-                  "missions-creator/client/replace-default-police-alert",
-                  "missions-creator/client/on-entity-spawn",
-                  "missions-creator/client/get-mission-template",
+                  "dealerships-creator/client/on-test-drive-vehicle-spawn",
                   {
                     "group": "Notifications",
-                    "root": "missions-creator/client/notifications/index",
+                    "root": "dealerships-creator/client/notifications/index",
                     "pages": [
-                      "missions-creator/client/notifications/replace-default-notifications",
-                      "missions-creator/client/notifications/replace-default-help-notifications",
-                      "missions-creator/client/notifications/replace-default-mugshot-notifications"
+                      "dealerships-creator/client/notifications/replace-default-notifications",
+                      "dealerships-creator/client/notifications/replace-default-help-notifications"
+                    ]
+                  },
+                  {
+                    "group": "Showroom",
+                    "root": "dealerships-creator/client/showroom/index",
+                    "pages": [
+                      "dealerships-creator/client/showroom/on-showroom-enter",
+                      "dealerships-creator/client/showroom/on-showroom-exit",
+                      "dealerships-creator/client/showroom/get-is-player-in-showroom",
+                      "dealerships-creator/client/showroom/get-is-player-doing-test-drive"
                     ]
                   }
                 ]
               },
               {
                 "group": "Server",
-                "root": "missions-creator/server/index",
+                "root": "dealerships-creator/server/index",
                 "pages": [
-                  "missions-creator/server/police-alerted",
-                  "missions-creator/server/on-mission-start",
-                  "missions-creator/server/on-mission-failed",
-                  "missions-creator/server/on-mission-completed",
-                  "missions-creator/server/start-mission",
-                  "missions-creator/server/get-mission-template"
+                  "dealerships-creator/server/on-vehicle-given",
+                  "dealerships-creator/server/on-vehicle-resell"
                 ]
               }
             ]
@@ -828,6 +730,34 @@
                 "root": "races-creator/server/index",
                 "pages": [
                   "races-creator/server/police-alerted"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Trackers Creator",
+            "icon": "satellite-dish",
+            "root": "trackers-creator/home",
+            "pages": [
+              "trackers-creator/installation",
+              "trackers-creator/faq",
+              "trackers-creator/optimization",
+              {
+                "group": "Client",
+                "root": "trackers-creator/client/index",
+                "pages": [
+                  "trackers-creator/client/replace-default-notifications",
+                  "trackers-creator/client/panic-button-pressed",
+                  "trackers-creator/client/manually-start-panic-button"
+                ]
+              },
+              {
+                "group": "Server",
+                "root": "trackers-creator/server/index",
+                "pages": [
+                  "trackers-creator/server/panic-button-pressed",
+                  "trackers-creator/server/player-lost-signal",
+                  "trackers-creator/server/player-set-new-private-frequency"
                 ]
               }
             ]
@@ -872,6 +802,52 @@
             ]
           },
           {
+            "group": "Billing UI",
+            "icon": "file-invoice-dollar",
+            "root": "billing-ui/home",
+            "pages": [
+              "billing-ui/installation",
+              {
+                "group": "Client",
+                "root": "billing-ui/client/index",
+                "pages": [
+                  "billing-ui/client/activate-billing-mode",
+                  "billing-ui/client/open-billing-menu",
+                  "billing-ui/client/replace-default-notifications",
+                  "billing-ui/client/pay-a-bill",
+                  "billing-ui/client/send-a-bill",
+                  "billing-ui/client/view-invoices"
+                ]
+              },
+              {
+                "group": "Server",
+                "root": "billing-ui/server/index",
+                "pages": [
+                  "billing-ui/server/create-bill",
+                  "billing-ui/server/delete-bill",
+                  "billing-ui/server/refresh-bill",
+                  "billing-ui/server/on-bill-created",
+                  "billing-ui/server/on-bill-paid"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Luxury Clothes Theft",
+            "icon": "shirt",
+            "root": "luxury-clothes-theft/home",
+            "pages": [
+              "luxury-clothes-theft/installation",
+              {
+                "group": "Client",
+                "root": "luxury-clothes-theft/client/index",
+                "pages": [
+                  "luxury-clothes-theft/client/replace-default-notifications"
+                ]
+              }
+            ]
+          },
+          {
             "group": "FiveM Escrow Errors",
             "icon": "triangle-exclamation",
             "hidden": true,
@@ -883,10 +859,6 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "Inventory",
-        "icon": "boxes-stacked"
       }
     ]
   },
