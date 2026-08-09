@@ -59,7 +59,7 @@
             "group": "jaksam's scripts",
             "icon": "house",
             "pages": [
-              "untitled-page-2",
+              "index",
               "jaksams-scripts/how-to-update-the-scripts",
               "untitled-page",
               "jaksams-scripts/fix-server-crash-on-script-start",
