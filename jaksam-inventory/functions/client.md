@@ -1,0 +1,782 @@
+# Compatibility
+This script works with other popular inventory systems, like es_extended, qb-inventory, and ox_inventory
+
+For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
+
+# Client functions
+Here there are built-in exports of jaksam's inventory that can be used client-side
+
+## getTotalItemAmount
+Gets the total amount of a specific item in the player's inventory
+
+```lua
+exports['jaksam_inventory']:getTotalItemAmount(itemName, metadata)
+```
+
+### Parameters
+
+- `itemName`: string
+  - The name of the item to count
+- `metadata`: table (optional)
+  - Metadata to match against when counting (if provided, only items with the same metadata AND name will be counted)
+
+### Returns
+
+- `totalAmount`: number
+  - Total amount of the item in the player's inventory
+
+### Example
+
+```lua
+-- Get total amount of bread
+local breadCount = exports['jaksam_inventory']:getTotalItemAmount('bread')
+
+-- Get amount of specific weapon by serial
+local weaponCount = exports['jaksam_inventory']:getTotalItemAmount('weapon_pistol', {
+    serial = "ABC123"
+})
+```
+
+## openInventory
+Opens an inventory alongside the player's inventory
+
+```lua
+exports['jaksam_inventory']:openInventory(inventoryId)
+```
+
+### Parameters
+
+- `inventoryId`: string
+  - The ID of the inventory to open
+
+### Returns
+None - Opens the inventory UI if successful
+
+### Example
+
+```lua
+-- Open a stash inventory
+exports['jaksam_inventory']:openInventory('police_stash_1')
+
+-- Open a trunk inventory
+exports['jaksam_inventory']:openInventory('car_trunk_123')
+```
+
+## closeInventory
+Closes the inventory UI. Can either close a specific inventory or close the entire inventory UI
+
+```lua
+exports['jaksam_inventory']:closeInventory(inventoryId)
+```
+
+### Parameters
+
+- `inventoryId`: string | nil
+  - If provided, removes only the specified inventory from the UI
+  - If nil, closes the entire inventory UI and all open inventories
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Close the entire inventory UI
+exports['jaksam_inventory']:closeInventory()
+
+-- Close a specific inventory (e.g., a stash)
+exports['jaksam_inventory']:closeInventory('police_stash_1')
+
+-- Force close inventory after a specific event
+AddEventHandler('myScript:forceCloseInventory', function()
+    exports['jaksam_inventory']:closeInventory()
+end)
+```
+
+## getInventory
+Gets the player's self inventory
+
+```lua
+exports['jaksam_inventory']:getInventory()
+```
+
+### Parameters
+None
+
+### Returns
+- `inventory`: table
+  - The player's self inventory
+
+### Example
+
+```lua
+-- Get the player's self inventory
+local inventory = exports['jaksam_inventory']:getInventory()
+
+print(json.encode(inventory, {indent = true}))
+--[[
+{
+    "id": "SIV35463",
+    "limits": {
+        "maxSlots": 20,
+        "maxWeight": 30
+    },
+    "items": {
+        "SLOT-3": {
+            "name": "money",
+            "amount": 4402
+        },
+        "SLOT-1": {
+            "name": "weapon_advancedrifle",
+            "metadata": {
+                "serial": "TSK-24895-LFN"
+            },
+            "amount": 1
+        },
+    },
+    "label": "Inventory",
+    "totalWeight": 21.0,
+}
+]]
+```
+
+## getItemByName
+Returns the first item found in the player's self inventory by name (order not guaranteed)
+
+```lua
+exports['jaksam_inventory']:getItemByName(itemName)
+```
+
+### Parameters
+None
+
+### Returns
+- `item`: table
+  - The item found in the player's self inventory
+- `slotId`: number
+  - The slot ID of the item in the player's self inventory
+
+### Example
+
+```lua
+-- Get the first item by name
+local item, slotId = exports['jaksam_inventory']:getItemByName('weapon_advancedrifle')
+
+print(json.encode(item, {indent = true}), "SLOT ID: " .. slotId)
+--[[
+{
+    "name": "weapon_advancedrifle",
+    "metadata": {
+        "serial": "TSK-24895-LFN"
+    },
+    "amount": 1
+}
+SLOT ID: 1
+```
+
+## getItemsByName
+Returns all items that match a specific item name from the player's inventory. Unlike `getItemByName` which returns only the first match, this function returns all occurrences with their slot numbers
+
+```lua
+exports['jaksam_inventory']:getItemsByName(itemName)
+```
+
+### Parameters
+
+- `itemName`: string
+  - The name of the items to search for in the player's inventory
+
+### Returns
+
+- `items`: table
+  - Array of all items matching the name. Each item includes the slot number. Returns empty table if no items found
+  - Item structure:
+  ```lua
+  {
+      name = string,     -- Item name
+      amount = number,   -- Item amount
+      metadata = table,  -- Item metadata (if any)
+      slot = number      -- Slot number where the item is located
+  }
+  ```
+
+### Example
+
+```lua
+-- Get all bread items in inventory
+local breadItems = exports['jaksam_inventory']:getItemsByName('bread')
+
+print('Found ' .. #breadItems .. ' bread items')
+for i, item in pairs(breadItems) do
+    print('Slot ' .. item.slot .. ': ' .. item.amount .. 'x ' .. item.name)
+end
+
+-- Check if player has multiple weapons of the same type
+local pistols = exports['jaksam_inventory']:getItemsByName('weapon_pistol')
+if #pistols > 1 then
+    print('Player has multiple pistols in different slots')
+    for i, pistol in pairs(pistols) do
+        if pistol.metadata and pistol.metadata.serial then
+            print('Serial: ' .. pistol.metadata.serial .. ' in slot ' .. pistol.slot)
+        end
+    end
+end
+
+-- No items found scenario
+local rareItems = exports['jaksam_inventory']:getItemsByName('rare_diamond')
+if #rareItems == 0 then
+    print('Player has no rare diamonds')
+end
+```
+
+## getItemFromSlot
+Gets an item from a specific slot in the player's inventory
+
+```lua
+exports['jaksam_inventory']:getItemFromSlot(slotId)
+```
+
+### Parameters
+
+- `slotId`: number
+  - The slot number to get the item from (in the player's inventory)
+
+### Returns
+
+- `item`: table | nil
+  - The item in the slot, or nil if the slot is empty
+  - Item structure:
+  ```lua
+  {
+      name = string,     -- Item name
+      amount = number,   -- Item amount
+      metadata = table   -- Item metadata
+  }
+  ```
+
+### Example
+
+```lua
+-- Get item from player's slot 5
+local item = exports['jaksam_inventory']:getItemFromSlot(5)
+
+if item then
+    print('Item name:', item.name)
+    print('Amount:', item.amount)
+    if item.metadata then
+        print('Metadata:', json.encode(item.metadata))
+    end
+else
+    print('Slot 5 is empty')
+end
+
+-- Check if a specific slot has a weapon
+local slotItem = exports['jaksam_inventory']:getItemFromSlot(1)
+if slotItem then
+  local staticItem = exports['jaksam_inventory']:getStaticItem(slotItem.name)
+  if staticItem and staticItem.type == 'weapon' then
+    print('Found weapon in slot 1:', slotItem.name)
+  end
+end
+```
+
+## showHotbar
+Shows the hotbar UI with the first 5 slots of the player's inventory
+
+```lua
+exports['jaksam_inventory']:showHotbar()
+```
+
+### Parameters
+None
+
+### Returns
+None - Shows the hotbar UI which automatically hides after 2 seconds
+
+### Example
+
+```lua
+-- Show hotbar
+exports['jaksam_inventory']:showHotbar()
+
+-- Show hotbar after receiving an item
+AddEventHandler('myScript:itemReceived', function()
+    exports['jaksam_inventory']:showHotbar()
+end)
+```
+
+Notes:
+- The hotbar shows slots 1-5 from the player's inventory
+- If `config.dynamicHotbar` is true, empty slots at the end are hidden
+- The hotbar automatically hides after 2 seconds
+- Multiple calls reset the hide timer
+
+## setHotbarDisabled
+Enables or disables the hotbar functionality. Useful for example during minigames. Don't forget to re-enable the hotbar when finished
+
+```lua
+exports['jaksam_inventory']:setHotbarDisabled(disabled)
+```
+
+### Parameters
+
+- `disabled`: boolean
+  - If true, the hotbar will be disabled and `showHotbar()` calls will be ignored
+  - If false, the hotbar will be enabled and will work normally
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Disable the hotbar
+exports['jaksam_inventory']:setHotbarDisabled(true)
+
+-- Enable the hotbar
+exports['jaksam_inventory']:setHotbarDisabled(false)
+
+-- Disable hotbar during a cutscene
+exports['jaksam_inventory']:setHotbarDisabled(true)
+-- ... cutscene code ...
+exports['jaksam_inventory']:setHotbarDisabled(false)
+```
+
+## setHotkeysEnabled
+Enables or disables the hotkeys functionality (slots 1-5). Useful for example during minigames or cutscenes. Don't forget to re-enable the hotkeys when finished
+
+```lua
+exports['jaksam_inventory']:setHotkeysEnabled(enabled)
+```
+
+### Parameters
+
+- `enabled`: boolean
+  - If true, the hotkeys will be enabled and will work normally
+  - If false, the hotkeys will be disabled and pressing 1-5 will be ignored
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Disable the hotkeys
+exports['jaksam_inventory']:setHotkeysEnabled(false)
+
+-- Enable the hotkeys
+exports['jaksam_inventory']:setHotkeysEnabled(true)
+
+-- Disable hotkeys during a minigame
+exports['jaksam_inventory']:setHotkeysEnabled(false)
+-- ... minigame code ...
+exports['jaksam_inventory']:setHotkeysEnabled(true)
+```
+
+## areHotkeysEnabled
+Returns whether the hotkeys are currently enabled or disabled
+
+```lua
+exports['jaksam_inventory']:areHotkeysEnabled()
+```
+
+### Parameters
+None
+
+### Returns
+
+- `enabled`: boolean
+  - True if hotkeys are enabled, false if disabled
+
+### Example
+
+```lua
+-- Check if hotkeys are enabled
+local enabled = exports['jaksam_inventory']:areHotkeysEnabled()
+
+if enabled then
+    print('Hotkeys are enabled')
+else
+    print('Hotkeys are disabled')
+end
+
+-- Toggle hotkeys
+local currentState = exports['jaksam_inventory']:areHotkeysEnabled()
+exports['jaksam_inventory']:setHotkeysEnabled(not currentState)
+```
+
+## dequipWeapon
+Deequips the currently equipped weapon
+
+```lua
+exports['jaksam_inventory']:dequipWeapon(skipSync)
+```
+
+### Parameters
+- `skipSync`: boolean (optional)
+  - If true, the weapon will be deequipped without syncing the ammo to the server
+
+### Returns
+None - Deequips the currently equipped weapon
+
+### Example
+
+```lua
+-- Deequip weapon
+exports['jaksam_inventory']:dequipWeapon()
+
+-- Deequip weapon without syncing the ammo to the server
+exports['jaksam_inventory']:dequipWeapon(true)
+```
+
+## setWeaponWheel
+Enables or disables the weapon wheel and related weapon settings. Useful for minigames where you want the GTA 5 weapon wheel. Note that this function will prevent using weapons from the inventory, it's mainly for FFA minigames
+
+```lua
+exports['jaksam_inventory']:setWeaponWheel(state)
+```
+
+### Parameters
+
+- `state`: boolean | nil
+  - If true, the default GTA5 weapon wheel will be enabled and weapons WON'T be handled by jaksam inventory
+  - If false, the default GTA5 weapon wheel will be disabled and weapons WILL be handled by jaksam inventory
+  - If nil, uses the current internal state
+
+### Returns
+None - Automatically deequips the current weapon when called
+
+### Example
+
+```lua
+-- Disable GTA5 weapon wheel (default jaksam_inventory mode)
+exports['jaksam_inventory']:setWeaponWheel(false)
+
+-- Enable GTA5 weapon wheel (enable only for minigames)
+exports['jaksam_inventory']:setWeaponWheel(true)
+
+-- Enable default GTA 5 weapon wheel during FFA minigame
+exports['jaksam_inventory']:setWeaponWheel(true)
+-- ... minigame code ...
+exports['jaksam_inventory']:setWeaponWheel(false) -- Disable GTA5 wheel again, returning to normal jaksam_inventory 
+```
+
+## setJaksamWeaponWheel
+Enables or disables the jaksam custom radial weapon wheel at runtime. Useful when you need to prevent players from switching weapons via the radial wheel during specific scenarios (cutscenes, minigames, etc.)
+
+```lua
+exports['jaksam_inventory']:setJaksamWeaponWheel(state)
+```
+
+### Parameters
+
+- `state`: boolean | nil
+  - If true, the jaksam radial weapon wheel is enabled
+  - If false, the jaksam radial weapon wheel is disabled (closes it immediately if open)
+  - If nil, uses the current internal state
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Disable jaksam weapon wheel during a cutscene
+exports['jaksam_inventory']:setJaksamWeaponWheel(false)
+-- ... cutscene code ...
+exports['jaksam_inventory']:setJaksamWeaponWheel(true) -- Re-enable after
+```
+
+## registerActionButton
+Registers a custom action button in the inventory UI toolbar. Action buttons appear on the right side of the inventory and can trigger any custom logic when clicked
+
+For a complete guide with images and examples, see the [Action Buttons Guide](../guides/action-buttons.md).
+
+```lua
+exports['jaksam_inventory']:registerActionButton(id, icon, tooltip, onClick, visible)
+```
+
+### Parameters
+
+- `id`: string
+  - Unique identifier for the button. Used to reference the button when showing/hiding/unregistering
+- `icon`: string
+  - Bootstrap Icons class name (e.g. "bi-shield-x", "bi-car-front-fill"). Find icons at https://icons.getbootstrap.com/
+- `tooltip`: string | nil
+  - Tooltip text shown when hovering the button. Can be nil for no tooltip
+- `onClick`: function
+  - Callback function executed when the button is clicked
+- `visible`: boolean | nil
+  - Whether the button should be visible initially. Default: true
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Register a simple action button
+exports['jaksam_inventory']:registerActionButton(
+    'my_custom_button',
+    'bi-star-fill',
+    'My Custom Action',
+    function()
+        print('Button clicked!')
+        -- Your custom logic here
+    end
+)
+
+-- Register a hidden button (to show later based on conditions)
+exports['jaksam_inventory']:registerActionButton(
+    'police_actions',
+    'bi-shield-check',
+    'Police Actions',
+    function()
+        TriggerEvent('myPoliceScript:openMenu')
+    end,
+    false -- hidden by default
+)
+```
+
+## unregisterActionButton
+Removes a previously registered action button from the inventory UI
+
+```lua
+exports['jaksam_inventory']:unregisterActionButton(id)
+```
+
+### Parameters
+
+- `id`: string
+  - The unique identifier of the button to remove (same id used in registerActionButton)
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Unregister a button when no longer needed
+exports['jaksam_inventory']:unregisterActionButton('my_custom_button')
+
+-- Unregister when player leaves a job
+AddEventHandler('esx:setJob', function(job)
+    if job.name ~= 'police' then
+        exports['jaksam_inventory']:unregisterActionButton('police_actions')
+    end
+end)
+```
+
+## showActionButton
+Makes a previously hidden action button visible in the inventory UI
+
+```lua
+exports['jaksam_inventory']:showActionButton(id)
+```
+
+### Parameters
+
+- `id`: string
+  - The unique identifier of the button to show
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Show a button that was registered as hidden
+exports['jaksam_inventory']:showActionButton('police_actions')
+
+-- Show button when player gets a specific job
+AddEventHandler('esx:setJob', function(job)
+    if job.name == 'police' then
+        exports['jaksam_inventory']:showActionButton('police_actions')
+    end
+end)
+```
+
+## hideActionButton
+Hides an action button from the inventory UI without removing it
+
+```lua
+exports['jaksam_inventory']:hideActionButton(id)
+```
+
+### Parameters
+
+- `id`: string
+  - The unique identifier of the button to hide
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Hide a button temporarily
+exports['jaksam_inventory']:hideActionButton('police_actions')
+
+-- Hide button when player is off-duty
+AddEventHandler('esx:setJob', function(job)
+    if job.name ~= 'police' then
+        exports['jaksam_inventory']:hideActionButton('police_actions')
+    end
+end)
+```
+
+## getVehicleInventoryLimits
+Returns the trunk or glovebox limits for a vehicle based on model. Uses the configuration from `_data/vehicles.lua` with priority: `trunkByModel`/`gloveboxByModel` > `trunkByClass`/`gloveboxByClass`. Returns `0, 0` if the vehicle/class is configured to not have trunk/glovebox (`noTrunkVehicles`, `noTrunkClasses`, etc.)
+
+```lua
+exports['jaksam_inventory']:getVehicleInventoryLimits(vehicleModel, inventoryType)
+```
+
+### Parameters
+- `vehicleModel`: number|string
+  - The vehicle model hash (from `GetEntityModel`) or the model name as string
+- `inventoryType`: string
+  - Either `"trunk"` or `"glovebox"`
+
+### Returns
+- `maxSlots`: number|nil
+  - The maximum slots for the vehicle inventory, or nil if no config found
+- `maxWeight`: number|nil
+  - The maximum weight for the vehicle inventory, or nil if no config found
+
+### Example
+
+```lua
+local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
+local maxSlots, maxWeight = exports['jaksam_inventory']:getVehicleInventoryLimits(GetEntityModel(vehicle), "trunk")
+
+if maxWeight then
+    print("Trunk max weight: " .. maxWeight)
+else
+    print("No specific config for this vehicle model/class")
+end
+
+-- Get glovebox limits for 'adder' vehicle
+local gloveboxSlots, gloveboxWeight = exports['jaksam_inventory']:getVehicleInventoryLimits('adder' "glovebox")
+```
+
+## isInventoryOpen
+Checks if an inventory is currently open. If no inventory ID is provided, returns whether the inventory UI is currently active (any inventory open). If an inventory ID is provided, checks if that specific inventory is open
+
+```lua
+exports['jaksam_inventory']:isInventoryOpen(inventoryId)
+```
+
+### Parameters
+
+- `inventoryId`: string | nil
+  - The ID of the inventory to check
+  - If nil, returns whether any inventory UI is currently active
+
+### Returns
+
+- `isOpen`: boolean
+  - True if the inventory (or any inventory UI when inventoryId is nil) is open, false otherwise
+
+### Example
+
+```lua
+-- Check if any inventory UI is open
+local isAnyInventoryOpen = exports['jaksam_inventory']:isInventoryOpen()
+
+if isAnyInventoryOpen then
+    print('An inventory is currently open')
+else
+    print('No inventory is open')
+end
+
+-- Check if a specific inventory is open
+local isPoliceStashOpen = exports['jaksam_inventory']:isInventoryOpen('police_stash_1')
+
+if isPoliceStashOpen then
+    print('Police stash is currently open')
+end
+
+-- Prevent opening another UI if inventory is already open
+if not exports['jaksam_inventory']:isInventoryOpen() then
+    -- Open custom UI
+    TriggerEvent('myScript:openCustomUI')
+else
+    notify("Can't do it while inventory is open")
+end
+```
+
+## setInventoryDisabled
+Completely disables or re-enables inventory opening. When disabled, all inventory interactions are blocked: hotkeys, keybinds, and direct export/event calls. If the inventory is currently open when disabling, it will be closed and the weapon will be dequipped automatically
+
+This is useful for cutscenes, minigames, progress bars, or any scenario where the player should not be able to open the inventory.
+
+```lua
+exports['jaksam_inventory']:setInventoryDisabled(disabled)
+```
+
+### Parameters
+
+- `disabled`: boolean
+  - If true, inventory opening is completely blocked
+  - If false, inventory opening is re-enabled
+
+### Returns
+None
+
+### Example
+
+```lua
+-- Disable inventory during a cutscene
+exports['jaksam_inventory']:setInventoryDisabled(true)
+-- ... cutscene code ...
+exports['jaksam_inventory']:setInventoryDisabled(false)
+
+-- Disable inventory during a progress bar
+exports['jaksam_inventory']:setInventoryDisabled(true)
+-- ... progress bar logic ...
+exports['jaksam_inventory']:setInventoryDisabled(false)
+```
+
+### ox_inventory compatibility
+
+If you are migrating from ox_inventory, this export replaces the `invBusy` state bag pattern. Scripts that set `LocalPlayer.state:set('invBusy', true, true)` will continue to work automatically - jaksam_inventory listens for `invBusy` state bag changes and maps them to the same internal flag.
+
+```lua
+-- ox_inventory pattern (still works with jaksam_inventory)
+LocalPlayer.state:set('invBusy', true, true)
+
+-- jaksam_inventory native export (recommended)
+exports['jaksam_inventory']:setInventoryDisabled(true)
+```
+
+## isInventoryDisabled
+Returns whether inventory opening is currently disabled
+
+```lua
+exports['jaksam_inventory']:isInventoryDisabled()
+```
+
+### Parameters
+None
+
+### Returns
+
+- `disabled`: boolean
+  - True if inventory opening is currently disabled, false otherwise
+
+### Example
+
+```lua
+-- Check if inventory is disabled before doing something
+local disabled = exports['jaksam_inventory']:isInventoryDisabled()
+
+if disabled then
+    print('Inventory is currently disabled')
+end
+
+-- Guard a custom action
+if not exports['jaksam_inventory']:isInventoryDisabled() then
+    exports['jaksam_inventory']:openInventory('my_stash')
+end
+```
