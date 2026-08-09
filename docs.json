@@ -274,7 +274,8 @@
                   "jobs-creator/server/set-handcuffs-state"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           },
           {
             "group": "Drugs Creator",
@@ -383,7 +384,8 @@
                   "drugs-creator/server/pocket-crafting-finished"
                 ]
               }
-            ]
+            ],
+            "expanded": true
           }
         ]
       },
