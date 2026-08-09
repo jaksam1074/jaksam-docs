@@ -111,23 +111,6 @@
             "expanded": true
           },
           {
-            "group": "FiveM Escrow Errors",
-            "icon": "triangle-exclamation",
-            "root": "fivem-escrow-system-errors/home",
-            "pages": [
-              "fivem-escrow-system-errors/error-parsing-script-...-less-than-1-greater-than",
-              "fivem-escrow-system-errors/you-lack-the-required-entitlement",
-              "fivem-escrow-system-errors/what-to-do-if-nothing-is-fixing-the-errors"
-            ],
-            "hidden": true
-          }
-        ]
-      },
-      {
-        "tab": "Jobs & Economy",
-        "icon": "briefcase",
-        "groups": [
-          {
             "group": "Jobs Creator",
             "icon": "briefcase",
             "root": "jobs-creator/home",
@@ -292,7 +275,13 @@
                 ]
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Jobs & Economy",
+        "icon": "briefcase",
+        "groups": [
           {
             "group": "Shops Creator",
             "icon": "cart-shopping",
@@ -878,6 +867,17 @@
                   }
                 ]
               }
+            ]
+          },
+          {
+            "group": "FiveM Escrow Errors",
+            "icon": "triangle-exclamation",
+            "hidden": true,
+            "root": "fivem-escrow-system-errors/home",
+            "pages": [
+              "fivem-escrow-system-errors/error-parsing-script-...-less-than-1-greater-than",
+              "fivem-escrow-system-errors/you-lack-the-required-entitlement",
+              "fivem-escrow-system-errors/what-to-do-if-nothing-is-fixing-the-errors"
             ]
           }
         ]
