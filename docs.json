@@ -60,6 +60,7 @@
             "icon": "house",
             "pages": [
               "index",
+              "untitled-page-2",
               "jaksams-scripts/how-to-update-the-scripts",
               "untitled-page",
               "jaksams-scripts/fix-server-crash-on-script-start",
