@@ -530,7 +530,6 @@
             "root": "dealerships-creator/home",
             "pages": [
               "dealerships-creator/installation",
-              "dealerships-creator/test-page",
               "dealerships-creator/adding-custom-vehicles-classes",
               {
                 "group": "Client",
