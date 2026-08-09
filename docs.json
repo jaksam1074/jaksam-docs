@@ -275,6 +275,115 @@
                 ]
               }
             ]
+          },
+          {
+            "group": "Drugs Creator",
+            "icon": "pills",
+            "root": "drugs-creator/home",
+            "pages": [
+              "drugs-creator/installation",
+              "drugs-creator/faq",
+              "drugs-creator/modules",
+              {
+                "group": "Guides",
+                "pages": [
+                  "drugs-creator/guides/custom-audio-and-images"
+                ]
+              },
+              {
+                "group": "Client",
+                "root": "drugs-creator/client/index",
+                "pages": [
+                  "drugs-creator/client/replace-default-notifications",
+                  "drugs-creator/client/replace-disable-default-progress-bar",
+                  "drugs-creator/client/replace-default-mugshot-notifications",
+                  "drugs-creator/client/replace-default-help-notifications",
+                  "drugs-creator/client/replace-default-police-alert",
+                  "drugs-creator/client/manually-start-drugs-effects",
+                  {
+                    "group": "NPC Selling",
+                    "root": "drugs-creator/client/npc-selling/index",
+                    "pages": [
+                      "drugs-creator/client/npc-selling/disable-default-selling-method-for-npcs",
+                      "drugs-creator/client/npc-selling/add-ped-to-selling-blacklist",
+                      "drugs-creator/client/npc-selling/remove-ped-from-selling-blacklist",
+                      "drugs-creator/client/npc-selling/manually-sell-to-a-npc",
+                      "drugs-creator/client/npc-selling/npc-accepted-drug"
+                    ]
+                  },
+                  {
+                    "group": "Territories",
+                    "root": "drugs-creator/client/territories/index",
+                    "pages": [
+                      "drugs-creator/client/territories/get-current-territory",
+                      "drugs-creator/client/territories/get-territory-owners"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Server",
+                "root": "drugs-creator/server/index",
+                "pages": [
+                  {
+                    "group": "Fields",
+                    "root": "drugs-creator/server/fields/index",
+                    "pages": [
+                      "drugs-creator/server/fields/item-harvested"
+                    ]
+                  },
+                  {
+                    "group": "Harvestable Items",
+                    "root": "drugs-creator/server/harvestable-items/index",
+                    "pages": [
+                      "drugs-creator/server/harvestable-items/item-harvested"
+                    ]
+                  },
+                  {
+                    "group": "Laboratories",
+                    "root": "drugs-creator/server/laboratories/index",
+                    "pages": [
+                      "drugs-creator/server/laboratories/successful-craft"
+                    ]
+                  },
+                  {
+                    "group": "Sellings",
+                    "root": "drugs-creator/server/sellings/index",
+                    "pages": [
+                      "drugs-creator/server/sellings/sold-to-pusher",
+                      "drugs-creator/server/sellings/sold-in-boat",
+                      "drugs-creator/server/sellings/sold-in-plane",
+                      "drugs-creator/server/sellings/sold-to-npc",
+                      "drugs-creator/server/sellings/sold-to-narcos",
+                      "drugs-creator/server/sellings/sold-by-corner-selling",
+                      "drugs-creator/server/sellings/sold-by-hired-dealer"
+                    ]
+                  },
+                  {
+                    "group": "Territories",
+                    "root": "drugs-creator/server/territories/index",
+                    "pages": [
+                      "drugs-creator/server/territories/ownership-changed",
+                      "drugs-creator/server/territories/give-territory-points",
+                      "drugs-creator/server/territories/remove-territory-points",
+                      "drugs-creator/server/territories/reset-territory-points"
+                    ]
+                  },
+                  {
+                    "group": "Hired Dealers",
+                    "root": "drugs-creator/server/hired-dealers/index",
+                    "pages": []
+                  },
+                  {
+                    "group": "Drug Factories",
+                    "root": "drugs-creator/server/drug-factories/index",
+                    "pages": []
+                  },
+                  "drugs-creator/server/police-alerted",
+                  "drugs-creator/server/pocket-crafting-finished"
+                ]
+              }
+            ]
           }
         ]
       },
@@ -391,115 +500,6 @@
         "tab": "Criminality",
         "icon": "user-secret",
         "groups": [
-          {
-            "group": "Drugs Creator",
-            "icon": "pills",
-            "root": "drugs-creator/home",
-            "pages": [
-              "drugs-creator/installation",
-              "drugs-creator/faq",
-              "drugs-creator/modules",
-              {
-                "group": "Guides",
-                "pages": [
-                  "drugs-creator/guides/custom-audio-and-images"
-                ]
-              },
-              {
-                "group": "Client",
-                "root": "drugs-creator/client/index",
-                "pages": [
-                  "drugs-creator/client/replace-default-notifications",
-                  "drugs-creator/client/replace-disable-default-progress-bar",
-                  "drugs-creator/client/replace-default-mugshot-notifications",
-                  "drugs-creator/client/replace-default-help-notifications",
-                  "drugs-creator/client/replace-default-police-alert",
-                  "drugs-creator/client/manually-start-drugs-effects",
-                  {
-                    "group": "NPC Selling",
-                    "root": "drugs-creator/client/npc-selling/index",
-                    "pages": [
-                      "drugs-creator/client/npc-selling/disable-default-selling-method-for-npcs",
-                      "drugs-creator/client/npc-selling/add-ped-to-selling-blacklist",
-                      "drugs-creator/client/npc-selling/remove-ped-from-selling-blacklist",
-                      "drugs-creator/client/npc-selling/manually-sell-to-a-npc",
-                      "drugs-creator/client/npc-selling/npc-accepted-drug"
-                    ]
-                  },
-                  {
-                    "group": "Territories",
-                    "root": "drugs-creator/client/territories/index",
-                    "pages": [
-                      "drugs-creator/client/territories/get-current-territory",
-                      "drugs-creator/client/territories/get-territory-owners"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Server",
-                "root": "drugs-creator/server/index",
-                "pages": [
-                  {
-                    "group": "Fields",
-                    "root": "drugs-creator/server/fields/index",
-                    "pages": [
-                      "drugs-creator/server/fields/item-harvested"
-                    ]
-                  },
-                  {
-                    "group": "Harvestable Items",
-                    "root": "drugs-creator/server/harvestable-items/index",
-                    "pages": [
-                      "drugs-creator/server/harvestable-items/item-harvested"
-                    ]
-                  },
-                  {
-                    "group": "Laboratories",
-                    "root": "drugs-creator/server/laboratories/index",
-                    "pages": [
-                      "drugs-creator/server/laboratories/successful-craft"
-                    ]
-                  },
-                  {
-                    "group": "Sellings",
-                    "root": "drugs-creator/server/sellings/index",
-                    "pages": [
-                      "drugs-creator/server/sellings/sold-to-pusher",
-                      "drugs-creator/server/sellings/sold-in-boat",
-                      "drugs-creator/server/sellings/sold-in-plane",
-                      "drugs-creator/server/sellings/sold-to-npc",
-                      "drugs-creator/server/sellings/sold-to-narcos",
-                      "drugs-creator/server/sellings/sold-by-corner-selling",
-                      "drugs-creator/server/sellings/sold-by-hired-dealer"
-                    ]
-                  },
-                  {
-                    "group": "Territories",
-                    "root": "drugs-creator/server/territories/index",
-                    "pages": [
-                      "drugs-creator/server/territories/ownership-changed",
-                      "drugs-creator/server/territories/give-territory-points",
-                      "drugs-creator/server/territories/remove-territory-points",
-                      "drugs-creator/server/territories/reset-territory-points"
-                    ]
-                  },
-                  {
-                    "group": "Hired Dealers",
-                    "root": "drugs-creator/server/hired-dealers/index",
-                    "pages": []
-                  },
-                  {
-                    "group": "Drug Factories",
-                    "root": "drugs-creator/server/drug-factories/index",
-                    "pages": []
-                  },
-                  "drugs-creator/server/police-alerted",
-                  "drugs-creator/server/pocket-crafting-finished"
-                ]
-              }
-            ]
-          },
           {
             "group": "Robberies Creator",
             "icon": "mask",
