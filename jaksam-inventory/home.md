@@ -1,5 +1,5 @@
 ---
-title: "home"
+title: "About the Resource"
 icon: "house-blank"
 ---
 
