@@ -17,30 +17,30 @@ Use the options below to quickly find the documentation you need.
   <Tab title="ESX + QBCore">
     Use Jaksam Inventory with both **ESX** and **QBCore**.
 
-    - [Installation](/installation)
-    - [Configuration](/configuration)
-    - [Backwards Compatibility](/installation#backwards-compatibility)
+    - [Installation](/jaksam-inventory/installation)
+    - [Configuration](jaksam-inventory/installation)
+    - [Backwards Compatibility](jaksam-inventory/installation#importing-old-items-and-inventories)
   </Tab>
   <Tab title="ESX">
     Documentation specifically for **ESX** servers.
 
     - [ESX Installation](/installation#esx-1107)
-    - [ESX Configuration](/configuration)
-    - [ESX Compatibility](/backwards-compatibility)
+    - [ESX Configuration](/installation#start-order-example-3)
+    - [ESX Compatibility](/jaksam-inventory/installation#importing-old-items-and-inventories)
   </Tab>
   <Tab title="QBCore">
     Documentation specifically for **QBCore** servers.
 
     - [QBCore Installation](/installation#qbcore)
-    - [QBCore Configuration](/configuration)
-    - [QB Inventory Compatibility](/backwards-compatibility)
+    - [QBCore Configuration](/installation#start-order-example-3)
+    - [QB Inventory Compatibility](/jaksam-inventory/installation#importing-old-items-and-inventories)
   </Tab>
   <Tab title="QBX">
     Documentation specifically for **QBX** servers.
 
     - [QBX Installation](/installation#qbx)
-    - [QBX Configuration](/configuration)
-    - [Compatibility](/backwards-compatibility)
+    - [QBX Configuration](/installation#start-order-example-3)
+    - [Compatibility](/jaksam-inventory/installation#importing-old-items-and-inventories)
   </Tab>
 </Tabs>
 
@@ -61,11 +61,11 @@ Looking for the Jaksam Inventory shop or other products?
 ## Documentation
 
 <CardGroup cols={3}>
-  <Card title="Installation" icon="download" href="/installation">
+  <Card title="Installation" icon="download" href="/jaksam-inventory/installation">
     Get Jaksam Inventory installed and running on your server.
   </Card>
 
-  <Card title="Configuration" icon="gear" href="/configuration">
+  <Card title="Configuration" icon="gear" href="/jaksam-inventory/installation">
     Configure the inventory to fit your server.
   </Card>
 
