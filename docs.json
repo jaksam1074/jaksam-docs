@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "palm",
+  "theme": "willow",
   "name": "jaksam's scripts",
   "description": "Documentation for jaksam's FiveM scripts - Jobs, Drugs, Robberies, Inventory and more",
   "logo": "/logo.png",
