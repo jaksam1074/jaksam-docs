@@ -1,5 +1,5 @@
 ---
-title: "nexus-terms"
+title: "Nexus Terms"
 description: "This page will describe the few rules Nexus has, and some information you'll find useful"
 icon: "file-contract"
 ---
