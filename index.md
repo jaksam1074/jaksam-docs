@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Home"
 description: "Documentation for all of jaksam's scripts"
 mode: "wide"
 ---
