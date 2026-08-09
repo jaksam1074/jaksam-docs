@@ -1,87 +1,130 @@
-# How to Update Jaksam Inventory
+---
+title: "how-to-update"
+---
 
-This guide shows you how to update without losing your custom items, settings, and configurations
+# Updating Jaksam Inventory
 
-{% hint style="danger" %}
-**Always backup before updating!** You'll lose all your customizations if you skip this step
-{% endhint %}
+Keep your Jaksam Inventory installation up to date without losing your custom items, settings, integrations, or other customizations.
 
-## What to Backup
+<Warning>
+  **Always create a backup before updating.** Never delete your existing installation before you have a working backup.
+</Warning>
 
-**Always backup these folders:**
-- `_backups/` - Items list backup
-- `_data/` - Your items and settings
-- `_hooks/` - Crafting recipes and custom logic
-- `_images/` - Items images
-- `_modules` - Integration with external scripts
-- `integrations/` - Some settings
-- `current_config.json` - Settings file
+## Before You Start
 
-**Only if you modified them:**
-- `_images/` - Custom item images
-- `dist/assets/variables.css` - Custom theme colors
-- `_locales/` - Translations
-- `dist/menu_translations/` - Menu translations
+<Tip>
+  **Recommended:** Keep your backup for at least a few days after the update. This makes it easy to roll back if something goes wrong.
+</Tip>
 
-## Update Steps
+<CardGroup cols={2}>
+  <Card title="Stop Your Server" icon="server">
+    Always stop your FiveM server before replacing the inventory files.
+  </Card>
 
-1. **Stop your server**
+  <Card title="Create a Backup" icon="floppy-disk">
+    Back up your customized files and folders before installing the new version.
+  </Card>
 
-2. **Backup your files**
-   - Copy the folders to backup from the server to a safe location (like your Desktop)
+  <Card title="Install the Update" icon="download">
+    Remove the old version and upload the latest Jaksam Inventory release.
+  </Card>
 
-3. **Remove the old inventory from server**
-   - Remove the entire `jaksam_inventory` folder from your server
+  <Card title="Restore Customizations" icon="rotate">
+    Restore your backed-up files to the new installation.
+  </Card>
+</CardGroup>
 
-4. **Install the new version**
-   - Download the latest version
-   - Extract and copy the new `jaksam_inventory` folder to your server
+## What Should I Back Up?
 
-5. **Restore your backups**
-   - Copy your backup folders back into the new `jaksam_inventory` folder:
-     - Replace `_data/` with your backup `_data/`
-     - Replace `_hooks/` with your backup `_hooks/`
-     - Replace `integrations/` with your backup `integrations/`
-     - Replace `_images/` with your backup `_images/`
-     - Replace `dist/menu_translations/` with your backup `dist/menu_translations/`
-     - Replace `current_config.json` with your backup `current_config.json`
-     - Replace `dist/assets/variables.css` with your backup `dist/assets/variables.css`
+### Always Back Up
 
-6. **Start your server and test**
+These files and folders should **always** be included in your backup:
+
+| File / Folder | Description |
+| --- | --- |
+| `_data/` | Items and inventory settings |
+| `_backups/` | Item list backups |
+| `_hooks/` | Crafting recipes and custom logic |
+| `_modules/` | Integrations with external scripts |
+| `integrations/` | Integration settings |
+| `current_config.json` | Main configuration file |
+
+### Custom Files
+
+Only back these up if you have modified or added them:
+
+| File / Folder | Description |
+| --- | --- |
+| `_images/` | Custom item images |
+| `dist/assets/variables.css` | Custom theme colors |
+| `_locales/` | Custom translations |
+| `dist/menu_translations/` | Custom menu translations |
+
+<Note>
+  If you haven't customized any of the files listed above, you don't need to back them up.
+</Note>
+
+## Update Process
+
+Follow these steps **in order**.
 
 ## Quick Reference
 
-| Folder/File | When to backup |
-|-------------|----------------|
-| `_data/` | ✅ Always |
-| `_backups/` | ✅ Always |
-| `_hooks/` | ✅ Always |
-| `_modules_/` | ✅ Always |
-| `integrations/` | ✅ Always |
-| `current_config.json` | ✅ Always |
-| `dist/assets/variables.css` | Only if you customized default theme globally |
-| `_images/` | Only if you added custom images |
-| `_locales/` | Only if you added custom translations |
-| `dist/menu_translations/` | Only if you added custom menu translations |
+| File / Folder | Backup Required | Purpose |
+| --- | :-: | --- |
+| `_data/` | Yes | Items and settings |
+| `_backups/` | Yes | Item list backups |
+| `_hooks/` | Yes | Crafting and custom logic |
+| `_modules/` | Yes | External integrations |
+| `integrations/` | Yes | Integration settings |
+| `current_config.json` | Yes | Main configuration |
+| `_images/` | Custom | Custom item images |
+| `dist/assets/variables.css` | Custom | Theme customization |
+| `_locales/` | Custom | Custom translations |
+| `dist/menu_translations/` | Custom | Menu translations |
 
 ## Troubleshooting
 
-**Items disappeared?**
-- Restore the `_data/` folder from your backup
+<AccordionGroup>
+  <Accordion title="My items disappeared">
+    Restore the `_data/` folder from your backup and restart the server.
+  </Accordion>
 
-**Crafting recipes missing?**
-- Restore the `_hooks/` folder from your backup
+  <Accordion title="My crafting recipes are missing">
+    Restore the `_hooks/` folder from your backup.
+  </Accordion>
 
-**Settings reset?**
-- Restore the `current_config.json` file from your backup
+  <Accordion title="My settings were reset">
+    Restore `current_config.json` from your backup.
+  </Accordion>
 
-**Theme colors reset?**
-- Restore `dist/assets/variables.css` from your backup
+  <Accordion title="My theme colors were reset">
+    Restore `dist/assets/variables.css` from your backup if you customized the default theme.
+  </Accordion>
 
-**Server won't start?**
-- Wait 30 seconds (database is updating automatically)
-- If still broken, restore your entire backup and contact support
+  <Accordion title="My custom images are missing">
+    Restore your customized `_images/` folder.
+  </Accordion>
 
-{% hint style="info" %}
-Keep your backup folder for a few days after updating, just in case
-{% endhint %}
+  <Accordion title="My translations are missing">
+    Restore `_locales/` and/or `dist/menu_translations/`, depending on which translation files you customized.
+  </Accordion>
+
+  <Accordion title="My server won't start">
+    1. Make sure the new `jaksam_inventory` folder is installed correctly.
+    2. Make sure your backup files were restored to the correct locations.
+    3. Wait approximately 30 seconds after starting the server, as the database may be updating automatically.
+    4. Check your server console for errors.
+    5. If the problem persists, restore your previous backup and contact support.
+  </Accordion>
+</AccordionGroup>
+
+## Important
+
+<Warning>
+  **Never delete your backup immediately after a successful update.** Keep it for a few days in case you discover an issue later.
+</Warning>
+
+<Check>
+  Once everything is working correctly, your Jaksam Inventory update is complete.
+</Check>
