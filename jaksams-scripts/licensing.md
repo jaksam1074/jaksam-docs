@@ -1,5 +1,6 @@
 ---
 title: "Licensing"
+icon: "drivers-license"
 ---
 
 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
