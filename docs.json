@@ -64,7 +64,8 @@
               "jaksams-scripts/troubleshooting",
               "jaksams-scripts/common-faq",
               "jaksams-scripts/licensing",
-              "jaksams-scripts/nexus-terms"
+              "jaksams-scripts/nexus-terms",
+              "fivem-escrow-system-errors/failed-to-verify-protected-resource"
             ]
           },
           {
@@ -73,7 +74,6 @@
             "root": "fivem-escrow-system-errors/home",
             "pages": [
               "fivem-escrow-system-errors/error-parsing-script-...-less-than-1-greater-than",
-              "fivem-escrow-system-errors/failed-to-verify-protected-resource",
               "fivem-escrow-system-errors/you-lack-the-required-entitlement",
               "fivem-escrow-system-errors/what-to-do-if-nothing-is-fixing-the-errors"
             ]
