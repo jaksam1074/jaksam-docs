@@ -1,7 +1,6 @@
 ---
 title: "Home"
 description: "Documentation for all of jaksam's scripts"
-mode: "wide"
 ---
 
 Here you will find all documentation for jaksam's scripts. Some pages may require coding knowledge.
@@ -27,10 +26,6 @@ Most of the scripts will have a folder named **integrations**, where you can add
 
   <Card title="sv_integrations.lua" icon="server">
     Code for **server side** scripts. Usually where you insert code from the `Server` category of the documentation.
-  </Card>
-
-  <Card title="_modules" icon="folder">
-    Our scripts have a `_modules` folder to easily replace default features like notify, progress bar, stash, or logs. Duplicate an existing module inside it to create your own.
   </Card>
 </CardGroup>
 
