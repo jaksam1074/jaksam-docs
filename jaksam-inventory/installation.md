@@ -1,201 +1,221 @@
+---
+title: "installation"
+---
+
 # Installation
 
-## Installation
+The installation of the script is extremely easy.
 
-The installation of the script is extremely easy
+<Warning>
+  **Do NOT use FileZilla** to upload the files, otherwise the script will **NOT** work. Use [WinSCP](https://winscp.net/eng/download.php) instead.
+</Warning>
 
-{% hint style="danger" %}
-Do NOT use **FileZilla** to upload the files, otherwise the script will NOT work
+<Tabs>
+  <Tab title="ESX 1.10.7">
+    1. Download the script and extract it into your resources.
+    2. Download `jaksam_core` and extract it into your resources.
+    3. Add the following code **right after** `es_extended` in your `server.cfg`:
 
-Use [WinSCP](https://winscp.net/eng/download.php) instead
-{% endhint %}
+    ```cfg
+    add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
+    ensure jaksam_inventory
+    ```
 
-{% tabs %}
+    4. In `es_extended/config.lua`, set:
 
-{% tab title="ESX 1.10.7" %}
-1. Download the script and extract it in your resources
-2. Download the jaksam_core and extract it in your resources
-3. Add this code, **right after** `es_extended` (example: server.cfg)
-```
-add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
-ensure jaksam_inventory
-```
-4. Set in `es_extended\config.lua` -> `Config.OxInventory = false`
-5. Set in `es_extended\config.lua` -> `Config.EnableDefaultInventory = false`
-6. The script will **automatically** setup the database, in case it doesn't, you can manually run the files in `jaksam_inventory/sql/` folder
+    ```lua
+    Config.OxInventory = false
+    ```
 
-Start order example
-```
-# OX
-ensure oxmysql
-ensure ox_lib
+    5. In `es_extended/config.lua`, set:
 
-## ESX
-ensure es_extended
-ensure jaksam_inventory
+    ```lua
+    Config.EnableDefaultInventory = false
+    ```
 
-# Other ESX scripts (start instead of ensure, otherwise es_extended would restart if it's in this folder)
-start [core]
-```
+    6. The script will **automatically** set up the database. If it doesn't, you can manually run the files in the `jaksam_inventory/sql/` folder.
 
-{% hint style="warning" %}
-If it doesn't work, be sure to use the latest version of the official ESX with the dependencies
-{% endhint %}
-{% endtab %}
+    ### Start Order Example
 
-{% tab title="ESX 1.11.3+" %}
-1. Download the script and extract it in your resources
-2. Download the jaksam_core and extract it in your resources
-3. Add this code, **right after** `es_extended` (example: server.cfg)
-```
-add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
-ensure jaksam_inventory
-```
-4. Set in `es_extended\config.lua` -> `Config.CustomInventory = "jaksam_inventory"`
-5. The script will **automatically** setup the database, in case it doesn't, you can manually run the files in `jaksam_inventory/sql/` folder
+    ```cfg
+    # OX
+    ensure oxmysql
+    ensure ox_lib
+    
+    ## ESX
+    ensure es_extended
+    ensure jaksam_inventory
+    
+    # Other ESX scripts
+    start [core]
+    ```
 
-Start order example
-```
-# OX
-ensure oxmysql
-ensure ox_lib
+    <Warning>
+      If it doesn't work, be sure to use the latest version of the official ESX with all required dependencies.
+    </Warning>
+  </Tab>
+  <Tab title="ESX 1.11.3+">
+    1. Download the script and extract it into your resources.
+    2. Download `jaksam_core` and extract it into your resources.
+    3. Add the following code **right after** `es_extended` in your `server.cfg`:
 
-## ESX
-ensure es_extended
-ensure jaksam_inventory
+    ```cfg
+    add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
+    ensure jaksam_inventory
+    ```
 
-# Other ESX scripts (start instead of ensure, otherwise es_extended would restart if it's in this folder)
-start [core]
-```
+    4. In `es_extended/config.lua`, set:
 
-{% endtab %}
+    ```lua
+    Config.CustomInventory = "jaksam_inventory"
+    ```
 
-{% tab title="QBCore" %}
-1. Download the script and extract it in your resources
-2. Download the jaksam_core and extract it in your resources
-3. Enable `Integrations.backwardsCompatibility` for qb-inventory in `jaksam_inventory\integrations\sv_integrations.lua`
-4. Add this code, **right after** `qb-core` (example: server.cfg)
-```
-add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
-ensure jaksam_inventory
-```
-5. The script will **automatically** setup the database, in case it doesn't, you can manually run the files in `jaksam_inventory/sql/` folder
+    5. The script will **automatically** set up the database. If it doesn't, you can manually run the files in the `jaksam_inventory/sql/` folder.
 
-Start order example
-```
-# OX
-ensure oxmysql
-ensure ox_lib
+    ### Start Order Example
 
-## QBCore
-ensure qb-core
-ensure jaksam_inventory
-# Other QBCore scripts
-```
+    ```cfg
+    # OX
+    ensure oxmysql
+    ensure ox_lib
+    
+    ## ESX
+    ensure es_extended
+    ensure jaksam_inventory
+    
+    # Other ESX scripts
+    start [core]
+    ```
+  </Tab>
+  <Tab title="QBCore">
+    1. Download the script and extract it into your resources.
+    2. Download `jaksam_core` and extract it into your resources.
+    3. Enable `Integrations.backwardsCompatibility` for `qb-inventory` in `jaksam_inventory/integrations/sv_integrations.lua`.
+    4. Add the following code **right after** `qb-core` in your `server.cfg`:
 
-{% hint style="warning" %}
-If it doesn't work, be sure to use the latest version of the official QBCore with the dependencies
-{% endhint %}
-{% endtab %}
+    ```cfg
+    add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
+    ensure jaksam_inventory
+    ```
 
+    5. The script will **automatically** set up the database. If it doesn't, you can manually run the files in the `jaksam_inventory/sql/` folder.
 
-{% tab title="QBX" %}
-1. Download the script and extract it in your resources
-2. Download the jaksam_core and extract it in your resources
-3. Enable `Integrations.backwardsCompatibility` for ox_inventory in `jaksam_inventory\integrations\sv_integrations.lua`
-4. Add this code, **right after** `qbx_core` (example: server.cfg)
-```
-add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
-ensure jaksam_inventory
-```
-5. The script will **automatically** setup the database, in case it doesn't, you can manually run the files in `jaksam_inventory/sql/` folder
+    ### Start Order Example
 
-Start order example
-```
-# OX
-ensure oxmysql
-ensure ox_lib
+    ```cfg
+    # OX
+    ensure oxmysql
+    ensure ox_lib
+    
+    ## QBCore
+    ensure qb-core
+    ensure jaksam_inventory
+    
+    # Other QBCore scripts
+    ```
 
-## QBX
-ensure qbx_core
-ensure jaksam_inventory
-# Other QBX scripts
-```
+    <Warning>
+      If it doesn't work, be sure to use the latest version of the official QBCore with all required dependencies.
+    </Warning>
+  </Tab>
+  <Tab title="QBX">
+    1. Download the script and extract it into your resources.
+    2. Download `jaksam_core` and extract it into your resources.
+    3. Enable `Integrations.backwardsCompatibility` for `ox_inventory` in `jaksam_inventory/integrations/sv_integrations.lua`.
+    4. Add the following code **right after** `qbx_core` in your `server.cfg`:
 
-{% hint style="warning" %}
-If it doesn't work, be sure to use the latest version of the official QBX with the dependencies
-{% endhint %}
-{% endtab %}
+    ```cfg
+    add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
+    ensure jaksam_inventory
+    ```
 
-{% endtabs %}
+    5. The script will **automatically** set up the database. If it doesn't, you can manually run the files in the `jaksam_inventory/sql/` folder.
+
+    ### Start Order Example
+
+    ```cfg
+    # OX
+    ensure oxmysql
+    ensure ox_lib
+    
+    ## QBX
+    ensure qbx_core
+    ensure jaksam_inventory
+    
+    # Other QBX scripts
+    ```
+
+    <Warning>
+      If it doesn't work, be sure to use the latest version of the official QBX with all required dependencies.
+    </Warning>
+  </Tab>
+</Tabs>
 
 You are ready to go! Enjoy the script 😁
 
-## Importing old items and inventories
-{% tabs %}
+## Importing Old Items and Inventories
 
-{% tab title="ESX" %}
-1. Go in-game
-2. Use /inventory command, go in settings
-3. Click button "Import from ESX"
-4. Done!
-{% endtab %}
-
-{% tab title="QBCore" %}
-1. Only during this process, make sure the **original qb-inventory** is running (then you can and should remove it)
-2. Use /inventory command, go in settings
-3. Click button "Import from QBCore"
-4. Done!
-{% endtab %}
-
-{% tab title="OX inventory" %}
-1. Only during this process, make sure the ox_inventory is running (then you can and should remove it)
-2. Use /inventory command, go in settings
-3. Click button "Import from OX inventory"
-4. Done!
-{% endtab %}
-
-{% tab title="qs-inventory" %}
-1. Only during this process, make sure the qs_inventory is running (then you can and should remove it)
-2. Use /inventory command, go in settings
-3. Click button "Import from qs-inventory"
-4. Done!
-{% endtab %}
-
-{% tab title="Chezza inventory" %}
-1. Only during this process, make sure the Chezza inventory is running (then you can and should remove it)
-2. Use /inventory command, go in settings
-3. Click button "Import from Chezza inventory"
-4. Done!
-{% endtab %}
-
-{% tab title="TGiann inventory" %}
-1. Only during this process, make sure the TGiann inventory is running (then you can and should remove it)
-2. Use /inventory command, go in settings
-3. Click button "Import from TGiann inventory"
-4. Done!
-{% endtab %}
-
-{% endtabs %}
+<Tabs>
+  <Tab title="ESX">
+    1. Go in-game.
+    2. Use the `/inventory` command and go to **Settings**.
+    3. Click **Import from ESX**.
+    4. Done!
+  </Tab>
+  <Tab title="QBCore">
+    1. Only during this process, make sure the **original `qb-inventory`** is running. After the import, you can and should remove it.
+    2. Use the `/inventory` command and go to **Settings**.
+    3. Click **Import from QBCore**.
+    4. Done!
+  </Tab>
+  <Tab title="OX Inventory">
+    1. Only during this process, make sure `ox_inventory` is running. After the import, you can and should remove it.
+    2. Use the `/inventory` command and go to **Settings**.
+    3. Click **Import from OX inventory**.
+    4. Done!
+  </Tab>
+  <Tab title="qs-inventory">
+    1. Only during this process, make sure `qs-inventory` is running. After the import, you can and should remove it.
+    2. Use the `/inventory` command and go to **Settings**.
+    3. Click **Import from qs-inventory**.
+    4. Done!
+  </Tab>
+  <Tab title="Chezza Inventory">
+    1. Only during this process, make sure the **Chezza inventory** is running. After the import, you can and should remove it.
+    2. Use the `/inventory` command and go to **Settings**.
+    3. Click **Import from Chezza inventory**.
+    4. Done!
+  </Tab>
+  <Tab title="TGiann Inventory">
+    1. Only during this process, make sure the **TGiann inventory** is running. After the import, you can and should remove it.
+    2. Use the `/inventory` command and go to **Settings**.
+    3. Click **Import from TGiann inventory**.
+    4. Done!
+  </Tab>
+</Tabs>
 
 ## Backwards Compatibility
-This inventory lets you use your old scripts, even if they need another inventory
+
+This inventory lets you use your old scripts, even if they require a different inventory system.
 
 ### Default Framework Functions
-You can use the normal inventory functions from your framework
 
-### 'OX Inventory' Compatibility
-If your old scripts use 'OX Inventory', you can enable easy compatibility
+You can use the normal inventory functions provided by your framework.
 
-1. Go in `jaksam_inventory\integrations\sv_integrations.lua`
-2. Enable `ox_inventory` in `Integrations.backwardsCompatibility`
-3. Server may require a restart after it loads the first time with these settings
+### OX Inventory Compatibility
 
-### 'QB Inventory' Compatibility
-If your old scripts use 'QB Inventory', you can enable easy compatibility
+If your old scripts use **OX Inventory**, you can enable easy compatibility.
 
-1. Go in `jaksam_inventory\integrations\sv_integrations.lua`
-2. Enable `qb-inventory` in `Integrations.backwardsCompatibility`
-3. Server may require a restart after it loads the first time with these settings
+1. Go to `jaksam_inventory/integrations/sv_integrations.lua`.
+2. Enable `ox_inventory` in `Integrations.backwardsCompatibility`.
+3. The server may require a restart after it loads for the first time with these settings.
 
-That's all, your old scripts should work with this inventory
+### QB Inventory Compatibility
+
+If your old scripts use **QB Inventory**, you can enable easy compatibility.
+
+1. Go to `jaksam_inventory/integrations/sv_integrations.lua`.
+2. Enable `qb-inventory` in `Integrations.backwardsCompatibility`.
+3. The server may require a restart after it loads for the first time with these settings.
+
+That's all! Your old scripts should now work with this inventory.
