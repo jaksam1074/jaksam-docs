@@ -1,15 +1,18 @@
+---
+title: "Common Escrow Issues"
+---
+
 # Failed to verify protected resource
 
-Error message example:\
-`[svadhesive] Failed to verify protected resource jobs_creator`
+Error message example:<br />`[svadhesive] Failed to verify protected resource jobs_creator`
 
 ## Possible reasons
 
-* You don't have `.fxap` file in the script folder
-* You are using **Filezilla**
-* Your server hosting is using **Filezilla** to upload the script
-* You are transferring the folder to the VPS file by file, please upload the .zip file and extract it **after** it is already on your VPS (so drag and drop the zip file and **not** the folder)
-* The download was corrupted, try doing a new clean install
+- You don't have `.fxap` file in the script folder
+- You are using **Filezilla**
+- Your server hosting is using **Filezilla** to upload the script
+- You are transferring the folder to the VPS file by file, please upload the .zip file and extract it **after** it is already on your VPS (so drag and drop the zip file and **not** the folder)
+- The download was corrupted, try doing a new clean install
 
 ## Solutions
 
