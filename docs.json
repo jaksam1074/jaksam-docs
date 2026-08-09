@@ -61,7 +61,7 @@
             "pages": [
               "index",
               "jaksams-scripts/how-to-update-the-scripts",
-              "untitled-page",
+              "troubleshooting",
               "jaksams-scripts/fix-server-crash-on-script-start",
               "jaksams-scripts/issues-with-items",
               "jaksams-scripts/manually-set-esx-shared-object",
