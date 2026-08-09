@@ -763,7 +763,8 @@
                 "group": "Events",
                 "pages": [
                   "jaksam-inventory/events/server"
-                ]
+                ],
+                "icon": "alarm-clock"
               },
               "jaksam-inventory/hooks"
             ]
