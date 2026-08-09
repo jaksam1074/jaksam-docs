@@ -1,6 +1,7 @@
 ---
 title: "Common FAQ"
 description: "Frequently asked questions shared across all scripts"
+icon: "circle-user-circle-question"
 ---
 
 This page contains common FAQ shared for all scripts. If your issue is not on this page, be sure to check the FAQ of the script you are having issues with.

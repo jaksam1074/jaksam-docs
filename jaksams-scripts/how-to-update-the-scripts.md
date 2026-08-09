@@ -1,6 +1,7 @@
 ---
 title: "How to update the scripts"
 description: "Steps to update your script and preserve your config"
+icon: "cloud-download"
 ---
 
 <Steps>

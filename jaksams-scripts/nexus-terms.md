@@ -1,7 +1,7 @@
 ---
-description: >-
-  This page will describe the few rules Nexus has, and some information you'll
-  find useful
+title: "nexus-terms"
+description: "This page will describe the few rules Nexus has, and some information you'll find useful"
+icon: "file-contract"
 ---
 
 # Nexus Terms
@@ -14,11 +14,11 @@ Nexus is a project by jaksam's scripts that enables server administrators to sha
 
 In simple terms, we store as little sensitive information as possible. Primarily, we save script data, which is non-sensitive. Below is a list of the information that is stored. Please note that this list may be updated, and it is your responsibility to check it periodically
 
-* **Script Version**: The version of the script you are using
-* **Shared Script Data**: The specific script data you actively choose to share (e.g., in Jobs Creator, this would be the job data)
-* **Server IP**: Stored securely as an SHA256 hash, making it unreadable
-* **Player Information**: Includes your player nickname and player identifier
-* **Server License:** Only a small part and stored securely as an SHA256 hash, making it unreadable (So even before encryption, the small part sent won't be usable by anyone)
+- **Script Version**: The version of the script you are using
+- **Shared Script Data**: The specific script data you actively choose to share (e.g., in Jobs Creator, this would be the job data)
+- **Server IP**: Stored securely as an SHA256 hash, making it unreadable
+- **Player Information**: Includes your player nickname and player identifier
+- **Server License:** Only a small part and stored securely as an SHA256 hash, making it unreadable (So even before encryption, the small part sent won't be usable by anyone)
 
 ## Rules
 

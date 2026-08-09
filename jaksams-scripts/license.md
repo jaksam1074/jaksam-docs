@@ -1,6 +1,6 @@
 ---
-title: "License"
-description: "License terms for jaksam's scripts"
+title: "license"
+icon: "id-card"
 ---
 
 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
