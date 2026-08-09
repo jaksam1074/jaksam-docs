@@ -1,17 +1,40 @@
-# Home
+---
+title: "index"
+description: "Documentation for all of jaksam's scripts"
+---
 
-Here you will find all documentations of jaksam's scripts, some pages may require coding knowledge
+Here you will find all documentation for jaksam's scripts. Some pages may require coding knowledge.
 
-## How to use the documentations
+## How to use the documentation
 
-Most of the scripts will have a folder named **integrations**, where you can add the integration code at the bottom of the files. So most of the times, you will only need to add your code inside these files, not in other scripts
+Most of the scripts will have a folder named **integrations**, where you can add the integration code at the bottom of the files. So most of the time, you will only need to add your code inside these files, not in other scripts.
 
-Be sure to read carefully the comments, they will explain you everything you need above the lines of code
+<Tip>
+  Be sure to read the comments carefully, they'll explain everything you need right above the lines of code.
+</Tip>
 
-Integrations files:
+### Integration files
 
-* `integrations/cl_integrations.lua` - Here there will be the code for **client side** scripts, as for example replacing the notifications or progress bar (usually here you can insert the code from `Client` category of the documentations)
-* `integrations/sh_integrations.lua` - Here there will be the code that will run **both on client side and server side**, usually there will be the external scripts names, so you will be able to edit the names if your server uses a different name than the default one
-* `integrations/sv_integrations.lua` - Here there will be the code for **server side** scripts (usually here you can insert the code from `Server` category of the documentations)
+### Integration files
 
-If you are looking for an option that you can't find in normal config/settings, probably it will be inside the integrations files
+<CardGroup cols={4}>
+  <Card title="cl_integrations.lua" icon="laptop">
+    Code for **client side** scripts, for example replacing notifications or the progress bar. Usually where you insert code from the `Client` category of the documentation.
+  </Card>
+
+  <Card title="sh_integrations.lua" icon="arrows-left-right">
+    Code that runs **both on client and server side**, usually external script names, so you can edit them if your server uses a different name than the default one.
+  </Card>
+
+  <Card title="sv_integrations.lua" icon="server">
+    Code for **server side** scripts. Usually where you insert code from the `Server` category of the documentation.
+  </Card>
+
+  <Card title="_modules" icon="folder">
+    Our scripts have a `_modules` folder to easily replace default features like notify, progress bar, stash, or logs. Duplicate an existing module inside it to create your own.
+  </Card>
+</CardGroup>
+
+<Info>
+  If you're looking for an option that you can't find in the normal config/settings, it's probably inside the integrations files.
+</Info>
