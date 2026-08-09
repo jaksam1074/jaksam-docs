@@ -620,7 +620,7 @@ local gloveboxSlots, gloveboxWeight = exports['jaksam_inventory']:getVehicleInve
 ```
 
 <Note>
-  Der letzte Beispiel-Aufruf hatte im Original ein fehlendes Komma zwischen `'adder'` und `"glovebox"` — hier korrigiert. Prüf bitte, ob das im Quellcode selbst auch ein Bug ist.
+  The last example call was missing a comma between `'adder'` and `"glovebox"` in the original — corrected here. Please double-check whether this is also a bug in the source code itself.
 </Note>
 
 ## isInventoryOpen

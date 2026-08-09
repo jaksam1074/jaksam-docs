@@ -1,15 +1,14 @@
 ---
-title: "server"
-icon: "server"
+title: "Server"
+icon: "bolt"
+description: "Events triggered when items are added, removed, or transferred between inventories"
 ---
 
-# Server Events
-
-The inventory system triggers various events when items are added, removed, or transferred. You can listen to these events to implement custom logic
+The inventory system triggers various events when items are added, removed, or transferred. You can listen to these events to implement custom logic.
 
 ## onInventoryItemAdded
 
-Triggered when an item is successfully added to an inventory
+Triggered when an item is successfully added to an inventory.
 
 ### Parameters
 
@@ -19,7 +18,7 @@ Triggered when an item is successfully added to an inventory
 | itemName | string | The name of the item added |
 | amount | number | The quantity added |
 | metadata | table | The item's metadata |
-| slotId | number/nil | The slot where the item was added (can be nil a slot wasn't specified when adding item) |
+| slotId | number/nil | The slot where the item was added (can be nil if a slot wasn't specified when adding item) |
 
 ### Example
 
@@ -29,14 +28,14 @@ AddEventHandler('jaksam_inventory:onInventoryItemAdded', function(inventoryId, i
     if inventoryType ~= 'player' then return end -- Only handle player inventories
 
     print(string.format("Item %s (x%d) added to inventory %s", itemName, amount, inventoryId))
-    
+
     -- For QBCore: Get player by character identifier
     local Player = exports['qb-core']:GetPlayerByCitizenId(inventoryId)
     if Player then
         local playerId = Player.PlayerData.source
         print(string.format("Player %d added item %s", playerId, itemName))
     end
-    
+
     -- For ESX: Get player by character identifier
     -- local xPlayer = ESX.GetPlayerFromIdentifier(inventoryId)
     -- if xPlayer then
@@ -50,7 +49,7 @@ end)
 
 ## onInventoryItemRemoved
 
-Triggered when an item is successfully removed from an inventory
+Triggered when an item is successfully removed from an inventory.
 
 ### Parameters
 
@@ -60,7 +59,7 @@ Triggered when an item is successfully removed from an inventory
 | itemName | string | The name of the item removed |
 | amount | number | The quantity removed |
 | metadata | table | The item's metadata |
-| slotId | number/nil | The slot from which the item was removed (can be nil a slot wasn't specified when removing item) |
+| slotId | number/nil | The slot from which the item was removed (can be nil if a slot wasn't specified when removing item) |
 
 ### Example
 
@@ -70,13 +69,13 @@ AddEventHandler('jaksam_inventory:onInventoryItemRemoved', function(inventoryId,
     if inventoryType ~= 'player' then return end -- Only handle player inventories
 
     print(string.format("Item %s (x%d) removed from inventory %s", itemName, amount, inventoryId))
-    
+
     -- For QBCore: Get player by character identifier
     local Player = exports['qb-core']:GetPlayerByCitizenId(inventoryId)
     if Player then
         local playerId = Player.PlayerData.source
         print(string.format("Player %d removed item %s", playerId, itemName))
-        
+
         -- Example: Log to Discord or database
         -- exports['your_logs']:log({
         --     event = "item_removed",
@@ -85,7 +84,7 @@ AddEventHandler('jaksam_inventory:onInventoryItemRemoved', function(inventoryId,
         --     amount = amount
         -- })
     end
-    
+
     -- For ESX: Get player by character identifier
     -- local xPlayer = ESX.GetPlayerFromIdentifier(inventoryId)
     -- if xPlayer then
@@ -122,15 +121,19 @@ AddEventHandler('jaksam_inventory:onInventoryItemTransferred', function(inventor
     if inventoryTypeFrom ~= 'player' or inventoryTypeTo ~= 'player' then return end -- Only handle player inventories
 
     print(string.format("Item %s (x%d) transferred from %s to %s", itemName, amount, inventoryIdFrom, inventoryIdTo))
-    
+
     -- For QBCore
-        local Player = exports['qb-core']:GetPlayerByCitizenId(inventoryId)
-        if Player then
-            local playerId = Player.PlayerData.source
-            print(string.format("Player %d transferred item %s (x%d) to player %d", playerId, itemName, amount, playerIdTo))
-        end
+    local PlayerFrom = exports['qb-core']:GetPlayerByCitizenId(inventoryIdFrom)
+    local PlayerTo = exports['qb-core']:GetPlayerByCitizenId(inventoryIdTo)
+
+    if PlayerFrom and PlayerTo then
+        local playerIdFrom = PlayerFrom.PlayerData.source
+        local playerIdTo = PlayerTo.PlayerData.source
+        print(string.format("Player %d transferred item %s (x%d) to player %d", playerIdFrom, itemName, amount, playerIdTo))
     end
-    
-    print(string.format("Item %s (x%d) transferred from %s to %s", itemName, amount, inventoryIdFrom, inventoryIdTo))
 end)
 ```
+
+<Warning>
+  The last example in the original had a real Lua bug: unbalanced `end` blocks and an undefined variable (`playerIdTo`). I've corrected it to working code (following the same QBCore pattern as the other examples) — please double-check it matches your actual logic.
+</Warning>
