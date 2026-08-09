@@ -1,6 +1,5 @@
 ---
-title: "license"
-icon: "id-card"
+title: "Licensing"
 ---
 
 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
