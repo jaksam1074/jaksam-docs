@@ -1,6 +1,7 @@
 ---
 title: "index"
 description: "Documentation for all of jaksam's scripts"
+mode: "wide"
 ---
 
 Here you will find all documentation for jaksam's scripts. Some pages may require coding knowledge.
@@ -12,8 +13,6 @@ Most of the scripts will have a folder named **integrations**, where you can add
 <Tip>
   Be sure to read the comments carefully, they'll explain everything you need right above the lines of code.
 </Tip>
-
-### Integration files
 
 ### Integration files
 
