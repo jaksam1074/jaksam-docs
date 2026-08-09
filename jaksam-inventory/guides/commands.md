@@ -1,6 +1,7 @@
 ---
 title: "Commands"
 icon: "slash-forward"
+description: "Full list of admin commands for managing items, inventories, and stashes"
 ---
 
 # Admin Commands
