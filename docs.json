@@ -6,9 +6,9 @@
   "logo": "/logo.png",
   "favicon": "/logo.png",
   "colors": {
-    "primary": "#EFA836",
-    "light": "#F5C36B",
-    "dark": "#D99425"
+    "primary": "#2BB673",
+    "light": "#6ED6A4",
+    "dark": "#1B8452"
   },
   "appearance": {
     "default": "dark"
