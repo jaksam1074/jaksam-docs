@@ -1,5 +1,5 @@
 ---
-title: "Shared Functions"
+title: "Shared"
 icon: "circle-share-nodes"
 description: "Compatibility notes and exports that work on both server and client"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Server Functions"
+title: "Server"
 icon: "server"
 description: "Full reference of server-side exports for managing inventories, items, stashes, and vehicles"
 ---

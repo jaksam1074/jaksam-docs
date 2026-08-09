@@ -1,5 +1,5 @@
 ---
-title: "Client Functions"
+title: "Client"
 icon: "user"
 description: "Compatibility notes and client-side exports for reading and controlling the inventory"
 ---
