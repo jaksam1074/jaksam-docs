@@ -11,7 +11,7 @@
     "dark": "#D99425"
   },
   "appearance": {
-    "default": "system"
+    "default": "dark"
   },
   "search": {
     "prompt": "Search documentation..."
