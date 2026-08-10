@@ -1,5 +1,5 @@
 ---
-title: "add-society-account-money"
+title: "Add society account money"
 description: "Add money to a job's society account."
 icon: "sack-dollar"
 ---
