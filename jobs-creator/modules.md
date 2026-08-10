@@ -20,6 +20,15 @@ Creating a module is extremely easy:
     Pick the module type you want to create (logs, progressbar, stash, etc.).
   </Step>
   <Step title="Duplicate an existing module">
-    Duplicate an existing module and use it as a template.
+    Copy an existing module and paste it in the same folder as a template.
+  </Step>
+  <Step title="Rename the copy">
+    Rename the pasted copy to match the integration you want to create.
+  </Step>
+  <Step title="Open the file">
+    Open the newly renamed file.
+  </Step>
+  <Step title="Modify the events">
+    Edit the file's content to match the events of the third-party script you're integrating.
   </Step>
 </Steps>
