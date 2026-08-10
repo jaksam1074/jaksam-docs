@@ -35,7 +35,7 @@ This page contains common FAQ shared for all scripts. If your issue is not on th
   </Accordion>
 
   <Accordion title="Can't receive ANY item">
-    If you have already tried with different items and you can't receive any of them, check [this page](/trouble-shooting).
+    If you have already tried with different items and you can't receive any of them, check [this page](/jaksams-scripts/troubleshooting).
   </Accordion>
 
   <Accordion title="Can't receive WEAPONS ONLY">
