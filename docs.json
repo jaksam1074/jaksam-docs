@@ -205,7 +205,8 @@
                           "jobs-creator/server/armory/remove-weapon-from-armory",
                           "jobs-creator/server/armory/get-player-armory-weapons",
                           "jobs-creator/server/armory/get-all-armory-weapons"
-                        ]
+                        ],
+                        "icon": "gun"
                       },
                       {
                         "group": "Boss",
