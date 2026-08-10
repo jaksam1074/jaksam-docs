@@ -1,19 +1,21 @@
-# Reset territory points
+---
+title: "Reset territory points"
+description: "Reset a faction's points in a territory to 0."
+icon: "rotate-left"
+---
 
-Resets points for a faction in a territory (sets to 0). Ownership is recalculated after the reset
+Resets points for a faction in a territory (sets to 0). Ownership is recalculated after the reset.
 
-## Export
-
-```lua
+```lua Export
 exports["drugs_creator"]:resetTerritoryPoints(territory, job)
 ```
 
 ### Parameters
 
-| Name        | Data Type | Description                                                                    |
-| ----------- | --------- | ------------------------------------------------------------------------------ |
-| `territory` | string    | Territory name, or `"*"` to target all territories                             |
-| `job`       | string    | Job/gang name to reset, or `"*"` to target all configured factions             |
+| Name         | Data Type | Description                                                          |
+| ------------- | --------- | -------------------------------------------------------------------------- |
+| `territory`    | string    | Territory name, or `"*"` to target all territories                            |
+| `job`          | string    | Job/gang name to reset, or `"*"` to target all configured factions              |
 
 ## Example
 

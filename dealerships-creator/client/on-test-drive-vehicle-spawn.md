@@ -1,10 +1,12 @@
-# On test drive vehicle spawn
+---
+title: "On test drive vehicle spawn"
+description: "Triggered client side after a test drive vehicle is spawned."
+icon: "car-side"
+---
 
-This event is triggered after a vehicle of test drive is spawned on the client doing the test drive
+This event is triggered after a test drive vehicle is spawned on the client doing the test drive.
 
-## Event
-
-```lua
+```lua Event
 AddEventHandler("dealerships_creator:testDrive:vehicleSpawned", function(vehicle, vehicleNetId, plate)
 
 end)
@@ -12,16 +14,16 @@ end)
 
 ### Parameters
 
-| Name           | Data Type | Description            |
-| -------------- | --------- | ---------------------- |
-| `vehicle`      | integer   | The vehicle handle     |
-| `vehicleNetId` | integer   | The vehicle network ID |
-| `plate` | string   | The vehicle's plate |
+| Name           | Data Type | Description               |
+| -------------- | --------- | ---------------------------- |
+| `vehicle`      | integer   | The vehicle handle             |
+| `vehicleNetId` | integer   | The vehicle network ID          |
+| `plate`        | string    | The vehicle's plate             |
 
 ## Example
 
 ```lua
-EventHandler("dealerships_creator:testDrive:vehicleSpawned", function(vehicle, vehicleNetId, plate)
+AddEventHandler("dealerships_creator:testDrive:vehicleSpawned", function(vehicle, vehicleNetId, plate)
     SetVehicleFuelLevel(vehicle, 100.0)
 
     -- You may want to give vehicle keys somehow

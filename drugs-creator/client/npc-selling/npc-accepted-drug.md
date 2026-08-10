@@ -1,10 +1,12 @@
-# NPC accepted drug
+---
+title: "NPC accepted drug"
+description: "Triggered client side after an NPC accepts a drug, for custom animations."
+icon: "check"
+---
 
-Triggered after a NPC accepts the drug, and so you can create your custom animation
+Triggered after an NPC accepts the drug, so you can create your own custom animation.
 
-## Event
-
-```lua
+```lua Event
 AddEventHandler("drugs_creator:npc:acceptedDrug", function(targetPedNetworkId)
 
 end)
@@ -12,15 +14,15 @@ end)
 
 ### Parameters
 
-| Name                 | Data Type      | Description                                                 |
-| -------------------- | -------------- | ----------------------------------------------------------- |
-| `targetPedNetworkId` | ped network ID | The network ID of the ped who accepted to purchase the drug |
+| Name                  | Data Type        | Description                                                    |
+| ---------------------- | ----------------- | ------------------------------------------------------------------- |
+| `targetPedNetworkId`   | ped network ID     | The network ID of the ped who accepted to purchase the drug           |
 
 ## Example
 
 ```lua
-RegisterNetEvent("drugs_creator:framework:ready", function() 
-    -- Disables the default script animations for the npc sell (otherwise there would be 2 animations)
+RegisterNetEvent("drugs_creator:framework:ready", function()
+    -- Disables the default script animations for the NPC sell (otherwise there would be 2 animations)
     exports["drugs_creator"]:disableScriptEvent("drugs_creator:npc:acceptedDrug")
 end)
 

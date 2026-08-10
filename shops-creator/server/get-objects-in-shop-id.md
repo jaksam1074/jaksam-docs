@@ -1,18 +1,20 @@
-# Get objects in shop ID
+---
+title: "Get objects in shop ID"
+description: "Get which objects are being sold or bought in a given shop."
+icon: "boxes-stacked"
+---
 
-This export returns which objects are being sold/bought in shop ID
+This export returns which objects are being sold/bought in a shop ID.
 
-## Export
-
-```lua
+```lua Export
 local objectsInShop = getAllObjectFromPlayersShopId(shopId)
 ```
 
 ### Parameters
 
-| Name     | Data Type | Description                                   |
-| -------- | --------- | --------------------------------------------- |
-| `shopId` | integer   | The shop ID (the same that's in the database) |
+| Name     | Data Type | Description                                     |
+| -------- | --------- | -------------------------------------------------- |
+| `shopId` | integer   | The shop ID (the same one that's in the database)   |
 
 ### Output example
 
@@ -48,6 +50,6 @@ local objectsInShop = getAllObjectFromPlayersShopId(shopId)
 }
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/sv_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/sv_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

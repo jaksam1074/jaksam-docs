@@ -1,18 +1,20 @@
-# Get territory owners
+---
+title: "Get territory owners"
+description: "Get the current owner of each territory."
+icon: "flag"
+---
 
-Returns a table containing the current owner of each territory
+Returns a table containing the current owner of each territory.
 
-## Export
-
-```lua
+```lua Export
 local owners = exports["drugs_creator"]:getTerritoryOwners()
 ```
 
 ### Returns
 
-| Data Type | Description                                                                |
-| --------- | -------------------------------------------------------------------------- |
-| table     | A table where key = territory name and value = owning job/gang name or nil |
+| Data Type | Description                                                                    |
+| --------- | ----------------------------------------------------------------------------------- |
+| table     | A table where key = territory name and value = owning job/gang name, or `nil`         |
 
 ## Example
 

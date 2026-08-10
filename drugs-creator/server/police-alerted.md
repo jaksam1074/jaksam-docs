@@ -1,10 +1,12 @@
-# Police alerted
+---
+title: "Police alerted"
+description: "Triggered server side, once per alert, when police is alerted."
+icon: "siren-on"
+---
 
-Triggered when police is alerted server side (only 1 time per alert, instead of on each player for the client side one)
+Triggered when police is alerted server side (only **1** time per alert, instead of on each player like the client-side one).
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("drugs_creator:alertedPolice", function(coords, message)
 
 end)
@@ -12,10 +14,10 @@ end)
 
 ### Parameters
 
-| Name      | Data Type | Description                                    |
-| --------- | --------- | ---------------------------------------------- |
-| `coords`  | vector3   | Coordinates where a player tried to sell drugs |
-| `message` | string    | Message that would be displayed                |
+| Name      | Data Type | Description                                |
+| --------- | --------- | -------------------------------------------- |
+| `coords`  | vector3   | Coordinates where the alert was triggered     |
+| `message` | string    | Message that would be displayed               |
 
 ## Example
 
@@ -26,6 +28,6 @@ RegisterNetEvent("drugs_creator:alertedPolice", function(coords, message)
 end)
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/sv_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/sv_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

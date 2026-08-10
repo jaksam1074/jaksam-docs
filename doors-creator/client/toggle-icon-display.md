@@ -1,18 +1,20 @@
-# Toggle icon display
+---
+title: "Toggle icon display"
+description: "Show or hide the icons/text of all doors."
+icon: "eye"
+---
 
-Toggles icons/text of all doors
+Toggles icons/text of all doors.
 
-## Export
-
-```lua
+```lua Export
 exports["doors_creator"]:toggleIconDisplay(newState)
 ```
 
-### Return
+### Parameters
 
-| Name       | Data Type | Description                                                  |
-| ---------- | --------- | ------------------------------------------------------------ |
-| `newState` | bool      | <p>true = display icon/text<br>false = hide icon/display</p> |
+| Name       | Data Type | Description                                          |
+| ---------- | --------- | ----------------------------------------------------- |
+| `newState` | boolean   | `true` = display icon/text, `false` = hide icon/text   |
 
 ## Example
 

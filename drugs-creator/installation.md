@@ -52,7 +52,7 @@ The installation of the script is extremely easy.
         The script will **automatically** set up the database. In case it doesn't, you can manually run the files in the `drugs_creator/sql/` folder.
       </Step>
       <Step title="Install menu_default">
-        Download and extract the [menu\_default](https://drive.google.com/file/d/1Ezz-d50NIKQZeZJ-RgyclvNG7qC4Nfu8/view?usp=sharing) script in your resources, **without renaming it**, and add it to your auto start (example: `server.cfg`).
+        Download and extract the [menu_default](https://drive.google.com/file/d/1Ezz-d50NIKQZeZJ-RgyclvNG7qC4Nfu8/view?usp=sharing) script in your resources, **without renaming it**, and add it to your auto start (example: `server.cfg`).
       </Step>
     </Steps>
 
@@ -95,7 +95,7 @@ The installation of the script is extremely easy.
     **Screenshot example**
 
     <Frame>
-      ![QBCore Drugs Creator items example](../.gitbook/assets/qb_core_drugs_creator_items.jpg)
+      ![QBCore Drugs Creator items example](/images/qb_core_drugs_creator_items.jpg)
     </Frame>
   </Tab>
   <Tab title="OX Inventory">

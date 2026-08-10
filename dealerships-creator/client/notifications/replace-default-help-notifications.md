@@ -1,18 +1,20 @@
-# Replace default help notifications
+---
+title: "Replace default help notifications"
+description: "Replace the default 'Press E to ...' help notification with your own."
+icon: "circle-info"
+---
 
-Used to show the usual `Press E to ...` at the top left of the player's screen
+Used to show the usual `Press E to ...` text at the top left of the player's screen.
 
-## Export
-
-```lua
+```lua Export
 exports["dealerships_creator"]:replaceShowHelpNotification(customFunction)
 ```
 
 ### Parameters
 
-| Name             | Data Type | Description                                                                                                                                |
-| ---------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `customFunction` | function  | A function that will replace the default ESX.ShowHelpNotification method. **Requires** the message parameter and will be called each frame |
+| Name             | Data Type | Description                                                                                                    |
+| ---------------- | --------- | ------------------------------------------------------------------------------------------------------------- |
+| `customFunction` | function  | A function that replaces the default `ESX.ShowHelpNotification` method. **Requires** the message parameter and is called each frame |
 
 ## Example
 
@@ -24,12 +26,12 @@ local function myCustomHelpNotification(message)
     ExternalScript.showHelpNotification(message)
 end
 
-RegisterNetEvent("dealerships_creator:framework:ready", function() 
+RegisterNetEvent("dealerships_creator:framework:ready", function()
     -- This will replace the base function with the one you want
     exports["dealerships_creator"]:replaceShowHelpNotification(myCustomHelpNotification)
 end)
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/cl_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/cl_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

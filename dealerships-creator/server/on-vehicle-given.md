@@ -1,10 +1,12 @@
-# On vehicle given
+---
+title: "On vehicle given"
+description: "Triggered server side after a player receives a vehicle in any way."
+icon: "car"
+---
 
-This event is triggered after a player receives a vehicle in any way
+This event is triggered after a player receives a vehicle in any way.
 
-## Event
-
-```lua
+```lua Event
 AddEventHandler("dealerships_creator:giveVehicleToPlayerId", function(playerId, vehicleName, plate)
 
 end)
@@ -13,10 +15,10 @@ end)
 ### Parameters
 
 | Name          | Data Type | Description                                   |
-| ------------- | --------- | --------------------------------------------- |
-| `playerId`    | integer   | The player server ID who received the vehicle |
-| `vehicleName` | string    | The vehicle spawn name                        |
-| `plate`       | string    | The vehicle's plate                           |
+| ------------- | --------- | -------------------------------------------------- |
+| `playerId`    | integer   | The player server ID who received the vehicle          |
+| `vehicleName` | string    | The vehicle spawn name                                |
+| `plate`       | string    | The vehicle's plate                                    |
 
 ## Example
 

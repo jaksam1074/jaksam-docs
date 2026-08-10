@@ -1,21 +1,23 @@
-# Get player ID keys
+---
+title: "Get player ID keys"
+description: "Get all vehicle keys owned by an online player server side."
+icon: "list"
+---
 
-## Export
-
-```lua
+```lua Export
 exports["vehicles_keys"]:getPlayerIdKeys(playerId)
 ```
 
 ### Parameters
 
-| Name       | Data Type | Description                 |
-| ---------- | --------- | --------------------------- |
-| `playerId` | integer   | The target player server ID |
+| Name       | Data Type | Description                    |
+| ---------- | --------- | ---------------------------------- |
+| `playerId` | integer   | The target player server ID           |
 
 ## Example
 
 ```lua
-Citizen.CreateThread(function() 
+Citizen.CreateThread(function()
     local playerServerId = 16
 
     local keys = exports["vehicles_keys"]:getPlayerIdKeys(playerServerId)

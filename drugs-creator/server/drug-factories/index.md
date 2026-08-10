@@ -1,6 +1,10 @@
-# Drug Factories
+---
+title: "Drug Factories"
+description: "Purchasable interiors where players can produce drugs through a multi-step production process."
+icon: "industry"
+---
 
-Drug Factories are purchasable interiors where players can produce drugs through a multi-step production process
+Drug Factories are purchasable interiors where players can produce drugs through a multi-step production process.
 
 ## Features
 
@@ -15,4 +19,4 @@ Drug Factories are purchasable interiors where players can produce drugs through
 
 ## Configuration
 
-All factory settings (prices, stations, production steps, upgrades, stash limits) are managed through the in-game `/drugscreator` menu
+All factory settings (prices, stations, production steps, upgrades, stash limits) are managed through the in-game `/drugscreator` menu.

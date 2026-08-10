@@ -1,27 +1,29 @@
-# Toggle hotwiring
+---
+title: "Toggle hotwiring"
+description: "Temporarily enable or disable hotwiring for the player."
+icon: "bolt"
+---
 
-This export can be useful when you want the player to not be able to use the hotwiring anymore **temporary**
+This export is useful when you want the player to **temporarily** not be able to use hotwiring anymore.
 
-## Export
-
-```lua
+```lua Export
 exports["vehicles_keys"]:toggleHotwiring(newState)
 ```
 
 ### Parameters
 
-| Name       | Data Type | Description                                               |
-| ---------- | --------- | --------------------------------------------------------- |
-| `newState` | bool      | `true` = hotwiring enabled - `false` = hotwiring disabled |
+| Name       | Data Type | Description                                            |
+| ---------- | --------- | ---------------------------------------------------------- |
+| `newState` | boolean   | `true` = hotwiring enabled, `false` = hotwiring disabled       |
 
 ## Example
 
 ```lua
-RegisterNetEvent("vehicle_shop:enteredList", function() 
+RegisterNetEvent("vehicle_shop:enteredList", function()
     exports["vehicles_keys"]:toggleHotwiring(false)
 end)
 
-RegisterNetEvent("vehicle_shop:exitedList", function() 
+RegisterNetEvent("vehicle_shop:exitedList", function()
     exports["vehicles_keys"]:toggleHotwiring(true)
 end)
 ```

@@ -54,32 +54,32 @@ icon: "wrench"
         ```
 
         <Frame caption="Before">
-          ![Before](../.gitbook/assets/can_always_carry_item_before.jpg)
+          ![Before](/images/can_always_carry_item_before.jpg)
         </Frame>
 
         <Frame caption="After">
-          ![After](../.gitbook/assets/can_always_carry_item_after.jpg)
+          ![After](/images/can_always_carry_item_after.jpg)
         </Frame>
 
         If the script has a `current_config.json` file (which is a different file from the previous one), edit the `canAlwaysCarryItem` option to `true` there as well.
 
         <Frame caption="Before">
-          !\[Before\](../.gitbook/assets/current\_config\_can\_always\_carry\_before (1).jpg)
+          ![Before](/images/current_config_can_always_carry_before-1.jpg)
         </Frame>
 
         <Frame caption="After">
-          ![After](../.gitbook/assets/current_config_can_always_carry_after.jpg)
+          ![After](/images/current_config_can_always_carry_after.jpg)
         </Frame>
 
         <Accordion title="What to do if I don't have the canAlwaysCarryItem option?">
           If you don't have the `canAlwaysCarryItem` option, you simply need to add it. Be sure to add it at the **beginning** of the `server` part.
 
           <Frame caption="Before">
-            ![Before](../.gitbook/assets/no_can_always_carry_item_before.jpg)
+            ![Before](/images/no_can_always_carry_item_before.jpg)
           </Frame>
 
           <Frame caption="After">
-            ![After](../.gitbook/assets/no_can_always_carry_item_after.jpg)
+            ![After](/images/no_can_always_carry_item_after.jpg)
           </Frame>
         </Accordion>
       </Step>
@@ -95,7 +95,7 @@ icon: "wrench"
     On ESX, it may happen for many reasons that you encounter the following error (in F8 console or in server console):
 
     <Frame>
-      ![ESX shared object error](../.gitbook/assets/esx_shared_object_error.png)
+      ![ESX shared object error](/images/esx_shared_object_error.png)
     </Frame>
 
     This usually happens because the script cannot find the _ESX shared object_ of your `es_extended` script automatically.
@@ -105,7 +105,7 @@ icon: "wrench"
     This is an example of what you can find (you may have something else):
 
     <Frame>
-      ![ESX shared object example](../.gitbook/assets/esx_shared_object_example.png)
+      ![ESX shared object example](/images/esx_shared_object_example.png)
     </Frame>
 
     After you found your _ESX shared object_ name, you can manually set it in the files `integrations/sv_integrations.lua` **and** `integrations/cl_integrations.lua`, replacing `nil` with the name of your shared object **(between double quotes)**.
@@ -115,7 +115,7 @@ icon: "wrench"
     An example:
 
     <Frame>
-      ![Edited shared object example](../.gitbook/assets/edited_shared_object.png)
+      ![Edited shared object example](/images/edited_shared_object.png)
     </Frame>
   </Accordion>
 </AccordionGroup>

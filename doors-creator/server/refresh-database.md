@@ -1,14 +1,12 @@
 ---
-description: >-
-  Useful to refresh Doors Creator after you manually create something in the
-  database
+title: "Refresh database"
+description: "Refresh Doors Creator after manually creating something in the database."
+icon: "rotate"
 ---
 
-# Refresh database
+Useful to refresh Doors Creator after you manually create something in the database.
 
-## Export
-
-```lua
+```lua Export
 exports["doors_creator"]:refreshDatabase()
 ```
 
@@ -18,7 +16,7 @@ exports["doors_creator"]:refreshDatabase()
 RegisterCommand("refreshDoorsCreator", function(playerId)
     -- Only server console can use the command
     if(playerId and playerId > 0) then return end
-    
+
     exports["doors_creator"]:refreshDatabase()
 end)
 ```

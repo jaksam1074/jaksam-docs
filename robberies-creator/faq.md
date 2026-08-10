@@ -1,25 +1,23 @@
-# FAQ
+---
+title: "FAQ"
+description: "Frequently asked questions specific to Robberies Creator."
+icon: "circle-question"
+---
 
-This page has FAQs related **ONLY to this script**, be sure to also check [common-faq.md](../jaksams-scripts/common-faq.md "mention") for other issues
+This page has FAQs related **only to this script** — be sure to also check the [common FAQ](/jaksams-scripts/common-faq) for other issues.
 
-<details>
+<AccordionGroup>
+  <Accordion title="Cargo vehicle is not moving">
+    If the cargo vehicle doesn't move when nobody is close to it, it's completely normal.
 
-<summary>Cargo vehicle is not moving</summary>
+    The cargo will only move if there is at least one player in its area — this is a FiveM mechanic.
+  </Accordion>
 
-If the cargo vehicle doesn't move when nobody is close to it, it's completely normal
+  <Accordion title="Heist alerts not working">
+    If you are not receiving any alert when a heist starts, it's because you didn't set up an alarm in the heist.
 
-The cargo will move only if there is at least one player in the area of it, this depends on FiveM mechanics
+    To set up an alarm, you need a step with the bell 🔔 icon, which allows you to configure alarms.
 
-</details>
-
-<details>
-
-<summary>Heists alerts not working</summary>
-
-If you are not receiving any alert when a heist is started, is because you didn't setup any alarm in the heist.
-
-To setup an alarm, you need a step which has the bell icon :bell:, which allows you to setup the alarms.
-
-An example can be the 'hackable panel' or a 'safe'
-
-</details>
+    An example would be the "hackable panel" or a "safe".
+  </Accordion>
+</AccordionGroup>

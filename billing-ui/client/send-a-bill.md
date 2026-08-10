@@ -1,21 +1,23 @@
-# Send a bill
+---
+title: "Send a bill"
+description: "Send an invoice to a target player."
+icon: "paper-plane"
+---
 
-Trigger to send an invoice to a target player
+Trigger to send an invoice to a target player.
 
-## Event
-
-```lua
+```lua Event
 TriggerServerEvent("billing_ui:sendBill", targetId, societyName, reason, amount)
 ```
 
 ### Parameters
 
-| Name          | Data Type | Description                                                 |
-| ------------- | --------- | ----------------------------------------------------------- |
-| `targetId`    | integer   | Target player server ID                                     |
-| `societyName` | string    | Society name (it will receive the money from the paid bill) |
-| `reason`      | string    | The reason of the invoice                                   |
-| `amount`      | integer   | The amount of the invoice                                   |
+| Name          | Data Type | Description                                                    |
+| ------------- | --------- | ------------------------------------------------------------------ |
+| `targetId`    | integer   | Target player server ID                                              |
+| `societyName` | string    | Society name (it will receive the money from the paid bill)          |
+| `reason`      | string    | The reason of the invoice                                             |
+| `amount`      | integer   | The amount of the invoice                                             |
 
 ## Example
 

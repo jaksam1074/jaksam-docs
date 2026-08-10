@@ -1,25 +1,25 @@
-# FAQ
+---
+title: "FAQ"
+description: "Frequently asked questions specific to Blips Creator."
+icon: "circle-question"
+---
 
-This page has FAQs related **ONLY to this script**, be sure to also check [common-faq.md](../jaksams-scripts/common-faq.md "mention") for other issues
+This page has FAQs related **only to this script** — be sure to also check the [common FAQ](/jaksams-scripts/common-faq) for other issues.
 
-<details>
+<AccordionGroup>
+  <Accordion title="Some blips are red">
+    If some blips are red, it's probably because one of your other scripts has a file named `minimap.gfx`.
 
-<summary>Some blips are red</summary>
+    Delete that file and restart the server.
+  </Accordion>
 
-If some blips are red, is probably because one of your other scripts has a file named `minimap.gfx`
+  <Accordion title="Blips are flashing">
+    If the blips on the map are flashing, it's because you have more than 99 blips.
 
-Delete that file and restart the server
+    Unfortunately GTA 5 doesn't support more than 99 blips, so the only way to fix it is by reducing the blip count.
 
-</details>
-
-<details>
-
-<summary>Blips are flashing</summary>
-
-If the blips on the map are flashing, it's because you have more than 99 blips
-
-Unfortunately GTA 5 doesn't support more than 99 blips, so the only way to fix it is reducing the blips count
-
-_Note: If you give to more blips the **same** name and the **same** sprite, they will group together_
-
-</details>
+    <Note>
+      If you give multiple blips the **same** name and the **same** sprite, they will group together.
+    </Note>
+  </Accordion>
+</AccordionGroup>

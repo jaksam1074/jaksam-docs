@@ -1,8 +1,28 @@
-# How to add minigames
-Adding new minigames is easy. Follow the procedure to add a new minigame:
-1. Duplicate the file `missions_creator/client/minigames/_EXAMPLE_MINIGAME.lua`
-2. Rename the file to your minigame name
-3. Open the new file, remove the comments at the beginning and at the end of the file (so remove these symbols: `--[[` and `--]]`)
-4. Change `YOUR_MINIGAME_NAME` to your minigame name
-5. Edit the function to support your minigame, it must return true on success and false on failure. You can see the examples with `datacrack.lua`, `fingerprint.lua` and `memory_game.lua`
-6. Save the file and restart the script. If you did everything correctly (especially implementing the minigame itself), you should see your minigame in the list of minigames in the script
+---
+title: "How to add minigames"
+description: "Add your own custom minigame to Missions Creator."
+icon: "gamepad"
+---
+
+Adding new minigames is easy. Follow this procedure to add a new minigame:
+
+<Steps>
+  <Step title="Duplicate the example file">
+    Duplicate the file `missions_creator/client/minigames/_EXAMPLE_MINIGAME.lua`.
+  </Step>
+  <Step title="Rename the file">
+    Rename the file to your minigame's name.
+  </Step>
+  <Step title="Remove the comment markers">
+    Open the new file and remove the comments at the beginning and at the end of the file (remove the `--[[` and `--]]` symbols).
+  </Step>
+  <Step title="Rename the minigame">
+    Change `YOUR_MINIGAME_NAME` to your minigame's name.
+  </Step>
+  <Step title="Implement your minigame">
+    Edit the function to support your minigame. It must return `true` on success and `false` on failure. You can see examples in `datacrack.lua`, `fingerprint.lua`, and `memory_game.lua`.
+  </Step>
+  <Step title="Restart the script">
+    Save the file and restart the script. If everything was done correctly (especially implementing the minigame itself), you should see your minigame in the script's list of minigames.
+  </Step>
+</Steps>

@@ -1,24 +1,26 @@
-# Get door ID data
+---
+title: "Get door ID data"
+description: "Get a door's data server side by its ID."
+icon: "door-closed"
+---
 
-## Export
-
-```lua
+```lua Export
 exports["doors_creator"]:getDoorIdData(doorId)
 ```
 
 ### Parameters
 
-| Name     | Data Type | Description                 |
-| -------- | --------- | --------------------------- |
-| `doorId` | integer   | The door ID to get the data |
+| Name     | Data Type | Description                   |
+| -------- | --------- | -------------------------------- |
+| `doorId` | integer   | The door ID to get the data for    |
 
 ## Example
 
 ```lua
-Citizen.CreateThread(function() 
+Citizen.CreateThread(function()
     local doorId = 55
     local doorData = exports["doors_creator"]:getDoorIdData(doorId)
 
-    print("The name of the door " .. doorId .. " is " .. doorData.label)
+    print("The name of door " .. doorId .. " is " .. doorData.label)
 end)
 ```

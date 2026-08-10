@@ -1,8 +1,10 @@
-# Vehicle window broken
+---
+title: "Vehicle window broken"
+description: "Triggered server side when a player breaks a vehicle window."
+icon: "car-burst"
+---
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("vehicles_keys:vehicleWindowBroken", function(playerId, vehicleNetId)
 
 end)
@@ -10,10 +12,10 @@ end)
 
 ### Parameters
 
-| Name           | Data Type        | Description                               |
-| -------------- | ---------------- | ----------------------------------------- |
-| `playerId`     | integer          | The player server ID who broke the window |
-| `vehicleNetId` | integer (net ID) | The vehicle network ID                    |
+| Name           | Data Type | Description                              |
+| -------------- | --------- | -------------------------------------------- |
+| `playerId`     | integer   | The player server ID who broke the window       |
+| `vehicleNetId` | integer   | The vehicle network ID                             |
 
 ## Example
 

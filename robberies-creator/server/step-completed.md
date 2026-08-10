@@ -1,10 +1,12 @@
-# Step completed
+---
+title: "Step completed"
+description: "Triggered when a step of a heist is completed."
+icon: "circle-check"
+---
 
-Triggered when a step of a heist is completed
+Triggered when a step of a heist is completed.
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("robberies_creator:heist:stepCompleted", function(playerId, heistId, stageId, stepType)
 
 end)
@@ -12,25 +14,25 @@ end)
 
 ### Parameters
 
-| Name       | Data Type | Description                                                                           |
-| ---------- | --------- | ------------------------------------------------------------------------------------- |
-| `playerId` | int       | player server ID who completed the step                                               |
-| `heistId`  | int       | Heist ID                                                                              |
-| `stageId`  | int       | Stage ID                                                                              |
-| `stepType` | string    | The step type. Available steps types are defined [here](step-completed.md#step-types) |
+| Name       | Data Type | Description                                                                              |
+| ---------- | --------- | -------------------------------------------------------------------------------------------- |
+| `playerId` | integer   | Player server ID who completed the step                                                       |
+| `heistId`  | integer   | Heist ID                                                                                        |
+| `stageId`  | integer   | Stage ID                                                                                        |
+| `stepType` | string    | The step type. Available step types are listed [below](#step-types)                            |
 
 ### Step types
 
-* `SAFE`
-* `ROBBABLE_OBJECT`
-* `HACKABLE_PANEL`
-* `THERMAL_CHARGE`
-* `LOCKPICKABLE_DOOR`
+- `SAFE`
+- `ROBBABLE_OBJECT`
+- `HACKABLE_PANEL`
+- `THERMAL_CHARGE`
+- `LOCKPICKABLE_DOOR`
 
 ## Example
 
 ```lua
--- This hypothetical example will give xp when a player does a step which has a minigame
+-- This hypothetical example will give xp when a player completes a step that has a minigame
 RegisterNetEvent("robberies_creator:heist:stepCompleted", function(playerId, heistId, stageId, stepType)
     if(stepType ~= "ROBBABLE_OBJECT") then
         TriggerEvent("xp_script:addPlayerXp", playerId, 10)
@@ -38,6 +40,6 @@ RegisterNetEvent("robberies_creator:heist:stepCompleted", function(playerId, hei
 end)
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/sv_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/sv_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

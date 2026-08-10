@@ -1,21 +1,25 @@
-# Remove identifier queue priority
+---
+title: "Remove identifier queue priority"
+description: "Remove a queue priority for an identifier."
+icon: "arrow-down-short-wide"
+---
 
-To remove a queue priority for an identifier
+Remove a queue priority for an identifier.
 
-## Export
+<CodeGroup>
 
-```lua
+```lua Export
 exports["easy_allowlist"]:removeIdentifierQueuePriority(identifier)
 ```
 
-### Parameters
-
-| Name         | Data Type | Description                |
-| ------------ | --------- | -------------------------- |
-| `identifier` | string    | The player main identifier |
-
-## Example
-
-```lua
+```lua Example
 exports["easy_allowlist"]:removeIdentifierQueuePriority("steam:71002010c2f9c5d")
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name         | Data Type | Description                 |
+| ------------ | --------- | ---------------------------- |
+| `identifier` | string    | The player's main identifier |

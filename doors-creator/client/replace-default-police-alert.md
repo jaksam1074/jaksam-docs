@@ -1,3 +1,7 @@
-# Replace default police alert
+---
+title: "Replace default police alert"
+description: "Replace the police dispatch behavior using a Doors Creator module."
+icon: "siren-on"
+---
 
-You can use Doors Creator [modules.md](../modules.md "mention") if you want to use your dispatch script
+You can use a Doors Creator [module](/doors-creator/modules) if you want to use your own dispatch script.

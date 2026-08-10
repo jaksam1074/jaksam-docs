@@ -40,7 +40,7 @@ To show players the metadata of an entire item type, it's 100% the same method, 
 
 ### Optional: Making metadata values look nicer
 
-Sometimes you want to show metadata in a prettier way to players. For example, instead of showing "weapon\_pistol", you want to show "Pistol". This is where formatters come in!
+Sometimes you want to show metadata in a prettier way to players. For example, instead of showing "weapon_pistol", you want to show "Pistol". This is where formatters come in!
 
 <Tip>
   A formatter is like a translator: it takes the original value (e.g. `weapon_pistol`) and converts it to something nicer (e.g. `Pistol`).

@@ -1,13 +1,17 @@
-# Replacing default events names
+---
+title: "Replacing default events names"
+description: "Rename the external event names Jobs Creator triggers, to match your own server's scripts."
+icon: "pen"
+---
 
-In case your server uses different event names than the default ones, you can edit those names in `jobs_creator/integrations/cl_integrations.lua` **and** `jobs_creator/integrations/sv_integrations.lua`
+In case your server uses different event names than the default ones, you can edit those names in `jobs_creator/integrations/cl_integrations.lua` **and** `jobs_creator/integrations/sv_integrations.lua`.
 
 Example of default ones:
 
 ```lua
 EXTERNAL_EVENTS_NAMES = {
     ["esx:getSharedObject"] = nil,
-    
+
     ["esx_skin:save"] = "esx_skin:save",
 
     ["esx_billing:sendBill"] = "esx_billing:sendBill",
@@ -19,13 +23,12 @@ EXTERNAL_EVENTS_NAMES = {
 }
 ```
 
-\
 Example of edited ones:
 
 ```lua
 EXTERNAL_EVENTS_NAMES = {
     ["esx:getSharedObject"] = "gamemode:getSharedObject",
-    
+
     ["esx_skin:save"] = "my_skin_script:save",
 
     ["esx_billing:sendBill"] = "billing_ui:sendBill",

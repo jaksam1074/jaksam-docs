@@ -409,7 +409,7 @@ payload = {
 
   <Accordion title="Populate dumpsters with random loot">
     <Note>
-      An existing hook for this is already provided in the `_hooks` folder of jaksam\_inventory.
+      An existing hook for this is already provided in the `_hooks` folder of jaksam_inventory.
     </Note>
 
     ```lua

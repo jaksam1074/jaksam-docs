@@ -1,48 +1,40 @@
-# FAQ
+---
+title: "FAQ"
+description: "Frequently asked questions specific to Doors Creator."
+icon: "circle-question"
+---
 
-This page has FAQs related **ONLY to this script**, be sure to also check [common-faq.md](../jaksams-scripts/common-faq.md "mention") for other issues
+This page has FAQs related **only to this script** — be sure to also check the [common FAQ](/jaksams-scripts/common-faq) for other issues.
 
-<details>
+<AccordionGroup>
+  <Accordion title="Can't select a door">
+    If you can't select a door, it means the door model is not in the allowed doors list.
 
-<summary>Can't select a door</summary>
+    To add the door model to the list, press **H** while selecting the door.
 
-If you can't select a door, it means that the door model is not in the allowed doors list
+    If you still can't select the door after pressing H, these are the possible reasons:
 
-To add the door model in the list, you can press **H** while selecting the doors
+    - You have a script that adds a weapon to your character
+    - The door isn't usable for some reason — if it's a modded MLO, that's probably the cause
+  </Accordion>
 
-In case you can't select the door after pressing H, these are the possible reasons:
+  <Accordion title="Vault door not working">
+    If a certain door isn't working with the vault option, try **both** the ratio and heading options.
 
-* You have a script which adds a weapon on your character
-* The door is not usable for some reasons, if it's a modded MLO is probably fault of it
+    For the heading, you'll have to find which value fits that door best on your own (0-360 are the min/max values), or use the built-in button in the script to find it.
 
-</details>
+    Be sure to try different speeds (like a slower speed).
 
-<details>
+    <Note>
+      If a door doesn't work at all, there is nothing that can be done.
+    </Note>
+  </Accordion>
 
-<summary>Vault door not working</summary>
+  <Accordion title="Doors not locked after restart">
+    If a door isn't locked when it should be after a script/server restart, it means you enabled the option to save the door lock state in the script's menu settings.
+  </Accordion>
 
-If a certain door is not working with the vault option, you have to try **both** the ratio and heading options
-
-About the heading, you'll have to find on your own which headings fit better for that door (0-360 are the min/max values), or you can use the simple button to find it, it's in the script
-
-Be sure to try different speeds (like trying a slower speed)
-
-_If a door doesn't work at all, there is nothing possible to do_
-
-</details>
-
-<details>
-
-<summary>Doors not locked after restart</summary>
-
-If a door is not locked when it should after script/server restart, it means you enabled the option to save the door lock state in the script menu settings
-
-</details>
-
-<details>
-
-<summary>I can't confirm new door</summary>
-
-If you can't confirm a new door with ENTER key, you can edit the keys in `integrations/cl_integrations.lua` file
-
-</details>
+  <Accordion title="I can't confirm a new door">
+    If you can't confirm a new door with the ENTER key, you can edit the keybinds in the `integrations/cl_integrations.lua` file.
+  </Accordion>
+</AccordionGroup>

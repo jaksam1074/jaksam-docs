@@ -1,10 +1,12 @@
-# Replace/Disable default progress bar
+---
+title: "Replace/Disable default progress bar"
+description: "Replace the default progress bar with your own, or trigger the default one from external scripts."
+icon: "spinner"
+---
 
-Triggered when using progress bar
+Triggered when using the progress bar.
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("vehicles_keys:internalProgressBar", function(time, text)
 
 end)
@@ -12,16 +14,16 @@ end)
 
 ### Parameters
 
-| Name   | Data Type | Description                      |
-| ------ | --------- | -------------------------------- |
-| `time` | int       | Progress bar duration in seconds |
-| `text` | string    | Description text                 |
+| Name   | Data Type | Description                       |
+| ------ | --------- | ------------------------------------ |
+| `time` | integer   | Progress bar duration in seconds       |
+| `text` | string    | Description text                        |
 
 ## Example
 
 ```lua
 -- In vehicles_keys/integrations/cl_integrations.lua
-RegisterNetEvent("vehicles_keys:framework:ready", function() 
+RegisterNetEvent("vehicles_keys:framework:ready", function()
     -- Disables the default script progress bar (otherwise there would be 2 progress bars)
     exports["vehicles_keys"]:disableScriptEvent("vehicles_keys:internalProgressBar")
 end)
@@ -33,6 +35,6 @@ RegisterNetEvent("vehicles_keys:internalProgressBar", function(time, text)
 end)
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/cl_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/cl_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

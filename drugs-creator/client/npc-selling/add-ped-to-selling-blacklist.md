@@ -1,20 +1,24 @@
-# Add ped to selling blacklist
+---
+title: "Add ped to selling blacklist"
+description: "Prevent a specific ped from being sold drugs to, for example shop keepers or dealers."
+icon: "user-slash"
+---
 
-To add a ped to NPC selling blacklist, so players won't be able to sell to the ped (example: blackjack dealers, shop keepers, etc.)
+Adds a ped to the NPC selling blacklist, so players won't be able to sell to that ped (example: blackjack dealers, shop keepers, etc.).
 
-If you prefer an easier way, you can blacklist entire ped models in `drugs_creator/integrations/cl_integrations.lua`
+<Note>
+  If you prefer an easier way, you can blacklist entire ped models in `drugs_creator/integrations/cl_integrations.lua`.
+</Note>
 
-## Event
-
-```lua
+```lua Export
 exports["drugs_creator"]:addPedToNPCSellingBlacklist(ped)
 ```
 
 ### Parameters
 
-| Name  | Data Type     | Description             |
-| ----- | ------------- | ----------------------- |
-| `ped` | ped (integer) | The target ped's handle |
+| Name  | Data Type       | Description             |
+| ----- | ---------------- | -------------------------- |
+| `ped` | ped (integer)     | The target ped's handle       |
 
 ## Example
 

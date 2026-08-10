@@ -1,22 +1,26 @@
-# Set identifier queue priority
+---
+title: "Set identifier queue priority"
+description: "Set a queue priority for an identifier."
+icon: "arrow-up-short-wide"
+---
 
-To set an identifier queue priority
+Set an identifier's queue priority.
 
-## Export
+<CodeGroup>
 
-```lua
+```lua Export
 exports["easy_allowlist"]:setIdentifierQueuePriority(identifier, priority)
 ```
 
-### Parameters
-
-| Name         | Data Type | Description              |
-| ------------ | --------- | ------------------------ |
-| `identifier` | string    | Player's main identifier |
-| `priority`   | integer   | Queue priority           |
-
-## Example
-
-```lua
+```lua Example
 exports["easy_allowlist"]:setIdentifierQueuePriority("steam:71002010c2f9c5d", 15)
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name         | Data Type | Description                |
+| ------------ | --------- | ---------------------------- |
+| `identifier` | string    | The player's main identifier |
+| `priority`   | integer   | Queue priority               |

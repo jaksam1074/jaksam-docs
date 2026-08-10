@@ -1,20 +1,22 @@
-# Self give current vehicle plate
+---
+title: "Self give current vehicle plate"
+description: "Give yourself the keys of the vehicle you're currently driving, without needing its plate."
+icon: "car-side"
+---
 
-This event does the same thing as "[Self give vehicle plate](self-give-vehicle-plate.md)", but this is even easier since it doesn't require any parameter, it's just a copy paste line
+This event does the same thing as [Self give vehicle plate](/vehicles-keys/client/self-give-vehicle-plate), but it's even easier since it doesn't require any parameter — it's just a copy-paste line.
 
-Triggering this event will automatically find the vehicle the local player is driving, and it will give its keys to him
+Triggering this event will automatically find the vehicle the local player is driving and give its keys to them.
 
-## Event
-
-```lua
+```lua Event
 TriggerServerEvent("vehicles_keys:selfGiveCurrentVehicleKeys")
 ```
 
 ## Example
 
 ```lua
--- Just an event of a imaginary driving school script
-RegisterNetEvent("driving_school:test_started", function() 
+-- Just an event of an imaginary driving school script
+RegisterNetEvent("driving_school:test_started", function()
     local vehicle = CreateVehicle("blista", 249.40, -1407.23, 30.40, true, false)
     SetVehicleColours(vehicle, 4, 5)
     SetVehicleExtraColours(vehicle, 1, 2)

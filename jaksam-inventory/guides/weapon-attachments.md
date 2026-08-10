@@ -131,7 +131,7 @@ Now you need to add the component hash(es) that this item should apply to weapon
 
 ## Complete Example
 
-Let's say you want to add a suppressor for a modded weapon called "WEAPON\_MODDEDAK47":
+Let's say you want to add a suppressor for a modded weapon called "WEAPON_MODDEDAK47":
 
 <Steps>
   <Step title="Check existing items">

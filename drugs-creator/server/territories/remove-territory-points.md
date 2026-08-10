@@ -1,20 +1,22 @@
-# Remove territory points
+---
+title: "Remove territory points"
+description: "Remove points from a faction in a territory from an external script."
+icon: "arrow-down"
+---
 
-Removes points from a faction in a territory from an external script
+Removes points from a faction in a territory from an external script.
 
-## Export
-
-```lua
+```lua Export
 exports["drugs_creator"]:removeTerritoryPoints(territory, job, amount)
 ```
 
 ### Parameters
 
-| Name        | Data Type | Description                                                                    |
-| ----------- | --------- | ------------------------------------------------------------------------------ |
-| `territory` | string    | Territory name, or `"*"` to target all territories                             |
-| `job`       | string    | Job/gang name to remove points from, or `"*"` to target all configured factions |
-| `amount`    | int       | Number of points to remove (must be > 0)                                       |
+| Name         | Data Type | Description                                                                |
+| ------------- | --------- | -------------------------------------------------------------------------------- |
+| `territory`    | string    | Territory name, or `"*"` to target all territories                                  |
+| `job`          | string    | Job/gang name to remove points from, or `"*"` to target all configured factions       |
+| `amount`       | integer   | Number of points to remove (must be > 0)                                                |
 
 ## Example
 

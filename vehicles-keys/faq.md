@@ -1,27 +1,27 @@
-# FAQ
+---
+title: "FAQ"
+description: "Frequently asked questions specific to Vehicles Keys."
+icon: "circle-question"
+---
 
-This page has FAQs related **ONLY to this script**, be sure to also check [common-faq.md](../jaksams-scripts/common-faq.md "mention") for other issues
+This page has FAQs related **only to this script** — be sure to also check the [common FAQ](/jaksams-scripts/common-faq) for other issues.
 
-<details>
+<AccordionGroup>
+  <Accordion title="Hitch warning / Performance">
+    If your server is showing hitches/performance issues, it's because the option `CONTINUOUSLY_REFRESH_PLAYERS_OWNED_VEHICLES` is enabled in `vehicles_keys/integrations/sv_integrations.lua`.
 
-<summary>Hitch warning / Performance</summary>
+    If you disable the option, it won't cause performance issues anymore, but you'll have to use the exports from the documentation to refresh a player's owned vehicles (for example after they buy a new vehicle from a shop).
 
-If your server is showing hitches/performance issues, it's because in `vehicles_keys/integrations/sv_integrations.lua` you have the option `CONTINUOUSLY_REFRESH_PLAYERS_OWNED_VEHICLES` enabled
+    See the [fix hotwiring bought car](/vehicles-keys/fix-hotwiring-bought-car) page for premade **examples**.
 
-If you will disable the option, it won't cause performance issues, but you'll have to use the exports from the documentation to refresh the players owned vehicle (for example after they buy a new vehicle from a shop)
+    <Note>
+      Integration with other external scripts is completely up to you.
+    </Note>
+  </Accordion>
 
-You can refer to [this page](fix-hotwiring-bought-car.md) to find some premade **examples**
+  <Accordion title="Cannot enter vehicle">
+    If you can't enter a vehicle after destroying its window, it means you still have the `qb-vehicleskeys` script started.
 
-_Note: external scripts integration is completely down to you_
-
-</details>
-
-<details>
-
-<summary>Cannot enter vehicle</summary>
-
-If after destroying a vehicle window, you can't enter the vehicle, it means you still have the script `qb-vehicleskeys` started.
-
-Remove it to solve the issue
-
-</details>
+    Remove it to solve the issue.
+  </Accordion>
+</AccordionGroup>

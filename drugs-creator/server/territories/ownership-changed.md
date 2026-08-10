@@ -1,10 +1,12 @@
-# Ownership changed
+---
+title: "Ownership changed"
+description: "Triggered server side when a territory changes owner."
+icon: "flag"
+---
 
-Triggered on the server when a territory changes owner
+Triggered on the server when a territory changes owner.
 
-## Event
-
-```lua
+```lua Event
 AddEventHandler("drugs_creator:territories:ownershipChanged", function(territoryName, newOwner, previousOwner)
 
 end)
@@ -12,11 +14,11 @@ end)
 
 ### Parameters
 
-| Name             | Data Type    | Description                                           |
-| ---------------- | ------------ | ----------------------------------------------------- |
-| `territoryName`  | string       | The name of the territory that changed owner          |
-| `newOwner`       | string / nil | The job/gang name of the new owner, or nil if lost    |
-| `previousOwner`  | string / nil | The job/gang name of the previous owner, or nil       |
+| Name              | Data Type    | Description                                           |
+| ------------------ | ------------- | ----------------------------------------------------------- |
+| `territoryName`     | string        | The name of the territory that changed owner                   |
+| `newOwner`          | string / nil  | The job/gang name of the new owner, or `nil` if lost              |
+| `previousOwner`     | string / nil  | The job/gang name of the previous owner, or `nil`                  |
 
 ## Example
 

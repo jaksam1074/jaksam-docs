@@ -1,10 +1,12 @@
-# Alarm activated (NPC vehicle)
+---
+title: "Alarm activated (NPC vehicle)"
+description: "Triggered server side when an alarm is activated on an NPC vehicle."
+icon: "car-side"
+---
 
-Triggered when an alarm is triggered on a NPC vehicle
+Triggered when an alarm is triggered on an NPC vehicle.
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("vehicles_keys:alarmOnNPCVehicle", function(vehicle, vehicleCoords)
 
 end)
@@ -12,10 +14,10 @@ end)
 
 ### Parameters
 
-| Name            | Data Type | Description                    |
-| --------------- | --------- | ------------------------------ |
-| `vehicle`       | int       | Vehicle handle                 |
-| `vehicleCoords` | vector3   | The coordinates of the vehicle |
+| Name            | Data Type | Description                     |
+| --------------- | --------- | ------------------------------------ |
+| `vehicle`       | integer   | Vehicle handle                          |
+| `vehicleCoords` | vector3   | The coordinates of the vehicle            |
 
 ## Example
 
@@ -25,6 +27,6 @@ RegisterNetEvent("vehicles_keys:alarmOnNPCVehicle", function(vehicle, vehicleCoo
 end)
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/sv_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/sv_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

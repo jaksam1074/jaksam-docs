@@ -1,10 +1,14 @@
-# Optimization
+---
+title: "Optimization"
+description: "Hook into your inventory's item events to improve Trackers Creator performance."
+icon: "gauge-high"
+---
 
-This page will show you how to optimize the script, following all the instructions will improve the script performance
+This page shows you how to optimize the script. Following all the instructions below will improve the script's performance.
 
 ## Item check
 
-Use these **server-side** events right after any item addition/removal, they can be used anywhere (if you replace the parameters with the proper ones)
+Use these **server-side** events right after any item addition/removal. They can be used anywhere, as long as you replace the parameters with the proper ones.
 
 ```lua
 TriggerEvent("framework:onItemAdded", playerId, itemName, itemCount)
@@ -16,32 +20,46 @@ TriggerEvent("framework:onItemRemoved", playerId, itemName, itemCount)
 
 ### Examples
 
-Note: if you use something that is not listed in the examples, editing it is down to you, the events listed above works anywhere if used properly
+<Note>
+  If you use something that is not listed in the examples, editing it is up to you — the events listed above work anywhere if used properly.
+</Note>
 
 #### ESX
 
-**Note: default ESX already has `esx:onAddInventoryItem` and `esx:onRemoveInventoryItem` which will allow you to not add anything, so follow the example only if you don't have those events for any reason**
+<Info>
+  Default ESX already has `esx:onAddInventoryItem` and `esx:onRemoveInventoryItem`, which means you won't need to add anything. Only follow the example below if you don't have those events for any reason.
+</Info>
 
-Go in `es_extended/server/classes/player.lua` and add the following codes
+Go to `es_extended/server/classes/player.lua` and add the following code:
 
-<figure><img src="../.gitbook/assets/immagine (2) (1).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  ![ESX item added/removed hook example 1](/images/immagine-2-1.png)
+</Frame>
 
-<figure><img src="../.gitbook/assets/immagine (3).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  ![ESX item added/removed hook example 2](/images/immagine-3.png)
+</Frame>
 
 #### OX Inventory (ESX)
 
-Go in `es_extended/server/classes/overrides/oxinventory.lua` and add the following codes
+Go to `es_extended/server/classes/overrides/oxinventory.lua` and add the following code:
 
-<figure><img src="../.gitbook/assets/immagine (4) (1).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  ![OX Inventory hook example 1](/images/immagine-4-1.png)
+</Frame>
 
-<figure><img src="../.gitbook/assets/immagine.png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  ![OX Inventory hook example 2](/images/immagine.png)
+</Frame>
 
 #### QBCore (latest version)
 
-Go in `qb-inventory/server/main.lua` and add the following codes
+Go to `qb-inventory/server/main.lua` and add the following code:
 
-<figure><img src="../.gitbook/assets/immagine (5) (1).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  ![QBCore hook example 1](/images/immagine-5-1.png)
+</Frame>
 
-<figure><img src="../.gitbook/assets/immagine (6).png" alt=""><figcaption></figcaption></figure>
-
-##
+<Frame>
+  ![QBCore hook example 2](/images/immagine-6.png)
+</Frame>

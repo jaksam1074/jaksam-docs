@@ -170,7 +170,7 @@ You can find all of jaksam's scripts [here](https://jaksam1074-fivem-scripts.teb
     **Example:**
 
     <Frame>
-      ![sv\_licenseKey example](/files/2kieI6DIcRd7KI7RIhVW)
+      ![sv_licenseKey example](/files/2kieI6DIcRd7KI7RIhVW)
     </Frame>
 
     ### How to verify if I am using the correct server key?
