@@ -251,7 +251,6 @@
                         "group": "Harvest",
                         "root": "jobs-creator/server/harvest/index",
                         "pages": [
-                          "jobs-creator/server/harvest/item-harvested",
                           "untitled-page-2"
                         ]
                       },
