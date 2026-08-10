@@ -261,7 +261,8 @@
                         "root": "jobs-creator/server/market/index",
                         "pages": [
                           "jobs-creator/server/market/item-sold"
-                        ]
+                        ],
+                        "icon": "store"
                       },
                       {
                         "group": "Process",
