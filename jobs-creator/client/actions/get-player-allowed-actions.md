@@ -1,29 +1,23 @@
-# Get player allowed actions
+---
+title: "Get player allowed actions"
+description: "Retrieve the list of actions the player's current job is allowed to perform."
+icon: "list-check"
+---
 
-To retrieve allowed actions from player's job
+Retrieve the allowed actions from the player's job.
 
-## Export
+<CodeGroup>
 
-```lua
+```lua Export
 exports["jobs_creator"]:getAllowedActions()
 ```
 
-### Return value
-
-| Name      | Data Type | Description                                                                           |
-| --------- | --------- | ------------------------------------------------------------------------------------- |
-| `actions` | table     | Key value table where key is the action and value it's boolean if it's allowed or not |
-
-## Example
-
-```lua
+```lua Example
 local actions = exports["jobs_creator"]:getAllowedActions()
-
 print(ESX.DumpTable(actions))
-
 --[[
     Example output
-    
+
     {
         ["canHeal"] = false,
         ["canCheckDrivingLicense"] = false,
@@ -39,3 +33,11 @@ print(ESX.DumpTable(actions))
     }
 ]]
 ```
+
+</CodeGroup>
+
+### Return value
+
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `actions` | table | Key-value table where the key is the action and the value is a boolean indicating whether it's allowed or not |
