@@ -236,7 +236,8 @@
                         "root": "jobs-creator/server/crafting-table/index",
                         "pages": [
                           "jobs-creator/server/crafting-table/item-crafted"
-                        ]
+                        ],
+                        "icon": "tools"
                       },
                       {
                         "group": "Duty",
