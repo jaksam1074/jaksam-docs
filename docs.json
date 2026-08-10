@@ -281,7 +281,8 @@
                         ]
                       },
                       "jobs-creator/server/set-handcuffs-state"
-                    ]
+                    ],
+                    "icon": "server"
                   }
                 ]
               },
