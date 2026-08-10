@@ -4,6 +4,12 @@ icon: "table-rows-add-below"
 description: "The installation of the script is extremely easy."
 ---
 
+## Requirements
+
+- **ESX** (1.10.7, 1.11.3+, or 1.14.0+), **QBCore**, or **QBX**
+- `jaksam_core`
+- `oxmysql` and `ox_lib` (see the Start Order Example for your framework below)
+
 <Warning>
   **Do NOT use FileZilla** to upload the files, otherwise the script will **NOT** work. Use [WinSCP](https://winscp.net/eng/download.php) instead.
 </Warning>
@@ -183,6 +189,10 @@ description: "The installation of the script is extremely easy."
 </Tabs>
 
 You are ready to go! Enjoy the script 😁
+
+## Verification
+
+Use the `/inventory` command in-game. If your inventory opens, the script is running correctly.
 
 ## Importing Old Items and Inventories
 

@@ -15,3 +15,23 @@ This is the official **Vehicles Keys** documentation.
     Purchase or view the script on Tebex.
   </Card>
 </CardGroup>
+
+## Documentation
+
+<CardGroup cols={2}>
+  <Card title="Installation" icon="download" href="/vehicles-keys/installation">
+    Get Vehicles Keys installed and running on your server.
+  </Card>
+
+  <Card title="Guides" icon="book-open" href="/vehicles-keys/how-to-give-keys-with-car-command">
+    Giving keys with the car command, fixing hotwiring, and other how-tos.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/vehicles-keys/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/vehicles-keys/client">
+    Exports, events, and integration reference for developers.
+  </Card>
+</CardGroup>

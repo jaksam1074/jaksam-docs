@@ -32,6 +32,10 @@ The installation of the script is extremely easy.
 
 You are ready to go! Enjoy the script 😁
 
+## Verification
+
+Press `SPACE BAR` while on the in-game big map. If the blips menu opens, the script is running correctly.
+
 <Note>
   Once the database has been successfully configured, you can optionally remove the SQL files from `blips_creator/sql/`, so the script won't try to set it up again each time it starts.
 </Note>

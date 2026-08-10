@@ -15,3 +15,19 @@ This is the official **Billing UI** documentation.
     Purchase or view the script on Tebex.
   </Card>
 </CardGroup>
+
+## Documentation
+
+<CardGroup cols={3}>
+  <Card title="Installation" icon="download" href="/billing-ui/installation">
+    Get Billing UI installed and running on your server.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/billing-ui/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/billing-ui/client">
+    Exports, events, and integration reference for developers.
+  </Card>
+</CardGroup>

@@ -15,3 +15,19 @@ This is the official **Luxury Clothes Theft** documentation.
     Purchase or view the script on Tebex.
   </Card>
 </CardGroup>
+
+## Documentation
+
+<CardGroup cols={3}>
+  <Card title="Installation" icon="download" href="/luxury-clothes-theft/installation">
+    Get Luxury Clothes Theft installed and running on your server.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/luxury-clothes-theft/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/luxury-clothes-theft/client">
+    Exports, events, and integration reference for developers.
+  </Card>
+</CardGroup>

@@ -6,6 +6,11 @@ icon: "download"
 
 Get **Jobs Creator** up and running on your FiveM server in just a few steps.
 
+## Requirements
+
+- **ESX** or **QBCore**
+- On QBCore, the [`menu_default`](https://drive.google.com/file/d/1Ezz-d50NIKQZeZJ-RgyclvNG7qC4Nfu8/view?usp=sharing) script (see step 4 below)
+
 Choose your framework below to view the correct installation instructions.
 
 <Tabs>
@@ -175,6 +180,10 @@ Choose your framework below to view the correct installation instructions.
     </Steps>
   </Tab>
 </Tabs>
+
+## Verification
+
+Open `/jobscreator` in-game. If the menu opens, the script is running correctly.
 
 ## Clean Up the SQL Files
 

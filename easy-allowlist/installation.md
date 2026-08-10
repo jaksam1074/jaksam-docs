@@ -32,6 +32,10 @@ The installation of the script is extremely easy.
 
 You are ready to go! Enjoy the script 😁
 
+## Verification
+
+Run `add_allowlist REQUEST_ID` in the server console (per the "Whitelist yourself" step above). If the command is recognized and runs without an unknown-command error, the script is running correctly.
+
 <Note>
   Once the database has been successfully configured, you can optionally remove the SQL files from `easy_allowlist/sql/`, so the script won't try to set it up again each time it starts.
 </Note>

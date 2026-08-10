@@ -1,0 +1,98 @@
+---
+title: "Developer Overview"
+description: "Conventions used across every export, event, and hook reference page, plus links to each product's API section."
+icon: "book"
+tag: "New"
+---
+
+This section documents the exports, events, and hooks exposed by jaksam's scripts, for anyone integrating another script, replacing default behavior, or building on top of a jaksam product.
+
+If you're looking for install/setup instructions instead, that content lives on the **Main** tab, on each product's own Home and Installation pages.
+
+## How integration works
+
+Most scripts ship with an `integrations` folder containing three files:
+
+<CardGroup cols={3}>
+  <Card title="cl_integrations.lua" icon="laptop">
+    Client-side code, for example replacing notifications or the progress bar. Usually where you paste in code from a **Client** reference page below.
+  </Card>
+
+  <Card title="sh_integrations.lua" icon="arrows-left-right">
+    Code that runs on both client and server, usually external script names, so you can point them at whatever your server actually uses.
+  </Card>
+
+  <Card title="sv_integrations.lua" icon="server">
+    Server-side code. Usually where you paste in code from a **Server** reference page below.
+  </Card>
+</CardGroup>
+
+## Reference page conventions
+
+Every export/event/hook page below follows the same shape, so you can scan any of them the same way:
+
+| Field | Meaning |
+|---|---|
+| **Side** | Whether it runs client-side or server-side. Conveyed by which section (Client/Server) the page is nested under. |
+| **Description** | One or two sentences on what it does, right under the title. |
+| **Export/Event** | The exact `exports[...]:...` call or `AddEventHandler`/`RegisterNetEvent` signature, in a code block. |
+| **Parameters** | A table of every parameter, its data type, and what it's for. |
+| **Return value** | A table of what's returned, if anything. Omitted on pages that return nothing. |
+| **Example** | A realistic, working usage snippet alongside the raw signature. |
+
+<Note>
+  Not every page has an Errors/Notes section yet. Where failure modes or limitations aren't documented, that's a known gap, not a claim that nothing can go wrong, check the product's FAQ or ask in [Discord](https://discord.gg/MrXMNnvhTr) if you hit an edge case that isn't covered.
+</Note>
+
+## Jump to a product's API reference
+
+<CardGroup cols={3}>
+  <Card title="Jaksam Inventory" icon="boxes-stacked" href="/jaksam-inventory/functions/client">
+    Functions, events, and hooks.
+  </Card>
+  <Card title="Jobs Creator" icon="briefcase" href="/jobs-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Drugs Creator" icon="pills" href="/drugs-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Doors Creator" icon="door-open" href="/doors-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Missions Creator" icon="bullseye" href="/missions-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Blips Creator" icon="location-dot" href="/blips-creator/client">
+    Client reference.
+  </Card>
+  <Card title="Farming Creator" icon="tractor" href="/farming-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Shops Creator" icon="cart-shopping" href="/shops-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Robberies Creator" icon="mask" href="/robberies-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Vehicles Keys" icon="key" href="/vehicles-keys/client">
+    Client and server reference.
+  </Card>
+  <Card title="Dealerships Creator" icon="car" href="/dealerships-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Races Creator" icon="flag-checkered" href="/races-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Trackers Creator" icon="satellite-dish" href="/trackers-creator/client">
+    Client and server reference.
+  </Card>
+  <Card title="Easy Allowlist" icon="shield-check" href="/easy-allowlist/server">
+    Server reference.
+  </Card>
+  <Card title="Billing UI" icon="file-invoice-dollar" href="/billing-ui/client">
+    Client and server reference.
+  </Card>
+  <Card title="Luxury Clothes Theft" icon="shirt" href="/luxury-clothes-theft/client">
+    Client reference.
+  </Card>
+</CardGroup>

@@ -26,6 +26,12 @@ The installation of the script is extremely easy.
 
 You are ready to go! Enjoy the script 😁
 
+## Verification
+
+<Info>
+  [TODO: INFORMATION NEEDED] No in-game check for a successful install is documented yet for Dealerships Creator.
+</Info>
+
 <Note>
   Once the database has been successfully configured, you can optionally remove the SQL files from `dealerships_creator/sql/`, so the script won't try to set it up again each time it starts.
 </Note>
