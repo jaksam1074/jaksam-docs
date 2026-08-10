@@ -1,3 +1,7 @@
+---
+title: "item-bought"
+---
+
 # Item bought
 
 Triggered when a player buys an item/weapon in shop marker
@@ -12,13 +16,13 @@ end)
 
 #### Parameters
 
-| Name           | Data Type | Description              |
-| -------------- | --------- | ------------------------ |
-| `playerId`     | integer   | Player's server ID       |
-| `markerId`     | integer   | Marker ID                |
-| `itemName`     | string    | Item name or weapon name |
-| `itemQuantity` | integer   | Bought quantity          |
-| `totalPrice`   | integer   | Total paid price         |
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `playerId` | integer | Player's server ID |
+| `markerId` | integer | Marker ID |
+| `itemName` | string | Item name or weapon name |
+| `itemQuantity` | integer | Bought quantity |
+| `totalPrice` | integer | Total paid price |
 
 ### Example
 
