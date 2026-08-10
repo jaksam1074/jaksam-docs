@@ -1,5 +1,5 @@
 ---
-title: "get-if-player-is-owner-of-vehicle-plate"
+title: "Get if player is owner of vehicle plate"
 ---
 
 Returns whether a player ID is the owner of a specific plate.
