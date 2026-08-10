@@ -1,7 +1,8 @@
 ---
-title: "Updating script from old versions"
+title: "How to"
 description: "Step-by-step database and script updates required when upgrading Jobs Creator from an older version."
 icon: "clock-rotate-left"
+tag: "Update"
 ---
 
 This section explains how to update the script from old versions.

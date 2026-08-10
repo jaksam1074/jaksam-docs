@@ -120,10 +120,10 @@
                 "root": "jobs-creator/home",
                 "pages": [
                   "jobs-creator/installation",
+                  "jobs-creator/updating-script-from-old-versions",
                   "jobs-creator/faq",
                   "jobs-creator/modules",
                   "jobs-creator/replacing-default-scripts-names",
-                  "jobs-creator/updating-script-from-old-versions",
                   {
                     "group": "Client",
                     "root": "jobs-creator/client/index",
