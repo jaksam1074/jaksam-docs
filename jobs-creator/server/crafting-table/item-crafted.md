@@ -1,28 +1,31 @@
-# Item crafted
+---
+title: "Item crafted"
+description: "Triggered when a player crafts an item at a crafting table marker."
+icon: "hammer"
+---
 
-Triggered when a player crafts an item in crafting table marker
+Triggered when a player crafts an item at a crafting table marker.
 
-### Event
+<CodeGroup>
 
-```lua
+```lua Event
 RegisterNetEvent("jobs_creator:crafting_table:craftedItem", function(playerId, markerId, itemName, itemQuantity)
-
 end)
 ```
 
-#### Parameters
-
-| Name           | Data Type | Description           |
-| -------------- | --------- | --------------------- |
-| `playerId`     | integer   | Player's server ID    |
-| `markerId`     | integer   | Marker ID             |
-| `itemName`     | integer   | Crafted item name     |
-| `itemQuantity` | integer   | Crafted item quantity |
-
-### Example
-
-```lua
+```lua Example
 RegisterNetEvent("jobs_creator:crafting_table:craftedItem", function(playerId, markerId, itemName, itemQuantity)
     TriggerEvent("xp_system:addExperience", playerId, "craft")
 end)
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `playerId` | integer | Player's server ID |
+| `markerId` | integer | Marker ID |
+| `itemName` | string | Crafted item name |
+| `itemQuantity` | integer | Crafted item quantity |
