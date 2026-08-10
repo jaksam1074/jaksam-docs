@@ -1,34 +1,36 @@
-# Get player armory weapons
+---
+title: "Get player armory weapons"
+description: "Retrieve the list of weapons a specific player has stored in a specific armory."
+icon: "gun"
+---
 
-To get a list of weapons of a player stored in a specific armory ID.
+Get a list of weapons of a player stored in a specific armory ID.
 
-### Export
+<CodeGroup>
 
-```lua
+```lua Export
 exports["jobs_creator"]:getPlayerArmoryWeapons(playerId, markerId)
 ```
 
-#### Parameters
-
-| Name       | Data Type | Description      |
-| ---------- | --------- | ---------------- |
-| `playerId` | integer   | Player server ID |
-| `markerId` | integer   | The marker ID    |
-
-#### Return value
-
-| Name                  | Data Type | Description                                                         |
-| --------------------- | --------- | ------------------------------------------------------------------- |
-| `playerArmoryWeapons` | table     | List of all weapons contained in the marker deposited by the player |
-
-### Example
-
-```lua
+```lua Example
 local playerId = 20
 local markerId = 52
-
-local playerArmoryWeapons = getPlayerArmoryWeapons(playerId, markerId)
-
+local playerArmoryWeapons = exports["jobs_creator"]:getPlayerArmoryWeapons(playerId, markerId)
 print("Player weapons in that armory")
 print(ESX.DumpTable(playerArmoryWeapons))
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `playerId` | integer | Player server ID |
+| `markerId` | integer | The marker ID |
+
+### Return value
+
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `playerArmoryWeapons` | table | List of all weapons contained in the marker deposited by the player |

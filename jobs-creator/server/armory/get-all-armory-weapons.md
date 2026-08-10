@@ -1,30 +1,34 @@
-# Get all armory weapons
+---
+title: "Get all armory weapons"
+description: "Retrieve the list of all weapons stored in a specific armory."
+icon: "gun"
+---
 
-To get a list of all weapons stored in a specific armory ID.
+Get a list of all weapons stored in a specific armory ID.
 
-### Export
+<CodeGroup>
 
-```lua
+```lua Export
 exports["jobs_creator"]:getAllArmoryWeapons(markerId)
 ```
 
-#### Parameters
-
-| Name       | Data Type | Description   |
-| ---------- | --------- | ------------- |
-| `markerId` | integer   | The marker ID |
-
-#### Return value
-
-| Name            | Data Type | Description                                 |
-| --------------- | --------- | ------------------------------------------- |
-| `armoryWeapons` | table     | List of all weapons contained in the marker |
-
-### Example
-
-```lua
-local allWeapons = getAllArmoryWeapons(markerId)
-
-print("All players weapons in that armory")
+```lua Example
+local markerId = 52
+local allWeapons = exports["jobs_creator"]:getAllArmoryWeapons(markerId)
+print("All players' weapons in that armory")
 print(ESX.DumpTable(allWeapons))
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `markerId` | integer | The marker ID |
+
+### Return value
+
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `armoryWeapons` | table | List of all weapons contained in the marker |
