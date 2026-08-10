@@ -311,7 +311,8 @@
                     "group": "Guides",
                     "pages": [
                       "drugs-creator/guides/custom-audio-and-images"
-                    ]
+                    ],
+                    "icon": "photo-film"
                   },
                   {
                     "group": "Client",
