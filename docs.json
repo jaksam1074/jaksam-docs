@@ -244,7 +244,8 @@
                         "pages": [
                           "jobs-creator/server/duty/duty-status-changed",
                           "jobs-creator/server/duty/get-if-a-player-is-on-duty"
-                        ]
+                        ],
+                        "icon": "briefcase-clock"
                       },
                       {
                         "group": "Harvest",

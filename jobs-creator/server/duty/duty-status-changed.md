@@ -1,26 +1,19 @@
-# Duty status changed
+---
+title: "Duty status changed"
+description: "Triggered after a player goes on or off duty, server side."
+icon: "briefcase"
+---
 
-Triggered after player goes on/off duty server side
+Triggered after a player goes on/off duty, server side.
 
-### Event
+<CodeGroup>
 
-```lua
+```lua Event
 RegisterNetEvent("jobs_creator:toggleDuty", function(playerId, jobName, isOnDuty)
-
 end)
 ```
 
-#### Parameters
-
-| Name       | Data Type | Description             |
-| ---------- | --------- | ----------------------- |
-| `playerId` | integer   | Target player server ID |
-| `jobName`  | string    | Player's job id         |
-| `isOnDuty` | boolean   | Player new duty status  |
-
-### Example
-
-```lua
+```lua Example
 RegisterNetEvent("jobs_creator:toggleDuty", function(playerId, jobName, isOnDuty)
     if(isOnDuty) then
         TriggerEvent("external_scoreboard:increaseOnDutyCount", jobName)
@@ -29,3 +22,13 @@ RegisterNetEvent("jobs_creator:toggleDuty", function(playerId, jobName, isOnDuty
     end
 end)
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `playerId` | integer | Target player's server ID |
+| `jobName` | string | Player's job ID |
+| `isOnDuty` | boolean | Player's new duty status |
