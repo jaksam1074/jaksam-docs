@@ -265,20 +265,20 @@
                         "icon": "store"
                       },
                       {
-                        "group": "Process",
-                        "root": "jobs-creator/server/process/index",
-                        "pages": [
-                          "jobs-creator/server/process/item-processed"
-                        ],
-                        "icon": "gears"
-                      },
-                      {
                         "group": "Shop",
                         "root": "jobs-creator/server/shop/index",
                         "pages": [
                           "untitled-page-3"
                         ],
                         "icon": "cart-circle-plus"
+                      },
+                      {
+                        "group": "Process",
+                        "icon": "gears",
+                        "root": "jobs-creator/server/process/index",
+                        "pages": [
+                          "jobs-creator/server/process/item-processed"
+                        ]
                       },
                       {
                         "group": "Search/Steal Action",
