@@ -1,6 +1,7 @@
 ---
-title: "item-stolen"
+title: "Item Stolen"
 description: "Triggered after a player steals something from the actions menu, only if you use the default player search/rob, it won't work if you replaced it"
+icon: "hand"
 ---
 
 Triggered after a player steals something from the actions menu.
