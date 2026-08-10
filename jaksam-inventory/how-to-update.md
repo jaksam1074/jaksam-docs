@@ -2,11 +2,10 @@
 title: "How to"
 icon: "rectangle-new"
 tag: "Update"
+description: "Keep your Jaksam Inventory installation up to date without losing your custom items, settings, integrations, or other customizations."
 ---
 
 # Updating Jaksam Inventory
-
-Keep your Jaksam Inventory installation up to date without losing your custom items, settings, integrations, or other customizations.
 
 <Warning>
   **Always create a backup before updating.** Never delete your existing installation before you have a working backup.
