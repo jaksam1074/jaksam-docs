@@ -343,7 +343,8 @@
                           "drugs-creator/client/territories/get-territory-owners"
                         ]
                       }
-                    ]
+                    ],
+                    "icon": "laptop"
                   },
                   {
                     "group": "Server",
@@ -404,7 +405,8 @@
                       },
                       "drugs-creator/server/police-alerted",
                       "drugs-creator/server/pocket-crafting-finished"
-                    ]
+                    ],
+                    "icon": "server"
                   }
                 ]
               },
@@ -428,7 +430,8 @@
                       "doors-creator/client/toggle-icon-display",
                       "doors-creator/client/replace-default-police-alert",
                       "doors-creator/client/get-door-id-from-entity"
-                    ]
+                    ],
+                    "icon": "laptop"
                   },
                   {
                     "group": "Server",
@@ -446,7 +449,8 @@
                       "doors-creator/server/create-door",
                       "doors-creator/server/delete-door",
                       "doors-creator/server/update-door"
-                    ]
+                    ],
+                    "icon": "server"
                   }
                 ]
               },
@@ -475,7 +479,8 @@
                           "missions-creator/client/notifications/replace-default-mugshot-notifications"
                         ]
                       }
-                    ]
+                    ],
+                    "icon": "laptop"
                   },
                   {
                     "group": "Server",
@@ -487,7 +492,8 @@
                       "missions-creator/server/on-mission-completed",
                       "missions-creator/server/start-mission",
                       "missions-creator/server/get-mission-template"
-                    ]
+                    ],
+                    "icon": "server"
                   }
                 ]
               },
@@ -505,7 +511,8 @@
                     "root": "blips-creator/client/index",
                     "pages": [
                       "blips-creator/client/open-menu-manually"
-                    ]
+                    ],
+                    "icon": "laptop"
                   }
                 ]
               },
