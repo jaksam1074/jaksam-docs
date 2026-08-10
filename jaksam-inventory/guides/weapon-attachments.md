@@ -63,7 +63,7 @@ First, check if an item for your attachment type already exists in your database
     </CardGroup>
 
     <Frame caption="Example with default suppressor">
-      ![Edit default suppressor item component example](/images/weapon-attachments-item-example.png)
+      ![Edit default suppressor item component example](/images/weapon-attachments-item-example.jpg)
     </Frame>
   </Step>
 </Steps>
@@ -108,7 +108,7 @@ Now you need to add the component hash(es) that this item should apply to weapon
 </Info>
 
 <Frame caption="Edit item hashes list example">
-  ![Edit item hashes list example](/images/weapon-attachments-hashes-example.png)
+  ![Edit item hashes list example](/images/weapon-attachments-hashes-example.jpg)
 </Frame>
 
 ### Step 3: Test in-game

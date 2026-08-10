@@ -14,7 +14,7 @@ Want every player to have the same default theme? Here's how to do it, step-by-s
     Click the **Theme** button (bottom right corner).
 
     <Frame>
-      ![Inventory theme customization 1](/images/inventory-theme-1.png)
+      ![Inventory theme customization 1](/images/inventory-theme-1.jpg)
     </Frame>
   </Step>
   <Step title="Customize and save">
@@ -24,7 +24,7 @@ Want every player to have the same default theme? Here's how to do it, step-by-s
     Make sure your custom theme is selected.
 
     <Frame>
-      ![Inventory theme customization 2](/images/inventory-theme-2.png)
+      ![Inventory theme customization 2](/images/inventory-theme-2.jpg)
     </Frame>
   </Step>
   <Step title="Open the console">
@@ -42,7 +42,7 @@ Want every player to have the same default theme? Here's how to do it, step-by-s
     </Note>
 
     <Frame>
-      ![Inventory theme customization 3](/images/inventory-theme-3.png)
+      ![Inventory theme customization 3](/images/inventory-theme-3.jpg)
     </Frame>
   </Step>
   <Step title="Open the theme file">
