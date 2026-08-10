@@ -1,6 +1,7 @@
 ---
-title: "How to Update"
+title: "How to"
 icon: "rectangle-new"
+tag: "Update"
 ---
 
 # Updating Jaksam Inventory
