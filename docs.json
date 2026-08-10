@@ -134,7 +134,8 @@
                         "pages": [
                           "jobs-creator/client/notifications/replace-default-notifications",
                           "jobs-creator/client/notifications/replace-help-notification-textui"
-                        ]
+                        ],
+                        "icon": "bell"
                       },
                       {
                         "group": "Actions",
@@ -147,7 +148,8 @@
                           "jobs-creator/client/actions/integrate-external-impound-script",
                           "jobs-creator/client/actions/vehicle-repaired",
                           "jobs-creator/client/actions/get-if-local-player-is-handcuffed"
-                        ]
+                        ],
+                        "icon": "hand-pointer"
                       },
                       {
                         "group": "Duty",
@@ -155,7 +157,8 @@
                         "pages": [
                           "jobs-creator/client/duty/duty-status-toggled",
                           "jobs-creator/client/duty/toggle-current-duty-status"
-                        ]
+                        ],
+                        "icon": "briefcase-arrow-right"
                       },
                       {
                         "group": "Buyable Vehicles",
@@ -163,7 +166,8 @@
                         "pages": [
                           "jobs-creator/client/buyable-vehicles/vehicle-spawned",
                           "jobs-creator/client/buyable-vehicles/vehicle-parked"
-                        ]
+                        ],
+                        "icon": "car"
                       },
                       {
                         "group": "Garage Owned",
@@ -171,7 +175,8 @@
                         "pages": [
                           "jobs-creator/client/garage-owned/vehicle-spawned",
                           "jobs-creator/client/garage-owned/vehicle-parked"
-                        ]
+                        ],
+                        "icon": "warehouse-full"
                       },
                       {
                         "group": "Temporary Garage",
@@ -179,7 +184,8 @@
                         "pages": [
                           "jobs-creator/client/temporary-garage/vehicle-spawned",
                           "jobs-creator/client/temporary-garage/vehicle-parked"
-                        ]
+                        ],
+                        "icon": "clock"
                       },
                       "jobs-creator/client/replace-stash-safe-armory",
                       "jobs-creator/client/replace-default-billing",
