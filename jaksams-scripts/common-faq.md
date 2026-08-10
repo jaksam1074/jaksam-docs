@@ -11,7 +11,7 @@ This page contains common FAQ shared for all scripts. If your issue is not on th
     Crashes can be caused by 2 things:
 
     - You have to whitelist these object models in your anticheat: `L1_1`, `GetHashKey('L1_1')`, `2116969379`
-    - If you still experience crashes after whitelisting those object models in your anticheat, you can refer to [this page](/trouble-shooting)
+    - If you still experience crashes after whitelisting those object models in your anticheat, you can refer to [this page](/jaksams-scripts/troubleshooting)
 
     _If you don't know how to whitelist object models in your anticheat, ask your anticheat creator._
   </Accordion>
@@ -21,7 +21,7 @@ This page contains common FAQ shared for all scripts. If your issue is not on th
 
     This error might be caused by other errors you have in your server/F8 console, which happen before it does.
 
-    If you don't have any other error before that one, you can refer to [this page](/trouble-shooting).
+    If you don't have any other error before that one, you can refer to [this page](/jaksams-scripts/troubleshooting).
   </Accordion>
 
   <Accordion title='How to fix "missing menu_default" error'>
