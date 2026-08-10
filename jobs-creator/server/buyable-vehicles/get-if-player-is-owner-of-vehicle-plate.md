@@ -1,6 +1,7 @@
 ---
 title: "Get if player is owner of vehicle plate"
 description: "Check whether a specific player is the owner of a specific vehicle plate."
+icon: "drivers-license"
 ---
 
 Returns whether a player ID is the owner of a specific plate.
