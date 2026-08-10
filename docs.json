@@ -252,7 +252,8 @@
                         "root": "jobs-creator/server/harvest/index",
                         "pages": [
                           "untitled-page-2"
-                        ]
+                        ],
+                        "icon": "leaf"
                       },
                       {
                         "group": "Market",
