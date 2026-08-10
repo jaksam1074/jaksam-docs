@@ -85,6 +85,39 @@ description: "The installation of the script is extremely easy."
     start [core]
     ```
   </Tab>
+  <Tab title="ESX 1.14.0+">
+    1. Download the script and extract it into your resources.
+    2. Download `jaksam_core` and extract it into your resources.
+    3. Add the following code **right after** `es_extended` in your `server.cfg`:
+
+    ```cfg
+    add_unsafe_worker_permission jaksam_inventory # Allows jaksam's inventory to automatically install itself
+    ensure jaksam_inventory
+    ```
+
+    4. In `es_extended/shared/config/main.lua`, set:
+
+    ```lua
+    Config.CustomInventory = "jaksam_inventory"
+    ```
+
+    5. The script will **automatically** set up the database. If it doesn't, you can manually run the files in the `jaksam_inventory/sql/` folder.
+
+    ### Start Order Example
+
+    ```cfg
+    # OX
+    ensure oxmysql
+    ensure ox_lib
+    
+    ## ESX
+    ensure es_extended
+    ensure jaksam_inventory
+    
+    # Other ESX scripts
+    start [core]
+    ```
+  </Tab>
   <Tab title="QBCore">
     1. Download the script and extract it into your resources.
     2. Download `jaksam_core` and extract it into your resources.
