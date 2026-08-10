@@ -277,7 +277,8 @@
                         "root": "jobs-creator/server/shop/index",
                         "pages": [
                           "untitled-page-3"
-                        ]
+                        ],
+                        "icon": "cart-circle-plus"
                       },
                       {
                         "group": "Search/Steal Action",
