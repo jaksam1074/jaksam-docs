@@ -216,7 +216,8 @@
                           "jobs-creator/server/boss/get-job-account-money",
                           "jobs-creator/server/boss/on-player-fired",
                           "jobs-creator/server/boss/on-player-hired"
-                        ]
+                        ],
+                        "icon": "user-crown"
                       },
                       {
                         "group": "Buyable Vehicles",
