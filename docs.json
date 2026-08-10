@@ -269,7 +269,8 @@
                         "root": "jobs-creator/server/process/index",
                         "pages": [
                           "jobs-creator/server/process/item-processed"
-                        ]
+                        ],
+                        "icon": "gears"
                       },
                       {
                         "group": "Shop",
