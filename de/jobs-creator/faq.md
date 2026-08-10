@@ -4,7 +4,7 @@ description: "Häufig gestellte Fragen speziell zu Jobs Creator, zu Animationen,
 icon: "circle-question"
 ---
 
-Diese Seite enthält FAQs, die **NUR** dieses Script betreffen. Sieh dir auch die [allgemeinen FAQ](https://jaksam.mintlify.site/jaksams-scripts/common-faq) für andere Probleme an.
+Diese Seite enthält FAQs, die **NUR** dieses Script betreffen. Sieh dir auch die [allgemeinen FAQ](/de/jaksams-scripts/common-faq) für andere Probleme an.
 
 <AccordionGroup>
   <Accordion title="Wie man Animationen ändert">

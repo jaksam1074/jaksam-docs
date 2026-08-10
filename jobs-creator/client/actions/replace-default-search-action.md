@@ -33,5 +33,5 @@ By default, the search action uses Jobs Creator's built-in search behavior. If y
 </Steps>
 
 <Note>
-  For more details on how modules work in general, see the [Modules](https://jaksam.mintlify.site/jaksam-scripts/modules) page.
+  For more details on how modules work in general, see the [Modules](/jobs-creator/modules) page.
 </Note>

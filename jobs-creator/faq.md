@@ -4,7 +4,7 @@ description: "Frequently asked questions specific to Jobs Creator, covering anim
 icon: "circle-question"
 ---
 
-This page has FAQs related **ONLY to this script**. Be sure to also check the [common FAQ](https://jaksam.mintlify.site/jaksams-scripts/common-faq) for other issues.
+This page has FAQs related **ONLY to this script**. Be sure to also check the [common FAQ](/jaksams-scripts/common-faq) for other issues.
 
 <AccordionGroup>
   <Accordion title="How to change animations">

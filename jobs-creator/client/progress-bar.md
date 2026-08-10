@@ -6,7 +6,7 @@ icon: "spinner"
 
 ## How to replace it
 
-You can use Jobs Creator [modules](https://jaksam.mintlify.site/jaksam-scripts/modules) if you want to use your own progress bar.
+You can use a Jobs Creator [module](/jobs-creator/modules) if you want to use your own progress bar.
 
 <Steps>
   <Step title="Navigate to the modules folder">
