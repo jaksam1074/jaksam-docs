@@ -303,8 +303,8 @@
                 "root": "drugs-creator/home",
                 "pages": [
                   "drugs-creator/installation",
-                  "drugs-creator/faq",
                   "drugs-creator/modules",
+                  "drugs-creator/faq",
                   {
                     "group": "Guides",
                     "pages": [
