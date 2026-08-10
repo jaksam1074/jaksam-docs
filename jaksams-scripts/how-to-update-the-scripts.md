@@ -7,7 +7,7 @@ tag: "Update"
 
 <Steps>
   <Step title="Download the latest version">
-    Go to [FiveM keymaster](https://keymaster.fivem.net/asset-grants) to update the script (simply download it again).
+    Go to [FiveM Portal](https://portal.cfx.re/login) to update the script (simply download it again).
   </Step>
   <Step title="Keep your config">
     If your existing script has a `current_config.json` file, keep it to save your changes and use it in the new updated version.
@@ -26,5 +26,5 @@ tag: "Update"
 </Info>
 
 <Info>
-  The version you download from FiveM Keymaster, will **always** be the latest version available
+  The version you download from FiveM Portal, will **always** be the latest version available
 </Info>
