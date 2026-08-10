@@ -333,7 +333,8 @@
                           "drugs-creator/client/npc-selling/remove-ped-from-selling-blacklist",
                           "drugs-creator/client/npc-selling/manually-sell-to-a-npc",
                           "drugs-creator/client/npc-selling/npc-accepted-drug"
-                        ]
+                        ],
+                        "icon": "person-carry"
                       },
                       {
                         "group": "Territories",
@@ -341,7 +342,8 @@
                         "pages": [
                           "drugs-creator/client/territories/get-current-territory",
                           "drugs-creator/client/territories/get-territory-owners"
-                        ]
+                        ],
+                        "icon": "map-location"
                       }
                     ],
                     "icon": "laptop"
@@ -355,21 +357,24 @@
                         "root": "drugs-creator/server/fields/index",
                         "pages": [
                           "drugs-creator/server/fields/item-harvested"
-                        ]
+                        ],
+                        "icon": "wheat"
                       },
                       {
                         "group": "Harvestable Items",
                         "root": "drugs-creator/server/harvestable-items/index",
                         "pages": [
                           "drugs-creator/server/harvestable-items/item-harvested"
-                        ]
+                        ],
+                        "icon": "plate-wheat"
                       },
                       {
                         "group": "Laboratories",
                         "root": "drugs-creator/server/laboratories/index",
                         "pages": [
                           "drugs-creator/server/laboratories/successful-craft"
-                        ]
+                        ],
+                        "icon": "flask-vial"
                       },
                       {
                         "group": "Sellings",
@@ -381,7 +386,8 @@
                           "drugs-creator/server/sellings/sold-to-npc",
                           "drugs-creator/server/sellings/sold-to-narcos",
                           "drugs-creator/server/sellings/sold-by-hired-dealer"
-                        ]
+                        ],
+                        "icon": "hands-usd"
                       },
                       {
                         "group": "Territories",
@@ -391,17 +397,20 @@
                           "drugs-creator/server/territories/give-territory-points",
                           "drugs-creator/server/territories/remove-territory-points",
                           "drugs-creator/server/territories/reset-territory-points"
-                        ]
+                        ],
+                        "icon": "map-location-dot"
                       },
                       {
                         "group": "Hired Dealers",
                         "root": "drugs-creator/server/hired-dealers/index",
-                        "pages": []
+                        "pages": [],
+                        "icon": "person-from-portal"
                       },
                       {
                         "group": "Drug Factories",
                         "root": "drugs-creator/server/drug-factories/index",
-                        "pages": []
+                        "pages": [],
+                        "icon": "building-lock"
                       },
                       "drugs-creator/server/police-alerted",
                       "drugs-creator/server/pocket-crafting-finished"
