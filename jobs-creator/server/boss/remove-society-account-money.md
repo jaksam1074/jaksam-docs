@@ -1,30 +1,33 @@
-# Remove society account money
+---
+title: "Remove society account money"
+description: "Remove money from a job's society account."
+icon: "sack-dollar"
+---
 
-To remove money from a society
+Remove money from a society.
 
-## Export
+<CodeGroup>
 
-```lua
+```lua Export
 exports["jobs_creator"]:removeSocietyMoney(jobName, amount)
 ```
 
+```lua Example
+local isSuccessful = exports["jobs_creator"]:removeSocietyMoney("police", 5000)
+print(isSuccessful)
+```
+
+</CodeGroup>
+
 ### Parameters
 
-| Name      | Data Type | Description               |
-| --------- | --------- | ------------------------- |
-| `jobName` | string    | Job ID (example police)   |
-| `amount`  | integer   | Amount of money to remove |
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `jobName` | string | Job ID (example: police) |
+| `amount` | integer | Amount of money to remove |
 
 ### Return value
 
-| Name           | Data Type | Description                 |
-| -------------- | --------- | --------------------------- |
-| `isSuccessful` | boolean   | If money are removed or not |
-
-## Example
-
-```lua
-local isSuccessful = exports["jobs_creator"]:removeSocietyMoney("police", 5000)
-
-print(isSuccessful)
-```
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `isSuccessful` | boolean | Whether the money was removed or not |
