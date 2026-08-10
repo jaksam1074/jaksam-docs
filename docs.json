@@ -228,7 +228,8 @@
                           "jobs-creator/server/buyable-vehicles/get-all-vehicles-of-player",
                           "jobs-creator/server/buyable-vehicles/on-vehicle-bought",
                           "jobs-creator/server/buyable-vehicles/get-player-vehicles-in-marker-id"
-                        ]
+                        ],
+                        "icon": "car"
                       },
                       {
                         "group": "Crafting Table",
