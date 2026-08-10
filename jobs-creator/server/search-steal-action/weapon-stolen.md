@@ -1,6 +1,7 @@
 ---
-title: "weapon-stolen"
+title: "Weapon Stolen"
 description: "Triggered after a player steals something from the actions menu, only if you use the default player search/rob, it won't work if you replaced it"
+icon: "gun"
 ---
 
 Triggered after a player steals a weapon from the actions menu.

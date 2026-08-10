@@ -287,7 +287,8 @@
                           "jobs-creator/server/search-steal-action/item-stolen",
                           "jobs-creator/server/search-steal-action/account-stolen",
                           "jobs-creator/server/search-steal-action/weapon-stolen"
-                        ]
+                        ],
+                        "icon": "magnifying-glass"
                       },
                       "jobs-creator/server/set-handcuffs-state"
                     ],
