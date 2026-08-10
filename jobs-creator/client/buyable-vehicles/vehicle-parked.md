@@ -1,18 +1,19 @@
-# Vehicle parked
+---
+title: "Vehicle parked"
+description: "Triggered after a vehicle from the buyable vehicles garage has been parked."
+icon: "car"
+---
 
-Triggered after the vehicle from buyable vehicles garage has been parked
+Triggered after the vehicle from the buyable vehicles garage has been parked.
 
-## Event
-
-```lua
+```lua Event
 AddEventHandler("jobs_creator:permanent_garage:vehicleParked", function(vehicleModel, vehiclePlate)
-
 end)
 ```
 
 ### Parameters
 
-| Name           | Data Type | Description                |
-| -------------- | --------- | -------------------------- |
-| `vehicleModel` | integer   | The vehicle's entity model |
-| `vehiclePlate` | string    | Vehicle's plate            |
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `vehicleModel` | integer | The vehicle's entity model |
+| `vehiclePlate` | string | Vehicle's plate |

@@ -1,24 +1,19 @@
-# Duty status toggled
+---
+title: "Duty status toggled"
+description: "Triggered client side after the player goes on or off duty."
+icon: "briefcase"
+---
 
-Triggered after player goes on/off duty client side
+Triggered after the player goes on/off duty, client side.
 
-## Event
+<CodeGroup>
 
-```lua
+```lua Event
 AddEventHandler("jobs_creator:toggleDuty", function(isOnDuty)
-
 end)
 ```
 
-### Parameters
-
-| Name       | Data Type | Description            |
-| ---------- | --------- | ---------------------- |
-| `isOnDuty` | boolean   | Player new duty status |
-
-## Example
-
-```lua
+```lua Example
 AddEventHandler("jobs_creator:toggleDuty", function(isOnDuty)
     if(isOnDuty) then
         ESX.ShowNotification("You are now on duty")
@@ -27,3 +22,11 @@ AddEventHandler("jobs_creator:toggleDuty", function(isOnDuty)
     end
 end)
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `isOnDuty` | boolean | Player's new duty status |
