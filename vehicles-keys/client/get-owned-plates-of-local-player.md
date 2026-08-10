@@ -1,15 +1,18 @@
-# Get owned plates of local player
+---
+title: "Get owned plates of local player"
+description: "Get all vehicle plates owned by the local player."
+icon: "list"
+---
 
-This export can be get all the owned plates of **the local player**&#x20;
+This export gets all the owned plates of **the local player**.
 
-## Export
-
-<pre class="language-lua"><code class="lang-lua"><strong>local ownedPlates = exports["vehicles_keys"]:getOwnedVehiclePlates()
-</strong></code></pre>
+```lua Export
+local ownedPlates = exports["vehicles_keys"]:getOwnedVehiclePlates()
+```
 
 ### Return
 
-A table containing all the owned plates with the following format
+A table containing all the owned plates, with the following format:
 
 ```lua
 {
@@ -17,7 +20,7 @@ A table containing all the owned plates with the following format
         type = "owned",
         model = -35726841
     },
-    
+
     ["BCD473"] = {
         type = "temporary",
         model = -55726841

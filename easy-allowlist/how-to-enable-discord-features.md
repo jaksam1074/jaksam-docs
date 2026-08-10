@@ -1,9 +1,11 @@
-# How to enable Discord features
+---
+title: "How to enable Discord features"
+description: "Enable allowlist checks and queue priority based on Discord roles."
+icon: "discord"
+---
 
-### How to enable Discord features
-
-To enable the Discord features (such as allowlist with a Discord role or Discord roles with priorities in queue), you can look at the following [**tutorial**](https://www.youtube.com/watch?v=NAnM3rBO7Z0)
+To enable the Discord features (such as allowlisting via a Discord role, or Discord role-based queue priority), follow this [tutorial](https://www.youtube.com/watch?v=NAnM3rBO7Z0).
 
 ### Common errors
 
-* Not placing the Discord bot role above all other roles
+- Not placing the Discord bot role above all other roles

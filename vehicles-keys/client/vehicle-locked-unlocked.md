@@ -1,10 +1,12 @@
-# Vehicle locked/unlocked
+---
+title: "Vehicle locked/unlocked"
+description: "Triggered client side when a vehicle's lock state changes."
+icon: "lock"
+---
 
-Triggered when the vehicle lock has been toggled
+Triggered when the vehicle lock has been toggled.
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("vehicles_keys:vehicleLockChanged", function(vehicle, isLocked)
 
 end)
@@ -12,10 +14,10 @@ end)
 
 ### Parameters
 
-| Name       | Data Type | Description                         |
-| ---------- | --------- | ----------------------------------- |
-| `vehicle`  | int       | Vehicle handle                      |
-| `isLocked` | bool      | If now the vehicle is locked or not |
+| Name       | Data Type | Description                            |
+| ---------- | --------- | ------------------------------------------ |
+| `vehicle`  | integer   | Vehicle handle                                |
+| `isLocked` | boolean   | Whether the vehicle is now locked or not        |
 
 ## Example
 
@@ -25,6 +27,6 @@ RegisterNetEvent("vehicles_keys:vehicleLockChanged", function(vehicle, isLocked)
 end)
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/cl_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/cl_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

@@ -1,13 +1,18 @@
-# How to give keys with /car command
+---
+title: "How to give keys with /car command"
+description: "Automatically give vehicle keys when a vehicle is spawned with the /car command, for common ESX and QBCore setups."
+icon: "car"
+---
 
-To automatically have keys of a vehicle received with /car command, you can see the examples below
+To automatically give the keys of a vehicle received with the `/car` command, see the examples below.
 
-In the following examples **the integration line** has already been added to previously existing code blocks
+<Note>
+  In the following examples, **the integration line** has already been added to the previously existing code.
+</Note>
 
 ### Old ESX
 
-{% code title="es_extended/client/main.lua" %}
-```lua
+```lua es_extended/client/main.lua
 RegisterNetEvent('esx:spawnVehicle')
 AddEventHandler('esx:spawnVehicle', function(vehicleName)
 	local model = (type(vehicleName) == 'number' and vehicleName or GetHashKey(vehicleName))
@@ -27,12 +32,10 @@ AddEventHandler('esx:spawnVehicle', function(vehicleName)
 	end
 end)
 ```
-{% endcode %}
 
 ### Newer ESX
 
-{% code title="es_extended/server/commands.lua" %}
-```lua
+```lua es_extended/server/commands.lua
 ESX.RegisterCommand('car', 'admin', function(xPlayer, args, showError)
 	local GameBuild = tonumber(GetConvar("sv_enforceGameBuild", 1604))
 	if not args.car then args.car = GameBuild >= 2699 and "draugur" or "prototipo" end
@@ -42,7 +45,7 @@ ESX.RegisterCommand('car', 'admin', function(xPlayer, args, showError)
     {name = "Vehicle", value = args.car, inline = true}
 	})
 	local upgrades = Config.MaxAdminVehicles and {
-		plate = "ADMINCAR", 
+		plate = "ADMINCAR",
 		modEngine = 3,
 		modBrakes = 2,
 		modTransmission = 2,
@@ -56,15 +59,14 @@ ESX.RegisterCommand('car', 'admin', function(xPlayer, args, showError)
 		local vehicle = NetworkGetEntityFromNetworkId(networkId)
 		Wait(250)
 		TaskWarpPedIntoVehicle(PlayerPed, vehicle, -1)
-		
+
 		-- VEHICLES KEYS INTEGRATION
-		exports["vehicles_keys"]:giveVehicleKeysToPlayerId(xPlayer.source, GetVehicleNumberPlateText(vehicle), "temporary") 
+		exports["vehicles_keys"]:giveVehicleKeysToPlayerId(xPlayer.source, GetVehicleNumberPlateText(vehicle), "temporary")
 	end)
 end, false, {help = TranslateCap('command_car'), validate = false, arguments = {
 	{name = 'car',validate = false, help = TranslateCap('command_car_car'), type = 'string'}
-}}) 
+}})
 ```
-{% endcode %}
 
 ### ESX 1.10
 
@@ -107,12 +109,12 @@ ESX.RegisterCommand('car', 'admin', function(xPlayer, args, showError)
 					break
 				end
 			end
-			
+
 			-- jaksam's vehicles keys integration
-			SetTimeout(2000, function() 
+			SetTimeout(2000, function()
 			  exports["vehicles_keys"]:giveVehicleKeysToPlayerId(xPlayer.source, GetVehicleNumberPlateText(vehicle), "temporary")
 			end)
-			
+
 			if GetVehiclePedIsIn(playerPed, false) ~= vehicle then
 				showError('[^1ERROR^7] The player could not be seated in the vehicle')
 			end
@@ -129,8 +131,7 @@ end, false, {
 
 ### QBCore
 
-{% code title="qb-core/client/events.lua" %}
-```lua
+```lua qb-core/client/events.lua
 RegisterNetEvent('QBCore:Command:SpawnVehicle', function(vehName)
     local ped = PlayerPedId()
     local hash = GetHashKey(vehName)
@@ -140,16 +141,16 @@ RegisterNetEvent('QBCore:Command:SpawnVehicle', function(vehName)
     while not HasModelLoaded(hash) do
         Wait(0)
     end
-        
-     if IsPedInAnyVehicle(ped) then 
+
+     if IsPedInAnyVehicle(ped) then
         DeleteVehicle(veh)
     end
-        
+
     local vehicle = CreateVehicle(hash, GetEntityCoords(ped), GetEntityHeading(ped), true, false)
     TaskWarpPedIntoVehicle(ped, vehicle, -1)
     SetVehicleFuelLevel(vehicle, 100.0)
     SetModelAsNoLongerNeeded(hash)
-    
+
     -- Old event
     --TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(vehicle))
 
@@ -157,4 +158,3 @@ RegisterNetEvent('QBCore:Command:SpawnVehicle', function(vehName)
     TriggerServerEvent("vehicles_keys:selfGiveVehicleKeys", QBCore.Functions.GetPlate(vehicle))
 end)
 ```
-{% endcode %}

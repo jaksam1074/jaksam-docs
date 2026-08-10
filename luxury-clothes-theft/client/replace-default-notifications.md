@@ -1,10 +1,12 @@
-# Replace default notifications
+---
+title: "Replace default notifications"
+description: "Use a custom notification system instead of the default one by listening to the notify event."
+icon: "bell"
+---
 
-Triggered after notifying player client side
+Triggered after notifying the player client side.
 
-## Event
-
-```lua
+```lua Event
 AddEventHandler("luxury_clothes_theft:notify", function(message, uncoloredMessage)
 
 end)
@@ -12,15 +14,15 @@ end)
 
 ### Parameters
 
-| Name               | Data Type | Description                                                    |
-| ------------------ | --------- | -------------------------------------------------------------- |
-| `message`          | string    | Message of the notification                                    |
-| `uncoloredMessage` | string    | Message of the notification but without \~r\~, \~g~~\~~~, etc. |
+| Name               | Data Type | Description                                                |
+| ------------------ | --------- | ------------------------------------------------------------ |
+| `message`          | string    | Message of the notification                                  |
+| `uncoloredMessage` | string    | Message of the notification but without `~r~`, `~g~`, etc.   |
 
 ## Example
 
 ```lua
-RegisterNetEvent("luxury_clothes_theft:framework:ready", function() 
+RegisterNetEvent("luxury_clothes_theft:framework:ready", function()
     -- Disables the default script notification (otherwise there would be 2 notifications)
     exports["luxury_clothes_theft"]:disableScriptEvent("luxury_clothes_theft:notify")
 end)
@@ -30,6 +32,6 @@ RegisterNetEvent("luxury_clothes_theft:notify", function(message, uncoloredMessa
 end)
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/cl_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/cl_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

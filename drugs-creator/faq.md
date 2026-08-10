@@ -1,27 +1,27 @@
-# FAQ
+---
+title: "FAQ"
+description: "Frequently asked questions specific to Drugs Creator."
+icon: "circle-question"
+---
 
-This page has FAQs related **ONLY to this script**, be sure to also check [common-faq.md](../jaksams-scripts/common-faq.md "mention") for other issues
+This page has FAQs related **only to this script** — be sure to also check the [common FAQ](/jaksams-scripts/common-faq) for other issues.
 
-<details>
+<AccordionGroup>
+  <Accordion title="Drugs effects not working">
+    If the effects aren't working, it means the `ESX.RegisterUsableItem` function of your `es_extended` isn't working properly.
 
-<summary>Drugs effects not working</summary>
+    You can still manually register/trigger effects by using the [manually start drugs effects](/drugs-creator/client/manually-start-drugs-effects) event.
 
-If the effects are not working, it means that `ESX.RegisterUsableItem` function of your `es_extended` doesn't work properly
+    On both **ESX** and **QBCore**, an anticheat may interfere with drug effects.
 
-You can still manually register/trigger effects by using the [following event](client/manually-start-drugs-effects.md)
+    <Note>
+      This isn't something that depends on the script, and we can't solve it for you.
+    </Note>
+  </Accordion>
 
-On both **ESX** and **QBCore**, an anticheat may interfere with drugs effects
+  <Accordion title="Bad performance">
+    If you're having server-side performance issues with Drugs Creator, it's most likely because of NPC selling, which requires refreshing all players' inventories to be able to prompt the `Press E to sell drugs` dialog.
 
-_Note: this is not something which depends on the script and we can't solve it for you_
-
-</details>
-
-<details>
-
-<summary>Bad performance</summary>
-
-If you are having issues with server side performance with Drugs Creator, most likely is because of NPC selling, which requires to refresh all players inventories to be able to prompt `Press E to sell drugs` dialog
-
-If you want to improve performance, enable the command in the in-game script settings, so it will use the closest NPC or spawn one (depending on your configuration)
-
-</details>
+    To improve performance, enable the corresponding option in the in-game script settings, so it will use the closest NPC or spawn one (depending on your configuration).
+  </Accordion>
+</AccordionGroup>

@@ -1,20 +1,24 @@
-# Refresh bill
+---
+title: "Refresh bill"
+description: "Refresh a bill's data server side after editing it directly in the database."
+icon: "rotate"
+---
 
-This export will refresh the specified bill ID, so if you edit the values in the database, you can use this export so the script won't require a restart to see it
+This export refreshes the specified bill ID, so if you edit the values in the database, you can use this export to see the changes without requiring a script restart.
 
-Note: if you have to delete a bill, use the [delete-bill.md](delete-bill.md "mention")export
+<Note>
+  If you need to delete a bill, use the [delete bill](/billing-ui/server/delete-bill) export instead.
+</Note>
 
-## Export
-
-```lua
+```lua Export
 exports["billing_ui"]:refreshBillId(billId)
 ```
 
 ### Parameters
 
-| Name     | Data Type | Description                                              |
-| -------- | --------- | -------------------------------------------------------- |
-| `billId` | integer   | The bill ID you can find in the database table `billing` |
+| Name     | Data Type | Description                                                    |
+| -------- | --------- | ------------------------------------------------------------------ |
+| `billId` | integer   | The bill ID, found in the database table `billing`                    |
 
 ## Example
 

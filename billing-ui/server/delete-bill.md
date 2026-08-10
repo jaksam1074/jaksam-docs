@@ -1,16 +1,18 @@
-# Delete bill
+---
+title: "Delete bill"
+description: "Delete a bill server side by its ID."
+icon: "trash"
+---
 
-## Export
-
-```lua
+```lua Export
 exports["billing_ui"]:deleteBillId(billId)
 ```
 
 ### Parameters
 
-| Name     | Data Type | Description                                              |
-| -------- | --------- | -------------------------------------------------------- |
-| `billId` | integer   | The bill ID you can find in the database table `billing` |
+| Name     | Data Type | Description                                                    |
+| -------- | --------- | ------------------------------------------------------------------ |
+| `billId` | integer   | The bill ID, found in the database table `billing`                    |
 
 ## Example
 

@@ -1,9 +1,12 @@
-# Get queue info
+---
+title: "Get queue info"
+description: "Get the data of the players who are currently in queue."
+icon: "circle-info"
+---
 
-Use the following export to get the data of the players who are currently in queue (nickname, identifier, priority, etc.)
+Use the following export to get the data of the players who are currently in queue (nickname, identifier, priority, etc.).
 
-## Export
-```lua
+```lua Export
 -- Returns a table
 exports["easy_allowlist"]:getPlayersInQueue()
 ```
@@ -17,4 +20,6 @@ RegisterCommand("queueinfo", function(source, args)
 end, false)
 ```
 
-__You can add this code in sv_integrations.lua of the script or in any other server side lua file__
+<Note>
+  You can add this code in `sv_integrations.lua` of the script or in any other server-side Lua file.
+</Note>

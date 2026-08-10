@@ -1,19 +1,21 @@
-# Get what objects can be sold in shop ID
+---
+title: "Get what objects can be sold in shop ID"
+description: "Get which objects a player can sell in a shop, based on its whitelist/blacklist settings."
+icon: "tags"
+---
 
-This export returns which objects the player can sell in the shop ID, depending on the shop whitelist/blacklist and on if the shop is allowed to manage weapons and/or items
+This export returns which objects the player can sell in the shop ID, depending on the shop's whitelist/blacklist and on whether the shop is allowed to manage weapons and/or items.
 
-## Export
-
-```lua
+```lua Export
 local sellableObjects = getSellableObjectsForShopId(playerId, shopId)
 ```
 
 ### Parameters
 
-| Name       | Data Type | Description                                   |
-| ---------- | --------- | --------------------------------------------- |
-| `playerId` | integer   | The player server ID                          |
-| `shopId`   | integer   | The shop ID (the same that's in the database) |
+| Name       | Data Type | Description                                     |
+| ---------- | --------- | -------------------------------------------------- |
+| `playerId` | integer   | The player server ID                                |
+| `shopId`   | integer   | The shop ID (the same one that's in the database)   |
 
 ### Output example
 
@@ -46,6 +48,6 @@ local sellableObjects = getSellableObjectsForShopId(playerId, shopId)
 }
 ```
 
-## Where to insert the code?
-
-You can place it in the file `integrations/sv_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/sv_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

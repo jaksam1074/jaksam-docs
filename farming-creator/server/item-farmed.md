@@ -1,8 +1,10 @@
-# Item farmed
+---
+title: "Item farmed"
+description: "Events triggered after a player farms anywhere - farms, fields, foundries, seeds, or workbenches."
+icon: "wheat-awn"
+---
 
-This page will have events that are triggered **after** a player farms anywhere
-
-
+This page lists events that are triggered **after** a player farms anywhere.
 
 ### Farms
 

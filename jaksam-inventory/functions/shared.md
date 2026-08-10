@@ -6,10 +6,10 @@ description: "Compatibility notes and exports that work on both server and clien
 
 ## Compatibility
 
-This script works with other popular inventory systems, like es\_extended, qb-inventory, and ox\_inventory.
+This script works with other popular inventory systems, like es_extended, qb-inventory, and ox_inventory.
 
 <Info>
-  For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox\_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
+  For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
 </Info>
 
 ## Shared functions
@@ -100,7 +100,7 @@ exports['jaksam_inventory']:getItemImagePath(itemName)
   The name of the item to get the image path for
 </ParamField>
 
-**Returns:** `imagePath` (string) — The NUI image path (e.g., "nui://jaksam\_inventory/\_images/bread.png"). Always returns a valid path, using fallback to `box.webp` if the item doesn't exist or no image is found
+**Returns:** `imagePath` (string) — The NUI image path (e.g., "nui://jaksam_inventory/_images/bread.png"). Always returns a valid path, using fallback to `box.webp` if the item doesn't exist or no image is found
 
 ```lua
 -- Get the image path of the item "bread"

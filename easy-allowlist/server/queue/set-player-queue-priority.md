@@ -1,23 +1,27 @@
-# Set player queue priority
+---
+title: "Set player queue priority"
+description: "Set a queue priority for an online player ID."
+icon: "arrow-up-short-wide"
+---
 
-To set a queue priority to an online player ID
+Set a queue priority for an online player ID.
 
-## Export
+<CodeGroup>
 
-```lua
+```lua Export
 exports["easy_allowlist"]:setPlayerQueuePriority(playerId, priority)
 ```
 
-### Parameters
-
-| Name       | Data Type | Description      |
-| ---------- | --------- | ---------------- |
-| `playerId` | integer   | Player server ID |
-| `priority` | integer   | Queue priority   |
-
-## Example
-
-```lua
+```lua Example
 local playerId = 61
 exports["easy_allowlist"]:setPlayerQueuePriority(playerId, 15)
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name       | Data Type | Description       |
+| ---------- | --------- | -------------------- |
+| `playerId` | integer   | Player's server ID   |
+| `priority` | integer   | Queue priority        |

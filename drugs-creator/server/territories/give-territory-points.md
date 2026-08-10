@@ -1,20 +1,22 @@
-# Give territory points
+---
+title: "Give territory points"
+description: "Add points to a faction in a territory from an external script."
+icon: "arrow-up"
+---
 
-Adds points to a faction in a territory from an external script
+Adds points to a faction in a territory from an external script.
 
-## Export
-
-```lua
+```lua Export
 exports["drugs_creator"]:giveTerritoryPoints(territory, job, amount)
 ```
 
 ### Parameters
 
-| Name        | Data Type | Description                                                                 |
-| ----------- | --------- | --------------------------------------------------------------------------- |
-| `territory` | string    | Territory name, or `"*"` to target all territories                          |
-| `job`       | string    | Job/gang name to give points to, or `"*"` to target all configured factions |
-| `amount`    | int       | Number of points to add (must be > 0)                                       |
+| Name         | Data Type | Description                                                             |
+| ------------- | --------- | ---------------------------------------------------------------------------- |
+| `territory`    | string    | Territory name, or `"*"` to target all territories                              |
+| `job`          | string    | Job/gang name to give points to, or `"*"` to target all configured factions       |
+| `amount`       | integer   | Number of points to add (must be > 0)                                              |
 
 ## Example
 

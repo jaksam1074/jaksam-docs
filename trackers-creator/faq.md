@@ -1,11 +1,13 @@
-# FAQ
+---
+title: "FAQ"
+description: "Frequently asked questions specific to Trackers Creator."
+icon: "circle-question"
+---
 
-This page has FAQs related **ONLY to this script**, be sure to also check [common-faq.md](../jaksams-scripts/common-faq.md "mention") for other issues
+This page has FAQs related **only to this script** — be sure to also check the [common FAQ](/jaksams-scripts/common-faq) for other issues.
 
-<details>
-
-<summary>Bad performance</summary>
-
-Due the nature of the script, it's quite normal that it consumes more resources than other scripts. To optimize it, you can follow [this guide](optimization.md)
-
-</details>
+<AccordionGroup>
+  <Accordion title="Bad performance">
+    Due to the nature of the script, it's quite normal that it consumes more resources than other scripts. To optimize it, you can follow the [optimization guide](/trackers-creator/optimization).
+  </Accordion>
+</AccordionGroup>

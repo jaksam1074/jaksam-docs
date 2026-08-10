@@ -1,9 +1,12 @@
-# Get count of players currently in queue
+---
+title: "Get queue count"
+description: "Get the count of players currently in queue."
+icon: "hashtag"
+---
 
-Use the following export if you need to get **the count of players currently in queue**
+Use the following export if you need to get **the count of players currently in queue**.
 
-## Export
-```lua
+```lua Export
 -- Returns a number
 exports["easy_allowlist"]:getQueueCount()
 ```
@@ -17,4 +20,6 @@ RegisterCommand("queuecount", function(source, args)
 end, false)
 ```
 
-__You can add this code in sv_integrations.lua of the script or in any other server side lua file__
+<Note>
+  You can add this code in `sv_integrations.lua` of the script or in any other server-side Lua file.
+</Note>

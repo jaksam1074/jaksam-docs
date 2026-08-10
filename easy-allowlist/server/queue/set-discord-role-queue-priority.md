@@ -1,23 +1,27 @@
-# Set discord role queue priority
+---
+title: "Set Discord role queue priority"
+description: "Set a queue priority for a Discord role."
+icon: "arrow-up-short-wide"
+---
 
-To set a queue priority for a Discord Role ID
+Set a queue priority for a Discord role ID.
 
-## Export
+<CodeGroup>
 
-```lua
+```lua Export
 exports["easy_allowlist"]:setDiscordRolePriority(discordRoleId, priority)
 ```
 
-### Parameters
-
-| Name            | Data Type | Description     |
-| --------------- | --------- | --------------- |
-| `discordRoleId` | integer   | Discord role ID |
-| `priority`      | integer   | Queue priority  |
-
-## Example
-
-```lua
+```lua Example
 local discordRoleId = "332962646660794880"
 exports["easy_allowlist"]:setDiscordRolePriority(discordRoleId, 30)
 ```
+
+</CodeGroup>
+
+### Parameters
+
+| Name            | Data Type | Description       |
+| ---------------- | --------- | ------------------- |
+| `discordRoleId`  | string    | Discord role ID     |
+| `priority`       | integer   | Queue priority      |

@@ -1,17 +1,19 @@
-# Remove keys from player ID
+---
+title: "Remove keys from player ID"
+description: "Remove vehicle keys from an online player server side."
+icon: "key"
+---
 
-## Export
-
-```lua
+```lua Export
 exports["vehicles_keys"]:removeKeysFromPlayerId(playerId, plate)
 ```
 
 ### Parameters
 
-| Name       | Data Type | Description                 |
-| ---------- | --------- | --------------------------- |
-| `playerId` | integer   | The target player server ID |
-| `plate`    | string    | The vehicle plate           |
+| Name       | Data Type | Description                   |
+| ---------- | --------- | ---------------------------------- |
+| `playerId` | integer   | The target player server ID           |
+| `plate`    | string    | The vehicle plate                      |
 
 ## Example
 

@@ -6,10 +6,10 @@ description: "Compatibility notes and client-side exports for reading and contro
 
 ## Compatibility
 
-This script works with other popular inventory systems, like es\_extended, qb-inventory, and ox\_inventory.
+This script works with other popular inventory systems, like es_extended, qb-inventory, and ox_inventory.
 
 <Info>
-  For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox\_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
+  For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
 </Info>
 
 ## Client functions
@@ -692,7 +692,7 @@ exports['jaksam_inventory']:setInventoryDisabled(false)
 ```
 
 <Note>
-  **ox\_inventory compatibility:** If you are migrating from ox\_inventory, this export replaces the `invBusy` state bag pattern. Scripts that set `LocalPlayer.state:set('invBusy', true, true)` will continue to work automatically — jaksam\_inventory listens for `invBusy` state bag changes and maps them to the same internal flag.
+  **ox_inventory compatibility:** If you are migrating from ox_inventory, this export replaces the `invBusy` state bag pattern. Scripts that set `LocalPlayer.state:set('invBusy', true, true)` will continue to work automatically — jaksam_inventory listens for `invBusy` state bag changes and maps them to the same internal flag.
 
   ```lua
   -- ox_inventory pattern (still works with jaksam_inventory)

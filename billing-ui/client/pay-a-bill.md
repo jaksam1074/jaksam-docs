@@ -1,15 +1,17 @@
-# Pay a bill
+---
+title: "Pay a bill"
+description: "Pay a bill by its ID, for example from an external script."
+icon: "credit-card"
+---
 
-Trigger to pay a bill ID properly, you can use this from external scripts
+Trigger to properly pay a bill by its ID — you can use this from external scripts.
 
-## Event
-
-```lua
+```lua Event
 TriggerServerEvent("billing_ui:payInvoice", billId)
 ```
 
 ### Parameters
 
-| Name     | Data Type | Description                                               |
-| -------- | --------- | --------------------------------------------------------- |
-| `billId` | integer   | The bill ID (the ID is from the database table `billing`) |
+| Name     | Data Type | Description                                                  |
+| -------- | --------- | ------------------------------------------------------------- |
+| `billId` | integer   | The bill ID (from the database table `billing`)                 |

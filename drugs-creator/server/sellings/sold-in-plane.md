@@ -1,10 +1,12 @@
-# Sold in plane
+---
+title: "Sold in plane"
+description: "Triggered server side after a player sells drugs while in a plane."
+icon: "plane"
+---
 
-Triggered after a player sells to in plane (for each item sold)
+Triggered after a player sells while in a plane (for each item sold).
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("drugs_creator:plane:soldItem", function(playerId, drugName, drugQuantity, totalDrugPrice, accountName)
 
 end)
@@ -12,13 +14,13 @@ end)
 
 ### Parameters
 
-| Name             | Data Type | Description                                      |
-| ---------------- | --------- | ------------------------------------------------ |
-| `playerId`       | int       | Player server ID                                 |
-| `drugName`       | string    | Item ID of the drug just sold                    |
-| `drugQuantity`   | int       | Item quantity sold                               |
-| `totalDrugPrice` | int       | Total money that the player received             |
-| `accountName`    | string    | Account type used for reward (money, black_money, etc.) |
+| Name              | Data Type | Description                                                |
+| ------------------ | --------- | -------------------------------------------------------------- |
+| `playerId`          | integer   | Player server ID                                                   |
+| `drugName`          | string    | Item ID of the drug just sold                                        |
+| `drugQuantity`      | integer   | Item quantity sold                                                     |
+| `totalDrugPrice`    | integer   | Total money that the player received                                    |
+| `accountName`       | string    | Account type used for the reward (money, black_money, etc.)               |
 
 ## Example
 
@@ -33,7 +35,7 @@ RegisterNetEvent("drugs_creator:plane:soldItem", function(playerId, drugName, dr
 
         xPlayer.showNotification("Here you have 3 bonus weed")
     end
-    
+
     print("Player received " .. totalDrugPrice .. " in " .. accountName)
 end)
 ```

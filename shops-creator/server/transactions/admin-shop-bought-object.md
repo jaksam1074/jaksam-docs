@@ -1,10 +1,12 @@
-# Admin shop bought object
+---
+title: "Admin shop bought object"
+description: "Triggered when a player buys an object from an admin shop."
+icon: "hand-holding-dollar"
+---
 
-Triggered after a player buys an object from an admin shop
+Triggered after a player buys an object from an admin shop.
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("shops_creator:adminShops:boughtObject", function(playerId, shopId, itemId, quantity, totalPrice)
 
 end)
@@ -12,14 +14,14 @@ end)
 
 ### Parameters
 
-| Name       | Data Type | Description                                   |
-| ---------- | --------- | --------------------------------------------- |
-| `playerId` | integer   | The player ID who bought the object           |
-| `shopId`   | integer   | The shop ID (the same that's in the database) |
-| `itemId`   | string    | The item ID that was bought                   |
-| `quantity` | integer   | The quantity of items bought                  |
-| `totalPrice` | integer   | The total price of the items bought           |
+| Name         | Data Type | Description                                     |
+| ------------ | --------- | -------------------------------------------------- |
+| `playerId`   | integer   | The player ID who bought the object                 |
+| `shopId`     | integer   | The shop ID (the same one that's in the database)   |
+| `itemId`     | string    | The item ID that was bought                          |
+| `quantity`   | integer   | The quantity of items bought                          |
+| `totalPrice` | integer   | The total price of the items bought                   |
 
-## Where to insert the code?
-
-You can place it in the file `integrations/sv_integrations.lua` of the script, **at the bottom of the file on new lines**
+<Note>
+  Place this code in the file `integrations/sv_integrations.lua` of the script, at the bottom of the file on new lines.
+</Note>

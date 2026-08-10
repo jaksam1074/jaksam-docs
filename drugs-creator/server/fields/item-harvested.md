@@ -1,10 +1,12 @@
-# Item harvested
+---
+title: "Item harvested"
+description: "Triggered server side after an item is harvested in a field."
+icon: "hand-holding"
+---
 
-Triggered after an item has been harvested in a field
+Triggered after an item has been harvested in a field.
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("drugs_creator:fields:itemHarvested", function(playerId, fieldId, itemName, itemQuantity)
 
 end)
@@ -12,12 +14,12 @@ end)
 
 ### Parameters
 
-| Name           | Data Type | Description                           |
-| -------------- | --------- | ------------------------------------- |
-| `playerId`     | int       | Player server ID                      |
-| `fieldId`      | int       | Field ID where the item was harvested |
-| `itemName`     | string    | Item ID just harvested                |
-| `itemQuantity` | int       | Item quantity harvested               |
+| Name             | Data Type | Description                             |
+| ----------------- | --------- | -------------------------------------------- |
+| `playerId`         | integer   | Player server ID                                 |
+| `fieldId`          | integer   | Field ID where the item was harvested              |
+| `itemName`         | string    | Item ID just harvested                              |
+| `itemQuantity`     | integer   | Item quantity harvested                              |
 
 ## Example
 

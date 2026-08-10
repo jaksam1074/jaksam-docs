@@ -1,18 +1,20 @@
-# Remove ped from selling blacklist
+---
+title: "Remove ped from selling blacklist"
+description: "Allow a previously blacklisted ped to be sold drugs to again."
+icon: "user-check"
+---
 
-To remove a ped from NPC selling blacklist, the opposite of the export `addPedToNPCSellingBlacklist`
+Removes a ped from the NPC selling blacklist — the opposite of the `addPedToNPCSellingBlacklist` export.
 
-## Event
-
-```lua
+```lua Export
 exports["drugs_creator"]:removePedFromNPCSellingBlacklist(ped)
 ```
 
 ### Parameters
 
-| Name  | Data Type     | Description             |
-| ----- | ------------- | ----------------------- |
-| `ped` | ped (integer) | The target ped's handle |
+| Name  | Data Type       | Description             |
+| ----- | ---------------- | -------------------------- |
+| `ped` | ped (integer)     | The target ped's handle       |
 
 ## Example
 

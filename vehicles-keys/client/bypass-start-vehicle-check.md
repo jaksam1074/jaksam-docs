@@ -1,16 +1,23 @@
-# Bypass start vehicle check
+---
+title: "Bypass start vehicle check"
+description: "Bypass the vehicle start conditions using a state bag."
+icon: "key"
+---
 
-You can bypass the start vehicle check by setting the state bag `canAlwaysStart to true`
+You can bypass the start vehicle check by setting the state bag `canAlwaysStart` to `true`.
 
 ## Example
 
-<pre class="language-lua"><code class="lang-lua"><strong>-- This command will make the player bypass the current vehicle start conditions
-</strong><strong>RegisterCommand("startbypass", function()
-</strong>    local plyPed = PlayerPedId()
+```lua
+-- This command will make the player bypass the current vehicle start conditions
+RegisterCommand("startbypass", function()
+    local plyPed = PlayerPedId()
     local plyVeh = GetVehiclePedIsIn(plyPed)
-    
+
     Entity(plyVeh).state.canAlwaysStart = true
 end)
-</code></pre>
+```
 
-Note: the bypass will apply when you enter the vehicle, **after** that the bypass is enabled
+<Note>
+  The bypass applies when you enter the vehicle **after** it's been enabled.
+</Note>

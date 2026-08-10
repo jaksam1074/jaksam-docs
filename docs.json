@@ -124,6 +124,8 @@
                   "jobs-creator/faq",
                   "jobs-creator/modules",
                   "jobs-creator/replacing-default-scripts-names",
+                  "jobs-creator/replacing-default-events-names",
+                  "jobs-creator/qbcore-jobs-injection",
                   {
                     "group": "Client",
                     "root": "jobs-creator/client/index",
@@ -376,7 +378,6 @@
                           "drugs-creator/server/sellings/sold-in-plane",
                           "drugs-creator/server/sellings/sold-to-npc",
                           "drugs-creator/server/sellings/sold-to-narcos",
-                          "drugs-creator/server/sellings/sold-by-corner-selling",
                           "drugs-creator/server/sellings/sold-by-hired-dealer"
                         ]
                       },
@@ -548,6 +549,7 @@
                     "root": "shops-creator/client/index",
                     "pages": [
                       "shops-creator/client/replace-default-police-alert",
+                      "shops-creator/client/ui_toggled",
                       {
                         "group": "Notifications",
                         "root": "shops-creator/client/notifications/index",

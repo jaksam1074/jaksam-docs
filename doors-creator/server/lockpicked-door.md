@@ -1,8 +1,10 @@
-# Lockpicked door
+---
+title: "Lockpicked door"
+description: "Triggered server side when a player lockpicks a door."
+icon: "lock-open"
+---
 
-## Event
-
-```lua
+```lua Event
 RegisterNetEvent("doors_creator:doorHasBeenLockpicked", function(playerId, doorId)
 
 end)
@@ -10,10 +12,10 @@ end)
 
 ### Parameters
 
-| Name       | Data Type | Description                                         |
-| ---------- | --------- | --------------------------------------------------- |
-| `playerId` | integer   | The server id of the player who lockpicked the door |
-| `doorId`   | integer   | The door ID that has been lockpicked                |
+| Name       | Data Type | Description                                        |
+| ---------- | --------- | ------------------------------------------------------ |
+| `playerId` | integer   | The server ID of the player who lockpicked the door       |
+| `doorId`   | integer   | The door ID that has been lockpicked                       |
 
 ## Example
 

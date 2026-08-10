@@ -1,18 +1,20 @@
-# Give keys to player ID
+---
+title: "Give keys to player ID"
+description: "Give vehicle keys to an online player server side."
+icon: "key"
+---
 
-## Export
-
-```lua
+```lua Export
 exports["vehicles_keys"]:giveVehicleKeysToPlayerId(playerId, plate, type)
 ```
 
 ### Parameters
 
-| Name       | Data Type         | Description                                                                                               |
-| ---------- | ----------------- | --------------------------------------------------------------------------------------------------------- |
-| `playerId` | integer           | The target player server ID                                                                               |
-| `plate`    | string            | The vehicle plate                                                                                         |
-| `type`     | string (optional) | The vehicle type. The default will be "temporary". Available types: "temporary", "owned", "other\_player" |
+| Name       | Data Type         | Description                                                                                                  |
+| ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------- |
+| `playerId` | integer             | The target player server ID                                                                                     |
+| `plate`    | string              | The vehicle plate                                                                                               |
+| `type`     | string (optional)  | The vehicle type. Defaults to `"temporary"`. Available types: `"temporary"`, `"owned"`, `"other_player"`          |
 
 ## Example
 

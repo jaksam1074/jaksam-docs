@@ -1,21 +1,23 @@
-# Create bill
+---
+title: "Create bill"
+description: "Create a new bill for a player or society server side."
+icon: "file-circle-plus"
+---
 
-## Export
-
-```lua
+```lua Export
 exports["billing_ui"]:createBill(senderIdentifier, targetIdentifier, reason, amount, target, targetType)
 ```
 
 ### Parameters
 
-| Name               | Data Type | Description                                                                                                                                                                                                                                                                                 |
-| ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `senderIdentifier` | string    | <p>The identifier of the player who creates the invoice<br><strong>In QBCore it's the citizen ID</strong></p>                                                                                                                                                                               |
-| `targetIdentifier` | string    | <p>The identifier of the player who receives the invoice<br><strong>In QBCore it's the citizen ID</strong></p>                                                                                                                                                                              |
-| `reason`           | string    | The reason of the invoice                                                                                                                                                                                                                                                                   |
-| `amount`           | integer   | The amount of the invoice                                                                                                                                                                                                                                                                   |
-| `target`           | string    | <p>Who will receive the payment of the invoice<br>- If <code>targetType</code> it's <code>player</code> the target will be an identifier (or citizen ID in QBCore)<br>- If <code>targetType</code> it's <code>society</code> the target will be for example <code>society_police</code></p> |
-| `targetType`       | string    | `player` or `society`                                                                                                                                                                                                                                                                       |
+| Name                | Data Type | Description                                                                                                                                                              |
+| -------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `senderIdentifier`   | string    | The identifier of the player who creates the invoice. **In QBCore it's the citizen ID.**                                                                                        |
+| `targetIdentifier`   | string    | The identifier of the player who receives the invoice. **In QBCore it's the citizen ID.**                                                                                       |
+| `reason`             | string    | The reason for the invoice                                                                                                                                                        |
+| `amount`             | integer   | The amount of the invoice                                                                                                                                                          |
+| `target`             | string    | Who will receive the payment of the invoice. If `targetType` is `player`, the target is an identifier (or citizen ID in QBCore). If `targetType` is `society`, the target is, for example, `society_police`. |
+| `targetType`         | string    | `player` or `society`                                                                                                                                                                |
 
 ## Example
 
@@ -28,7 +30,7 @@ RegisterCommand("sendInvoiceToOfflinePlayer", function(playerId, args)
     local amount = tonumber(args[3]) -- Example 5000
     local target = "society_police"
     local targetType = "society"
-    
+
     exports["billing_ui"]:createBill(senderIdentifier, targetIdentifier, reason, amount, target, targetType)
 end)
 
@@ -40,7 +42,7 @@ RegisterCommand("sendInvoiceToOfflinePlayer", function(playerId, args)
     local amount = tonumber(args[3]) -- Example 5000
     local target = "society_police"
     local targetType = "society"
-    
+
     exports["billing_ui"]:createBill(senderIdentifier, targetIdentifier, reason, amount, target, targetType)
 end)
 ```

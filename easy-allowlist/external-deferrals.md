@@ -1,4 +1,8 @@
-# External deferrals
+---
+title: "External deferrals"
+description: "Integrate Easy Allowlist's queue with a framework that already uses its own connection deferrals, like QBCore's connectqueue."
+icon: "code-merge"
+---
 
 ### Example for QB-Core
 
@@ -97,7 +101,7 @@ local function OnPlayerConnecting(name, setKickReason, deferrals)
             Wait(1000)
             TriggerEvent('connectqueue:playerConnect', name, setKickReason, deferrals)
         ]]
-        
+
         deferrals.done()
     end
 end
@@ -105,9 +109,9 @@ end
 
 ### Disable default QB-Core queue
 
-To disable the default QB-Core queue, you can delete the `connectqueue` script folder and remove the dependency in qb-core script
+To disable the default QB-Core queue, delete the `connectqueue` script folder and remove the dependency in the qb-core script.
 
-**Example Path: qb-core/fxmanifest.lua**
+**Example path: `qb-core/fxmanifest.lua`**
 
 ```lua
 -- OLD CODE

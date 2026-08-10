@@ -6,10 +6,10 @@ description: "Full reference of server-side exports for managing inventories, it
 
 ## Compatibility
 
-This script works with other popular inventory systems, like es\_extended, qb-inventory, and ox\_inventory.
+This script works with other popular inventory systems, like es_extended, qb-inventory, and ox_inventory.
 
 <Info>
-  For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox\_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
+  For ESX and QBCore functions, the setup is done automatically. But, if you want to keep using exports from ox_inventory or qb-inventory for compatibility, you need to turn on this option in the file: `jaksam_inventory/integrations/sv_integrations.lua`
 </Info>
 
 ## Server functions
@@ -94,7 +94,7 @@ exports['jaksam_inventory']:addItemToTrunk(plate, itemName, amount, metadata, sl
 **Returns:**
 
 - `success` (boolean) — true if items were added successfully
-- `resultCode` (string) — Error message if the operation failed (e.g., "vehicle\_not\_found")
+- `resultCode` (string) — Error message if the operation failed (e.g., "vehicle_not_found")
 - `notificationType` (string) — Type of notification to show to the user
 
 ```lua
@@ -150,7 +150,7 @@ exports['jaksam_inventory']:addItemToGlovebox(plate, itemName, amount, metadata,
 **Returns:**
 
 - `success` (boolean) — true if items were added successfully
-- `resultCode` (string) — Error message if the operation failed (e.g., "vehicle\_not\_found")
+- `resultCode` (string) — Error message if the operation failed (e.g., "vehicle_not_found")
 - `notificationType` (string) — Type of notification to show to the user
 
 ```lua
@@ -213,7 +213,7 @@ local success = exports['jaksam_inventory']:removeItemFromTrunk("ABC 123", 'weap
 ```
 
 <Note>
-  Vehicle must exist (owned vehicle in database or NPC vehicle currently spawned). Returns false with "vehicle\_not\_found" if vehicle doesn't exist.
+  Vehicle must exist (owned vehicle in database or NPC vehicle currently spawned). Returns false with "vehicle_not_found" if vehicle doesn't exist.
 </Note>
 
 ## removeItemFromGlovebox
@@ -261,7 +261,7 @@ end
 ```
 
 <Note>
-  Vehicle must exist (owned vehicle in database or NPC vehicle currently spawned). Returns false with "vehicle\_not\_found" if vehicle doesn't exist.
+  Vehicle must exist (owned vehicle in database or NPC vehicle currently spawned). Returns false with "vehicle_not_found" if vehicle doesn't exist.
 </Note>
 
 ## getInventoryIdFromPlate

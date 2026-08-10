@@ -1,21 +1,23 @@
-# Get identifier keys
+---
+title: "Get identifier keys"
+description: "Get all vehicle keys owned by a player identifier server side."
+icon: "list"
+---
 
-## Export
-
-```lua
+```lua Export
 exports["vehicles_keys"]:getIdentifierKeys(identifier)
 ```
 
 ### Parameters
 
-| Name         | Data Type | Description                          |
-| ------------ | --------- | ------------------------------------ |
-| `identifier` | string    | The target player identifier/license |
+| Name         | Data Type | Description                           |
+| ------------ | --------- | ---------------------------------------- |
+| `identifier` | string    | The target player identifier/license       |
 
 ## Example
 
 ```lua
-Citizen.CreateThread(function() 
+Citizen.CreateThread(function()
     local identifier = "abcedfghj12356"
 
     local keys = exports["vehicles_keys"]:getIdentifierKeys(identifier)
