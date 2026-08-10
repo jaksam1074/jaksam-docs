@@ -1,0 +1,125 @@
+---
+title: "Problembehandlung"
+description: "Häufige Probleme und wie man sie behebt"
+icon: "wrench"
+---
+
+<Note>
+  Wenn deine Fehlermeldung das FiveM-Escrow-System erwähnt (zum Beispiel "Failed to verify protected resource" oder "You lack the required entitlement"), sieh dir stattdessen die eigene [Escrow-Fehler](/de/jaksams-scripts/escrow-errors)-Seite an.
+</Note>
+
+<AccordionGroup>
+  <Accordion title="Serverabsturz beim Scriptstart beheben">
+    Wenn dein Server beim Start des Scripts abstürzt, verwendest du eine alte Version des `mysql-async`-Scripts.
+
+    Das Beheben dieses Problems ist sehr einfach und schnell, du hast 2 Möglichkeiten:
+
+    <CardGroup cols={2}>
+      <Card title="OxMySQL installieren" icon="database" href="https://overextended.dev/docs/oxmysql">
+        **Dringend empfohlen.** Ersetzt `mysql-async` durch bessere Performance und volle Kompatibilität, ein einfacher Austausch. Details in der Installationsanleitung.
+      </Card>
+
+      <Card title="mysql-async aktualisieren" icon="download" href="https://github.com/brouznouf/fivem-mysql-async">
+        **Nicht empfohlen.** Installiere das aktualisierte Script anstelle deines aktuellen `mysql-async`. Achte darauf, den Script-Ordner in `mysql-async` umzubenennen.
+      </Card>
+    </CardGroup>
+  </Accordion>
+
+  <Accordion title="Probleme mit Items">
+    Es kann vorkommen, dass bei bestimmten Inventaren das Hinzufügen oder Entfernen von Items Fehler in der Serverkonsole verursacht.
+
+    Versuche in diesem Fall folgende Schritte:
+
+    <Steps>
+      <Step title="Item-Existenzprüfung deaktivieren">
+        Gehe im Script-Ordner in die Datei `integrations/sv_integrations.lua` und ändere diese Option von
+
+        ```lua
+                SKIP_ITEM_EXISTS_CHECK = false
+        ```
+
+        zu
+
+        ```lua
+                SKIP_ITEM_EXISTS_CHECK = true
+        ```
+      </Step>
+      <Step title="canAlwaysCarryItem aktivieren">
+        Falls das Script eine `default_config.json`-Datei hat, bearbeite diese Option im `"server"`-Bereich von
+
+        ```json
+                "canAlwaysCarryItem": false,
+        ```
+
+        zu
+
+        ```json
+                "canAlwaysCarryItem": true,
+        ```
+
+        <Frame caption="Vorher">
+          ![Vorher](/images/can_always_carry_item_before.jpg)
+        </Frame>
+
+        <Frame caption="Nachher">
+          ![Nachher](/images/can_always_carry_item_after.jpg)
+        </Frame>
+
+        Falls das Script eine `current_config.json`-Datei hat (eine andere Datei als die vorherige), bearbeite die `canAlwaysCarryItem`-Option dort ebenfalls auf `true`.
+
+        <Frame caption="Vorher">
+          ![Vorher](/images/current_config_can_always_carry_before-1.jpg)
+        </Frame>
+
+        <Frame caption="Nachher">
+          ![Nachher](/images/current_config_can_always_carry_after.jpg)
+        </Frame>
+
+        <Accordion title="Was tun, wenn ich die Option canAlwaysCarryItem nicht habe?">
+          Falls du die `canAlwaysCarryItem`-Option nicht hast, musst du sie einfach hinzufügen. Füge sie unbedingt am **Anfang** des `server`-Bereichs ein.
+
+          <Frame caption="Vorher">
+            ![Vorher](/images/no_can_always_carry_item_before.jpg)
+          </Frame>
+
+          <Frame caption="Nachher">
+            ![Nachher](/images/no_can_always_carry_item_after.jpg)
+          </Frame>
+        </Accordion>
+      </Step>
+      <Step title="Item-Existenz prüfen">
+        Das Item, an dem du arbeitest, muss existieren, um in den Scripts verwendet werden zu können. Um sicherzugehen, dass das Item existiert, kannst du versuchen, es dir selbst zu geben.
+
+        Das Erstellen des Items hängt von deinem Framework und/oder deinem Inventar ab, das liegt bei dir.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="ESX-Shared-Object manuell setzen">
+    Bei ESX kann es aus vielen Gründen vorkommen, dass folgender Fehler auftritt (in der F8-Konsole oder Serverkonsole):
+
+    <Frame>
+      ![ESX shared object error](/images/esx_shared_object_error.png)
+    </Frame>
+
+    Das passiert meist, weil das Script das _ESX Shared Object_ deines `es_extended`-Scripts nicht automatisch finden kann.
+
+    Um das Problem zu lösen, musst du den Shared-Object-Namen deines `es_extended`-Scripts in der Datei `es_extended/client/common.lua` finden.
+
+    Hier ein Beispiel, was du finden könntest (bei dir kann es anders aussehen):
+
+    <Frame>
+      ![ESX shared object example](/images/esx_shared_object_example.png)
+    </Frame>
+
+    Nachdem du den Namen deines _ESX Shared Object_ gefunden hast, kannst du ihn manuell in den Dateien `integrations/sv_integrations.lua` **und** `integrations/cl_integrations.lua` setzen, indem du `nil` durch den Namen deines Shared Objects ersetzt **(in doppelten Anführungszeichen)**.
+
+    Ersetze **nicht** die linke Seite, nur die rechte.
+
+    Ein Beispiel:
+
+    <Frame>
+      ![Edited shared object example](/images/edited_shared_object.png)
+    </Frame>
+  </Accordion>
+</AccordionGroup>

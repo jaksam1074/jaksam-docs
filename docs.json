@@ -1230,6 +1230,190 @@
           }
         ],
         "default": true
+      },
+      {
+        "language": "de",
+        "tabs": [
+          {
+            "tab": "Start",
+            "icon": "house",
+            "groups": [
+              {
+                "group": "Allgemein",
+                "icon": "house",
+                "pages": [
+                  "de/index",
+                  "de/jaksams-scripts/how-to-update-the-scripts",
+                  "de/jaksams-scripts/troubleshooting",
+                  "de/jaksams-scripts/common-faq",
+                  "de/jaksams-scripts/nexus-terms",
+                  "de/jaksams-scripts/escrow-errors"
+                ]
+              },
+              {
+                "group": "Inventory",
+                "icon": "boxes-stacked",
+                "expanded": true,
+                "root": "de/jaksam-inventory/home",
+                "pages": [
+                  "de/jaksam-inventory/installation",
+                  "de/jaksam-inventory/faq"
+                ]
+              },
+              {
+                "group": "Jobs Creator",
+                "icon": "briefcase",
+                "expanded": true,
+                "root": "de/jobs-creator/home",
+                "pages": [
+                  "de/jobs-creator/installation",
+                  "de/jobs-creator/faq"
+                ]
+              },
+              {
+                "group": "Drugs Creator",
+                "icon": "pills",
+                "expanded": true,
+                "root": "de/drugs-creator/home",
+                "pages": [
+                  "de/drugs-creator/installation",
+                  "de/drugs-creator/faq"
+                ]
+              },
+              {
+                "group": "Doors Creator",
+                "icon": "door-open",
+                "expanded": true,
+                "root": "de/doors-creator/home",
+                "pages": [
+                  "de/doors-creator/installation",
+                  "de/doors-creator/faq"
+                ]
+              },
+              {
+                "group": "Missions Creator",
+                "icon": "bullseye",
+                "expanded": true,
+                "root": "de/missions-creator/home",
+                "pages": [
+                  "de/missions-creator/installation",
+                  "de/missions-creator/faq"
+                ]
+              },
+              {
+                "group": "Blips Creator",
+                "icon": "location-dot",
+                "expanded": true,
+                "root": "de/blips-creator/home",
+                "pages": [
+                  "de/blips-creator/installation",
+                  "de/blips-creator/faq"
+                ]
+              },
+              {
+                "group": "Farming Creator",
+                "icon": "tractor",
+                "expanded": true,
+                "root": "de/farming-creator/home",
+                "pages": [
+                  "de/farming-creator/installation",
+                  "de/farming-creator/faq"
+                ]
+              },
+              {
+                "group": "Shops Creator",
+                "icon": "cart-shopping",
+                "expanded": true,
+                "root": "de/shops-creator/home",
+                "pages": [
+                  "de/shops-creator/installation",
+                  "de/shops-creator/faq"
+                ]
+              },
+              {
+                "group": "Robberies Creator",
+                "icon": "mask",
+                "expanded": true,
+                "root": "de/robberies-creator/home",
+                "pages": [
+                  "de/robberies-creator/installation",
+                  "de/robberies-creator/faq"
+                ]
+              },
+              {
+                "group": "Vehicles Keys",
+                "icon": "key",
+                "expanded": true,
+                "root": "de/vehicles-keys/home",
+                "pages": [
+                  "de/vehicles-keys/installation",
+                  "de/vehicles-keys/faq"
+                ]
+              },
+              {
+                "group": "Dealerships Creator",
+                "icon": "car",
+                "expanded": true,
+                "root": "de/dealerships-creator/home",
+                "pages": [
+                  "de/dealerships-creator/installation",
+                  "de/dealerships-creator/faq"
+                ]
+              },
+              {
+                "group": "Races Creator",
+                "icon": "flag-checkered",
+                "expanded": true,
+                "root": "de/races-creator/home",
+                "pages": [
+                  "de/races-creator/installation",
+                  "de/races-creator/faq"
+                ]
+              },
+              {
+                "group": "Trackers Creator",
+                "icon": "satellite-dish",
+                "expanded": true,
+                "root": "de/trackers-creator/home",
+                "pages": [
+                  "de/trackers-creator/installation",
+                  "de/trackers-creator/faq"
+                ]
+              },
+              {
+                "group": "Easy Allowlist",
+                "icon": "shield-check",
+                "expanded": true,
+                "root": "de/easy-allowlist/home",
+                "pages": [
+                  "de/easy-allowlist/installation",
+                  "de/easy-allowlist/faq"
+                ]
+              },
+              {
+                "group": "Billing UI",
+                "icon": "file-invoice-dollar",
+                "expanded": true,
+                "root": "de/billing-ui/home",
+                "pages": [
+                  "de/billing-ui/installation",
+                  "de/billing-ui/faq"
+                ]
+              },
+              {
+                "group": "Luxury Clothes Theft",
+                "icon": "shirt",
+                "expanded": true,
+                "root": "de/luxury-clothes-theft/home",
+                "pages": [
+                  "de/luxury-clothes-theft/installation",
+                  "de/luxury-clothes-theft/faq"
+                ]
+              }
+            ]
+          }
+        ],
+        "default": false
       }
     ]
   },

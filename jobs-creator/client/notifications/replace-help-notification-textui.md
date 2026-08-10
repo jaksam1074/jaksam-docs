@@ -33,5 +33,5 @@ Used to show the usual `Press E to ...` prompt at the top left of the player's s
 </Steps>
 
 <Note>
-  For more details on how modules work in general, see the [Modules](https://jaksam.mintlify.site/jaksam-scripts/modules) page.
+  For more details on how modules work in general, see the [Modules](/jobs-creator/modules) page.
 </Note>

@@ -33,5 +33,5 @@ Used to show the normal notifications, for example `"You are not on duty"`. Thes
 </Steps>
 
 <Note>
-  For more details on how modules work in general, see the [Modules](https://jaksam.mintlify.site/jaksam-scripts/modules) page.
+  For more details on how modules work in general, see the [Modules](/jobs-creator/modules) page.
 </Note>
