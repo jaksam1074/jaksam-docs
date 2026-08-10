@@ -124,7 +124,6 @@
                   "jobs-creator/modules",
                   "jobs-creator/replacing-default-scripts-names",
                   "jobs-creator/updating-script-from-old-versions",
-                  "jobs-creator/qbcore-jobs-injection",
                   {
                     "group": "Client",
                     "root": "jobs-creator/client/index",
