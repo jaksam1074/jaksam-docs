@@ -1,6 +1,7 @@
 ---
 title: "Installation"
 description: "Install Drugs Creator on your FiveM server with ESX, QBCore, or OX Inventory, including optional default items setup."
+icon: "download"
 ---
 
 The installation of the script is extremely easy.
