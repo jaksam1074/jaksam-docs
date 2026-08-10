@@ -1,18 +1,16 @@
 ---
-description: >-
-  You can use the actions in any external menu, here there are the triggers you
-  can use from external scripts
+title: "Actions in external menus"
+description: "Trigger Jobs Creator actions from any external or radial menu using client-side events."
+icon: "circle-dot"
 ---
 
-# Using the actions in a radial/external menu
+You can use the actions in any external menu. Here are the triggers you can use from external scripts.
 
-{% hint style="warning" %}
-Make sure that the job has the actions enabled in Jobs Creator settings of that job to avoid issues
+<Warning>
+  Make sure the job has the actions enabled in the Jobs Creator settings of that job to avoid issues. You can enable the actions themselves while disabling **"Can open actions menu"**.
+</Warning>
 
-So you can enable the actions themselves, but disable "Can open actions menu"
-{% endhint %}
-
-### Check identity
+## Check identity
 
 ```lua
 -- Trigger to start check identity action
@@ -45,7 +43,6 @@ TriggerEvent("jobs_creator:actions:drag")
 ```lua
 -- Trigger to start soft handcuff action
 TriggerEvent("jobs_creator:actions:softHandcuff")
-
 -- Trigger to start hard handcuff action
 TriggerEvent("jobs_creator:actions:hardHandcuff")
 ```
@@ -124,7 +121,6 @@ TriggerEvent("jobs_creator:actions:search")
 
 ```lua
 -- Trigger to start wash vehicle action
-
 TriggerEvent("jobs_creator:actions:washVehicle")
 ```
 
