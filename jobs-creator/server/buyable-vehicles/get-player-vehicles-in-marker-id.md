@@ -1,3 +1,9 @@
+---
+title: "Get player vehicles in marker ID"
+description: "Retrieve all vehicles a player owns in a specific buyable garage marker."
+icon: "car"
+---
+
 # Get player vehicles in marker ID
 
 To get all vehicles owned by a player ID in a specific buyable garage marker ID
@@ -10,16 +16,16 @@ exports["jobs_creator"]:getPlayerVehiclesInMarkerId(playerId, markerId)
 
 ### Parameters
 
-| Name       | Data Type | Description        |
-| ---------- | --------- | ------------------ |
-| `playerId` | integer   | Player's server ID |
-| `markerId` | integer   | Marker ID          |
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `playerId` | integer | Player's server ID |
+| `markerId` | integer | Marker ID |
 
 ### Return value
 
-| Name       | Data Type | Description                                                                                                |
-| ---------- | --------- | ---------------------------------------------------------------------------------------------------------- |
-| `vehicles` | table     | Table with all vehicles owned by the player in the garage, key is vehicle ID and value is the vehicle data |
+| Name | Data Type | Description |
+| --- | --- | --- |
+| `vehicles` | table | Table with all vehicles owned by the player in the garage, key is vehicle ID and value is the vehicle data |
 
 ## Example
 
