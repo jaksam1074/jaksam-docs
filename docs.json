@@ -486,7 +486,8 @@
                           "missions-creator/client/notifications/replace-default-notifications",
                           "missions-creator/client/notifications/replace-default-help-notifications",
                           "missions-creator/client/notifications/replace-default-mugshot-notifications"
-                        ]
+                        ],
+                        "icon": "bell-on"
                       }
                     ],
                     "icon": "laptop"
@@ -575,7 +576,8 @@
                         "pages": [
                           "shops-creator/client/notifications/replace-default-notifications",
                           "shops-creator/client/notifications/replace-default-help-notifications"
-                        ]
+                        ],
+                        "icon": "bell-on"
                       }
                     ],
                     "icon": "laptop"
@@ -597,7 +599,8 @@
                           "shops-creator/server/transactions/admin-shop-sold-object",
                           "shops-creator/server/transactions/player-shop-bought-object",
                           "shops-creator/server/transactions/player-shop-sold-object"
-                        ]
+                        ],
+                        "icon": "money-bill-trend-up"
                       }
                     ],
                     "icon": "server"
@@ -626,7 +629,8 @@
                         "pages": [
                           "robberies-creator/client/notifications/replace-default-notifications",
                           "robberies-creator/client/notifications/replace-default-help-notifications"
-                        ]
+                        ],
+                        "icon": "bell"
                       }
                     ],
                     "icon": "laptop"
@@ -679,7 +683,8 @@
                         "pages": [
                           "vehicles-keys/client/notifications/replace-default-notifications",
                           "vehicles-keys/client/notifications/replace-default-help-notifications"
-                        ]
+                        ],
+                        "icon": "bell-on"
                       },
                       "vehicles-keys/client/bypass-start-vehicle-check"
                     ],
@@ -708,7 +713,8 @@
                         "pages": [
                           "vehicles-keys/server/alarms/alarm-activated-player-vehicle",
                           "vehicles-keys/server/alarms/alarm-activated-npc-vehicle"
-                        ]
+                        ],
+                        "icon": "bell-exclamation"
                       }
                     ],
                     "icon": "server"
@@ -734,7 +740,8 @@
                         "pages": [
                           "dealerships-creator/client/notifications/replace-default-notifications",
                           "dealerships-creator/client/notifications/replace-default-help-notifications"
-                        ]
+                        ],
+                        "icon": "bell-on"
                       },
                       {
                         "group": "Showroom",
@@ -744,7 +751,8 @@
                           "dealerships-creator/client/showroom/on-showroom-exit",
                           "dealerships-creator/client/showroom/get-is-player-in-showroom",
                           "dealerships-creator/client/showroom/get-is-player-doing-test-drive"
-                        ]
+                        ],
+                        "icon": "car-tilt"
                       }
                     ],
                     "icon": "laptop"
@@ -778,7 +786,8 @@
                         "pages": [
                           "races-creator/client/notifications/replace-default-notifications",
                           "races-creator/client/notifications/replace-default-help-notifications"
-                        ]
+                        ],
+                        "icon": "bell-on"
                       }
                     ],
                     "icon": "laptop"
@@ -845,7 +854,8 @@
                         "pages": [
                           "easy-allowlist/server/allowlist/add-identifier-to-allowlist",
                           "easy-allowlist/server/allowlist/remove-identifier-from-allowlist"
-                        ]
+                        ],
+                        "icon": "list-check"
                       },
                       {
                         "group": "Queue",
@@ -858,7 +868,8 @@
                           "easy-allowlist/server/queue/remove-discord-role-queue-priority",
                           "easy-allowlist/server/queue/get-queue-count",
                           "easy-allowlist/server/queue/get-queue-info"
-                        ]
+                        ],
+                        "icon": "bus-stop"
                       }
                     ],
                     "icon": "server"
