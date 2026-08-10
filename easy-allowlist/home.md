@@ -15,3 +15,23 @@ This is the official **Easy Allowlist & Queue** documentation.
     Purchase or view the script on Tebex.
   </Card>
 </CardGroup>
+
+## Documentation
+
+<CardGroup cols={2}>
+  <Card title="Installation" icon="download" href="/easy-allowlist/installation">
+    Get Easy Allowlist installed and running on your server.
+  </Card>
+
+  <Card title="Guides" icon="book-open" href="/easy-allowlist/commands-usage">
+    Command usage, Discord features, and other how-tos.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/easy-allowlist/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/easy-allowlist/server">
+    Exports, events, and integration reference for developers.
+  </Card>
+</CardGroup>

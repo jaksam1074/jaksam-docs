@@ -15,3 +15,23 @@ This is the official **Missions Creator** documentation.
     Purchase or view the script on Tebex.
   </Card>
 </CardGroup>
+
+## Documentation
+
+<CardGroup cols={2}>
+  <Card title="Installation" icon="download" href="/missions-creator/installation">
+    Get Missions Creator installed and running on your server.
+  </Card>
+
+  <Card title="Guides" icon="book-open" href="/missions-creator/how-to-start">
+    Starting missions, adding minigames, and other how-tos.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/missions-creator/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/missions-creator/client">
+    Exports, events, and integration reference for developers.
+  </Card>
+</CardGroup>

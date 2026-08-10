@@ -6,6 +6,10 @@ icon: "download"
 
 The installation of the script is extremely easy.
 
+## Requirements
+
+- The [cracking safe script](https://github.com/VHall1/pd-safe) by [VHall1](https://github.com/VHall1) (if you want the safe-cracking feature)
+
 <Danger>
   Do **NOT** use FileZilla to upload the files, otherwise the script will **NOT** work.
 
@@ -28,6 +32,10 @@ The installation of the script is extremely easy.
 </Steps>
 
 You are ready to go! Enjoy the script 😁
+
+## Verification
+
+Open `/shopscreator` in-game. If the menu opens, the script is running correctly.
 
 <Note>
   Once the database has been successfully configured, you can optionally remove the SQL files from `shops_creator/sql/`, so the script won't try to set it up again each time it starts.

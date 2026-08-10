@@ -18,29 +18,25 @@ Use the options below to quickly find the documentation you need.
     Use Jaksam Inventory with both **ESX** and **QBCore**.
 
     - [Installation](/jaksam-inventory/installation)
-    - [Configuration](jaksam-inventory/installation)
-    - [Backwards Compatibility](jaksam-inventory/installation#importing-old-items-and-inventories)
+    - [Backwards Compatibility](/jaksam-inventory/installation#backwards-compatibility)
   </Tab>
   <Tab title="ESX">
     Documentation specifically for **ESX** servers.
 
-    - [ESX Installation](/installation#esx-1107)
-    - [ESX Configuration](/installation#start-order-example-3)
-    - [ESX Compatibility](/jaksam-inventory/installation#importing-old-items-and-inventories)
+    - [ESX Installation](/jaksam-inventory/installation#esx-1107)
+    - [ESX Compatibility](/jaksam-inventory/installation#backwards-compatibility)
   </Tab>
   <Tab title="QBCore">
     Documentation specifically for **QBCore** servers.
 
-    - [QBCore Installation](/installation#qbcore)
-    - [QBCore Configuration](/installation#start-order-example-3)
-    - [QB Inventory Compatibility](/jaksam-inventory/installation#importing-old-items-and-inventories)
+    - [QBCore Installation](/jaksam-inventory/installation#qbcore)
+    - [QB Inventory Compatibility](/jaksam-inventory/installation#backwards-compatibility)
   </Tab>
   <Tab title="QBX">
     Documentation specifically for **QBX** servers.
 
-    - [QBX Installation](/installation#qbx)
-    - [QBX Configuration](/installation#start-order-example-3)
-    - [Compatibility](/jaksam-inventory/installation#importing-old-items-and-inventories)
+    - [QBX Installation](/jaksam-inventory/installation#qbx)
+    - [Compatibility](/jaksam-inventory/installation#backwards-compatibility)
   </Tab>
 </Tabs>
 
@@ -61,16 +57,20 @@ Looking for the Jaksam Inventory shop or other products?
 ## Documentation
 
 <CardGroup cols={3}>
-  <Card title="Installation" icon="download" href="/jaksam-inventory/installation">
-    Get Jaksam Inventory installed and running on your server.
+  <Card title="Installation & Configuration" icon="download" href="/jaksam-inventory/installation">
+    Get Jaksam Inventory installed and configured on your server.
   </Card>
 
-  <Card title="Configuration" icon="gear" href="/jaksam-inventory/installation">
-    Configure the inventory to fit your server.
-  </Card>
-
-  <Card title="Compatibility" icon="plug" href="/backwards-compatibility">
+  <Card title="Compatibility" icon="plug" href="/jaksam-inventory/installation#backwards-compatibility">
     Make your existing scripts work with Jaksam Inventory.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/jaksam-inventory/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/jaksam-inventory/functions/client">
+    Exports, events, hooks, and integration reference for developers.
   </Card>
 </CardGroup>
 
@@ -79,19 +79,19 @@ Looking for the Jaksam Inventory shop or other products?
 Jaksam Inventory supports multiple popular FiveM frameworks.
 
 <CardGroup cols={4}>
-  <Card title="ESX" icon="code" href="/installation#esx-1107">
+  <Card title="ESX" icon="code" href="/jaksam-inventory/installation#esx-1107">
     Installation and configuration for ESX.
   </Card>
 
-  <Card title="QBCore" icon="code" href="/installation#qbcore">
+  <Card title="QBCore" icon="code" href="/jaksam-inventory/installation#qbcore">
     Installation and configuration for QBCore.
   </Card>
 
-  <Card title="QBX" icon="code" href="/installation#qbx">
+  <Card title="QBX" icon="code" href="/jaksam-inventory/installation#qbx">
     Installation and configuration for QBX.
   </Card>
 
-  <Card title="OX" icon="box" href="/backwards-compatibility">
+  <Card title="OX" icon="box" href="/jaksam-inventory/installation#backwards-compatibility">
     Compatibility with OX Inventory.
   </Card>
 </CardGroup>

@@ -6,6 +6,13 @@ icon: "download"
 
 The installation of the script is extremely easy.
 
+## Requirements
+
+- **ESX**, **QBCore**, or **OX Inventory**
+- The [cracking safe script](https://github.com/VHall1/pd-safe) by [VHall1](https://github.com/VHall1)
+- The [lockpicking script](https://github.com/baguscodestudio/lockpick) by [baguscodestudio](https://github.com/baguscodestudio/lockpick)
+- Optional minigame scripts (see below) if you want to use them
+
 <Danger>
   Do **NOT** use FileZilla to upload the files, otherwise the script will **NOT** work.
 
@@ -165,6 +172,10 @@ The installation of the script is extremely easy.
 </Tabs>
 
 You are ready to go! Enjoy the script 😁
+
+## Verification
+
+Open `/robberiescreator` in-game. If the menu opens, the script is running correctly.
 
 ## Optional step
 

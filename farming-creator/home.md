@@ -15,3 +15,19 @@ This is the official **Farming Creator** documentation.
     Purchase or view the script on Tebex.
   </Card>
 </CardGroup>
+
+## Documentation
+
+<CardGroup cols={3}>
+  <Card title="Installation" icon="download" href="/farming-creator/installation">
+    Get Farming Creator installed and running on your server.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/farming-creator/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/farming-creator/client">
+    Exports, events, and integration reference for developers.
+  </Card>
+</CardGroup>

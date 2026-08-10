@@ -6,6 +6,11 @@ icon: "download"
 
 The installation of the script is extremely easy.
 
+## Requirements
+
+- **ESX** or **QBCore**
+- On QBCore, the [`menu_default`](https://drive.google.com/file/d/1Ezz-d50NIKQZeZJ-RgyclvNG7qC4Nfu8/view?usp=sharing) script
+
 <Danger>
   Do **NOT** use FileZilla to upload the files, otherwise the script will **NOT** work.
 
@@ -76,3 +81,9 @@ The installation of the script is extremely easy.
 </Tabs>
 
 You are ready to go! Enjoy the script 😁
+
+## Verification
+
+<Info>
+  [TODO: INFORMATION NEEDED] No in-game check for a successful install is documented yet for Luxury Clothes Theft.
+</Info>

@@ -6,6 +6,11 @@ icon: "download"
 
 The installation of the script is extremely easy.
 
+## Requirements
+
+- The [lockpicking script](https://github.com/baguscodestudio/lockpick) by [baguscodestudio](https://github.com/baguscodestudio/lockpick)
+- A `doors_lockpick` item added to your inventory system
+
 <Danger>
   Do **NOT** use FileZilla to upload the files, otherwise the script will **NOT** work.
 
@@ -34,6 +39,10 @@ The installation of the script is extremely easy.
 </Steps>
 
 You are ready to go! Enjoy the script 😁
+
+## Verification
+
+Open `/doorscreator` in-game. If the admin menu opens, the script is running correctly.
 
 <Note>
   Once the database has been successfully configured, you can optionally remove the SQL files from `doors_creator/sql/`, so the script won't try to set it up again each time it starts.

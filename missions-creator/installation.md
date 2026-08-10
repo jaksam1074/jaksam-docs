@@ -6,6 +6,12 @@ icon: "download"
 
 The installation of the script is extremely easy.
 
+## Requirements
+
+- **ESX** or **QBCore**
+- `jaksam_core`, started before `missions_creator`
+- Optional minigame scripts (see the last step below) if you want to use them
+
 <Danger>
   Do **NOT** use FileZilla to upload the files, otherwise the script will **NOT** work.
 
@@ -68,6 +74,12 @@ The installation of the script is extremely easy.
 </Tabs>
 
 You are ready to go! Enjoy the script 😁
+
+## Verification
+
+<Info>
+  [TODO: INFORMATION NEEDED] The existing docs mention an in-game admin menu (missions reference their ID "the one you see in the admin menu") but don't state the command to open it. Add it here once confirmed.
+</Info>
 
 ## Optional step
 

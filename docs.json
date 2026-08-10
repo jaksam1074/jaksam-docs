@@ -36,6 +36,20 @@
   "feedback": {
     "thumbsRating": true
   },
+  "redirects": [
+    {
+      "source": "/untitled-page-2",
+      "destination": "/jobs-creator/server/harvest/item-harvested"
+    },
+    {
+      "source": "/untitled-page-3",
+      "destination": "/jobs-creator/server/shop/item-bought"
+    },
+    {
+      "source": "/fivem-escrow-system-errors/failed-to-verify-protected-resource",
+      "destination": "/jaksams-scripts/escrow-errors"
+    }
+  ],
   "navigation": {
     "anchors": [
       {
@@ -68,7 +82,7 @@
                   "jaksams-scripts/common-faq",
                   "jaksams-scripts/licensing",
                   "jaksams-scripts/nexus-terms",
-                  "fivem-escrow-system-errors/failed-to-verify-protected-resource"
+                  "jaksams-scripts/escrow-errors"
                 ]
               },
               {
@@ -79,6 +93,7 @@
                 "pages": [
                   "jaksam-inventory/installation",
                   "jaksam-inventory/how-to-update",
+                  "jaksam-inventory/faq",
                   {
                     "group": "Guides",
                     "icon": "hire-a-helper",
@@ -92,25 +107,7 @@
                       "jaksam-inventory/guides/block-police-weapon-rob",
                       "jaksam-inventory/guides/crafting"
                     ]
-                  },
-                  {
-                    "group": "Functions",
-                    "icon": "function",
-                    "pages": [
-                      "jaksam-inventory/guides/commands",
-                      "jaksam-inventory/functions/client",
-                      "jaksam-inventory/functions/shared",
-                      "jaksam-inventory/functions/server"
-                    ]
-                  },
-                  {
-                    "group": "Events",
-                    "icon": "alarm-clock",
-                    "pages": [
-                      "jaksam-inventory/events/server"
-                    ]
-                  },
-                  "jaksam-inventory/hooks"
+                  }
                 ]
               },
               {
@@ -120,8 +117,367 @@
                 "root": "jobs-creator/home",
                 "pages": [
                   "jobs-creator/installation",
-                  "jobs-creator/updating-script-from-old-versions",
                   "jobs-creator/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "clock-rotate-left",
+                    "pages": [
+                      "jobs-creator/updating-script-from-old-versions"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Drugs Creator",
+                "icon": "pills",
+                "expanded": true,
+                "root": "drugs-creator/home",
+                "pages": [
+                  "drugs-creator/installation",
+                  "drugs-creator/faq",
+                  {
+                    "group": "Guides",
+                    "pages": [
+                      "drugs-creator/guides/custom-audio-and-images"
+                    ],
+                    "icon": "photo-film"
+                  }
+                ]
+              },
+              {
+                "group": "Doors Creator",
+                "icon": "door-open",
+                "expanded": true,
+                "root": "doors-creator/home",
+                "pages": [
+                  "doors-creator/installation",
+                  "doors-creator/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "door-closed",
+                    "pages": [
+                      "doors-creator/change-doors-icon",
+                      "doors-creator/admin-bypass-lock"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Missions Creator",
+                "icon": "bullseye",
+                "expanded": true,
+                "root": "missions-creator/home",
+                "pages": [
+                  "missions-creator/installation",
+                  "missions-creator/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "flag",
+                    "pages": [
+                      "missions-creator/how-to-start",
+                      "missions-creator/how-to-add-minigames"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Blips Creator",
+                "icon": "location-dot",
+                "expanded": true,
+                "root": "blips-creator/home",
+                "pages": [
+                  "blips-creator/installation",
+                  "blips-creator/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "map-pin",
+                    "pages": [
+                      "blips-creator/how-to-use-custom-sprites"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Farming Creator",
+                "icon": "tractor",
+                "expanded": true,
+                "root": "farming-creator/home",
+                "pages": [
+                  "farming-creator/installation",
+                  "farming-creator/faq"
+                ]
+              },
+              {
+                "group": "Shops Creator",
+                "icon": "cart-shopping",
+                "expanded": true,
+                "root": "shops-creator/home",
+                "pages": [
+                  "shops-creator/installation",
+                  "shops-creator/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "image",
+                    "pages": [
+                      "shops-creator/how-to-use-images-for-items"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Robberies Creator",
+                "icon": "mask",
+                "expanded": true,
+                "root": "robberies-creator/home",
+                "pages": [
+                  "robberies-creator/installation",
+                  "robberies-creator/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "gamepad",
+                    "pages": [
+                      "robberies-creator/how-to-edit-minigames"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Vehicles Keys",
+                "icon": "key",
+                "expanded": true,
+                "root": "vehicles-keys/home",
+                "pages": [
+                  "vehicles-keys/installation",
+                  "vehicles-keys/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "key",
+                    "pages": [
+                      "vehicles-keys/how-to-give-keys-with-car-command",
+                      "vehicles-keys/fix-hotwiring-bought-car",
+                      "vehicles-keys/lock-unlock-vehicle"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Dealerships Creator",
+                "icon": "car",
+                "expanded": true,
+                "root": "dealerships-creator/home",
+                "pages": [
+                  "dealerships-creator/installation",
+                  "dealerships-creator/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "car-side",
+                    "pages": [
+                      "dealerships-creator/adding-custom-vehicles-classes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Races Creator",
+                "icon": "flag-checkered",
+                "expanded": true,
+                "root": "races-creator/home",
+                "pages": [
+                  "races-creator/installation",
+                  "races-creator/faq"
+                ]
+              },
+              {
+                "group": "Trackers Creator",
+                "icon": "satellite-dish",
+                "expanded": true,
+                "root": "trackers-creator/home",
+                "pages": [
+                  "trackers-creator/installation",
+                  "trackers-creator/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "gauge-high",
+                    "pages": [
+                      "trackers-creator/optimization"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Easy Allowlist",
+                "icon": "shield-check",
+                "expanded": true,
+                "root": "easy-allowlist/home",
+                "pages": [
+                  "easy-allowlist/installation",
+                  "easy-allowlist/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "terminal",
+                    "pages": [
+                      "easy-allowlist/commands-usage",
+                      "easy-allowlist/how-to-enable-discord-features",
+                      "easy-allowlist/external-deferrals"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Billing UI",
+                "icon": "file-invoice-dollar",
+                "expanded": true,
+                "root": "billing-ui/home",
+                "pages": [
+                  "billing-ui/installation",
+                  "billing-ui/faq"
+                ]
+              },
+              {
+                "group": "Luxury Clothes Theft",
+                "icon": "shirt",
+                "expanded": true,
+                "root": "luxury-clothes-theft/home",
+                "pages": [
+                  "luxury-clothes-theft/installation",
+                  "luxury-clothes-theft/faq"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API",
+            "icon": "code",
+            "groups": [
+              {
+                "group": "General",
+                "icon": "book",
+                "pages": [
+                  "developers/overview"
+                ]
+              },
+              {
+                "group": "Inventory",
+                "icon": "boxes-stacked",
+                "expanded": true,
+                "pages": [
+                  "jaksam-inventory/guides/commands",
+                  {
+                    "group": "Functions",
+                    "icon": "function",
+                    "pages": [
+                      {
+                        "group": "Client",
+                        "root": "jaksam-inventory/functions/client/index",
+                        "icon": "laptop",
+                        "pages": [
+                          "jaksam-inventory/functions/client/get-total-item-amount",
+                          "jaksam-inventory/functions/client/open-inventory",
+                          "jaksam-inventory/functions/client/close-inventory",
+                          "jaksam-inventory/functions/client/get-inventory",
+                          "jaksam-inventory/functions/client/get-item-by-name",
+                          "jaksam-inventory/functions/client/get-items-by-name",
+                          "jaksam-inventory/functions/client/get-item-from-slot",
+                          "jaksam-inventory/functions/client/show-hotbar",
+                          "jaksam-inventory/functions/client/set-hotbar-disabled",
+                          "jaksam-inventory/functions/client/set-hotkeys-enabled",
+                          "jaksam-inventory/functions/client/are-hotkeys-enabled",
+                          "jaksam-inventory/functions/client/dequip-weapon",
+                          "jaksam-inventory/functions/client/set-weapon-wheel",
+                          "jaksam-inventory/functions/client/set-jaksam-weapon-wheel",
+                          "jaksam-inventory/functions/client/register-action-button",
+                          "jaksam-inventory/functions/client/unregister-action-button",
+                          "jaksam-inventory/functions/client/show-action-button",
+                          "jaksam-inventory/functions/client/hide-action-button",
+                          "jaksam-inventory/functions/client/get-vehicle-inventory-limits",
+                          "jaksam-inventory/functions/client/is-inventory-open",
+                          "jaksam-inventory/functions/client/set-inventory-disabled",
+                          "jaksam-inventory/functions/client/is-inventory-disabled"
+                        ]
+                      },
+                      {
+                        "group": "Shared",
+                        "root": "jaksam-inventory/functions/shared/index",
+                        "icon": "circle-share-nodes",
+                        "pages": [
+                          "jaksam-inventory/functions/shared/get-static-items-list",
+                          "jaksam-inventory/functions/shared/get-static-item",
+                          "jaksam-inventory/functions/shared/get-item-label",
+                          "jaksam-inventory/functions/shared/get-item-image-path"
+                        ]
+                      },
+                      {
+                        "group": "Server",
+                        "root": "jaksam-inventory/functions/server/index",
+                        "icon": "server",
+                        "pages": [
+                          "jaksam-inventory/functions/server/add-item",
+                          "jaksam-inventory/functions/server/add-item-to-trunk",
+                          "jaksam-inventory/functions/server/add-item-to-glovebox",
+                          "jaksam-inventory/functions/server/remove-item-from-trunk",
+                          "jaksam-inventory/functions/server/remove-item-from-glovebox",
+                          "jaksam-inventory/functions/server/get-inventory-id-from-plate",
+                          "jaksam-inventory/functions/server/can-carry-item",
+                          "jaksam-inventory/functions/server/can-swap-item",
+                          "jaksam-inventory/functions/server/clear-inventory",
+                          "jaksam-inventory/functions/server/create-inventory",
+                          "jaksam-inventory/functions/server/force-open-inventory",
+                          "jaksam-inventory/functions/server/get-inventory",
+                          "jaksam-inventory/functions/server/get-item-from-slot",
+                          "jaksam-inventory/functions/server/get-item-by-name",
+                          "jaksam-inventory/functions/server/get-items-by-name",
+                          "jaksam-inventory/functions/server/get-item-label",
+                          "jaksam-inventory/functions/server/get-total-item-amount",
+                          "jaksam-inventory/functions/server/has-item",
+                          "jaksam-inventory/functions/server/register-usable-item",
+                          "jaksam-inventory/functions/server/register-stash",
+                          "jaksam-inventory/functions/server/register-item",
+                          "jaksam-inventory/functions/server/remove-item",
+                          "jaksam-inventory/functions/server/save-dirty-inventories",
+                          "jaksam-inventory/functions/server/save-dirty-inventory",
+                          "jaksam-inventory/functions/server/set-inventory-max-weight",
+                          "jaksam-inventory/functions/server/set-item-metadata-in-slot",
+                          "jaksam-inventory/functions/server/set-durability"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Events",
+                    "icon": "alarm-clock",
+                    "pages": [
+                      {
+                        "group": "Server",
+                        "root": "jaksam-inventory/events/server/index",
+                        "icon": "server",
+                        "pages": [
+                          "jaksam-inventory/events/server/on-inventory-item-added",
+                          "jaksam-inventory/events/server/on-inventory-item-removed",
+                          "jaksam-inventory/events/server/on-inventory-item-transferred"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Hooks",
+                    "icon": "webhook",
+                    "root": "jaksam-inventory/hooks/index",
+                    "pages": [
+                      "jaksam-inventory/hooks/on-item-added",
+                      "jaksam-inventory/hooks/on-item-removed",
+                      "jaksam-inventory/hooks/on-item-transferred",
+                      "jaksam-inventory/hooks/on-pre-use-item",
+                      "jaksam-inventory/hooks/on-post-use-item",
+                      "jaksam-inventory/hooks/on-inventory-created"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Jobs Creator",
+                "icon": "briefcase",
+                "expanded": true,
+                "pages": [
                   "jobs-creator/modules",
                   "jobs-creator/replacing-default-scripts-names",
                   "jobs-creator/replacing-default-events-names",
@@ -254,7 +610,7 @@
                         "group": "Harvest",
                         "root": "jobs-creator/server/harvest/index",
                         "pages": [
-                          "untitled-page-2"
+                          "jobs-creator/server/harvest/item-harvested"
                         ],
                         "icon": "leaf"
                       },
@@ -270,7 +626,7 @@
                         "group": "Shop",
                         "root": "jobs-creator/server/shop/index",
                         "pages": [
-                          "untitled-page-3"
+                          "jobs-creator/server/shop/item-bought"
                         ],
                         "icon": "cart-circle-plus"
                       },
@@ -302,18 +658,8 @@
                 "group": "Drugs Creator",
                 "icon": "pills",
                 "expanded": true,
-                "root": "drugs-creator/home",
                 "pages": [
-                  "drugs-creator/installation",
                   "drugs-creator/modules",
-                  "drugs-creator/faq",
-                  {
-                    "group": "Guides",
-                    "pages": [
-                      "drugs-creator/guides/custom-audio-and-images"
-                    ],
-                    "icon": "photo-film"
-                  },
                   {
                     "group": "Client",
                     "root": "drugs-creator/client/index",
@@ -423,13 +769,8 @@
                 "group": "Doors Creator",
                 "icon": "door-open",
                 "expanded": true,
-                "root": "doors-creator/home",
                 "pages": [
-                  "doors-creator/installation",
-                  "doors-creator/faq",
                   "doors-creator/modules",
-                  "doors-creator/change-doors-icon",
-                  "doors-creator/admin-bypass-lock",
                   {
                     "group": "Client",
                     "root": "doors-creator/client/index",
@@ -467,11 +808,7 @@
                 "group": "Missions Creator",
                 "icon": "bullseye",
                 "expanded": true,
-                "root": "missions-creator/home",
                 "pages": [
-                  "missions-creator/installation",
-                  "missions-creator/how-to-start",
-                  "missions-creator/how-to-add-minigames",
                   {
                     "group": "Client",
                     "root": "missions-creator/client/index",
@@ -511,11 +848,7 @@
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
-                "root": "blips-creator/home",
                 "pages": [
-                  "blips-creator/installation",
-                  "blips-creator/faq",
-                  "blips-creator/how-to-use-custom-sprites",
                   {
                     "group": "Client",
                     "root": "blips-creator/client/index",
@@ -530,9 +863,7 @@
                 "group": "Farming Creator",
                 "icon": "tractor",
                 "expanded": true,
-                "root": "farming-creator/home",
                 "pages": [
-                  "farming-creator/installation",
                   {
                     "group": "Client",
                     "root": "farming-creator/client/index",
@@ -559,11 +890,8 @@
                 "group": "Shops Creator",
                 "icon": "cart-shopping",
                 "expanded": true,
-                "root": "shops-creator/home",
                 "pages": [
-                  "shops-creator/installation",
                   "shops-creator/modules",
-                  "shops-creator/how-to-use-images-for-items",
                   {
                     "group": "Client",
                     "root": "shops-creator/client/index",
@@ -611,12 +939,8 @@
                 "group": "Robberies Creator",
                 "icon": "mask",
                 "expanded": true,
-                "root": "robberies-creator/home",
                 "pages": [
-                  "robberies-creator/installation",
-                  "robberies-creator/faq",
                   "robberies-creator/modules",
-                  "robberies-creator/how-to-edit-minigames",
                   {
                     "group": "Client",
                     "root": "robberies-creator/client/index",
@@ -652,13 +976,7 @@
                 "group": "Vehicles Keys",
                 "icon": "key",
                 "expanded": true,
-                "root": "vehicles-keys/home",
                 "pages": [
-                  "vehicles-keys/installation",
-                  "vehicles-keys/faq",
-                  "vehicles-keys/how-to-give-keys-with-car-command",
-                  "vehicles-keys/fix-hotwiring-bought-car",
-                  "vehicles-keys/lock-unlock-vehicle",
                   {
                     "group": "Client",
                     "root": "vehicles-keys/client/index",
@@ -725,10 +1043,7 @@
                 "group": "Dealerships Creator",
                 "icon": "car",
                 "expanded": true,
-                "root": "dealerships-creator/home",
                 "pages": [
-                  "dealerships-creator/installation",
-                  "dealerships-creator/adding-custom-vehicles-classes",
                   {
                     "group": "Client",
                     "root": "dealerships-creator/client/index",
@@ -772,9 +1087,7 @@
                 "group": "Races Creator",
                 "icon": "flag-checkered",
                 "expanded": true,
-                "root": "races-creator/home",
                 "pages": [
-                  "races-creator/installation",
                   {
                     "group": "Client",
                     "root": "races-creator/client/index",
@@ -806,11 +1119,7 @@
                 "group": "Trackers Creator",
                 "icon": "satellite-dish",
                 "expanded": true,
-                "root": "trackers-creator/home",
                 "pages": [
-                  "trackers-creator/installation",
-                  "trackers-creator/faq",
-                  "trackers-creator/optimization",
                   {
                     "group": "Client",
                     "root": "trackers-creator/client/index",
@@ -837,13 +1146,7 @@
                 "group": "Easy Allowlist",
                 "icon": "shield-check",
                 "expanded": true,
-                "root": "easy-allowlist/home",
                 "pages": [
-                  "easy-allowlist/installation",
-                  "easy-allowlist/faq",
-                  "easy-allowlist/commands-usage",
-                  "easy-allowlist/how-to-enable-discord-features",
-                  "easy-allowlist/external-deferrals",
                   {
                     "group": "Server",
                     "root": "easy-allowlist/server/index",
@@ -880,9 +1183,7 @@
                 "group": "Billing UI",
                 "icon": "file-invoice-dollar",
                 "expanded": true,
-                "root": "billing-ui/home",
                 "pages": [
-                  "billing-ui/installation",
                   {
                     "group": "Client",
                     "root": "billing-ui/client/index",
@@ -914,9 +1215,7 @@
                 "group": "Luxury Clothes Theft",
                 "icon": "shirt",
                 "expanded": true,
-                "root": "luxury-clothes-theft/home",
                 "pages": [
-                  "luxury-clothes-theft/installation",
                   {
                     "group": "Client",
                     "root": "luxury-clothes-theft/client/index",

@@ -15,3 +15,23 @@ This is the official **Shops Creator** documentation.
     Purchase or view the script on Tebex.
   </Card>
 </CardGroup>
+
+## Documentation
+
+<CardGroup cols={2}>
+  <Card title="Installation" icon="download" href="/shops-creator/installation">
+    Get Shops Creator installed and running on your server.
+  </Card>
+
+  <Card title="Guides" icon="book-open" href="/shops-creator/how-to-use-images-for-items">
+    Using images for items and other how-tos.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/shops-creator/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/shops-creator/client">
+    Exports, events, and integration reference for developers.
+  </Card>
+</CardGroup>

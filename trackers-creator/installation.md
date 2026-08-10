@@ -6,6 +6,10 @@ icon: "download"
 
 The installation of the script is extremely easy.
 
+## Requirements
+
+- **ESX** or **QBCore**
+
 <Danger>
   Do **NOT** use FileZilla to upload the files, otherwise the script will **NOT** work.
 
@@ -64,6 +68,12 @@ The installation of the script is extremely easy.
 </Tabs>
 
 You are ready to go! Enjoy the script 😁
+
+## Verification
+
+<Info>
+  [TODO: INFORMATION NEEDED] No in-game check for a successful install is documented yet for Trackers Creator.
+</Info>
 
 ## Optional step
 

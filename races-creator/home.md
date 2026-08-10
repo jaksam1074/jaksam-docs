@@ -15,3 +15,19 @@ This is the official **Races Creator** documentation.
     Purchase or view the script on Tebex.
   </Card>
 </CardGroup>
+
+## Documentation
+
+<CardGroup cols={3}>
+  <Card title="Installation" icon="download" href="/races-creator/installation">
+    Get Races Creator installed and running on your server.
+  </Card>
+
+  <Card title="FAQ" icon="circle-question" href="/races-creator/faq">
+    Frequently asked questions.
+  </Card>
+
+  <Card title="Developer Reference" icon="code" href="/races-creator/client">
+    Exports, events, and integration reference for developers.
+  </Card>
+</CardGroup>
