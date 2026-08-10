@@ -8,11 +8,11 @@ Action buttons are custom buttons that appear in the inventory UI toolbar. Unlik
 
 <Columns cols={2}>
   <Frame>
-    ![Action buttons screenshot](/images/action-buttons-1.png)
+    ![Action buttons screenshot](/images/action-buttons-1.jpg)
   </Frame>
 
   <Frame>
-    ![Action buttons 2nd screenshot](/images/action-buttons-2.png)
+    ![Action buttons 2nd screenshot](/images/action-buttons-2.jpg)
   </Frame>
 </Columns>
 
