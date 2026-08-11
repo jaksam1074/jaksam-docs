@@ -1648,7 +1648,76 @@
                   "de/jobs-creator/modules",
                   "de/jobs-creator/replacing-default-scripts-names",
                   "de/jobs-creator/replacing-default-events-names",
-                  "de/jobs-creator/qbcore-jobs-injection"
+                  "de/jobs-creator/qbcore-jobs-injection",
+                  {
+                    "group": "Client",
+                    "root": "de/jobs-creator/client/index",
+                    "pages": [
+                      {
+                        "group": "Notifications",
+                        "root": "de/jobs-creator/client/notifications/index",
+                        "pages": [
+                          "de/jobs-creator/client/notifications/replace-default-notifications",
+                          "de/jobs-creator/client/notifications/replace-help-notification-textui"
+                        ],
+                        "icon": "bell"
+                      },
+                      {
+                        "group": "Actions",
+                        "root": "de/jobs-creator/client/actions/index",
+                        "pages": [
+                          "de/jobs-creator/client/actions/using-the-actions-in-a-radial-external-menu",
+                          "de/jobs-creator/client/actions/replace-default-search-action",
+                          "de/jobs-creator/client/actions/get-player-allowed-actions",
+                          "de/jobs-creator/client/actions/open-actions-menu",
+                          "de/jobs-creator/client/actions/integrate-external-impound-script",
+                          "de/jobs-creator/client/actions/vehicle-repaired",
+                          "de/jobs-creator/client/actions/get-if-local-player-is-handcuffed"
+                        ],
+                        "icon": "hand-pointer"
+                      },
+                      {
+                        "group": "Duty",
+                        "root": "de/jobs-creator/client/duty/index",
+                        "pages": [
+                          "de/jobs-creator/client/duty/duty-status-toggled",
+                          "de/jobs-creator/client/duty/toggle-current-duty-status"
+                        ],
+                        "icon": "briefcase-arrow-right"
+                      },
+                      {
+                        "group": "Buyable Vehicles",
+                        "root": "de/jobs-creator/client/buyable-vehicles/index",
+                        "pages": [
+                          "de/jobs-creator/client/buyable-vehicles/vehicle-spawned",
+                          "de/jobs-creator/client/buyable-vehicles/vehicle-parked"
+                        ],
+                        "icon": "car"
+                      },
+                      {
+                        "group": "Garage Owned",
+                        "root": "de/jobs-creator/client/garage-owned/index",
+                        "pages": [
+                          "de/jobs-creator/client/garage-owned/vehicle-spawned",
+                          "de/jobs-creator/client/garage-owned/vehicle-parked"
+                        ],
+                        "icon": "warehouse-full"
+                      },
+                      {
+                        "group": "Temporary Garage",
+                        "root": "de/jobs-creator/client/temporary-garage/index",
+                        "pages": [
+                          "de/jobs-creator/client/temporary-garage/vehicle-spawned",
+                          "de/jobs-creator/client/temporary-garage/vehicle-parked"
+                        ],
+                        "icon": "clock"
+                      },
+                      "de/jobs-creator/client/replace-stash-safe-armory",
+                      "de/jobs-creator/client/replace-default-billing",
+                      "de/jobs-creator/client/progress-bar"
+                    ],
+                    "icon": "laptop"
+                  }
                 ]
               },
               {
