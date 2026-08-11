@@ -14,6 +14,10 @@ This is the official **Billing UI** documentation.
   <Card title="Tebex Store" icon="cart-shopping" href="https://jaksam1074-fivem-scripts.tebex.io/">
     Purchase or view the script on Tebex.
   </Card>
+
+  <Card title="Supported Languages" icon="language">
+    English, Czech, Dutch, German, Hungarian, Portuguese (Brazil), Spanish
+  </Card>
 </CardGroup>
 
 ## Documentation

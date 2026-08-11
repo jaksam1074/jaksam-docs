@@ -52,6 +52,10 @@ Looking for the Jaksam Inventory shop or other products?
   <Card title="Jaksam Inventory" icon="boxes-stacked" href="https://jaksam.com">
     Learn more about Jaksam Inventory and its features.
   </Card>
+
+  <Card title="Supported Languages" icon="language">
+    English, German
+  </Card>
 </CardGroup>
 
 ## Documentation
