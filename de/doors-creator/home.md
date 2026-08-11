@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Doors Creator**.
     Doors Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/doors-creator/change-doors-icon">
+    Symbole ändern, Admin-Bypass und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/doors-creator/faq">
     Häufig gestellte Fragen.
   </Card>

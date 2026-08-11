@@ -1257,7 +1257,21 @@
                 "root": "de/jaksam-inventory/home",
                 "pages": [
                   "de/jaksam-inventory/installation",
-                  "de/jaksam-inventory/faq"
+                  "de/jaksam-inventory/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "hire-a-helper",
+                    "pages": [
+                      "de/jaksam-inventory/guides/customize-theme",
+                      "de/jaksam-inventory/guides/admin-inventory",
+                      "de/jaksam-inventory/guides/metadata",
+                      "de/jaksam-inventory/guides/context-actions",
+                      "de/jaksam-inventory/guides/action-buttons",
+                      "de/jaksam-inventory/guides/weapon-attachments",
+                      "de/jaksam-inventory/guides/block-police-weapon-rob",
+                      "de/jaksam-inventory/guides/crafting"
+                    ]
+                  }
                 ]
               },
               {
@@ -1267,7 +1281,14 @@
                 "root": "de/jobs-creator/home",
                 "pages": [
                   "de/jobs-creator/installation",
-                  "de/jobs-creator/faq"
+                  "de/jobs-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "clock-rotate-left",
+                    "pages": [
+                      "de/jobs-creator/updating-script-from-old-versions"
+                    ]
+                  }
                 ]
               },
               {
@@ -1277,7 +1298,14 @@
                 "root": "de/drugs-creator/home",
                 "pages": [
                   "de/drugs-creator/installation",
-                  "de/drugs-creator/faq"
+                  "de/drugs-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "photo-film",
+                    "pages": [
+                      "de/drugs-creator/guides/custom-audio-and-images"
+                    ]
+                  }
                 ]
               },
               {
@@ -1287,7 +1315,15 @@
                 "root": "de/doors-creator/home",
                 "pages": [
                   "de/doors-creator/installation",
-                  "de/doors-creator/faq"
+                  "de/doors-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "door-closed",
+                    "pages": [
+                      "de/doors-creator/change-doors-icon",
+                      "de/doors-creator/admin-bypass-lock"
+                    ]
+                  }
                 ]
               },
               {
@@ -1297,7 +1333,15 @@
                 "root": "de/missions-creator/home",
                 "pages": [
                   "de/missions-creator/installation",
-                  "de/missions-creator/faq"
+                  "de/missions-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "flag",
+                    "pages": [
+                      "de/missions-creator/how-to-start",
+                      "de/missions-creator/how-to-add-minigames"
+                    ]
+                  }
                 ]
               },
               {
@@ -1307,7 +1351,14 @@
                 "root": "de/blips-creator/home",
                 "pages": [
                   "de/blips-creator/installation",
-                  "de/blips-creator/faq"
+                  "de/blips-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "map-pin",
+                    "pages": [
+                      "de/blips-creator/how-to-use-custom-sprites"
+                    ]
+                  }
                 ]
               },
               {
@@ -1327,7 +1378,14 @@
                 "root": "de/shops-creator/home",
                 "pages": [
                   "de/shops-creator/installation",
-                  "de/shops-creator/faq"
+                  "de/shops-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "image",
+                    "pages": [
+                      "de/shops-creator/how-to-use-images-for-items"
+                    ]
+                  }
                 ]
               },
               {
@@ -1337,7 +1395,14 @@
                 "root": "de/robberies-creator/home",
                 "pages": [
                   "de/robberies-creator/installation",
-                  "de/robberies-creator/faq"
+                  "de/robberies-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "gamepad",
+                    "pages": [
+                      "de/robberies-creator/how-to-edit-minigames"
+                    ]
+                  }
                 ]
               },
               {
@@ -1347,7 +1412,16 @@
                 "root": "de/vehicles-keys/home",
                 "pages": [
                   "de/vehicles-keys/installation",
-                  "de/vehicles-keys/faq"
+                  "de/vehicles-keys/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "key",
+                    "pages": [
+                      "de/vehicles-keys/how-to-give-keys-with-car-command",
+                      "de/vehicles-keys/fix-hotwiring-bought-car",
+                      "de/vehicles-keys/lock-unlock-vehicle"
+                    ]
+                  }
                 ]
               },
               {
@@ -1357,7 +1431,14 @@
                 "root": "de/dealerships-creator/home",
                 "pages": [
                   "de/dealerships-creator/installation",
-                  "de/dealerships-creator/faq"
+                  "de/dealerships-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "car-side",
+                    "pages": [
+                      "de/dealerships-creator/adding-custom-vehicles-classes"
+                    ]
+                  }
                 ]
               },
               {
@@ -1377,7 +1458,14 @@
                 "root": "de/trackers-creator/home",
                 "pages": [
                   "de/trackers-creator/installation",
-                  "de/trackers-creator/faq"
+                  "de/trackers-creator/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "gauge-high",
+                    "pages": [
+                      "de/trackers-creator/optimization"
+                    ]
+                  }
                 ]
               },
               {
@@ -1387,7 +1475,16 @@
                 "root": "de/easy-allowlist/home",
                 "pages": [
                   "de/easy-allowlist/installation",
-                  "de/easy-allowlist/faq"
+                  "de/easy-allowlist/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "terminal",
+                    "pages": [
+                      "de/easy-allowlist/commands-usage",
+                      "de/easy-allowlist/how-to-enable-discord-features",
+                      "de/easy-allowlist/external-deferrals"
+                    ]
+                  }
                 ]
               },
               {

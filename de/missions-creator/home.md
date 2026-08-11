@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Missions Creator**.
     Missions Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/missions-creator/how-to-start">
+    Missionen starten, Minigames hinzufügen und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/missions-creator/faq">
     Häufig gestellte Fragen.
   </Card>

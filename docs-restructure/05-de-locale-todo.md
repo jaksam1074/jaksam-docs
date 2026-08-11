@@ -1,0 +1,58 @@
+# jaksam-docs — German (de) locale: continuation notes
+
+Internal planning document, not part of the published site. Read this first in a fresh session before continuing the German translation.
+
+**Status as of 2026-08-11:** Main tab (server-owner content) is fully translated, including all Guides sub-pages. Only the **API tab** (developer reference, ~300+ pages) remains untranslated.
+
+---
+
+## What's already done (don't redo)
+
+- `docs.json` → `navigation.languages` has a `"de"` entry with one tab, `"tab": "Start"`.
+- Under it: a `"Allgemein"` group (General) + one group per product (16), each with `root` pointing to `de/<product>/home`, `pages: [installation, faq]`, and (for the 12 products that have one in English) an `"Anleitungen"` sub-group mirroring the English `"Guides"` sub-group, same icons.
+- `de/` folder mirrors English structure for: `index.mdx`, `jaksams-scripts/{how-to-update-the-scripts,troubleshooting,common-faq,nexus-terms,escrow-errors}`, every product's `home.md` + `installation.md` + `faq.md`, and all 26 Guides pages (8 Jaksam Inventory + 18 across the other 11 products that have them). 80 German files total.
+- `jaksams-scripts/licensing.md` was deliberately skipped (long CC legal license text, `hidden: true`, not in active nav, low value to translate).
+- Every German home page's Documentation CardGroup now has the full card set: Installation, Anleitungen (where applicable), FAQ, Entwickler-Referenz. The Entwickler-Referenz card intentionally still points to the **English** API page (e.g. `/jobs-creator/client`, `/jaksam-inventory/functions/client`) since that content isn't translated yet — don't "fix" these to a German URL until the API tab translation actually exists at that path.
+- Full validation before every commit (see the PowerShell snippet at the bottom of this file) confirmed 0 missing files, 0 orphans, 0 duplicate nav entries across all languages combined.
+
+## What's NOT done
+
+### 1. ~~Guides sub-pages~~ — DONE as of 2026-08-11, see above.
+
+### 2. API tab (developer reference) — the big one, ~300+ pages
+
+Not started at all in German. This is everything currently under the English `"API"` tab in `docs.json`:
+
+- Per-product `Client`/`Server` export & event pages (15 products, varies from ~2 to ~50 pages each)
+- Jaksam Inventory's split reference: 22 client functions + 4 shared + 27 server + 3 events + 6 hooks = 62 pages, plus 5 index/landing pages
+- `developers/overview.mdx` (the conventions page)
+- The `Modules`/advanced-integration pages (`jobs-creator/modules.md` etc.)
+
+**Recommendation:** treat this as its own multi-session project, same way the original restructure was phased (audit → plan → execute). Given the volume, prioritize by product popularity/complexity if doing it incrementally rather than all-or-nothing — Jobs Creator and Jaksam Inventory are the largest.
+
+**Mechanical approach that already worked well for Main tab:**
+1. Read the English source file(s) (don't re-derive content, translate what's there — see [[feedback_jaksam_docs_no_new_info]], no new facts, ever).
+2. Keep code blocks, export/event signatures, parameter names, file paths, and command names **untranslated** (they're literal identifiers, not language).
+3. Translate: titles, descriptions, prose, table cell descriptions, Note/Warning/Info box text.
+4. Give every new page its own specific icon (reuse the same icon as the English equivalent page — don't invent a new one, don't default to a generic set, see the icon-convention lesson in [[project_jaksam_docs_migration]]).
+5. Build the German `docs.json` nav block by mirroring the English API tab's structure exactly, with `de/` prefixed paths.
+6. **Validate before every commit** — this repo has 400+ pages, mistakes are easy to miss by eye. Use a PowerShell pass (see the ones used throughout this session, in the conversation history / git log) that walks `docs.json`, collects every referenced page path, and checks: (a) every referenced path has a matching file, (b) every file under `de/` is referenced somewhere, (c) no duplicate nav entries. Don't skip this — it caught 2 real bugs during the Main-tab pass.
+7. Commit on a new branch (e.g. `de-locale-api-tab`), stage files **by name**, never `git add -A` (see the `seo-ux-dx-strategy.md` incident in [[project_jaksam_docs_migration]] — there's a stray untracked planning file at repo root that must never get swept into a commit).
+8. Push, give the user the compare link (no `gh` CLI on this machine): `https://github.com/jaksam1074/jaksam-docs/compare/master...ofcshiro:jaksam-docs:<branch-name>`.
+
+### 3. Tags/icons on new German pages
+
+Reuse the same `tag`/`icon` frontmatter values as the English source page where the English page has them (e.g. `jaksam-inventory/how-to-update.md` has `tag: "Update"` — its German translation should too, once translated). Don't invent new tags; see [[project_jaksam_docs_migration]] for the "tag" mechanism (page frontmatter only, never `docs.json`, and only used topically/for genuinely new-or-replaced pages).
+
+---
+
+## Quick sanity check to run first in a new session
+
+```powershell
+$j = Get-Content -Raw docs.json | ConvertFrom-Json
+# confirm the "de" language entry still only has one tab ("Start") — if API translation
+# work already started in a prior session, it'll show up here
+$j.navigation.languages | Where-Object { $_.language -eq "de" } | ConvertTo-Json -Depth 10 | Select-String "tab"
+```
+
+If this still only shows `"Start"`, nothing has changed since this note was written and the plan above is accurate.

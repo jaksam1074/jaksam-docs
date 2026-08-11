@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Easy Allowlist & Queue**.
     Easy Allowlist auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/easy-allowlist/commands-usage">
+    Befehlsnutzung, Discord-Funktionen und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/easy-allowlist/faq">
     Häufig gestellte Fragen.
   </Card>

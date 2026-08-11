@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Vehicles Keys**.
     Vehicles Keys auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/vehicles-keys/how-to-give-keys-with-car-command">
+    Schlüssel mit dem Car-Befehl geben, Kurzschließen beheben und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/vehicles-keys/faq">
     Häufig gestellte Fragen.
   </Card>

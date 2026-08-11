@@ -65,8 +65,16 @@ Auf der Suche nach dem Jaksam-Inventory-Store oder anderen Produkten?
     Bestehende Scripts mit Jaksam Inventory zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="hire-a-helper" href="/de/jaksam-inventory/guides/customize-theme">
+    Theme anpassen, Metadaten, Crafting und mehr.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/jaksam-inventory/faq">
     Häufig gestellte Fragen.
+  </Card>
+
+  <Card title="Entwickler-Referenz" icon="code" href="/jaksam-inventory/functions/client">
+    Exports, Events, Hooks und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>
 

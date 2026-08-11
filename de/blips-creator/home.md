@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Blips Creator**.
     Blips Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/blips-creator/how-to-use-custom-sprites">
+    Eigene Sprites nutzen und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/blips-creator/faq">
     Häufig gestellte Fragen.
   </Card>

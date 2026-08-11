@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Shops Creator**.
     Shops Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/shops-creator/how-to-use-images-for-items">
+    Bilder für Items nutzen und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/shops-creator/faq">
     Häufig gestellte Fragen.
   </Card>
