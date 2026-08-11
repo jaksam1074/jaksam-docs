@@ -1508,6 +1508,129 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "API",
+            "icon": "code",
+            "groups": [
+              {
+                "group": "Inventory",
+                "icon": "boxes-stacked",
+                "expanded": true,
+                "pages": [
+                  "de/jaksam-inventory/guides/commands",
+                  {
+                    "group": "Functions",
+                    "icon": "function",
+                    "pages": [
+                      {
+                        "group": "Client",
+                        "root": "de/jaksam-inventory/functions/client/index",
+                        "icon": "laptop",
+                        "pages": [
+                          "de/jaksam-inventory/functions/client/get-total-item-amount",
+                          "de/jaksam-inventory/functions/client/open-inventory",
+                          "de/jaksam-inventory/functions/client/close-inventory",
+                          "de/jaksam-inventory/functions/client/get-inventory",
+                          "de/jaksam-inventory/functions/client/get-item-by-name",
+                          "de/jaksam-inventory/functions/client/get-items-by-name",
+                          "de/jaksam-inventory/functions/client/get-item-from-slot",
+                          "de/jaksam-inventory/functions/client/show-hotbar",
+                          "de/jaksam-inventory/functions/client/set-hotbar-disabled",
+                          "de/jaksam-inventory/functions/client/set-hotkeys-enabled",
+                          "de/jaksam-inventory/functions/client/are-hotkeys-enabled",
+                          "de/jaksam-inventory/functions/client/dequip-weapon",
+                          "de/jaksam-inventory/functions/client/set-weapon-wheel",
+                          "de/jaksam-inventory/functions/client/set-jaksam-weapon-wheel",
+                          "de/jaksam-inventory/functions/client/register-action-button",
+                          "de/jaksam-inventory/functions/client/unregister-action-button",
+                          "de/jaksam-inventory/functions/client/show-action-button",
+                          "de/jaksam-inventory/functions/client/hide-action-button",
+                          "de/jaksam-inventory/functions/client/get-vehicle-inventory-limits",
+                          "de/jaksam-inventory/functions/client/is-inventory-open",
+                          "de/jaksam-inventory/functions/client/set-inventory-disabled",
+                          "de/jaksam-inventory/functions/client/is-inventory-disabled"
+                        ]
+                      },
+                      {
+                        "group": "Shared",
+                        "root": "de/jaksam-inventory/functions/shared/index",
+                        "icon": "circle-share-nodes",
+                        "pages": [
+                          "de/jaksam-inventory/functions/shared/get-static-items-list",
+                          "de/jaksam-inventory/functions/shared/get-static-item",
+                          "de/jaksam-inventory/functions/shared/get-item-label",
+                          "de/jaksam-inventory/functions/shared/get-item-image-path"
+                        ]
+                      },
+                      {
+                        "group": "Server",
+                        "root": "de/jaksam-inventory/functions/server/index",
+                        "icon": "server",
+                        "pages": [
+                          "de/jaksam-inventory/functions/server/add-item",
+                          "de/jaksam-inventory/functions/server/add-item-to-trunk",
+                          "de/jaksam-inventory/functions/server/add-item-to-glovebox",
+                          "de/jaksam-inventory/functions/server/remove-item-from-trunk",
+                          "de/jaksam-inventory/functions/server/remove-item-from-glovebox",
+                          "de/jaksam-inventory/functions/server/get-inventory-id-from-plate",
+                          "de/jaksam-inventory/functions/server/can-carry-item",
+                          "de/jaksam-inventory/functions/server/can-swap-item",
+                          "de/jaksam-inventory/functions/server/clear-inventory",
+                          "de/jaksam-inventory/functions/server/create-inventory",
+                          "de/jaksam-inventory/functions/server/force-open-inventory",
+                          "de/jaksam-inventory/functions/server/get-inventory",
+                          "de/jaksam-inventory/functions/server/get-item-from-slot",
+                          "de/jaksam-inventory/functions/server/get-item-by-name",
+                          "de/jaksam-inventory/functions/server/get-items-by-name",
+                          "de/jaksam-inventory/functions/server/get-item-label",
+                          "de/jaksam-inventory/functions/server/get-total-item-amount",
+                          "de/jaksam-inventory/functions/server/has-item",
+                          "de/jaksam-inventory/functions/server/register-usable-item",
+                          "de/jaksam-inventory/functions/server/register-stash",
+                          "de/jaksam-inventory/functions/server/register-item",
+                          "de/jaksam-inventory/functions/server/remove-item",
+                          "de/jaksam-inventory/functions/server/save-dirty-inventories",
+                          "de/jaksam-inventory/functions/server/save-dirty-inventory",
+                          "de/jaksam-inventory/functions/server/set-inventory-max-weight",
+                          "de/jaksam-inventory/functions/server/set-item-metadata-in-slot",
+                          "de/jaksam-inventory/functions/server/set-durability"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Events",
+                    "icon": "alarm-clock",
+                    "pages": [
+                      {
+                        "group": "Server",
+                        "root": "de/jaksam-inventory/events/server/index",
+                        "icon": "server",
+                        "pages": [
+                          "de/jaksam-inventory/events/server/on-inventory-item-added",
+                          "de/jaksam-inventory/events/server/on-inventory-item-removed",
+                          "de/jaksam-inventory/events/server/on-inventory-item-transferred"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Hooks",
+                    "icon": "webhook",
+                    "root": "de/jaksam-inventory/hooks/index",
+                    "pages": [
+                      "de/jaksam-inventory/hooks/on-item-added",
+                      "de/jaksam-inventory/hooks/on-item-removed",
+                      "de/jaksam-inventory/hooks/on-item-transferred",
+                      "de/jaksam-inventory/hooks/on-pre-use-item",
+                      "de/jaksam-inventory/hooks/on-post-use-item",
+                      "de/jaksam-inventory/hooks/on-inventory-created"
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "default": false
