@@ -27,7 +27,7 @@ Dies ist die offizielle Dokumentation von **Races Creator**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/races-creator/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/races-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>

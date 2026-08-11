@@ -27,7 +27,7 @@ Dies ist die offizielle Dokumentation von **Farming Creator**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/farming-creator/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/farming-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>
