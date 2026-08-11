@@ -1641,6 +1641,187 @@
                 ]
               },
               {
+                "group": "Jobs Creator",
+                "icon": "briefcase",
+                "expanded": true,
+                "pages": [
+                  "de/jobs-creator/modules",
+                  "de/jobs-creator/replacing-default-scripts-names",
+                  "de/jobs-creator/replacing-default-events-names",
+                  "de/jobs-creator/qbcore-jobs-injection",
+                  {
+                    "group": "Client",
+                    "root": "de/jobs-creator/client/index",
+                    "pages": [
+                      {
+                        "group": "Notifications",
+                        "root": "de/jobs-creator/client/notifications/index",
+                        "pages": [
+                          "de/jobs-creator/client/notifications/replace-default-notifications",
+                          "de/jobs-creator/client/notifications/replace-help-notification-textui"
+                        ],
+                        "icon": "bell"
+                      },
+                      {
+                        "group": "Actions",
+                        "root": "de/jobs-creator/client/actions/index",
+                        "pages": [
+                          "de/jobs-creator/client/actions/using-the-actions-in-a-radial-external-menu",
+                          "de/jobs-creator/client/actions/replace-default-search-action",
+                          "de/jobs-creator/client/actions/get-player-allowed-actions",
+                          "de/jobs-creator/client/actions/open-actions-menu",
+                          "de/jobs-creator/client/actions/integrate-external-impound-script",
+                          "de/jobs-creator/client/actions/vehicle-repaired",
+                          "de/jobs-creator/client/actions/get-if-local-player-is-handcuffed"
+                        ],
+                        "icon": "hand-pointer"
+                      },
+                      {
+                        "group": "Duty",
+                        "root": "de/jobs-creator/client/duty/index",
+                        "pages": [
+                          "de/jobs-creator/client/duty/duty-status-toggled",
+                          "de/jobs-creator/client/duty/toggle-current-duty-status"
+                        ],
+                        "icon": "briefcase-arrow-right"
+                      },
+                      {
+                        "group": "Buyable Vehicles",
+                        "root": "de/jobs-creator/client/buyable-vehicles/index",
+                        "pages": [
+                          "de/jobs-creator/client/buyable-vehicles/vehicle-spawned",
+                          "de/jobs-creator/client/buyable-vehicles/vehicle-parked"
+                        ],
+                        "icon": "car"
+                      },
+                      {
+                        "group": "Garage Owned",
+                        "root": "de/jobs-creator/client/garage-owned/index",
+                        "pages": [
+                          "de/jobs-creator/client/garage-owned/vehicle-spawned",
+                          "de/jobs-creator/client/garage-owned/vehicle-parked"
+                        ],
+                        "icon": "warehouse-full"
+                      },
+                      {
+                        "group": "Temporary Garage",
+                        "root": "de/jobs-creator/client/temporary-garage/index",
+                        "pages": [
+                          "de/jobs-creator/client/temporary-garage/vehicle-spawned",
+                          "de/jobs-creator/client/temporary-garage/vehicle-parked"
+                        ],
+                        "icon": "clock"
+                      },
+                      "de/jobs-creator/client/replace-stash-safe-armory",
+                      "de/jobs-creator/client/replace-default-billing",
+                      "de/jobs-creator/client/progress-bar"
+                    ],
+                    "icon": "laptop"
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/jobs-creator/server/index",
+                    "pages": [
+                      {
+                        "group": "Armory",
+                        "root": "de/jobs-creator/server/armory/index",
+                        "pages": [
+                          "de/jobs-creator/server/armory/add-weapon-to-armory",
+                          "de/jobs-creator/server/armory/remove-weapon-from-armory",
+                          "de/jobs-creator/server/armory/get-player-armory-weapons",
+                          "de/jobs-creator/server/armory/get-all-armory-weapons"
+                        ],
+                        "icon": "gun"
+                      },
+                      {
+                        "group": "Boss",
+                        "root": "de/jobs-creator/server/boss/index",
+                        "pages": [
+                          "de/jobs-creator/server/boss/add-society-account-money",
+                          "de/jobs-creator/server/boss/remove-society-account-money",
+                          "de/jobs-creator/server/boss/get-job-account-money",
+                          "de/jobs-creator/server/boss/on-player-fired",
+                          "de/jobs-creator/server/boss/on-player-hired"
+                        ],
+                        "icon": "user-crown"
+                      },
+                      {
+                        "group": "Buyable Vehicles",
+                        "root": "de/jobs-creator/server/buyable-vehicles/index",
+                        "pages": [
+                          "de/jobs-creator/server/buyable-vehicles/get-if-player-is-owner-of-vehicle-plate",
+                          "de/jobs-creator/server/buyable-vehicles/get-all-vehicles-of-player",
+                          "de/jobs-creator/server/buyable-vehicles/on-vehicle-bought",
+                          "de/jobs-creator/server/buyable-vehicles/get-player-vehicles-in-marker-id"
+                        ],
+                        "icon": "car"
+                      },
+                      {
+                        "group": "Crafting Table",
+                        "root": "de/jobs-creator/server/crafting-table/index",
+                        "pages": [
+                          "de/jobs-creator/server/crafting-table/item-crafted"
+                        ],
+                        "icon": "tools"
+                      },
+                      {
+                        "group": "Duty",
+                        "root": "de/jobs-creator/server/duty/index",
+                        "pages": [
+                          "de/jobs-creator/server/duty/duty-status-changed",
+                          "de/jobs-creator/server/duty/get-if-a-player-is-on-duty"
+                        ],
+                        "icon": "briefcase-clock"
+                      },
+                      {
+                        "group": "Harvest",
+                        "root": "de/jobs-creator/server/harvest/index",
+                        "pages": [
+                          "de/jobs-creator/server/harvest/item-harvested"
+                        ],
+                        "icon": "leaf"
+                      },
+                      {
+                        "group": "Market",
+                        "root": "de/jobs-creator/server/market/index",
+                        "pages": [
+                          "de/jobs-creator/server/market/item-sold"
+                        ],
+                        "icon": "store"
+                      },
+                      {
+                        "group": "Shop",
+                        "root": "de/jobs-creator/server/shop/index",
+                        "pages": [
+                          "de/jobs-creator/server/shop/item-bought"
+                        ],
+                        "icon": "cart-circle-plus"
+                      },
+                      {
+                        "group": "Process",
+                        "icon": "gears",
+                        "root": "de/jobs-creator/server/process/index",
+                        "pages": [
+                          "de/jobs-creator/server/process/item-processed"
+                        ]
+                      },
+                      {
+                        "group": "Search/Steal Action",
+                        "root": "de/jobs-creator/server/search-steal-action/index",
+                        "pages": [
+                          "de/jobs-creator/server/search-steal-action/item-stolen",
+                          "de/jobs-creator/server/search-steal-action/account-stolen",
+                          "de/jobs-creator/server/search-steal-action/weapon-stolen"
+                        ],
+                        "icon": "magnifying-glass"
+                      },
+                      "de/jobs-creator/server/set-handcuffs-state"
+                    ],
+                    "icon": "server"
+                  }
+                ]
+              },
+              {
                 "group": "Drugs Creator",
                 "icon": "pills",
                 "expanded": true,

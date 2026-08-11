@@ -1,0 +1,33 @@
+---
+title: "Item geerntet"
+description: "Wird ausgelöst, wenn ein Spieler an einem Harvest-Marker ein Item erntet."
+icon: "leaf"
+---
+
+Wird ausgelöst, wenn ein Spieler an einem Harvest-Marker ein Item erntet.
+
+<CodeGroup>
+
+```lua Event
+RegisterNetEvent("jobs_creator:harvest:harvestedItem", function(playerId, markerId, itemName, itemType, itemQuantity)
+end)
+```
+
+```lua Beispiel
+RegisterNetEvent("jobs_creator:harvest:harvestedItem", function(playerId, markerId, itemName, itemType, itemQuantity)
+    print("Spieler-ID: " .. playerId .. " hat " .. itemQuantity .. " " .. itemName .. " aus Marker " .. markerId .. " geerntet")
+    TriggerEvent("xp_system:addExperience", playerId, "harvest")
+end)
+```
+
+</CodeGroup>
+
+### Parameter
+
+| Name | Datentyp | Beschreibung |
+| --- | --- | --- |
+| `playerId` | integer | Server-ID des Spielers |
+| `markerId` | integer | Marker-ID |
+| `itemName` | string | Item-Name |
+| `itemType` | string | Item-Typ (`item`, `weapon`, `account`) |
+| `itemQuantity` | integer | Geerntete Menge |
