@@ -1631,6 +1631,46 @@
                 ]
               },
               {
+                "group": "Missions Creator",
+                "icon": "bullseye",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/missions-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/missions-creator/client/replace-default-police-alert",
+                      "de/missions-creator/client/on-entity-spawn",
+                      "de/missions-creator/client/get-mission-template",
+                      {
+                        "group": "Notifications",
+                        "root": "de/missions-creator/client/notifications/index",
+                        "icon": "bell-on",
+                        "pages": [
+                          "de/missions-creator/client/notifications/replace-default-notifications",
+                          "de/missions-creator/client/notifications/replace-default-help-notifications",
+                          "de/missions-creator/client/notifications/replace-default-mugshot-notifications"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/missions-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/missions-creator/server/police-alerted",
+                      "de/missions-creator/server/on-mission-start",
+                      "de/missions-creator/server/on-mission-failed",
+                      "de/missions-creator/server/on-mission-completed",
+                      "de/missions-creator/server/start-mission",
+                      "de/missions-creator/server/get-mission-template"
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
