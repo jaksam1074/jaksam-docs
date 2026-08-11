@@ -1718,6 +1718,33 @@
                     ]
                   }
                 ]
+              },
+              {
+                "group": "Trackers Creator",
+                "icon": "satellite-dish",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/trackers-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/trackers-creator/client/replace-default-notifications",
+                      "de/trackers-creator/client/panic-button-pressed",
+                      "de/trackers-creator/client/manually-start-panic-button"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/trackers-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/trackers-creator/server/panic-button-pressed",
+                      "de/trackers-creator/server/player-lost-signal",
+                      "de/trackers-creator/server/player-set-new-private-frequency"
+                    ]
+                  }
+                ]
               }
             ]
           }
