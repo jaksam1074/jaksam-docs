@@ -1782,6 +1782,43 @@
                     ]
                   }
                 ]
+              },
+              {
+                "group": "Easy Allowlist",
+                "icon": "shield-check",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Server",
+                    "root": "de/easy-allowlist/server/index",
+                    "icon": "server",
+                    "pages": [
+                      {
+                        "group": "Allowlist",
+                        "root": "de/easy-allowlist/server/allowlist/index",
+                        "icon": "list-check",
+                        "pages": [
+                          "de/easy-allowlist/server/allowlist/add-identifier-to-allowlist",
+                          "de/easy-allowlist/server/allowlist/remove-identifier-from-allowlist"
+                        ]
+                      },
+                      {
+                        "group": "Queue",
+                        "root": "de/easy-allowlist/server/queue/index",
+                        "icon": "bus-stop",
+                        "pages": [
+                          "de/easy-allowlist/server/queue/set-player-queue-priority",
+                          "de/easy-allowlist/server/queue/set-discord-role-queue-priority",
+                          "de/easy-allowlist/server/queue/set-identifier-queue-priority",
+                          "de/easy-allowlist/server/queue/remove-identifier-queue-priority",
+                          "de/easy-allowlist/server/queue/remove-discord-role-queue-priority",
+                          "de/easy-allowlist/server/queue/get-queue-count",
+                          "de/easy-allowlist/server/queue/get-queue-info"
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
