@@ -1,0 +1,98 @@
+---
+title: "Entwickler-Übersicht"
+description: "Konventionen, die auf jeder Export-, Event- und Hook-Referenzseite genutzt werden, plus Links zum API-Bereich jedes Produkts."
+icon: "book"
+tag: "New"
+---
+
+Dieser Bereich dokumentiert die Exports, Events und Hooks, die von jaksams Scripts bereitgestellt werden — für alle, die ein anderes Script integrieren, Standardverhalten ersetzen oder auf einem jaksam-Produkt aufbauen möchten.
+
+Falls du stattdessen Installations-/Einrichtungsanleitungen suchst, findest du diese Inhalte im **Main**-Tab, auf der jeweiligen Home- und Installations-Seite jedes Produkts.
+
+## Wie die Integration funktioniert
+
+Die meisten Scripts liefern einen `integrations`-Ordner mit drei Dateien:
+
+<CardGroup cols={3}>
+  <Card title="cl_integrations.lua" icon="laptop">
+    Client-seitiger Code, zum Beispiel um Benachrichtigungen oder den Fortschrittsbalken zu ersetzen. Üblicherweise der Ort, an dem du Code von einer **Client**-Referenzseite unten einfügst.
+  </Card>
+
+  <Card title="sh_integrations.lua" icon="arrows-left-right">
+    Code, der sowohl client- als auch server-seitig läuft, meist Namen externer Scripts, sodass du sie auf das verweisen kannst, was dein Server tatsächlich nutzt.
+  </Card>
+
+  <Card title="sv_integrations.lua" icon="server">
+    Server-seitiger Code. Üblicherweise der Ort, an dem du Code von einer **Server**-Referenzseite unten einfügst.
+  </Card>
+</CardGroup>
+
+## Konventionen der Referenzseiten
+
+Jede Export-/Event-/Hook-Seite unten folgt derselben Struktur, sodass du sie alle auf dieselbe Weise überfliegen kannst:
+
+| Feld | Bedeutung |
+|---|---|
+| **Seite** | Ob es client-seitig oder server-seitig läuft. Ersichtlich daran, unter welchem Abschnitt (Client/Server) die Seite eingeordnet ist. |
+| **Beschreibung** | Ein bis zwei Sätze darüber, was es tut, direkt unter dem Titel. |
+| **Export/Event** | Der genaue `exports[...]:...`-Aufruf oder die `AddEventHandler`-/`RegisterNetEvent`-Signatur, in einem Codeblock. |
+| **Parameter** | Eine Tabelle mit jedem Parameter, seinem Datentyp und seinem Zweck. |
+| **Rückgabewert** | Eine Tabelle mit dem, was zurückgegeben wird, falls vorhanden. Wird bei Seiten weggelassen, die nichts zurückgeben. |
+| **Beispiel** | Ein realistischer, funktionierender Nutzungs-Ausschnitt neben der reinen Signatur. |
+
+<Note>
+  Nicht jede Seite hat bereits einen Fehler-/Hinweise-Abschnitt. Wo Fehlerfälle oder Einschränkungen nicht dokumentiert sind, ist das eine bekannte Lücke, keine Aussage, dass nichts schiefgehen kann — schau im FAQ des jeweiligen Produkts nach oder frag im [Discord](https://discord.gg/MrXMNnvhTr), falls du auf einen nicht abgedeckten Sonderfall stößt.
+</Note>
+
+## Zur API-Referenz eines Produkts springen
+
+<CardGroup cols={3}>
+  <Card title="Jaksam Inventory" icon="boxes-stacked" href="/de/jaksam-inventory/functions/client">
+    Funktionen, Events und Hooks.
+  </Card>
+  <Card title="Jobs Creator" icon="briefcase" href="/jobs-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Drugs Creator" icon="pills" href="/de/drugs-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Doors Creator" icon="door-open" href="/de/doors-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Missions Creator" icon="bullseye" href="/de/missions-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Blips Creator" icon="location-dot" href="/de/blips-creator/client">
+    Client-Referenz.
+  </Card>
+  <Card title="Farming Creator" icon="tractor" href="/de/farming-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Shops Creator" icon="cart-shopping" href="/de/shops-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Robberies Creator" icon="mask" href="/de/robberies-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Vehicles Keys" icon="key" href="/de/vehicles-keys/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Dealerships Creator" icon="car" href="/de/dealerships-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Races Creator" icon="flag-checkered" href="/de/races-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Trackers Creator" icon="satellite-dish" href="/de/trackers-creator/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Easy Allowlist" icon="shield-check" href="/de/easy-allowlist/server">
+    Server-Referenz.
+  </Card>
+  <Card title="Billing UI" icon="file-invoice-dollar" href="/de/billing-ui/client">
+    Client- und Server-Referenz.
+  </Card>
+  <Card title="Luxury Clothes Theft" icon="shirt" href="/de/luxury-clothes-theft/client">
+    Client-Referenz.
+  </Card>
+</CardGroup>

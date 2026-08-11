@@ -1514,6 +1514,13 @@
             "icon": "code",
             "groups": [
               {
+                "group": "General",
+                "icon": "book",
+                "pages": [
+                  "de/developers/overview"
+                ]
+              },
+              {
                 "group": "Inventory",
                 "icon": "boxes-stacked",
                 "expanded": true,
