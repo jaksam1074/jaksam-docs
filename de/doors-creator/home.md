@@ -31,7 +31,7 @@ Dies ist die offizielle Dokumentation von **Doors Creator**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/doors-creator/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/doors-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>

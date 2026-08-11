@@ -1631,6 +1631,45 @@
                 ]
               },
               {
+                "group": "Doors Creator",
+                "icon": "door-open",
+                "expanded": true,
+                "pages": [
+                  "de/doors-creator/modules",
+                  {
+                    "group": "Client",
+                    "root": "de/doors-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/doors-creator/client/replace-default-notifications",
+                      "de/doors-creator/client/get-closest-door",
+                      "de/doors-creator/client/toggle-icon-display",
+                      "de/doors-creator/client/replace-default-police-alert",
+                      "de/doors-creator/client/get-door-id-from-entity"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/doors-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/doors-creator/server/refresh-database",
+                      "de/doors-creator/server/police-alerted",
+                      "de/doors-creator/server/get-door-id-data",
+                      "de/doors-creator/server/get-building-id-data",
+                      "de/doors-creator/server/get-all-buildings-list",
+                      "de/doors-creator/server/get-all-doors-list",
+                      "de/doors-creator/server/set-door-id-state-locked-unlocked",
+                      "de/doors-creator/server/lockpicked-door",
+                      "de/doors-creator/server/create-building",
+                      "de/doors-creator/server/create-door",
+                      "de/doors-creator/server/delete-door",
+                      "de/doors-creator/server/update-door"
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Missions Creator",
                 "icon": "bullseye",
                 "expanded": true,
