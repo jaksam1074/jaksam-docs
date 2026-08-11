@@ -361,6 +361,7 @@
                 "icon": "boxes-stacked",
                 "expanded": true,
                 "pages": [
+                  "jaksam-inventory/modules",
                   "jaksam-inventory/guides/commands",
                   {
                     "group": "Functions",
@@ -1526,6 +1527,7 @@
                 "icon": "boxes-stacked",
                 "expanded": true,
                 "pages": [
+                  "de/jaksam-inventory/modules",
                   "de/jaksam-inventory/guides/commands",
                   {
                     "group": "Functions",
