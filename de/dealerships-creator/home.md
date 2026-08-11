@@ -31,7 +31,7 @@ Dies ist die offizielle Dokumentation von **Dealerships Creator**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/dealerships-creator/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/dealerships-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>

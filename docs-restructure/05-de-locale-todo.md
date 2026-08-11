@@ -2,7 +2,9 @@
 
 Internal planning document, not part of the published site. Read this first in a fresh session before continuing the German translation.
 
-**Status as of 2026-08-11:** Main tab (server-owner content) is fully translated, including all Guides sub-pages. The **API tab** now exists in German with 8 products fully translated: Jaksam Inventory (63 pages), Blips Creator (2), Luxury Clothes Theft (2), Races Creator (7), Farming Creator (8), Trackers Creator (8), Robberies Creator (12), Easy Allowlist (12) — 114 API pages total. ~8 more products remain untranslated in the API tab (~200+ pages), the largest being Jobs Creator (66) and Drugs Creator (40).
+**Status as of 2026-08-11:** Main tab (server-owner content) is fully translated, including all Guides sub-pages. The **API tab** now exists in German with 10 products fully translated: Jaksam Inventory (63 pages), Blips Creator (2), Farming Creator (8), Robberies Creator (12), Dealerships Creator (13), Races Creator (7), Trackers Creator (8), Easy Allowlist (12), Billing UI (13), Luxury Clothes Theft (2) — 140 API pages total. ~6 more products remain untranslated in the API tab (~170+ pages), the largest being Jobs Creator (66) and Drugs Creator (40).
+
+**Important:** the German API tab's group order must match the English API tab's group order exactly (this was violated once — groups 1c-1f were appended in translation order, not English nav order — and had to be corrected in the same session that added Dealerships Creator/Billing UI, branch `de-locale-dealerships-billing`). When adding a new product's group to `docs.json`, insert it at the position matching where that product's `group` object sits in the English `"API"` tab's `groups` array, not at the end. Run the order-check snippet at the bottom of this file before every commit, not just the missing/duplicate/orphan checks.
 
 ---
 
@@ -46,15 +48,22 @@ Each product's German `docs.json` API-tab group was added as a sibling to `"Inve
 
 12 pages: Server index + nested Allowlist group (index + 2 pages) + nested Queue group (index + 7 pages). This product's Entwickler-Referenz card points at `/de/easy-allowlist/server` (not `/client` — the product is server-only, no client-side API), same as the English source.
 
-### 2. API tab (developer reference) — ~200+ pages remaining across ~8 products
+### 1g. ~~Dealerships Creator, Billing UI~~ — DONE as of 2026-08-11 (branch `de-locale-dealerships-billing`)
 
-Not started in German for: Jobs Creator (66), Drugs Creator (40), Vehicles Keys (36), Doors Creator (20), Shops Creator (18), Missions Creator (15), Billing UI (13), Dealerships Creator (13). This is everything else currently under the English `"API"` tab in `docs.json`:
+- **Dealerships Creator** (13 pages): Client index + `on-test-drive-vehicle-spawn` + nested Notifications group (index + 2 pages) + nested Showroom group (index + 4 pages), Server index + 2 pages.
+- **Billing UI** (13 pages): Client index + 6 pages, Server index + 5 pages.
+
+This is also when the German API-tab **group order** was fixed to match English exactly (see the note at the top of this file) — the previous ad-hoc append order was: Inventory, Blips, Luxury Clothes Theft, Races, Farming, Trackers, Robberies, Easy Allowlist. Corrected to: Inventory, Blips, Farming, Robberies, Dealerships, Races, Trackers, Easy Allowlist, Billing UI, Luxury Clothes Theft — matching the English `"API"` tab's group sequence with the two new groups inserted at their correct English-nav positions.
+
+### 2. API tab (developer reference) — ~170+ pages remaining across ~6 products
+
+Not started in German for: Jobs Creator (66), Drugs Creator (40), Vehicles Keys (36), Doors Creator (20), Shops Creator (18), Missions Creator (15). This is everything else currently under the English `"API"` tab in `docs.json`:
 
 - Per-product `Client`/`Server` export & event pages
 - `developers/overview.mdx` (the conventions page) — the German API tab currently has no `"General"` group/overview page at all; add one (mirroring English) when translating it, or when it becomes the first page a user hits
 - The `Modules`/advanced-integration pages (`jobs-creator/modules.md` etc.)
 
-**Recommendation:** keep working smallest-to-largest (see page counts above) to maximize the number of fully-bilingual products per session; Billing UI/Dealerships Creator (13 each) are the natural next pick. Jobs Creator (66) is the largest and should be its own dedicated multi-session effort near the end, same way the original restructure was phased (audit → plan → execute).
+**Recommendation:** keep working smallest-to-largest (see page counts above) to maximize the number of fully-bilingual products per session; Missions Creator (15) is the natural next pick. Jobs Creator (66) is the largest and should be its own dedicated multi-session effort near the end, same way the original restructure was phased (audit → plan → execute). **Remember to insert each new group at its correct English-nav position, not append to the end** — see the note at the top of this file.
 
 **Mechanical approach that already worked well for Main tab:**
 1. Read the English source file(s) (don't re-derive content, translate what's there — see [[feedback_jaksam_docs_no_new_info]], no new facts, ever).
@@ -76,12 +85,19 @@ Reuse the same `tag`/`icon` frontmatter values as the English source page where 
 
 ```powershell
 $j = Get-Content -Raw docs.json | ConvertFrom-Json
-# confirm which German API-tab groups exist already — if more products were
-# added in a prior session, they'll show up here (should show "Inventory" only,
-# as of 2026-08-11)
+# confirm which German API-tab groups exist already, IN ORDER — if more
+# products were added in a prior session, they'll show up here
 ($j.navigation.languages | Where-Object { $_.language -eq "de" }).tabs |
   Where-Object { $_.tab -eq "API" } |
   Select-Object -ExpandProperty groups | Select-Object -ExpandProperty group
 ```
 
-If this still only shows `Inventory`, nothing has changed since this note was written and the plan above is accurate.
+As of 2026-08-11 this should print, in this exact order: `Inventory, Blips Creator, Farming Creator, Robberies Creator, Dealerships Creator, Races Creator, Trackers Creator, Easy Allowlist, Billing UI, Luxury Clothes Theft`. If it doesn't match, something changed since this note was written — re-derive the current state before continuing.
+
+**Order-check (run before every commit, not just when adding a group):** the printed order above must be a subsequence of the English API tab's group order. Compare against:
+
+```powershell
+($j.navigation.languages | Where-Object { $_.language -eq "en" }).tabs |
+  Where-Object { $_.tab -eq "API" } |
+  Select-Object -ExpandProperty groups | Select-Object -ExpandProperty group
+```

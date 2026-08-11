@@ -1646,53 +1646,6 @@
                 ]
               },
               {
-                "group": "Luxury Clothes Theft",
-                "icon": "shirt",
-                "expanded": true,
-                "pages": [
-                  {
-                    "group": "Client",
-                    "root": "de/luxury-clothes-theft/client/index",
-                    "icon": "laptop",
-                    "pages": [
-                      "de/luxury-clothes-theft/client/replace-default-notifications"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Races Creator",
-                "icon": "flag-checkered",
-                "expanded": true,
-                "pages": [
-                  {
-                    "group": "Client",
-                    "root": "de/races-creator/client/index",
-                    "icon": "laptop",
-                    "pages": [
-                      "de/races-creator/client/replace-default-police-alert",
-                      {
-                        "group": "Notifications",
-                        "root": "de/races-creator/client/notifications/index",
-                        "icon": "bell-on",
-                        "pages": [
-                          "de/races-creator/client/notifications/replace-default-notifications",
-                          "de/races-creator/client/notifications/replace-default-help-notifications"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Server",
-                    "root": "de/races-creator/server/index",
-                    "icon": "server",
-                    "pages": [
-                      "de/races-creator/server/police-alerted"
-                    ]
-                  }
-                ]
-              },
-              {
                 "group": "Farming Creator",
                 "icon": "tractor",
                 "expanded": true,
@@ -1715,33 +1668,6 @@
                     "pages": [
                       "de/farming-creator/server/police-alerted",
                       "de/farming-creator/server/item-farmed"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Trackers Creator",
-                "icon": "satellite-dish",
-                "expanded": true,
-                "pages": [
-                  {
-                    "group": "Client",
-                    "root": "de/trackers-creator/client/index",
-                    "icon": "laptop",
-                    "pages": [
-                      "de/trackers-creator/client/replace-default-notifications",
-                      "de/trackers-creator/client/panic-button-pressed",
-                      "de/trackers-creator/client/manually-start-panic-button"
-                    ]
-                  },
-                  {
-                    "group": "Server",
-                    "root": "de/trackers-creator/server/index",
-                    "icon": "server",
-                    "pages": [
-                      "de/trackers-creator/server/panic-button-pressed",
-                      "de/trackers-creator/server/player-lost-signal",
-                      "de/trackers-creator/server/player-set-new-private-frequency"
                     ]
                   }
                 ]
@@ -1784,6 +1710,109 @@
                 ]
               },
               {
+                "group": "Dealerships Creator",
+                "icon": "car",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/dealerships-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/dealerships-creator/client/on-test-drive-vehicle-spawn",
+                      {
+                        "group": "Notifications",
+                        "root": "de/dealerships-creator/client/notifications/index",
+                        "icon": "bell-on",
+                        "pages": [
+                          "de/dealerships-creator/client/notifications/replace-default-notifications",
+                          "de/dealerships-creator/client/notifications/replace-default-help-notifications"
+                        ]
+                      },
+                      {
+                        "group": "Showroom",
+                        "root": "de/dealerships-creator/client/showroom/index",
+                        "icon": "car-tilt",
+                        "pages": [
+                          "de/dealerships-creator/client/showroom/on-showroom-enter",
+                          "de/dealerships-creator/client/showroom/on-showroom-exit",
+                          "de/dealerships-creator/client/showroom/get-is-player-in-showroom",
+                          "de/dealerships-creator/client/showroom/get-is-player-doing-test-drive"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/dealerships-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/dealerships-creator/server/on-vehicle-given",
+                      "de/dealerships-creator/server/on-vehicle-resell"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Races Creator",
+                "icon": "flag-checkered",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/races-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/races-creator/client/replace-default-police-alert",
+                      {
+                        "group": "Notifications",
+                        "root": "de/races-creator/client/notifications/index",
+                        "icon": "bell-on",
+                        "pages": [
+                          "de/races-creator/client/notifications/replace-default-notifications",
+                          "de/races-creator/client/notifications/replace-default-help-notifications"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/races-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/races-creator/server/police-alerted"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Trackers Creator",
+                "icon": "satellite-dish",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/trackers-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/trackers-creator/client/replace-default-notifications",
+                      "de/trackers-creator/client/panic-button-pressed",
+                      "de/trackers-creator/client/manually-start-panic-button"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/trackers-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/trackers-creator/server/panic-button-pressed",
+                      "de/trackers-creator/server/player-lost-signal",
+                      "de/trackers-creator/server/player-set-new-private-frequency"
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Easy Allowlist",
                 "icon": "shield-check",
                 "expanded": true,
@@ -1816,6 +1845,53 @@
                           "de/easy-allowlist/server/queue/get-queue-info"
                         ]
                       }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Billing UI",
+                "icon": "file-invoice-dollar",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/billing-ui/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/billing-ui/client/activate-billing-mode",
+                      "de/billing-ui/client/open-billing-menu",
+                      "de/billing-ui/client/replace-default-notifications",
+                      "de/billing-ui/client/pay-a-bill",
+                      "de/billing-ui/client/send-a-bill",
+                      "de/billing-ui/client/view-invoices"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/billing-ui/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/billing-ui/server/create-bill",
+                      "de/billing-ui/server/delete-bill",
+                      "de/billing-ui/server/refresh-bill",
+                      "de/billing-ui/server/on-bill-created",
+                      "de/billing-ui/server/on-bill-paid"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Luxury Clothes Theft",
+                "icon": "shirt",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/luxury-clothes-theft/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/luxury-clothes-theft/client/replace-default-notifications"
                     ]
                   }
                 ]
