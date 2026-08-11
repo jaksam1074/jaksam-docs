@@ -10,7 +10,7 @@ Diese Seite enthält FAQs, die **NUR** dieses Script betreffen — sieh dir auch
   <Accordion title="Drogen-Effekte funktionieren nicht">
     Falls die Effekte nicht funktionieren, funktioniert die `ESX.RegisterUsableItem`-Funktion deines `es_extended` nicht richtig.
 
-    Du kannst Effekte trotzdem manuell registrieren/auslösen, über das Event [manually start drugs effects](/drugs-creator/client/manually-start-drugs-effects).
+    Du kannst Effekte trotzdem manuell registrieren/auslösen, über das Event [manually start drugs effects](/de/drugs-creator/client/manually-start-drugs-effects).
 
     Sowohl bei **ESX** als auch bei **QBCore** kann ein Anticheat die Drogen-Effekte stören.
 

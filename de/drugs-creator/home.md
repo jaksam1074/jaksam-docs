@@ -31,7 +31,7 @@ Dies ist die offizielle Dokumentation von **Drugs Creator**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/drugs-creator/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/drugs-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>
