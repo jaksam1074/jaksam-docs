@@ -1641,6 +1641,17 @@
                 ]
               },
               {
+                "group": "Jobs Creator",
+                "icon": "briefcase",
+                "expanded": true,
+                "pages": [
+                  "de/jobs-creator/modules",
+                  "de/jobs-creator/replacing-default-scripts-names",
+                  "de/jobs-creator/replacing-default-events-names",
+                  "de/jobs-creator/qbcore-jobs-injection"
+                ]
+              },
+              {
                 "group": "Drugs Creator",
                 "icon": "pills",
                 "expanded": true,
