@@ -2,7 +2,7 @@
 
 Internal planning document, not part of the published site. Read this first in a fresh session before continuing the German translation.
 
-**Status as of 2026-08-11:** Main tab (server-owner content) is fully translated, including all Guides sub-pages. The **API tab** now exists in German with 14 products fully translated: Jaksam Inventory (63 pages), Doors Creator (20), Missions Creator (15), Blips Creator (2), Farming Creator (8), Shops Creator (18), Robberies Creator (12), Vehicles Keys (36), Dealerships Creator (13), Races Creator (7), Trackers Creator (8), Easy Allowlist (12), Billing UI (13), Luxury Clothes Theft (2) — 229 API pages total. Plus **1 product partially done**: Drugs Creator's Client section (16 of 40 pages) — see 1l below. Only **Jobs Creator (66)** and **Drugs Creator's Server section (24 pages)** remain.
+**Status as of 2026-08-11:** Main tab (server-owner content) is fully translated, including all Guides sub-pages. The **API tab** now exists in German with the `General` group (Developer Overview, 1 page — see 1m below) plus 14 products fully translated: Jaksam Inventory (63 pages), Doors Creator (20), Missions Creator (15), Blips Creator (2), Farming Creator (8), Shops Creator (18), Robberies Creator (12), Vehicles Keys (36), Dealerships Creator (13), Races Creator (7), Trackers Creator (8), Easy Allowlist (12), Billing UI (13), Luxury Clothes Theft (2) — 230 API pages total. Plus **1 product partially done**: Drugs Creator's Client section (16 of 40 pages) — see 1l below. Only **Jobs Creator (66)** and **Drugs Creator's Server section (24 pages)** remain.
 
 **Important:** the German API tab's group order must match the English API tab's group order exactly (this was violated once — groups 1c-1f were appended in translation order, not English nav order — and had to be corrected in the same session that added Dealerships Creator/Billing UI, branch `de-locale-dealerships-billing`). When adding a new product's group to `docs.json`, insert it at the position matching where that product's `group` object sits in the English `"API"` tab's `groups` array, not at the end. Run the order-check snippet at the bottom of this file before every commit, not just the missing/duplicate/orphan checks.
 
@@ -81,13 +81,16 @@ Drugs Creator has the most nested structure of any product so far (7 subgroups: 
 
 **Also NOT done yet:** the German home page `de/drugs-creator/home.md` still has its "Entwickler-Referenz" card pointing at the English `/drugs-creator/client` URL — **don't update it to `/de/drugs-creator/client` until the Server section is also done**, to avoid pointing users at a half-translated section from the homepage (the Client section itself is fully self-contained and correct, this is just about the entry-point card).
 
+### 1m. ~~General / Developer Overview~~ — DONE as of 2026-08-11 (branch `de-locale-dev-overview`)
+
+Translated `developers/overview.mdx` → `de/developers/overview.mdx` (1 page, `tag: "New"` kept). Added the `"General"` group to the German API tab in `docs.json`, first position (matching English order: General, Inventory, ...). The page's "Jump to a product's API reference" CardGroup links to every product's client/server root — **each href was updated to `/de/<product>/client` (or `/server` for Easy Allowlist) only for the 14 fully-translated products**; the **Jobs Creator** card intentionally still points at the English `/jobs-creator/client` since no German translation exists there at all. When Jobs Creator eventually gets translated, update that one href too (grep `href="/jobs-creator` in `de/developers/overview.mdx`).
+
 ### 2. API tab (developer reference) — ~90 pages remaining across Jobs Creator + Drugs Creator's Server section
 
 Not started in German for: Jobs Creator (66 pages, entirely), Drugs Creator's Server section + modules.md (24 pages, see 1l above). This is everything else currently under the English `"API"` tab in `docs.json`:
 
 - Jobs Creator's `Client`/`Server` export & event pages (all of it)
 - Drugs Creator's `Server` export & event pages + `modules.md`
-- `developers/overview.mdx` (the conventions page) — the German API tab currently has no `"General"` group/overview page at all; add one (mirroring English) when translating it, or when it becomes the first page a user hits
 - The `Modules`/advanced-integration pages (`jobs-creator/modules.md`, `drugs-creator/modules.md`)
 
 **Recommendation:** Finish Drugs Creator's Server section next (24 pages, smaller/faster than starting Jobs Creator) — see 1l above for the exact page list, and don't forget `modules.md`. After that, only Jobs Creator (66) remains and should be its own dedicated multi-session effort, same way the original restructure was phased (audit → plan → execute). Once Jobs Creator is done, the API tab is 100% bilingual and this file's job is finished. **Remember to insert each new group at its correct English-nav position, not append to the end** — see the note at the top of this file.
@@ -119,7 +122,7 @@ $j = Get-Content -Raw docs.json | ConvertFrom-Json
   Select-Object -ExpandProperty groups | Select-Object -ExpandProperty group
 ```
 
-As of 2026-08-11 this should print, in this exact order: `Inventory, Drugs Creator, Doors Creator, Missions Creator, Blips Creator, Farming Creator, Shops Creator, Robberies Creator, Vehicles Keys, Dealerships Creator, Races Creator, Trackers Creator, Easy Allowlist, Billing UI, Luxury Clothes Theft`. Note that `Drugs Creator`'s group at this point only contains a `Client` subgroup (16 pages) — no `Server` subgroup and no top-level `modules.md` yet, see 1l. If the order doesn't match, something changed since this note was written — re-derive the current state before continuing.
+As of 2026-08-11 this should print, in this exact order: `General, Inventory, Drugs Creator, Doors Creator, Missions Creator, Blips Creator, Farming Creator, Shops Creator, Robberies Creator, Vehicles Keys, Dealerships Creator, Races Creator, Trackers Creator, Easy Allowlist, Billing UI, Luxury Clothes Theft`. Note that `Drugs Creator`'s group at this point only contains a `Client` subgroup (16 pages) — no `Server` subgroup and no top-level `modules.md` yet, see 1l. If the order doesn't match, something changed since this note was written — re-derive the current state before continuing.
 
 **Order-check (run before every commit, not just when adding a group):** the printed order above must be a subsequence of the English API tab's group order. Compare against:
 
