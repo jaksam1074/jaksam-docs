@@ -8,6 +8,6 @@ Diese Seite enthält FAQs, die **NUR** dieses Script betreffen — sieh dir auch
 
 <AccordionGroup>
   <Accordion title="Schlechte Performance">
-    Aufgrund der Natur des Scripts ist es normal, dass es mehr Ressourcen verbraucht als andere Scripts. Zur Optimierung kannst du der [Optimierungs-Anleitung](/trackers-creator/optimization) folgen.
+    Aufgrund der Natur des Scripts ist es normal, dass es mehr Ressourcen verbraucht als andere Scripts. Zur Optimierung kannst du der [Optimierungs-Anleitung](/de/trackers-creator/optimization) folgen.
   </Accordion>
 </AccordionGroup>

@@ -2,7 +2,7 @@
 
 Internal planning document, not part of the published site. Read this first in a fresh session before continuing the German translation.
 
-**Status as of 2026-08-11:** Main tab (server-owner content) is fully translated, including all Guides sub-pages. The **API tab** now exists in German with 5 products fully translated: Jaksam Inventory (63 pages), Blips Creator (2), Luxury Clothes Theft (2), Races Creator (7), Farming Creator (8) — 82 API pages total. ~11 more products remain untranslated in the API tab (~230+ pages), the largest being Jobs Creator (66) and Drugs Creator (40).
+**Status as of 2026-08-11:** Main tab (server-owner content) is fully translated, including all Guides sub-pages. The **API tab** now exists in German with 6 products fully translated: Jaksam Inventory (63 pages), Blips Creator (2), Luxury Clothes Theft (2), Races Creator (7), Farming Creator (8), Trackers Creator (8) — 90 API pages total. ~10 more products remain untranslated in the API tab (~220+ pages), the largest being Jobs Creator (66) and Drugs Creator (40).
 
 ---
 
@@ -34,15 +34,19 @@ Translated the 4 smallest remaining API products (19 pages total) in one pass, p
 
 Each product's German `docs.json` API-tab group was added as a sibling to `"Inventory"` under the `"de"` language's `"API"` tab, mirroring the English group/icon structure exactly with `de/`-prefixed paths. Each product's German `home.md` "Entwickler-Referenz" card was updated from the English fallback URL to the new German one (e.g. `/de/blips-creator/client`) — this is the pattern to repeat for every future product once its API section is translated (grep `Entwickler-Referenz` in the product's `de/<product>/home.md`).
 
-### 2. API tab (developer reference) — ~230+ pages remaining across ~11 products
+### 1d. ~~Trackers Creator~~ — DONE as of 2026-08-11 (branch `de-locale-trackers`)
 
-Not started in German for: Jobs Creator (66), Drugs Creator (40), Vehicles Keys (36), Doors Creator (20), Shops Creator (18), Missions Creator (15), Billing UI (13), Dealerships Creator (13), Easy Allowlist (12), Robberies Creator (12), Trackers Creator (8, next smallest — natural next pick). This is everything else currently under the English `"API"` tab in `docs.json`:
+8 pages: Client index + 3 pages (notifications, panic button pressed, manually start panic button), Server index + 3 pages (panic button pressed, player lost signal, player set new private frequency). Also fixed a pre-existing bug found in passing: `de/trackers-creator/faq.md` linked to the **English** `optimization` guide page (`/trackers-creator/optimization`) even though the German translation already existed at that path — this was a leftover from the earlier Main-tab Guides pass, not something this session introduced. Worth spot-checking other already-translated products' FAQ/home pages for the same kind of stale English link now that more API sections exist.
+
+### 2. API tab (developer reference) — ~220+ pages remaining across ~10 products
+
+Not started in German for: Jobs Creator (66), Drugs Creator (40), Vehicles Keys (36), Doors Creator (20), Shops Creator (18), Missions Creator (15), Billing UI (13), Dealerships Creator (13), Easy Allowlist (12), Robberies Creator (12). This is everything else currently under the English `"API"` tab in `docs.json`:
 
 - Per-product `Client`/`Server` export & event pages
 - `developers/overview.mdx` (the conventions page) — the German API tab currently has no `"General"` group/overview page at all; add one (mirroring English) when translating it, or when it becomes the first page a user hits
 - The `Modules`/advanced-integration pages (`jobs-creator/modules.md` etc.)
 
-**Recommendation:** keep working smallest-to-largest (see page counts above) to maximize the number of fully-bilingual products per session; Trackers Creator (8) is the natural next pick, then Robberies Creator/Easy Allowlist (12 each). Jobs Creator (66) is the largest and should be its own dedicated multi-session effort near the end, same way the original restructure was phased (audit → plan → execute).
+**Recommendation:** keep working smallest-to-largest (see page counts above) to maximize the number of fully-bilingual products per session; Robberies Creator/Easy Allowlist (12 each) are the natural next pick. Jobs Creator (66) is the largest and should be its own dedicated multi-session effort near the end, same way the original restructure was phased (audit → plan → execute).
 
 **Mechanical approach that already worked well for Main tab:**
 1. Read the English source file(s) (don't re-derive content, translate what's there — see [[feedback_jaksam_docs_no_new_info]], no new facts, ever).
