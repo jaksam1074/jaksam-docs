@@ -1044,6 +1044,7 @@
                 "icon": "car",
                 "expanded": true,
                 "pages": [
+                  "dealerships-creator/modules",
                   {
                     "group": "Client",
                     "root": "dealerships-creator/client/index",
@@ -2027,6 +2028,7 @@
                 "icon": "car",
                 "expanded": true,
                 "pages": [
+                  "de/dealerships-creator/modules",
                   {
                     "group": "Client",
                     "root": "de/dealerships-creator/client/index",
