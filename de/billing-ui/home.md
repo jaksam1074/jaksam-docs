@@ -27,7 +27,7 @@ Dies ist die offizielle Dokumentation von **Billing UI**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/billing-ui/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/billing-ui/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>
