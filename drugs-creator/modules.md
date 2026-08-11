@@ -4,7 +4,7 @@ description: "Replace default features like notify, progress bar, stash, and log
 icon: "puzzle-piece"
 ---
 
-Modules are an easy way for Jobs Creator to replace certain default features (notify, progress bar, stash, logs).
+Modules are an easy way for Drugs Creator to replace certain default features (notify, progress bar, stash, logs).
 
 To choose an existing module, open the `/drugscreator` menu, go to settings, and choose it. As easy as that.
 
@@ -32,3 +32,16 @@ Creating a module is extremely easy:
     Edit the file's content to match the events of the third-party script you're integrating.
   </Step>
 </Steps>
+
+### Available Modules
+
+| Category | Available Options |
+| --- | --- |
+| Dispatch | `codesign`, `default`, `rcore`, `roadphone` |
+| Gangs | `default` |
+| Inventory | `jaksam_inventory`, `ox_inventory`, `qb-inventory` |
+| Logs | `custom`, `jaksam` |
+| Menu | `menu_default`, `ox_context`, `ox_lib` |
+| Progress Bar | `jaksam`, `ox_lib`, `qb-core` |
+| Stash | `jaksam_inventory`, `ox-inventory`, `qb-inventory` |
+| Text UI | `esx`, `none`, `ox_lib` |
