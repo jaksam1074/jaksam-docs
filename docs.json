@@ -1745,6 +1745,43 @@
                     ]
                   }
                 ]
+              },
+              {
+                "group": "Robberies Creator",
+                "icon": "mask",
+                "expanded": true,
+                "pages": [
+                  "de/robberies-creator/modules",
+                  {
+                    "group": "Client",
+                    "root": "de/robberies-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/robberies-creator/client/progress-bar",
+                      "de/robberies-creator/client/replace-default-police-alert",
+                      {
+                        "group": "Notifications",
+                        "root": "de/robberies-creator/client/notifications/index",
+                        "icon": "bell",
+                        "pages": [
+                          "de/robberies-creator/client/notifications/replace-default-notifications",
+                          "de/robberies-creator/client/notifications/replace-default-help-notifications"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/robberies-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/robberies-creator/server/heist-started",
+                      "de/robberies-creator/server/heist-finished",
+                      "de/robberies-creator/server/police-alerted",
+                      "de/robberies-creator/server/step-completed"
+                    ]
+                  }
+                ]
               }
             ]
           }
