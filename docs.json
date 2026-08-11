@@ -1642,6 +1642,7 @@
                 "icon": "pills",
                 "expanded": true,
                 "pages": [
+                  "de/drugs-creator/modules",
                   {
                     "group": "Client",
                     "root": "de/drugs-creator/client/index",
@@ -1674,6 +1675,75 @@
                           "de/drugs-creator/client/territories/get-territory-owners"
                         ]
                       }
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/drugs-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      {
+                        "group": "Fields",
+                        "root": "de/drugs-creator/server/fields/index",
+                        "icon": "wheat",
+                        "pages": [
+                          "de/drugs-creator/server/fields/item-harvested"
+                        ]
+                      },
+                      {
+                        "group": "Harvestable Items",
+                        "root": "de/drugs-creator/server/harvestable-items/index",
+                        "icon": "plate-wheat",
+                        "pages": [
+                          "de/drugs-creator/server/harvestable-items/item-harvested"
+                        ]
+                      },
+                      {
+                        "group": "Laboratories",
+                        "root": "de/drugs-creator/server/laboratories/index",
+                        "icon": "flask-vial",
+                        "pages": [
+                          "de/drugs-creator/server/laboratories/successful-craft"
+                        ]
+                      },
+                      {
+                        "group": "Sellings",
+                        "root": "de/drugs-creator/server/sellings/index",
+                        "icon": "hands-usd",
+                        "pages": [
+                          "de/drugs-creator/server/sellings/sold-to-pusher",
+                          "de/drugs-creator/server/sellings/sold-in-boat",
+                          "de/drugs-creator/server/sellings/sold-in-plane",
+                          "de/drugs-creator/server/sellings/sold-to-npc",
+                          "de/drugs-creator/server/sellings/sold-to-narcos",
+                          "de/drugs-creator/server/sellings/sold-by-hired-dealer"
+                        ]
+                      },
+                      {
+                        "group": "Territories",
+                        "root": "de/drugs-creator/server/territories/index",
+                        "icon": "map-location-dot",
+                        "pages": [
+                          "de/drugs-creator/server/territories/ownership-changed",
+                          "de/drugs-creator/server/territories/give-territory-points",
+                          "de/drugs-creator/server/territories/remove-territory-points",
+                          "de/drugs-creator/server/territories/reset-territory-points"
+                        ]
+                      },
+                      {
+                        "group": "Hired Dealers",
+                        "root": "de/drugs-creator/server/hired-dealers/index",
+                        "icon": "person-from-portal",
+                        "pages": []
+                      },
+                      {
+                        "group": "Drug Factories",
+                        "root": "de/drugs-creator/server/drug-factories/index",
+                        "icon": "building-lock",
+                        "pages": []
+                      },
+                      "de/drugs-creator/server/police-alerted",
+                      "de/drugs-creator/server/pocket-crafting-finished"
                     ]
                   }
                 ]
