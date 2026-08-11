@@ -1631,6 +1631,47 @@
                 ]
               },
               {
+                "group": "Drugs Creator",
+                "icon": "pills",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/drugs-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/drugs-creator/client/replace-default-notifications",
+                      "de/drugs-creator/client/replace-disable-default-progress-bar",
+                      "de/drugs-creator/client/replace-default-mugshot-notifications",
+                      "de/drugs-creator/client/replace-default-help-notifications",
+                      "de/drugs-creator/client/replace-default-police-alert",
+                      "de/drugs-creator/client/manually-start-drugs-effects",
+                      {
+                        "group": "NPC Selling",
+                        "root": "de/drugs-creator/client/npc-selling/index",
+                        "icon": "person-carry",
+                        "pages": [
+                          "de/drugs-creator/client/npc-selling/disable-default-selling-method-for-npcs",
+                          "de/drugs-creator/client/npc-selling/add-ped-to-selling-blacklist",
+                          "de/drugs-creator/client/npc-selling/remove-ped-from-selling-blacklist",
+                          "de/drugs-creator/client/npc-selling/manually-sell-to-a-npc",
+                          "de/drugs-creator/client/npc-selling/npc-accepted-drug"
+                        ]
+                      },
+                      {
+                        "group": "Territories",
+                        "root": "de/drugs-creator/client/territories/index",
+                        "icon": "map-location",
+                        "pages": [
+                          "de/drugs-creator/client/territories/get-current-territory",
+                          "de/drugs-creator/client/territories/get-territory-owners"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Doors Creator",
                 "icon": "door-open",
                 "expanded": true,
