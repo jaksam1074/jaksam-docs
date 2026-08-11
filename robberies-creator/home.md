@@ -14,6 +14,10 @@ This is the official **Robberies Creator** documentation.
   <Card title="Tebex Store" icon="cart-shopping" href="https://jaksam1074-fivem-scripts.tebex.io/">
     Purchase or view the script on Tebex.
   </Card>
+
+  <Card title="Supported Languages" icon="language">
+    English, Czech, French, German, Hungarian, Italian, Polish, Portuguese, Spanish
+  </Card>
 </CardGroup>
 
 ## Documentation
