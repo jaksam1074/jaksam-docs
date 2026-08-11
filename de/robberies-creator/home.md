@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Robberies Creator**.
     Robberies Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/robberies-creator/how-to-edit-minigames">
+    Minigames bearbeiten und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/robberies-creator/faq">
     Häufig gestellte Fragen.
   </Card>

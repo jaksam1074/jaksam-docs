@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Jobs Creator**.
     Jobs Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/jobs-creator/updating-script-from-old-versions">
+    Update von älteren Script-Versionen und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/jobs-creator/faq">
     Häufig gestellte Fragen.
   </Card>

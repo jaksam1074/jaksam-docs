@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Dealerships Creator**.
     Dealerships Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="book-open" href="/de/dealerships-creator/adding-custom-vehicles-classes">
+    Eigene Fahrzeugklassen hinzufügen und weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/dealerships-creator/faq">
     Häufig gestellte Fragen.
   </Card>

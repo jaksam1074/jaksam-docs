@@ -23,6 +23,10 @@ Dies ist die offizielle Dokumentation von **Drugs Creator**.
     Drugs Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
+  <Card title="Anleitungen" icon="photo-film" href="/de/drugs-creator/guides/custom-audio-and-images">
+    Eigene Audiodateien und Bilder sowie weitere Anleitungen.
+  </Card>
+
   <Card title="FAQ" icon="circle-question" href="/de/drugs-creator/faq">
     Häufig gestellte Fragen.
   </Card>
