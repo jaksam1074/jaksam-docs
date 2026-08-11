@@ -12,7 +12,7 @@ Diese Seite enthält FAQs, die **NUR** dieses Script betreffen — sieh dir auch
 
     Wenn du die Option deaktivierst, verursacht sie keine Performance-Probleme mehr, du musst dann aber die Exports aus der Dokumentation nutzen, um die Fahrzeuge eines Spielers zu aktualisieren (zum Beispiel nachdem er ein neues Fahrzeug in einem Shop gekauft hat).
 
-    Fertige **Beispiele** findest du auf der Seite [fix hotwiring bought car](/vehicles-keys/fix-hotwiring-bought-car).
+    Fertige **Beispiele** findest du auf der Seite [fix hotwiring bought car](/de/vehicles-keys/fix-hotwiring-bought-car).
 
     <Note>
       Die Integration mit externen Scripts liegt komplett bei dir.

@@ -1799,6 +1799,73 @@
                 ]
               },
               {
+                "group": "Vehicles Keys",
+                "icon": "key",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/vehicles-keys/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/vehicles-keys/client/self-give-current-vehicle-plate",
+                      "de/vehicles-keys/client/self-give-vehicle-plate",
+                      "de/vehicles-keys/client/self-remove-vehicle-plate",
+                      "de/vehicles-keys/client/open-remote-ui-menu",
+                      "de/vehicles-keys/client/open-keys-list",
+                      "de/vehicles-keys/client/toggle-hotwiring",
+                      "de/vehicles-keys/client/get-if-local-player-owns-a-plate",
+                      "de/vehicles-keys/client/get-owned-plates-of-local-player",
+                      "de/vehicles-keys/client/toggle-closest-vehicle-lock",
+                      "de/vehicles-keys/client/switch-vehicle-lock",
+                      "de/vehicles-keys/client/vehicle-locked-unlocked",
+                      "de/vehicles-keys/client/replace-disable-default-progress-bar",
+                      "de/vehicles-keys/client/refresh-self-owned-vehicles",
+                      "de/vehicles-keys/client/replace-default-police-alert",
+                      {
+                        "group": "Notifications",
+                        "root": "de/vehicles-keys/client/notifications/index",
+                        "icon": "bell-on",
+                        "pages": [
+                          "de/vehicles-keys/client/notifications/replace-default-notifications",
+                          "de/vehicles-keys/client/notifications/replace-default-help-notifications"
+                        ]
+                      },
+                      "de/vehicles-keys/client/bypass-start-vehicle-check"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/vehicles-keys/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/vehicles-keys/server/refresh-player-owned-vehicles",
+                      "de/vehicles-keys/server/get-if-player-id-owns-a-plate",
+                      "de/vehicles-keys/server/vehicle-locked-unlocked",
+                      "de/vehicles-keys/server/player-hotwired-a-vehicle",
+                      "de/vehicles-keys/server/player-lockpicked-a-vehicle",
+                      "de/vehicles-keys/server/give-keys-to-identifier",
+                      "de/vehicles-keys/server/remove-keys-from-identifier",
+                      "de/vehicles-keys/server/give-keys-to-player-id",
+                      "de/vehicles-keys/server/remove-keys-from-player-id",
+                      "de/vehicles-keys/server/vehicle-window-broken",
+                      "de/vehicles-keys/server/get-player-id-keys",
+                      "de/vehicles-keys/server/get-identifier-keys",
+                      "de/vehicles-keys/server/police-alerted",
+                      {
+                        "group": "Alarms",
+                        "root": "de/vehicles-keys/server/alarms/index",
+                        "icon": "bell-exclamation",
+                        "pages": [
+                          "de/vehicles-keys/server/alarms/alarm-activated-player-vehicle",
+                          "de/vehicles-keys/server/alarms/alarm-activated-npc-vehicle"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Dealerships Creator",
                 "icon": "car",
                 "expanded": true,

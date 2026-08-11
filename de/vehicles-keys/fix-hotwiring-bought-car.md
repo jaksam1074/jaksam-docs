@@ -6,7 +6,7 @@ icon: "wrench"
 
 ## Generisches Script
 
-Musst du ein Fahrzeug direkt nach dem Kauf kurzschließen, füge [diese einfache Codezeile](/vehicles-keys/client/refresh-self-owned-vehicles) zu deinem Script hinzu, nachdem das Fahrzeug zur Tabelle `owned_vehicles` / `player_vehicles` (je nach Framework) hinzugefügt wurde.
+Musst du ein Fahrzeug direkt nach dem Kauf kurzschließen, füge [diese einfache Codezeile](/de/vehicles-keys/client/refresh-self-owned-vehicles) zu deinem Script hinzu, nachdem das Fahrzeug zur Tabelle `owned_vehicles` / `player_vehicles` (je nach Framework) hinzugefügt wurde.
 
 Eventuell willst du davor ein `Citizen.Wait(2000)` einfügen, falls das Fahrzeug zum Zeitpunkt des Event-Triggers noch nicht in der Tabelle war.
 
