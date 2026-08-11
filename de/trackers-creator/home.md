@@ -14,6 +14,10 @@ Dies ist die offizielle Dokumentation von **Trackers Creator**.
   <Card title="Tebex Store" icon="cart-shopping" href="https://www.jaksam-scripts.com/">
     Kaufe oder sieh dir das Script auf Tebex an.
   </Card>
+
+  <Card title="Unterstützte Sprachen" icon="language">
+    Englisch, Tschechisch, Französisch, Deutsch, Ungarisch, Italienisch, Polnisch, Spanisch
+  </Card>
 </CardGroup>
 
 ## Dokumentation

@@ -14,6 +14,10 @@ Dies ist die offizielle Dokumentation von **Missions Creator**.
   <Card title="Tebex Store" icon="cart-shopping" href="https://fivem.jaksam-scripts.com/">
     Kaufe oder sieh dir das Script auf Tebex an.
   </Card>
+
+  <Card title="Unterstützte Sprachen" icon="language">
+    Englisch, Französisch, Deutsch, Spanisch
+  </Card>
 </CardGroup>
 
 ## Dokumentation

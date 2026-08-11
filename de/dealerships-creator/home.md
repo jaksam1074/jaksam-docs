@@ -14,6 +14,10 @@ Dies ist die offizielle Dokumentation von **Dealerships Creator**.
   <Card title="Tebex Store" icon="cart-shopping" href="https://www.jaksam-scripts.com/">
     Kaufe oder sieh dir das Script auf Tebex an.
   </Card>
+
+  <Card title="Unterstützte Sprachen" icon="language">
+    Englisch, Französisch, Deutsch, Spanisch
+  </Card>
 </CardGroup>
 
 ## Dokumentation

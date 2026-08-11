@@ -14,6 +14,10 @@ This is the official **Dealerships Creator** documentation.
   <Card title="Tebex Store" icon="cart-shopping" href="https://www.jaksam-scripts.com/">
     Purchase or view the script on Tebex.
   </Card>
+
+  <Card title="Supported Languages" icon="language">
+    English, French, German, Spanish
+  </Card>
 </CardGroup>
 
 ## Documentation
