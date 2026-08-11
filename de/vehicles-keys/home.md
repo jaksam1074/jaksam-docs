@@ -31,7 +31,7 @@ Dies ist die offizielle Dokumentation von **Vehicles Keys**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/vehicles-keys/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/vehicles-keys/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>
