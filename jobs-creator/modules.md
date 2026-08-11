@@ -192,4 +192,232 @@ Pick the category you want to create a module for. Each tab walks you through th
       </Step>
     </Steps>
   </Tab>
+
+  <Tab title="Outfits">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `jobs_creator/_modules/outfits` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `rcore_clothing`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating. `openExternalMenu` controls the others: return `true` to fully replace the outfits UI with your own script (only `openWardrobe`/`openJobOutfits` are used), or `false` to keep using the Jobs Creator menu (`getPlayerClothes`/`setPlayerClothes` are used instead).
+
+        ```lua
+        local moduleType = "outfits"
+        local moduleName = "yourModuleName"
+
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
+
+        -- Return true to fully replace the outfits UI with your own script, false to keep using the Jobs Creator menu
+        Integrations[moduleType][moduleName].openExternalMenu = function()
+            return false
+        end
+
+        -- Opens your script's saved player outfits menu (only used if openExternalMenu returns true)
+        Integrations[moduleType][moduleName].openWardrobe = function()
+            -- Add your code here
+        end
+
+        -- Opens your script's saved job outfits menu, fully replacing the Jobs Creator job outfit feature (only used if openExternalMenu returns true)
+        Integrations[moduleType][moduleName].openJobOutfits = function()
+            -- Add your code here
+        end
+
+        -- Returns the player's current outfit/clothes table (only used if openExternalMenu returns false)
+        Integrations[moduleType][moduleName].getPlayerClothes = function()
+            -- Add your code here
+        end
+
+        -- Applies the given outfit/clothes table to the player (only used if openExternalMenu returns false)
+        Integrations[moduleType][moduleName].setPlayerClothes = function(outfit, saveAfterRestart)
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Progress Bar">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `jobs_creator/_modules/progressbar` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `jaksam`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
+
+        ```lua
+        local moduleType = "progressbar"
+        local moduleName = "yourModuleName"
+
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
+
+        -- Starts a progress bar for the given time (ms), with the given text and color
+        Integrations[moduleType][moduleName].start = function(time, text, hexColor)
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Search Player">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `jobs_creator/_modules/search_player` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `ox_inventory`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
+
+        ```lua
+        local moduleType = "search_player"
+        local moduleName = "yourModuleName"
+
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
+
+        -- Opens the target player's search/inventory UI (e.g. after checking they're handcuffed)
+        Integrations[moduleType][moduleName].search = function(targetServerId)
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Skillcheck">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `jobs_creator/_modules/skillcheck` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `ox_lib`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
+
+        ```lua
+        local moduleType = "skillcheck"
+        local moduleName = "yourModuleName"
+
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
+
+        -- Starts a skillcheck minigame with the given difficulty and speed
+        Integrations[moduleType][moduleName].start = function(difficulty, speed)
+            -- Add your code here
+        end
+
+        -- Cancels the currently running skillcheck minigame
+        Integrations[moduleType][moduleName].cancel = function()
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Stash">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `jobs_creator/_modules/stash` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `jaksam_inventory`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
+
+        ```lua
+        local moduleType = "stash"
+        local moduleName = "yourModuleName"
+
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
+
+        -- Opens the stash UI for the given marker
+        Integrations[moduleType][moduleName].open = function(type, markerId)
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Text UI">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `jobs_creator/_modules/textui` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `ox_lib`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
+
+        ```lua
+        local moduleType = "textui"
+        local moduleName = "yourModuleName"
+
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
+
+        -- Shows a text UI prompt with the given message
+        Integrations[moduleType][moduleName].show = function(message)
+            -- Add your code here
+        end
+
+        -- Hides the text UI prompt
+        Integrations[moduleType][moduleName].hide = function()
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
 </Tabs>
