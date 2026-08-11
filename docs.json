@@ -1629,6 +1629,95 @@
                     ]
                   }
                 ]
+              },
+              {
+                "group": "Blips Creator",
+                "icon": "location-dot",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/blips-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/blips-creator/client/open-menu-manually"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Luxury Clothes Theft",
+                "icon": "shirt",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/luxury-clothes-theft/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/luxury-clothes-theft/client/replace-default-notifications"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Races Creator",
+                "icon": "flag-checkered",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/races-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/races-creator/client/replace-default-police-alert",
+                      {
+                        "group": "Notifications",
+                        "root": "de/races-creator/client/notifications/index",
+                        "icon": "bell-on",
+                        "pages": [
+                          "de/races-creator/client/notifications/replace-default-notifications",
+                          "de/races-creator/client/notifications/replace-default-help-notifications"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/races-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/races-creator/server/police-alerted"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Farming Creator",
+                "icon": "tractor",
+                "expanded": true,
+                "pages": [
+                  {
+                    "group": "Client",
+                    "root": "de/farming-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/farming-creator/client/replace-default-notifications",
+                      "de/farming-creator/client/progress-bar",
+                      "de/farming-creator/client/replace-default-help-notifications",
+                      "de/farming-creator/client/replace-default-police-alert"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/farming-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/farming-creator/server/police-alerted",
+                      "de/farming-creator/server/item-farmed"
+                    ]
+                  }
+                ]
               }
             ]
           }

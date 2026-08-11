@@ -31,7 +31,7 @@ Dies ist die offizielle Dokumentation von **Blips Creator**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/blips-creator/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/blips-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>

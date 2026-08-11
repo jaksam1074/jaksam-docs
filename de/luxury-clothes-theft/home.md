@@ -27,7 +27,7 @@ Dies ist die offizielle Dokumentation von **Luxury Clothes Theft**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/luxury-clothes-theft/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/luxury-clothes-theft/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>
