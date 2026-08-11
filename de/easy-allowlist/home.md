@@ -31,7 +31,7 @@ Dies ist die offizielle Dokumentation von **Easy Allowlist & Queue**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/easy-allowlist/server">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/easy-allowlist/server">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>
