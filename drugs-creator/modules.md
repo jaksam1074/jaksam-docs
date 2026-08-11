@@ -8,31 +8,6 @@ Modules are an easy way for Drugs Creator to replace certain default features (n
 
 To choose an existing module, open the `/drugscreator` menu, go to settings, and choose it. As easy as that.
 
-### How to create a custom module?
-
-Creating a module is extremely easy:
-
-<Steps>
-  <Step title="Navigate to the modules folder">
-    Go to the `drugs_creator/_modules` folder.
-  </Step>
-  <Step title="Choose the module type">
-    Pick the module type you want to create (logs, progressbar, stash, etc.).
-  </Step>
-  <Step title="Duplicate an existing module">
-    Copy an existing module and paste it in the same folder as a template.
-  </Step>
-  <Step title="Rename the copy">
-    Rename the pasted copy to match the integration you want to create.
-  </Step>
-  <Step title="Open the file">
-    Open the newly renamed file.
-  </Step>
-  <Step title="Modify the events">
-    Edit the file's content to match the events of the third-party script you're integrating.
-  </Step>
-</Steps>
-
 ### Available Modules
 
 | Category | Available Options |
@@ -46,259 +21,379 @@ Creating a module is extremely easy:
 | Stash | `jaksam_inventory`, `ox-inventory`, `qb-inventory` |
 | Text UI | `esx`, `none`, `ox_lib` |
 
-### Required Functions
+### Creating a Custom Module
 
-Each module category expects a specific set of functions. Below is a minimal template for each category, based on the module registration boilerplate every module needs plus the functions that category must implement:
+Pick the category you want to create a module for. Each tab walks you through the exact steps for that category and gives you a ready-to-edit template.
 
-<AccordionGroup>
-  <Accordion title="Dispatch">
-    ```lua
-    local moduleType = "dispatch"
-    local moduleName = "yourModuleName" -- Rename to match the integration you're creating
+<Tabs>
+  <Tab title="Dispatch">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `drugs_creator/_modules/dispatch` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `default`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
 
-    -- Don't touch, required to appear in in-game settings
-    Integrations.modules = Integrations.modules or {}
-    Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
-    Integrations[moduleType] = Integrations[moduleType] or {}
-    Integrations[moduleType][moduleName] = {}
-    table.insert(Integrations.modules[moduleType], moduleName)
+        ```lua
+        local moduleType = "dispatch"
+        local moduleName = "yourModuleName" -- Rename to match the integration you're creating
 
-    -- Runs once per call, server side
-    Integrations[moduleType][moduleName].alertPoliceServerSide = function(coords, message, category)
-        if not IsDuplicityVersion() then return end
+        -- Don't touch, required to appear in in-game settings
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
 
-        -- Add your code here (e.g. call your dispatch script's export/event to alert police)
-    end
+        -- Runs once per call, server side
+        Integrations[moduleType][moduleName].alertPoliceServerSide = function(coords, message, category)
+            if not IsDuplicityVersion() then return end
 
-    -- Runs client side, on every police officer's client
-    Integrations[moduleType][moduleName].alertPoliceMemberClientSide = function(coords, message, category)
-        if IsDuplicityVersion() then return end
+            -- Add your code here (e.g. call your dispatch script's export/event to alert police)
+        end
 
-        -- Add your code here (e.g. show a blip/notification to the officer)
-    end
-    ```
-  </Accordion>
+        -- Runs client side, on every police officer's client
+        Integrations[moduleType][moduleName].alertPoliceMemberClientSide = function(coords, message, category)
+            if IsDuplicityVersion() then return end
 
-  <Accordion title="Gangs">
-    ```lua
-    local moduleType = "gangs"
-    local moduleName = "yourModuleName"
+            -- Add your code here (e.g. show a blip/notification to the officer)
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
 
-    Integrations.modules = Integrations.modules or {}
-    Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
-    Integrations[moduleType] = Integrations[moduleType] or {}
-    Integrations[moduleType][moduleName] = {}
-    table.insert(Integrations.modules[moduleType], moduleName)
+  <Tab title="Gangs">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `drugs_creator/_modules/gangs` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `default`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
 
-    --- Checks if a player has gang permission based on their gang and grade level, SERVER SIDE
-    --- @param playerId number - The server ID of the player
-    --- @param allowedGangs table<string, boolean|table<string, boolean>> - Table of allowed gangs and their grades
-    --- @return boolean|nil - Whether the player has permission
-    Integrations[moduleType][moduleName].isPlayerGangAllowed = function(playerId, allowedGangs)
-        -- Add your code here
-    end
+        ```lua
+        local moduleType = "gangs"
+        local moduleName = "yourModuleName"
 
-    --- Same check, but CLIENT SIDE
-    --- @param allowedGangs table<string, boolean|table<string, boolean>>
-    --- @return boolean|nil
-    Integrations[moduleType][moduleName].isClientGangAllowed = function(allowedGangs)
-        -- Add your code here
-    end
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
 
-    --- Returns the gang name for a player, SERVER SIDE
-    --- @param playerId number
-    --- @return string|nil
-    Integrations[moduleType][moduleName].getPlayerGangName = function(playerId)
-        -- Add your code here
-    end
+        --- Checks if a player has gang permission based on their gang and grade level, SERVER SIDE
+        --- @param playerId number - The server ID of the player
+        --- @param allowedGangs table<string, boolean|table<string, boolean>> - Table of allowed gangs and their grades
+        --- @return boolean|nil - Whether the player has permission
+        Integrations[moduleType][moduleName].isPlayerGangAllowed = function(playerId, allowedGangs)
+            -- Add your code here
+        end
 
-    --- Returns the gang name for the local player, CLIENT SIDE
-    --- @return string|nil
-    Integrations[moduleType][moduleName].getClientGangName = function()
-        -- Add your code here
-    end
+        --- Same check, but CLIENT SIDE
+        --- @param allowedGangs table<string, boolean|table<string, boolean>>
+        --- @return boolean|nil
+        Integrations[moduleType][moduleName].isClientGangAllowed = function(allowedGangs)
+            -- Add your code here
+        end
 
-    --- Returns all gangs available in the game
-    --- @return table<string, { label: string, grades: table<number, { grade: number, label: string }> }>
-    Integrations[moduleType][moduleName].getAllGangs = function()
-        -- Add your code here
-    end
-    ```
-  </Accordion>
+        --- Returns the gang name for a player, SERVER SIDE
+        --- @param playerId number
+        --- @return string|nil
+        Integrations[moduleType][moduleName].getPlayerGangName = function(playerId)
+            -- Add your code here
+        end
 
-  <Accordion title="Inventory">
-    ```lua
-    local moduleType = "inventory"
-    local moduleName = "yourModuleName"
+        --- Returns the gang name for the local player, CLIENT SIDE
+        --- @return string|nil
+        Integrations[moduleType][moduleName].getClientGangName = function()
+            -- Add your code here
+        end
 
-    Integrations.modules = Integrations.modules or {}
-    Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
-    Integrations[moduleType] = Integrations[moduleType] or {}
-    Integrations[moduleType][moduleName] = {}
-    table.insert(Integrations.modules[moduleType], moduleName)
+        --- Returns all gangs available in the game
+        --- @return table<string, { label: string, grades: table<number, { grade: number, label: string }> }>
+        Integrations[moduleType][moduleName].getAllGangs = function()
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
 
-    -- Returns the slot id that contains the given item, or nil if none
-    Integrations[moduleType][moduleName].getSlotIdWithItem = function(playerId, itemName, metadata)
-        -- Add your code here
-    end
+  <Tab title="Inventory">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `drugs_creator/_modules/inventory` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `jaksam_inventory`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
 
-    -- Sets metadata on the item in the given slot
-    Integrations[moduleType][moduleName].setItemMetadata = function(playerId, slotId, metadata)
-        -- Add your code here
-    end
+        ```lua
+        local moduleType = "inventory"
+        local moduleName = "yourModuleName"
 
-    -- Returns the item data stored in the given slot
-    Integrations[moduleType][moduleName].getSlotItem = function(playerId, slotId)
-        -- Add your code here
-    end
-    ```
-  </Accordion>
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
 
-  <Accordion title="Logs">
-    ```lua
-    local moduleType = "logs"
-    local moduleName = "yourModuleName"
+        -- Returns the slot id that contains the given item, or nil if none
+        Integrations[moduleType][moduleName].getSlotIdWithItem = function(playerId, itemName, metadata)
+            -- Add your code here
+        end
 
-    Integrations.modules = Integrations.modules or {}
-    Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
-    Integrations[moduleType] = Integrations[moduleType] or {}
-    Integrations[moduleType][moduleName] = {}
-    table.insert(Integrations.modules[moduleType], moduleName)
+        -- Sets metadata on the item in the given slot
+        Integrations[moduleType][moduleName].setItemMetadata = function(playerId, slotId, metadata)
+            -- Add your code here
+        end
 
-    -- Sends a log entry (e.g. to a Discord webhook or a custom logging script)
-    Integrations[moduleType][moduleName].log = function(playerId, title, description, type, logType)
-        -- Add your code here
-    end
-    ```
-  </Accordion>
+        -- Returns the item data stored in the given slot
+        Integrations[moduleType][moduleName].getSlotItem = function(playerId, slotId)
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
 
-  <Accordion title="Menu">
-    ```lua
-    local moduleType = "menu"
-    local moduleName = "yourModuleName"
+  <Tab title="Logs">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `drugs_creator/_modules/logs` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `jaksam`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
 
-    Integrations.modules = Integrations.modules or {}
-    Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
-    Integrations[moduleType] = Integrations[moduleType] or {}
-    Integrations[moduleType][moduleName] = {}
-    table.insert(Integrations.modules[moduleType], moduleName)
+        ```lua
+        local moduleType = "logs"
+        local moduleName = "yourModuleName"
 
-    -- Opens a menu with the given elements
-    Integrations[moduleType][moduleName].open = function(id, title, elements, onSelect, onClose)
-        -- Add your code here
-    end
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
 
-    -- Closes any menu opened by this module
-    Integrations[moduleType][moduleName].closeAll = function()
-        -- Add your code here
-    end
+        -- Sends a log entry (e.g. to a Discord webhook or a custom logging script)
+        Integrations[moduleType][moduleName].log = function(playerId, title, description, type, logType)
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
 
-    -- Prompts the player for a number between min and max
-    Integrations[moduleType][moduleName].askQuantity = function(title, min, max)
-        -- Add your code here
-    end
+  <Tab title="Menu">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `drugs_creator/_modules/menu` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `menu_default`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
 
-    -- Prompts the player for free text input
-    Integrations[moduleType][moduleName].askInput = function(title)
-        -- Add your code here
-    end
-    ```
-  </Accordion>
+        ```lua
+        local moduleType = "menu"
+        local moduleName = "yourModuleName"
 
-  <Accordion title="Progress Bar">
-    ```lua
-    local moduleType = "progressbar"
-    local moduleName = "yourModuleName"
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
 
-    Integrations.modules = Integrations.modules or {}
-    Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
-    Integrations[moduleType] = Integrations[moduleType] or {}
-    Integrations[moduleType][moduleName] = {}
-    table.insert(Integrations.modules[moduleType], moduleName)
+        -- Opens a menu with the given elements
+        Integrations[moduleType][moduleName].open = function(id, title, elements, onSelect, onClose)
+            -- Add your code here
+        end
 
-    -- Starts a progress bar for the given time (ms), with the given text and color
-    Integrations[moduleType][moduleName].start = function(time, text, hexColor)
-        -- Add your code here
-    end
+        -- Closes any menu opened by this module
+        Integrations[moduleType][moduleName].closeAll = function()
+            -- Add your code here
+        end
 
-    -- Stops/hides the progress bar
-    Integrations[moduleType][moduleName].stop = function()
-        -- Add your code here
-    end
-    ```
-  </Accordion>
+        -- Prompts the player for a number between min and max
+        Integrations[moduleType][moduleName].askQuantity = function(title, min, max)
+            -- Add your code here
+        end
 
-  <Accordion title="Stash">
-    Client:
-    ```lua
-    local moduleType = "stash"
-    local moduleName = "yourModuleName"
+        -- Prompts the player for free text input
+        Integrations[moduleType][moduleName].askInput = function(title)
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
 
-    Integrations.modules = Integrations.modules or {}
-    Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
-    Integrations[moduleType] = Integrations[moduleType] or {}
-    Integrations[moduleType][moduleName] = {}
-    table.insert(Integrations.modules[moduleType], moduleName)
+  <Tab title="Progress Bar">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `drugs_creator/_modules/progressbar` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `jaksam`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
 
-    -- Opens the stash UI for the player
-    Integrations[moduleType][moduleName].open = function(stashId)
-        -- Add your code here
-    end
-    ```
-    Server:
-    ```lua
-    -- Registers the stash so it exists and can be opened
-    Integrations[moduleType][moduleName].register = function(options)
-        -- Add your code here
-    end
+        ```lua
+        local moduleType = "progressbar"
+        local moduleName = "yourModuleName"
 
-    -- Adds an item to the stash
-    Integrations[moduleType][moduleName].addItem = function(stashId, itemName, amount, metadata)
-        -- Add your code here
-    end
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
 
-    -- Removes an item from the stash
-    Integrations[moduleType][moduleName].removeItem = function(stashId, itemName, amount, metadata)
-        -- Add your code here
-    end
+        -- Starts a progress bar for the given time (ms), with the given text and color
+        Integrations[moduleType][moduleName].start = function(time, text, hexColor)
+            -- Add your code here
+        end
 
-    -- Returns how many of itemName are currently in the stash
-    Integrations[moduleType][moduleName].getItemCount = function(stashId, itemName)
-        -- Add your code here
-    end
+        -- Stops/hides the progress bar
+        Integrations[moduleType][moduleName].stop = function()
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
 
-    -- Returns whether amount more of itemName would still fit in the stash
-    Integrations[moduleType][moduleName].canAddItem = function(stashId, itemName, amount)
-        -- Add your code here
-    end
+  <Tab title="Stash">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `drugs_creator/_modules/stash` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `jaksam_inventory`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file (client and server side) and edit it to match the events of the third-party script you're integrating:
 
-    -- Removes all items from the stash
-    Integrations[moduleType][moduleName].clearStash = function(stashId)
-        -- Add your code here
-    end
-    ```
-  </Accordion>
+        Client:
+        ```lua
+        local moduleType = "stash"
+        local moduleName = "yourModuleName"
 
-  <Accordion title="Text UI">
-    ```lua
-    local moduleType = "textui"
-    local moduleName = "yourModuleName"
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
 
-    Integrations.modules = Integrations.modules or {}
-    Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
-    Integrations[moduleType] = Integrations[moduleType] or {}
-    Integrations[moduleType][moduleName] = {}
-    table.insert(Integrations.modules[moduleType], moduleName)
+        -- Opens the stash UI for the player
+        Integrations[moduleType][moduleName].open = function(stashId)
+            -- Add your code here
+        end
+        ```
+        Server:
+        ```lua
+        -- Registers the stash so it exists and can be opened
+        Integrations[moduleType][moduleName].register = function(options)
+            -- Add your code here
+        end
 
-    -- Shows a text UI prompt with the given message
-    Integrations[moduleType][moduleName].show = function(message)
-        -- Add your code here
-    end
+        -- Adds an item to the stash
+        Integrations[moduleType][moduleName].addItem = function(stashId, itemName, amount, metadata)
+            -- Add your code here
+        end
 
-    -- Hides the text UI prompt
-    Integrations[moduleType][moduleName].hide = function()
-        -- Add your code here
-    end
-    ```
-  </Accordion>
-</AccordionGroup>
+        -- Removes an item from the stash
+        Integrations[moduleType][moduleName].removeItem = function(stashId, itemName, amount, metadata)
+            -- Add your code here
+        end
+
+        -- Returns how many of itemName are currently in the stash
+        Integrations[moduleType][moduleName].getItemCount = function(stashId, itemName)
+            -- Add your code here
+        end
+
+        -- Returns whether amount more of itemName would still fit in the stash
+        Integrations[moduleType][moduleName].canAddItem = function(stashId, itemName, amount)
+            -- Add your code here
+        end
+
+        -- Removes all items from the stash
+        Integrations[moduleType][moduleName].clearStash = function(stashId)
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Text UI">
+    <Steps>
+      <Step title="Navigate to the modules folder">
+        Go to the `drugs_creator/_modules/textui` folder.
+      </Step>
+      <Step title="Duplicate an existing module">
+        Copy an existing module (e.g. `ox_lib`) and paste it in the same folder as a template.
+      </Step>
+      <Step title="Rename the copy">
+        Rename the pasted copy to match the integration you want to create.
+      </Step>
+      <Step title="Implement the required functions">
+        Open the renamed file and edit it to match the events of the third-party script you're integrating:
+
+        ```lua
+        local moduleType = "textui"
+        local moduleName = "yourModuleName"
+
+        Integrations.modules = Integrations.modules or {}
+        Integrations.modules[moduleType] = Integrations.modules[moduleType] or {}
+        Integrations[moduleType] = Integrations[moduleType] or {}
+        Integrations[moduleType][moduleName] = {}
+        table.insert(Integrations.modules[moduleType], moduleName)
+
+        -- Shows a text UI prompt with the given message
+        Integrations[moduleType][moduleName].show = function(message)
+            -- Add your code here
+        end
+
+        -- Hides the text UI prompt
+        Integrations[moduleType][moduleName].hide = function()
+            -- Add your code here
+        end
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
