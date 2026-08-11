@@ -1713,6 +1713,55 @@
                 ]
               },
               {
+                "group": "Shops Creator",
+                "icon": "cart-shopping",
+                "expanded": true,
+                "pages": [
+                  "de/shops-creator/modules",
+                  {
+                    "group": "Client",
+                    "root": "de/shops-creator/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/shops-creator/client/replace-default-police-alert",
+                      "de/shops-creator/client/ui_toggled",
+                      {
+                        "group": "Notifications",
+                        "root": "de/shops-creator/client/notifications/index",
+                        "icon": "bell-on",
+                        "pages": [
+                          "de/shops-creator/client/notifications/replace-default-notifications",
+                          "de/shops-creator/client/notifications/replace-default-help-notifications"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/shops-creator/server/index",
+                    "icon": "server",
+                    "pages": [
+                      "de/shops-creator/server/police-alerted",
+                      "de/shops-creator/server/shop-bought",
+                      "de/shops-creator/server/shop-sold",
+                      "de/shops-creator/server/get-what-objects-can-be-sold-in-shop-id",
+                      "de/shops-creator/server/get-objects-in-shop-id",
+                      {
+                        "group": "Transactions",
+                        "root": "de/shops-creator/server/transactions/index",
+                        "icon": "money-bill-trend-up",
+                        "pages": [
+                          "de/shops-creator/server/transactions/admin-shop-bought-object",
+                          "de/shops-creator/server/transactions/admin-shop-sold-object",
+                          "de/shops-creator/server/transactions/player-shop-bought-object",
+                          "de/shops-creator/server/transactions/player-shop-sold-object"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Robberies Creator",
                 "icon": "mask",
                 "expanded": true,

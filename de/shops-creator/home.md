@@ -31,7 +31,7 @@ Dies ist die offizielle Dokumentation von **Shops Creator**.
     Häufig gestellte Fragen.
   </Card>
 
-  <Card title="Entwickler-Referenz" icon="code" href="/shops-creator/client">
+  <Card title="Entwickler-Referenz" icon="code" href="/de/shops-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
 </CardGroup>
