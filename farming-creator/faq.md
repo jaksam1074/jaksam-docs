@@ -3,6 +3,7 @@ title: "FAQ"
 description: "Frequently asked questions specific to Farming Creator."
 icon: "circle-question"
 tag: "New"
+hidden: true
 ---
 
 This page has FAQs related **ONLY to this script**. Be sure to also check the [common FAQ](/jaksams-scripts/common-faq) for other issues.
