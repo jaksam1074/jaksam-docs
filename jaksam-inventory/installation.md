@@ -121,7 +121,7 @@ description: "The installation of the script is extremely easy."
     ensure jaksam_inventory
     
     # Other ESX scripts
-    start [core]
+    start [core] ## Change "ensure" to "start" so it doesnt restart es_extended
     ```
   </Tab>
   <Tab title="QBCore">
