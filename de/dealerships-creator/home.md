@@ -31,10 +31,6 @@ Dies ist die offizielle Dokumentation von **Dealerships Creator**.
     Eigene Fahrzeugklassen hinzufügen und weitere Anleitungen.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/de/dealerships-creator/faq">
-    Häufig gestellte Fragen.
-  </Card>
-
   <Card title="Entwickler-Referenz" icon="code" href="/de/dealerships-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>

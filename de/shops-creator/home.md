@@ -31,10 +31,6 @@ Dies ist die offizielle Dokumentation von **Shops Creator**.
     Bilder für Items nutzen und weitere Anleitungen.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/de/shops-creator/faq">
-    Häufig gestellte Fragen.
-  </Card>
-
   <Card title="Entwickler-Referenz" icon="code" href="/de/shops-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>

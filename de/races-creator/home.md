@@ -27,10 +27,6 @@ Dies ist die offizielle Dokumentation von **Races Creator**.
     Races Creator auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/de/races-creator/faq">
-    Häufig gestellte Fragen.
-  </Card>
-
   <Card title="Entwickler-Referenz" icon="code" href="/de/races-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>

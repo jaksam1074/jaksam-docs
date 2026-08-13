@@ -31,10 +31,6 @@ Dies ist die offizielle Dokumentation von **Missions Creator**.
     Missionen starten, Minigames hinzufügen und weitere Anleitungen.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/de/missions-creator/faq">
-    Häufig gestellte Fragen.
-  </Card>
-
   <Card title="Entwickler-Referenz" icon="code" href="/de/missions-creator/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>

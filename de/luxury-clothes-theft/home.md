@@ -27,10 +27,6 @@ Dies ist die offizielle Dokumentation von **Luxury Clothes Theft**.
     Luxury Clothes Theft auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/de/luxury-clothes-theft/faq">
-    Häufig gestellte Fragen.
-  </Card>
-
   <Card title="Entwickler-Referenz" icon="code" href="/de/luxury-clothes-theft/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>

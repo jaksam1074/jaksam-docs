@@ -27,10 +27,6 @@ Dies ist die offizielle Dokumentation von **Billing UI**.
     Billing UI auf deinem Server installieren und zum Laufen bringen.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/de/billing-ui/faq">
-    Häufig gestellte Fragen.
-  </Card>
-
   <Card title="Entwickler-Referenz" icon="code" href="/de/billing-ui/client">
     Exports, Events und Integrationsreferenz für Entwickler.
   </Card>
