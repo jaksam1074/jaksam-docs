@@ -6,7 +6,7 @@ description: "The installation of the script is extremely easy."
 
 ## Requirements
 
-- **ESX** (1.10.7, 1.11.3+, or 1.14.0+), **QBCore**, or **QBX**
+- **ESX** (1.10.7, 1.11.3\+, or 1.14.0\+), **QBCore**, or **QBX**
 - `jaksam_core`
 - `oxmysql` and `ox_lib` (see the Start Order Example for your framework below)
 
@@ -149,6 +149,7 @@ description: "The installation of the script is extremely easy."
     ensure jaksam_inventory
     
     # Other QBCore scripts
+    start [qb] ## If it said "ensure", change it to "start" so it doesnt restart qb-core
     ```
 
     <Warning>
