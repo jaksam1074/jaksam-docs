@@ -69,10 +69,6 @@ Looking for the Jaksam Inventory shop or other products?
     Make your existing scripts work with Jaksam Inventory.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/jaksam-inventory/faq">
-    Frequently asked questions.
-  </Card>
-
   <Card title="Developer Reference" icon="code" href="/jaksam-inventory/functions/client">
     Exports, events, hooks, and integration reference for developers.
   </Card>

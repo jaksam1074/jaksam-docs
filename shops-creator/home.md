@@ -31,10 +31,6 @@ This is the official **Shops Creator** documentation.
     Using images for items and other how-tos.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/shops-creator/faq">
-    Frequently asked questions.
-  </Card>
-
   <Card title="Developer Reference" icon="code" href="/shops-creator/client">
     Exports, events, and integration reference for developers.
   </Card>

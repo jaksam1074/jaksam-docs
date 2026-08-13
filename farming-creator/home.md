@@ -27,10 +27,6 @@ This is the official **Farming Creator** documentation.
     Get Farming Creator installed and running on your server.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/farming-creator/faq">
-    Frequently asked questions.
-  </Card>
-
   <Card title="Developer Reference" icon="code" href="/farming-creator/client">
     Exports, events, and integration reference for developers.
   </Card>

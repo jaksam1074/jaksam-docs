@@ -31,10 +31,6 @@ This is the official **Missions Creator** documentation.
     Starting missions, adding minigames, and other how-tos.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/missions-creator/faq">
-    Frequently asked questions.
-  </Card>
-
   <Card title="Developer Reference" icon="code" href="/missions-creator/client">
     Exports, events, and integration reference for developers.
   </Card>
