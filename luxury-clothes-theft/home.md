@@ -27,10 +27,6 @@ This is the official **Luxury Clothes Theft** documentation.
     Get Luxury Clothes Theft installed and running on your server.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/luxury-clothes-theft/faq">
-    Frequently asked questions.
-  </Card>
-
   <Card title="Developer Reference" icon="code" href="/luxury-clothes-theft/client">
     Exports, events, and integration reference for developers.
   </Card>

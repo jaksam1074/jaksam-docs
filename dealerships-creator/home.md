@@ -31,10 +31,6 @@ This is the official **Dealerships Creator** documentation.
     Adding custom vehicle classes and other how-tos.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/dealerships-creator/faq">
-    Frequently asked questions.
-  </Card>
-
   <Card title="Developer Reference" icon="code" href="/dealerships-creator/client">
     Exports, events, and integration reference for developers.
   </Card>

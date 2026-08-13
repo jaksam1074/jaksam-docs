@@ -27,10 +27,6 @@ This is the official **Billing UI** documentation.
     Get Billing UI installed and running on your server.
   </Card>
 
-  <Card title="FAQ" icon="circle-question" href="/billing-ui/faq">
-    Frequently asked questions.
-  </Card>
-
   <Card title="Developer Reference" icon="code" href="/billing-ui/client">
     Exports, events, and integration reference for developers.
   </Card>
