@@ -45,11 +45,11 @@ Nutze die Optionen unten, um schnell die passende Dokumentation zu finden.
 Auf der Suche nach dem Jaksam-Inventory-Store oder anderen Produkten?
 
 <CardGroup cols={2}>
-  <Card title="Jaksam Store" icon="store" href="https://jaksam.com">
+  <Card title="Jaksam Store" icon="store" href="https://jaksam-scripts.com/">
     Entdecke unsere Produkte und kaufe Jaksam Inventory.
   </Card>
 
-  <Card title="Jaksam Inventory" icon="boxes-stacked" href="https://jaksam.com">
+  <Card title="Jaksam Inventory" icon="boxes-stacked" href="https://fivem.jaksam-scripts.com/package/7091876">
     Erfahre mehr über Jaksam Inventory und seine Funktionen.
   </Card>
 

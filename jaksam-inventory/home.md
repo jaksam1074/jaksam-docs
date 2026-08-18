@@ -49,7 +49,7 @@ Looking for the Jaksam Inventory shop or other products?
     Browse our products and purchase Jaksam Inventory.
   </Card>
 
-  <Card title="Jaksam Inventory" icon="boxes-stacked" href="https://jaksam.com">
+  <Card title="Jaksam Inventory" icon="boxes-stacked" href="https://fivem.jaksam-scripts.com/package/7091876">
     Learn more about Jaksam Inventory and its features.
   </Card>
 
