@@ -45,7 +45,7 @@ Use the options below to quickly find the documentation you need.
 Looking for the Jaksam Inventory shop or other products?
 
 <CardGroup cols={2}>
-  <Card title="Jaksam Store" icon="store" href="https://jaksam.com">
+  <Card title="Jaksam Store" icon="store" href="https://jaksam-scripts.com/">
     Browse our products and purchase Jaksam Inventory.
   </Card>
 
