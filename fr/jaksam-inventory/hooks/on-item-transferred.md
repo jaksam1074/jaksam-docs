@@ -19,6 +19,10 @@ Se déclenche quand un item est transféré entre inventaires (y compris les dé
 | `amount` | number | Quantité transférée |
 | `metadata` | table \| nil | Métadonnées de l'item |
 
+<Note>
+  L'inventaire admin (omnipack) ne déclenche **pas** ce hook, il a son propre [`onOmnipackTransaction`](/fr/jaksam-inventory/hooks/on-omnipack-transaction). Ainsi les restrictions que tu écris pour tes joueurs ne s'appliquent jamais à un admin qui crée un item.
+</Note>
+
 ### Exemples
 
 <AccordionGroup>

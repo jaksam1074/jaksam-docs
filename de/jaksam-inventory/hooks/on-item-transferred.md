@@ -19,6 +19,10 @@ Wird ausgelöst, wenn ein Item zwischen Inventaren übertragen wird (inklusive B
 | `amount` | number | Übertragene Menge |
 | `metadata` | table \| nil | Item-Metadaten |
 
+<Note>
+  Das Admin-Inventar (Omnipack) löst diesen Hook **nicht** aus, es hat sein eigenes [`onOmnipackTransaction`](/de/jaksam-inventory/hooks/on-omnipack-transaction). So werden die Einschränkungen, die du für deine Spieler schreibst, nie auf einen Admin angewendet, der ein Item spawnt.
+</Note>
+
 ### Beispiele
 
 <AccordionGroup>

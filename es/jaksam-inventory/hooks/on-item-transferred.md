@@ -19,6 +19,10 @@ Se activa cuando un ítem se transfiere entre inventarios (incluyendo movimiento
 | `amount` | number | Cantidad transferida |
 | `metadata` | table \| nil | Metadatos del ítem |
 
+<Note>
+  El inventario de admin (omnipack) **no** activa este hook, tiene su propio [`onOmnipackTransaction`](/es/jaksam-inventory/hooks/on-omnipack-transaction). Así las restricciones que escribes para tus jugadores nunca se aplican a un admin creando un ítem.
+</Note>
+
 ### Ejemplos
 
 <AccordionGroup>

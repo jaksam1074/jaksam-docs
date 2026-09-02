@@ -19,6 +19,10 @@ Triggered when an item is transferred between inventories (including intra-inven
 | `amount` | number | Amount transferred |
 | `metadata` | table \| nil | Item metadata |
 
+<Note>
+  The admin inventory (omnipack) does **not** trigger this hook, it has its own [`onOmnipackTransaction`](/jaksam-inventory/hooks/on-omnipack-transaction). This way the restrictions you write for your players are never applied to an admin spawning an item.
+</Note>
+
 ### Examples
 
 <AccordionGroup>

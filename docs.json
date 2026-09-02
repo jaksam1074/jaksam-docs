@@ -467,9 +467,11 @@
                       "jaksam-inventory/hooks/on-item-added",
                       "jaksam-inventory/hooks/on-item-removed",
                       "jaksam-inventory/hooks/on-item-transferred",
+                      "jaksam-inventory/hooks/on-omnipack-transaction",
                       "jaksam-inventory/hooks/on-pre-use-item",
                       "jaksam-inventory/hooks/on-post-use-item",
-                      "jaksam-inventory/hooks/on-inventory-created"
+                      "jaksam-inventory/hooks/on-inventory-created",
+                      "jaksam-inventory/hooks/on-pre-open-inventory"
                     ]
                   }
                 ]
@@ -1633,9 +1635,11 @@
                       "de/jaksam-inventory/hooks/on-item-added",
                       "de/jaksam-inventory/hooks/on-item-removed",
                       "de/jaksam-inventory/hooks/on-item-transferred",
+                      "de/jaksam-inventory/hooks/on-omnipack-transaction",
                       "de/jaksam-inventory/hooks/on-pre-use-item",
                       "de/jaksam-inventory/hooks/on-post-use-item",
-                      "de/jaksam-inventory/hooks/on-inventory-created"
+                      "de/jaksam-inventory/hooks/on-inventory-created",
+                      "de/jaksam-inventory/hooks/on-pre-open-inventory"
                     ]
                   }
                 ]
@@ -2799,9 +2803,11 @@
                       "es/jaksam-inventory/hooks/on-item-added",
                       "es/jaksam-inventory/hooks/on-item-removed",
                       "es/jaksam-inventory/hooks/on-item-transferred",
+                      "es/jaksam-inventory/hooks/on-omnipack-transaction",
                       "es/jaksam-inventory/hooks/on-pre-use-item",
                       "es/jaksam-inventory/hooks/on-post-use-item",
-                      "es/jaksam-inventory/hooks/on-inventory-created"
+                      "es/jaksam-inventory/hooks/on-inventory-created",
+                      "es/jaksam-inventory/hooks/on-pre-open-inventory"
                     ]
                   }
                 ]
@@ -3965,9 +3971,11 @@
                       "fr/jaksam-inventory/hooks/on-item-added",
                       "fr/jaksam-inventory/hooks/on-item-removed",
                       "fr/jaksam-inventory/hooks/on-item-transferred",
+                      "fr/jaksam-inventory/hooks/on-omnipack-transaction",
                       "fr/jaksam-inventory/hooks/on-pre-use-item",
                       "fr/jaksam-inventory/hooks/on-post-use-item",
-                      "fr/jaksam-inventory/hooks/on-inventory-created"
+                      "fr/jaksam-inventory/hooks/on-inventory-created",
+                      "fr/jaksam-inventory/hooks/on-pre-open-inventory"
                     ]
                   }
                 ]

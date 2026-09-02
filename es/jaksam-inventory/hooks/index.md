@@ -120,7 +120,7 @@ El parámetro options acepta una table con filtros para optimizar el rendimiento
     ```
   </Tab>
   <Tab title="Filtros de inventario">
-    Para `onItemAdded`, `onItemRemoved`, `onInventoryCreated`:
+    Para `onItemAdded`, `onItemRemoved`, `onInventoryCreated`, `onPreOpenInventory`, `onOmnipackTransaction`:
 
     ```lua
         local options = {
@@ -175,9 +175,11 @@ El parámetro options acepta una table con filtros para optimizar el rendimiento
 | [Item added](/es/jaksam-inventory/hooks/on-item-added) | Se activa cuando se agrega un ítem a un inventario |
 | [Item removed](/es/jaksam-inventory/hooks/on-item-removed) | Se activa cuando se elimina un ítem de un inventario |
 | [Item transferred](/es/jaksam-inventory/hooks/on-item-transferred) | Se activa cuando un ítem se transfiere entre inventarios |
+| [Omnipack transaction](/es/jaksam-inventory/hooks/on-omnipack-transaction) | Se activa cuando un admin crea o destruye un ítem a través del inventario de admin |
 | [Pre use item](/es/jaksam-inventory/hooks/on-pre-use-item) | Se activa antes de que se use un ítem, puede cancelar el uso |
 | [Post use item](/es/jaksam-inventory/hooks/on-post-use-item) | Se activa después de que se ha usado un ítem, solo como notificación |
 | [Inventory created](/es/jaksam-inventory/hooks/on-inventory-created) | Se activa cuando se crea un nuevo inventario |
+| [Pre open inventory](/es/jaksam-inventory/hooks/on-pre-open-inventory) | Se activa antes de que se abra un inventario secundario, puede impedir que se abra |
 
 ## Comportamiento de los Hooks
 
@@ -192,3 +194,28 @@ El parámetro options acepta una table con filtros para optimizar el rendimiento
     `return false, "message", "notifyType"`: evita la acción y detiene la ejecución de los demás hooks. Los parámetros message y notifyType son opcionales (notifyType puede ser `"error"`, `"success"`, `"info"`)
   </Card>
 </CardGroup>
+
+<Note>
+  **Excepción - [`onPreOpenInventory`](/es/jaksam-inventory/hooks/on-pre-open-inventory)**: el mensaje no se muestra al jugador, porque la precarga haría que se repitiese. Llama a `notifyPlayer` desde dentro del hook si quieres decirle al jugador el motivo.
+</Note>
+
+## Compatibilidad con ox_inventory
+
+Cuando el resource de compatibilidad con ox_inventory está instalado, `exports.ox_inventory:registerHook(...)` se traduce a los hooks nativos de arriba, así que los scripts de ox_inventory funcionan sin cambios. Los payloads se transforman al formato de ox, y los nombres de opciones de ox (`itemFilter`, `typeFilter`, `inventoryFilter`, `print`) también se traducen.
+
+| Hook de ox_inventory | Soportado | Hook nativo usado |
+| --- | --- | --- |
+| `createItem` | Sí | `onItemAdded` |
+| `swapItems` | Sí | `onItemTransferred` |
+| `openInventory` | Sí | `onPreOpenInventory` |
+| `usingItem` | Sí | `onPreUseItem` |
+| `buyItem` / `openShop` | No | todavía no hay hooks de tienda |
+| `craftItem` | No | todavía no hay hooks de crafteo |
+
+Registrar un hook no soportado imprime una advertencia y devuelve `nil` en lugar de lanzar un error.
+
+Tres diferencias a tener en cuenta al migrar:
+
+- Un hook de ox solo puede permitir o bloquear; no puede proporcionar un mensaje personalizado ni un tipo de notificación. Usa los hooks nativos para eso
+- `openInventory` hereda el requisito de no tener estado descrito en [`onPreOpenInventory`](/es/jaksam-inventory/hooks/on-pre-open-inventory)
+- **Los inventarios de jugador se identifican de forma distinta.** Los hooks de ox reciben el ID de servidor del jugador como number (`inventoryId = 4`), igual que ox_inventory. Los hooks nativos reciben el identificador de personaje de jaksam como string (`inventoryId = "char1:35030084..."`). Cualquier otro tipo de inventario usa el mismo ID string en ambos
