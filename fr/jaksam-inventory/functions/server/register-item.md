@@ -90,7 +90,7 @@ local success, err = exports['jaksam_inventory']:registerItem('custom_bag', {
 Aussi :
 
 - Les objets enregistrés avec `registerItem` n'existent qu'en mémoire. Ils sont perdus au redémarrage de la resource. Si tu as besoin d'objets persistants, utilise le menu d'administration en jeu ou ajoute-les à `_data/items.lua`
-- Les objets inconnus sont nettoyés de manière différée lors du premier chargement de chaque inventaire, et non au démarrage ; ton script peut appeler `registerItem` sans risque à tout moment avant que l'inventaire du joueur soit accédé, généralement au démarrage de la resource
+- Les objets inconnus de l'inventaire ne sont jamais supprimés : ils sont masqués dans l'inventaire où ils se trouvent et reviennent automatiquement dès que l'objet est de nouveau enregistré ; ton script peut donc appeler `registerItem` à tout moment, généralement au démarrage de la resource
 - Tu peux combiner `registerItem` avec `registerUsableItem` pour définir à la fois l'objet et son comportement d'utilisation depuis un script externe
 - Si le nom de l'objet existe déjà, l'enregistrement est rejeté afin d'éviter d'écraser des objets définis par fichier
 - Les champs de type table (comme `metadata`, `useOptions`, etc.) sont copiés en profondeur, donc les modifications apportées à la table d'origine après l'enregistrement n'ont aucun effet

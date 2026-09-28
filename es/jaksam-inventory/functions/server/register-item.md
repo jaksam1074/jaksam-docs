@@ -90,7 +90,7 @@ local success, err = exports['jaksam_inventory']:registerItem('custom_bag', {
 Además:
 
 - Los ítems registrados con `registerItem` existen solo en memoria. Se pierden al reiniciar el resource. Si necesitas ítems persistentes, usa el menú de administración en el juego o añádelos a `_data/items.lua`
-- Los ítems desconocidos se limpian de forma diferida cuando se carga cada inventario por primera vez, no al iniciar, tu script puede llamar a `registerItem` de forma segura en cualquier momento antes de que se acceda al inventario del jugador, normalmente al iniciar el resource
+- Los ítems desconocidos para el inventario nunca se eliminan: se ocultan en el inventario donde están y vuelven automáticamente en cuanto el ítem se registra de nuevo, así que tu script puede llamar a `registerItem` en cualquier momento, normalmente al iniciar el resource
 - Puedes combinar `registerItem` con `registerUsableItem` para definir tanto el ítem como su comportamiento de uso desde un script externo
 - Si el nombre del ítem ya existe, el registro se rechaza para evitar sobrescribir ítems definidos por archivo
 - Los campos de tipo table (como `metadata`, `useOptions`, etc.) se copian en profundidad, por lo que los cambios en la tabla original después del registro no tienen efecto

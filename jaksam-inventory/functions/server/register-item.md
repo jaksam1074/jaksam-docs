@@ -90,7 +90,7 @@ local success, err = exports['jaksam_inventory']:registerItem('custom_bag', {
 Also:
 
 - Items registered with `registerItem` exist only in memory. They are lost on resource restart. If you need persistent items, use the in-game admin menu or add them to `_data/items.lua`
-- Unknown items are cleaned up lazily when each inventory is first loaded, not at startup, your script can safely call `registerItem` at any time before the player's inventory is accessed, typically on resource start
+- Items unknown to the inventory are never deleted: they are hidden from the inventory they are in and come back automatically as soon as the item is registered again, so your script can call `registerItem` at any time, typically on resource start
 - You can combine `registerItem` with `registerUsableItem` to define both the item and its use behavior from an external script
 - If the item name already exists, registration is rejected to prevent overwriting file-defined items
 - Table fields (like `metadata`, `useOptions`, etc.) are deep-copied, so changes to the original table after registration have no effect
