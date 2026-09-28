@@ -404,7 +404,8 @@
                           "jaksam-inventory/functions/shared/get-static-items-list",
                           "jaksam-inventory/functions/shared/get-static-item",
                           "jaksam-inventory/functions/shared/get-item-label",
-                          "jaksam-inventory/functions/shared/get-item-image-path"
+                          "jaksam-inventory/functions/shared/get-item-image-path",
+                          "jaksam-inventory/functions/shared/get-rarities"
                         ]
                       },
                       {
@@ -433,6 +434,7 @@
                           "jaksam-inventory/functions/server/register-usable-item",
                           "jaksam-inventory/functions/server/register-stash",
                           "jaksam-inventory/functions/server/register-item",
+                          "jaksam-inventory/functions/server/register-metadata-template",
                           "jaksam-inventory/functions/server/remove-item",
                           "jaksam-inventory/functions/server/save-dirty-inventories",
                           "jaksam-inventory/functions/server/save-dirty-inventory",
@@ -1572,7 +1574,8 @@
                           "de/jaksam-inventory/functions/shared/get-static-items-list",
                           "de/jaksam-inventory/functions/shared/get-static-item",
                           "de/jaksam-inventory/functions/shared/get-item-label",
-                          "de/jaksam-inventory/functions/shared/get-item-image-path"
+                          "de/jaksam-inventory/functions/shared/get-item-image-path",
+                          "de/jaksam-inventory/functions/shared/get-rarities"
                         ]
                       },
                       {
@@ -1601,6 +1604,7 @@
                           "de/jaksam-inventory/functions/server/register-usable-item",
                           "de/jaksam-inventory/functions/server/register-stash",
                           "de/jaksam-inventory/functions/server/register-item",
+                          "de/jaksam-inventory/functions/server/register-metadata-template",
                           "de/jaksam-inventory/functions/server/remove-item",
                           "de/jaksam-inventory/functions/server/save-dirty-inventories",
                           "de/jaksam-inventory/functions/server/save-dirty-inventory",
@@ -2740,7 +2744,8 @@
                           "es/jaksam-inventory/functions/shared/get-static-items-list",
                           "es/jaksam-inventory/functions/shared/get-static-item",
                           "es/jaksam-inventory/functions/shared/get-item-label",
-                          "es/jaksam-inventory/functions/shared/get-item-image-path"
+                          "es/jaksam-inventory/functions/shared/get-item-image-path",
+                          "es/jaksam-inventory/functions/shared/get-rarities"
                         ]
                       },
                       {
@@ -2769,6 +2774,7 @@
                           "es/jaksam-inventory/functions/server/register-usable-item",
                           "es/jaksam-inventory/functions/server/register-stash",
                           "es/jaksam-inventory/functions/server/register-item",
+                          "es/jaksam-inventory/functions/server/register-metadata-template",
                           "es/jaksam-inventory/functions/server/remove-item",
                           "es/jaksam-inventory/functions/server/save-dirty-inventories",
                           "es/jaksam-inventory/functions/server/save-dirty-inventory",
@@ -3908,7 +3914,8 @@
                           "fr/jaksam-inventory/functions/shared/get-static-items-list",
                           "fr/jaksam-inventory/functions/shared/get-static-item",
                           "fr/jaksam-inventory/functions/shared/get-item-label",
-                          "fr/jaksam-inventory/functions/shared/get-item-image-path"
+                          "fr/jaksam-inventory/functions/shared/get-item-image-path",
+                          "fr/jaksam-inventory/functions/shared/get-rarities"
                         ]
                       },
                       {
@@ -3937,6 +3944,7 @@
                           "fr/jaksam-inventory/functions/server/register-usable-item",
                           "fr/jaksam-inventory/functions/server/register-stash",
                           "fr/jaksam-inventory/functions/server/register-item",
+                          "fr/jaksam-inventory/functions/server/register-metadata-template",
                           "fr/jaksam-inventory/functions/server/remove-item",
                           "fr/jaksam-inventory/functions/server/save-dirty-inventories",
                           "fr/jaksam-inventory/functions/server/save-dirty-inventory",

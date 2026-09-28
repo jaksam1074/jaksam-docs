@@ -20,3 +20,4 @@ Dieses Script funktioniert mit anderen beliebten Inventarsystemen wie es_extende
 | [Get static item](/de/jaksam-inventory/functions/shared/get-static-item) | Ruft allgemeine Item-Informationen ab (Gewicht, Stapelbarkeit, Beschreibung usw.) |
 | [Get item label](/de/jaksam-inventory/functions/shared/get-item-label) | Ruft nur das Label (den Anzeigenamen) eines Items ab |
 | [Get item image path](/de/jaksam-inventory/functions/shared/get-item-image-path) | Ruft den NUI-Bildpfad für ein Item ab |
+| [Get rarities](/de/jaksam-inventory/functions/shared/get-rarities) | Gibt alle in den Einstellungen konfigurierten Seltenheiten mit Label und Farbe zurück |

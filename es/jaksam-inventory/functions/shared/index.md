@@ -21,3 +21,4 @@ Este script funciona con otros sistemas de inventario populares, como es_extende
 | [Get static item](/es/jaksam-inventory/functions/shared/get-static-item) | Obtiene información genérica del ítem (peso, si es apilable, descripción, etc.) |
 | [Get item label](/es/jaksam-inventory/functions/shared/get-item-label) | Obtiene solo el label (nombre para mostrar) de un ítem |
 | [Get item image path](/es/jaksam-inventory/functions/shared/get-item-image-path) | Obtiene la ruta de imagen NUI de un ítem |
+| [Get rarities](/es/jaksam-inventory/functions/shared/get-rarities) | Devuelve todas las rarezas configuradas en los ajustes, con label y color |

@@ -21,3 +21,4 @@ This script works with other popular inventory systems, like es_extended, qb-inv
 | [Get static item](/jaksam-inventory/functions/shared/get-static-item) | Gets generic item information (weight, stackable, description, etc.) |
 | [Get item label](/jaksam-inventory/functions/shared/get-item-label) | Gets only the label (display name) of an item |
 | [Get item image path](/jaksam-inventory/functions/shared/get-item-image-path) | Gets the NUI image path for an item |
+| [Get rarities](/jaksam-inventory/functions/shared/get-rarities) | Returns every rarity configured in the settings, with label and color |

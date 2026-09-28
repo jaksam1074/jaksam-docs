@@ -37,6 +37,7 @@ Dieses Script funktioniert mit anderen beliebten Inventarsystemen wie es_extende
 | [Register usable item](/de/jaksam-inventory/functions/server/register-usable-item) | Registriert einen Callback für die Nutzung eines Items |
 | [Register stash](/de/jaksam-inventory/functions/server/register-stash) | Registriert dynamisch einen neuen Stash |
 | [Register item](/de/jaksam-inventory/functions/server/register-item) | Registriert zur Laufzeit eine neue Item-Definition |
+| [Register metadata template](/de/jaksam-inventory/functions/server/register-metadata-template) | Fügt ein Metadata-Template aus einem externen Script hinzu |
 | [Remove item](/de/jaksam-inventory/functions/server/remove-item) | Entfernt Items aus einem Inventar |
 | [Save dirty inventories](/de/jaksam-inventory/functions/server/save-dirty-inventories) | Speichert alle geänderten Inventare in der Datenbank |
 | [Save dirty inventory](/de/jaksam-inventory/functions/server/save-dirty-inventory) | Speichert ein bestimmtes Inventar in der Datenbank |
