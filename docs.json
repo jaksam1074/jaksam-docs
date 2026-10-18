@@ -181,6 +181,31 @@
                 ]
               },
               {
+                "group": "Jaksam Identity",
+                "icon": "id-card",
+                "expanded": true,
+                "root": "jaksam-identity/home",
+                "pages": [
+                  "jaksam-identity/installation",
+                  "jaksam-identity/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "book-open",
+                    "pages": [
+                      "jaksam-identity/guides/documents-and-register",
+                      "jaksam-identity/guides/citizen-offices",
+                      "jaksam-identity/guides/business-cards",
+                      "jaksam-identity/guides/forgery-workshops",
+                      "jaksam-identity/guides/forging",
+                      "jaksam-identity/guides/raids",
+                      "jaksam-identity/guides/settings-in-game",
+                      "jaksam-identity/guides/commands",
+                      "jaksam-identity/guides/roadphone-wallet"
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
@@ -850,6 +875,74 @@
                 ]
               },
               {
+                "group": "Jaksam Identity",
+                "icon": "id-card",
+                "expanded": true,
+                "pages": [
+                  "jaksam-identity/editable-files",
+                  {
+                    "group": "Client",
+                    "root": "jaksam-identity/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "jaksam-identity/client/replace-notifications",
+                      "jaksam-identity/client/skill-check",
+                      "jaksam-identity/client/progress-bar"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "jaksam-identity/server/index",
+                    "icon": "server",
+                    "pages": [
+                      {
+                        "group": "Register",
+                        "root": "jaksam-identity/server/register/index",
+                        "icon": "address-book",
+                        "pages": [
+                          "jaksam-identity/server/register/check",
+                          "jaksam-identity/server/register/issue",
+                          "jaksam-identity/server/register/set-status",
+                          "jaksam-identity/server/register/get-documents"
+                        ]
+                      },
+                      {
+                        "group": "Wallet",
+                        "root": "jaksam-identity/server/wallet/index",
+                        "icon": "wallet",
+                        "pages": [
+                          "jaksam-identity/server/wallet/get-wallet-documents",
+                          "jaksam-identity/server/wallet/show-document"
+                        ]
+                      },
+                      {
+                        "group": "Events",
+                        "root": "jaksam-identity/server/events/index",
+                        "icon": "bolt",
+                        "pages": [
+                          "jaksam-identity/server/events/document-issued",
+                          "jaksam-identity/server/events/document-forged",
+                          "jaksam-identity/server/events/status-changed"
+                        ]
+                      },
+                      {
+                        "group": "Hooks",
+                        "root": "jaksam-identity/server/hooks/index",
+                        "icon": "code",
+                        "pages": [
+                          "jaksam-identity/server/hooks/can-issue",
+                          "jaksam-identity/server/hooks/can-enter-workshop",
+                          "jaksam-identity/server/hooks/can-raid",
+                          "jaksam-identity/server/hooks/on-raid",
+                          "jaksam-identity/server/hooks/on-log",
+                          "jaksam-identity/server/hooks/phone-number"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
@@ -1346,6 +1439,31 @@
                     "pages": [
                       "de/missions-creator/how-to-start",
                       "de/missions-creator/how-to-add-minigames"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Jaksam Identity",
+                "icon": "id-card",
+                "expanded": true,
+                "root": "de/jaksam-identity/home",
+                "pages": [
+                  "de/jaksam-identity/installation",
+                  "de/jaksam-identity/faq",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "book-open",
+                    "pages": [
+                      "de/jaksam-identity/guides/documents-and-register",
+                      "de/jaksam-identity/guides/citizen-offices",
+                      "de/jaksam-identity/guides/business-cards",
+                      "de/jaksam-identity/guides/forgery-workshops",
+                      "de/jaksam-identity/guides/forging",
+                      "de/jaksam-identity/guides/raids",
+                      "de/jaksam-identity/guides/settings-in-game",
+                      "de/jaksam-identity/guides/commands",
+                      "de/jaksam-identity/guides/roadphone-wallet"
                     ]
                   }
                 ]
@@ -2020,6 +2138,74 @@
                 ]
               },
               {
+                "group": "Jaksam Identity",
+                "icon": "id-card",
+                "expanded": true,
+                "pages": [
+                  "de/jaksam-identity/editable-files",
+                  {
+                    "group": "Client",
+                    "root": "de/jaksam-identity/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "de/jaksam-identity/client/replace-notifications",
+                      "de/jaksam-identity/client/skill-check",
+                      "de/jaksam-identity/client/progress-bar"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "de/jaksam-identity/server/index",
+                    "icon": "server",
+                    "pages": [
+                      {
+                        "group": "Register",
+                        "root": "de/jaksam-identity/server/register/index",
+                        "icon": "address-book",
+                        "pages": [
+                          "de/jaksam-identity/server/register/check",
+                          "de/jaksam-identity/server/register/issue",
+                          "de/jaksam-identity/server/register/set-status",
+                          "de/jaksam-identity/server/register/get-documents"
+                        ]
+                      },
+                      {
+                        "group": "Wallet",
+                        "root": "de/jaksam-identity/server/wallet/index",
+                        "icon": "wallet",
+                        "pages": [
+                          "de/jaksam-identity/server/wallet/get-wallet-documents",
+                          "de/jaksam-identity/server/wallet/show-document"
+                        ]
+                      },
+                      {
+                        "group": "Events",
+                        "root": "de/jaksam-identity/server/events/index",
+                        "icon": "bolt",
+                        "pages": [
+                          "de/jaksam-identity/server/events/document-issued",
+                          "de/jaksam-identity/server/events/document-forged",
+                          "de/jaksam-identity/server/events/status-changed"
+                        ]
+                      },
+                      {
+                        "group": "Hooks",
+                        "root": "de/jaksam-identity/server/hooks/index",
+                        "icon": "code",
+                        "pages": [
+                          "de/jaksam-identity/server/hooks/can-issue",
+                          "de/jaksam-identity/server/hooks/can-enter-workshop",
+                          "de/jaksam-identity/server/hooks/can-raid",
+                          "de/jaksam-identity/server/hooks/on-raid",
+                          "de/jaksam-identity/server/hooks/on-log",
+                          "de/jaksam-identity/server/hooks/phone-number"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
@@ -2516,6 +2702,31 @@
                     "pages": [
                       "es/missions-creator/how-to-start",
                       "es/missions-creator/how-to-add-minigames"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Jaksam Identity",
+                "icon": "id-card",
+                "expanded": true,
+                "root": "es/jaksam-identity/home",
+                "pages": [
+                  "es/jaksam-identity/installation",
+                  "es/jaksam-identity/faq",
+                  {
+                    "group": "Guías",
+                    "icon": "book-open",
+                    "pages": [
+                      "es/jaksam-identity/guides/documents-and-register",
+                      "es/jaksam-identity/guides/citizen-offices",
+                      "es/jaksam-identity/guides/business-cards",
+                      "es/jaksam-identity/guides/forgery-workshops",
+                      "es/jaksam-identity/guides/forging",
+                      "es/jaksam-identity/guides/raids",
+                      "es/jaksam-identity/guides/settings-in-game",
+                      "es/jaksam-identity/guides/commands",
+                      "es/jaksam-identity/guides/roadphone-wallet"
                     ]
                   }
                 ]
@@ -3190,6 +3401,74 @@
                 ]
               },
               {
+                "group": "Jaksam Identity",
+                "icon": "id-card",
+                "expanded": true,
+                "pages": [
+                  "es/jaksam-identity/editable-files",
+                  {
+                    "group": "Client",
+                    "root": "es/jaksam-identity/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "es/jaksam-identity/client/replace-notifications",
+                      "es/jaksam-identity/client/skill-check",
+                      "es/jaksam-identity/client/progress-bar"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "es/jaksam-identity/server/index",
+                    "icon": "server",
+                    "pages": [
+                      {
+                        "group": "Registro",
+                        "root": "es/jaksam-identity/server/register/index",
+                        "icon": "address-book",
+                        "pages": [
+                          "es/jaksam-identity/server/register/check",
+                          "es/jaksam-identity/server/register/issue",
+                          "es/jaksam-identity/server/register/set-status",
+                          "es/jaksam-identity/server/register/get-documents"
+                        ]
+                      },
+                      {
+                        "group": "Cartera",
+                        "root": "es/jaksam-identity/server/wallet/index",
+                        "icon": "wallet",
+                        "pages": [
+                          "es/jaksam-identity/server/wallet/get-wallet-documents",
+                          "es/jaksam-identity/server/wallet/show-document"
+                        ]
+                      },
+                      {
+                        "group": "Eventos",
+                        "root": "es/jaksam-identity/server/events/index",
+                        "icon": "bolt",
+                        "pages": [
+                          "es/jaksam-identity/server/events/document-issued",
+                          "es/jaksam-identity/server/events/document-forged",
+                          "es/jaksam-identity/server/events/status-changed"
+                        ]
+                      },
+                      {
+                        "group": "Hooks",
+                        "root": "es/jaksam-identity/server/hooks/index",
+                        "icon": "code",
+                        "pages": [
+                          "es/jaksam-identity/server/hooks/can-issue",
+                          "es/jaksam-identity/server/hooks/can-enter-workshop",
+                          "es/jaksam-identity/server/hooks/can-raid",
+                          "es/jaksam-identity/server/hooks/on-raid",
+                          "es/jaksam-identity/server/hooks/on-log",
+                          "es/jaksam-identity/server/hooks/phone-number"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
@@ -3686,6 +3965,31 @@
                     "pages": [
                       "fr/missions-creator/how-to-start",
                       "fr/missions-creator/how-to-add-minigames"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Jaksam Identity",
+                "icon": "id-card",
+                "expanded": true,
+                "root": "fr/jaksam-identity/home",
+                "pages": [
+                  "fr/jaksam-identity/installation",
+                  "fr/jaksam-identity/faq",
+                  {
+                    "group": "Guides",
+                    "icon": "book-open",
+                    "pages": [
+                      "fr/jaksam-identity/guides/documents-and-register",
+                      "fr/jaksam-identity/guides/citizen-offices",
+                      "fr/jaksam-identity/guides/business-cards",
+                      "fr/jaksam-identity/guides/forgery-workshops",
+                      "fr/jaksam-identity/guides/forging",
+                      "fr/jaksam-identity/guides/raids",
+                      "fr/jaksam-identity/guides/settings-in-game",
+                      "fr/jaksam-identity/guides/commands",
+                      "fr/jaksam-identity/guides/roadphone-wallet"
                     ]
                   }
                 ]
@@ -4355,6 +4659,74 @@
                       "fr/missions-creator/server/on-mission-completed",
                       "fr/missions-creator/server/start-mission",
                       "fr/missions-creator/server/get-mission-template"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Jaksam Identity",
+                "icon": "id-card",
+                "expanded": true,
+                "pages": [
+                  "fr/jaksam-identity/editable-files",
+                  {
+                    "group": "Client",
+                    "root": "fr/jaksam-identity/client/index",
+                    "icon": "laptop",
+                    "pages": [
+                      "fr/jaksam-identity/client/replace-notifications",
+                      "fr/jaksam-identity/client/skill-check",
+                      "fr/jaksam-identity/client/progress-bar"
+                    ]
+                  },
+                  {
+                    "group": "Server",
+                    "root": "fr/jaksam-identity/server/index",
+                    "icon": "server",
+                    "pages": [
+                      {
+                        "group": "Registre",
+                        "root": "fr/jaksam-identity/server/register/index",
+                        "icon": "address-book",
+                        "pages": [
+                          "fr/jaksam-identity/server/register/check",
+                          "fr/jaksam-identity/server/register/issue",
+                          "fr/jaksam-identity/server/register/set-status",
+                          "fr/jaksam-identity/server/register/get-documents"
+                        ]
+                      },
+                      {
+                        "group": "Portefeuille",
+                        "root": "fr/jaksam-identity/server/wallet/index",
+                        "icon": "wallet",
+                        "pages": [
+                          "fr/jaksam-identity/server/wallet/get-wallet-documents",
+                          "fr/jaksam-identity/server/wallet/show-document"
+                        ]
+                      },
+                      {
+                        "group": "Events",
+                        "root": "fr/jaksam-identity/server/events/index",
+                        "icon": "bolt",
+                        "pages": [
+                          "fr/jaksam-identity/server/events/document-issued",
+                          "fr/jaksam-identity/server/events/document-forged",
+                          "fr/jaksam-identity/server/events/status-changed"
+                        ]
+                      },
+                      {
+                        "group": "Hooks",
+                        "root": "fr/jaksam-identity/server/hooks/index",
+                        "icon": "code",
+                        "pages": [
+                          "fr/jaksam-identity/server/hooks/can-issue",
+                          "fr/jaksam-identity/server/hooks/can-enter-workshop",
+                          "fr/jaksam-identity/server/hooks/can-raid",
+                          "fr/jaksam-identity/server/hooks/on-raid",
+                          "fr/jaksam-identity/server/hooks/on-log",
+                          "fr/jaksam-identity/server/hooks/phone-number"
+                        ]
+                      }
                     ]
                   }
                 ]
