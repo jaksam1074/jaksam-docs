@@ -28,7 +28,7 @@ Ein Amt ist ein NPC an einem Schalter, mit einem Blip auf der Karte. Jedes Amt b
 - eigene Karten, die nicht mehr gültig sind, **abgeben**
 - eine **Klasse hinzufügen**, die nach dem Druck der Karte erworben wurde (läuft als Verlängerung)
 
-Das Foto wird am Schalter aufgenommen. Ein gesperrtes, entzogenes oder eingezogenes Dokument blockiert den Schalter für diesen Typ. **Dienstausweise werden hier nie ausgestellt**, das macht der Boss des Jobs.
+Das Foto wird am Schalter aufgenommen. Ein gesperrtes, entzogenes oder eingezogenes Dokument blockiert den Schalter für diesen Typ. **Dienstausweise werden hier nie ausgestellt**: Sie kommen von `/documents issue` oder dem Export `Issue`, siehe [Eigenes Dokument erstellen](/de/jaksam-identity/guides/custom-documents).
 
 <Note>
   Eine Karte, die nicht dem Spieler gehört, bekommt dieselbe Antwort, egal ob sie jemand anderem gehört oder gefälscht ist. Das Amt kann also nicht zum Testen von Fälschungen benutzt werden.

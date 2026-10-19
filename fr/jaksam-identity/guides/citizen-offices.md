@@ -28,7 +28,7 @@ Une mairie est un PNJ à un guichet, avec un blip sur la carte. Chaque mairie g�
 - **Rendre** leurs propres cartes qui ne sont plus valides
 - **Ajouter une catégorie** obtenue après l'impression de la carte (fait un renouvellement)
 
-La photo se prend au guichet. Un document suspendu, retiré ou saisi bloque le guichet pour ce type. **Les cartes de service ne sont jamais délivrées ici**, c'est le patron du job qui s'en charge.
+La photo se prend au guichet. Un document suspendu, retiré ou saisi bloque le guichet pour ce type. **Les cartes de service ne sont jamais délivrées ici** : elles viennent de `/documents issue` ou de l'export `Issue`, voir [Créer ton propre document](/fr/jaksam-identity/guides/custom-documents).
 
 <Note>
   Une carte qui n'appartient pas au joueur reçoit la même réponse, qu'elle soit à quelqu'un d'autre ou fausse : la mairie ne peut donc pas servir à tester des faux.

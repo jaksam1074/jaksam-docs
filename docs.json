@@ -193,6 +193,7 @@
                     "icon": "book-open",
                     "pages": [
                       "jaksam-identity/guides/documents-and-register",
+                      "jaksam-identity/guides/custom-documents",
                       "jaksam-identity/guides/citizen-offices",
                       "jaksam-identity/guides/business-cards",
                       "jaksam-identity/guides/forgery-workshops",
@@ -1456,6 +1457,7 @@
                     "icon": "book-open",
                     "pages": [
                       "de/jaksam-identity/guides/documents-and-register",
+                      "de/jaksam-identity/guides/custom-documents",
                       "de/jaksam-identity/guides/citizen-offices",
                       "de/jaksam-identity/guides/business-cards",
                       "de/jaksam-identity/guides/forgery-workshops",
@@ -2719,6 +2721,7 @@
                     "icon": "book-open",
                     "pages": [
                       "es/jaksam-identity/guides/documents-and-register",
+                      "es/jaksam-identity/guides/custom-documents",
                       "es/jaksam-identity/guides/citizen-offices",
                       "es/jaksam-identity/guides/business-cards",
                       "es/jaksam-identity/guides/forgery-workshops",
@@ -3982,6 +3985,7 @@
                     "icon": "book-open",
                     "pages": [
                       "fr/jaksam-identity/guides/documents-and-register",
+                      "fr/jaksam-identity/guides/custom-documents",
                       "fr/jaksam-identity/guides/citizen-offices",
                       "fr/jaksam-identity/guides/business-cards",
                       "fr/jaksam-identity/guides/forgery-workshops",

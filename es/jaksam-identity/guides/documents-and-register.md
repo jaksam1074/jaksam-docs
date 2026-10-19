@@ -75,6 +75,8 @@ Cualquier licencia de tu framework puede ser un documento. Añade el item a tu i
 hunting = { item = 'hunting_license', kind = 'license', license = 'hunting', label = 'Hunting licence', validityDays = 120 },
 ```
 
+La guía completa, con el item para cada inventario, el aspecto de la tarjeta, las oficinas y las placas, está en [Crear un documento propio](/es/jaksam-identity/guides/custom-documents).
+
 ### Metadatos del item
 
 Todos los documentos llevan los mismos campos: `serial`, `firstname`, `lastname`, `dob`, `sex`, `issued`, `expires`, `photo`, y `classes` con clases de licencia. `photo` es solo un ID de foto: la imagen está en la tabla `jksm_identity_photos`.

@@ -28,7 +28,7 @@ Una oficina es un NPC en un mostrador, con un blip en el mapa. Cada oficina gest
 - **Entregar** sus propias tarjetas que ya no son válidas
 - **Añadir una clase** conseguida después de imprimir la tarjeta (hace una renovación)
 
-La foto se hace en el mostrador. Un documento suspendido, revocado o retirado bloquea el mostrador para ese tipo. **Aquí nunca se expiden placas**, eso lo hace el jefe del trabajo.
+La foto se hace en el mostrador. Un documento suspendido, revocado o retirado bloquea el mostrador para ese tipo. **Aquí nunca se expiden placas**: salen de `/documents issue` o del export `Issue`, ver [Crear un documento propio](/es/jaksam-identity/guides/custom-documents).
 
 <Note>
   Una tarjeta que no es del jugador recibe la misma respuesta tanto si es de otra persona como si es falsa, así que la oficina no sirve para probar falsificaciones.

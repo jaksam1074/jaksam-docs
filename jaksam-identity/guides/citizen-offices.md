@@ -28,7 +28,7 @@ An office is an NPC at a counter, with a blip on the map. Each office handles th
 - **Hand in** their own cards that are no longer valid
 - **Add a class** gained after the card was printed (runs a renewal)
 
-The photo is taken at the counter. A suspended, revoked or seized document blocks the counter for that type. **Badges are never issued here**, the boss of the job does that.
+The photo is taken at the counter. A suspended, revoked or seized document blocks the counter for that type. **Badges are never issued here**: they come from `/documents issue` or the `Issue` export, see [Create a custom document](/jaksam-identity/guides/custom-documents).
 
 <Note>
   A card that isn't the player's own gets the same answer whether it belongs to someone else or is forged, so the office can't be used to test forgeries.
