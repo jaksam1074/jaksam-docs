@@ -8,8 +8,8 @@ Get **Jobs Creator** up and running on your FiveM server in just a few steps.
 
 ## Requirements
 
-- **ESX** or **QBCore**
-- On QBCore, the [`menu_default`](https://drive.google.com/file/d/1Ezz-d50NIKQZeZJ-RgyclvNG7qC4Nfu8/view?usp=sharing) script (see step 4 below)
+- **ESX**, **QBCore** or **QBox**
+- **ox_lib**
 
 Choose your framework below to view the correct installation instructions.
 
@@ -79,15 +79,6 @@ Choose your framework below to view the correct installation instructions.
 
         ```text
         jobs_creator/sql/
-        ```
-      </Step>
-      <Step title="Install menu_default">
-        Download [`menu_default`](https://drive.google.com/file/d/1Ezz-d50NIKQZeZJ-RgyclvNG7qC4Nfu8/view?usp=sharing) and extract it into your server's `resources` folder.
-
-        Then add `menu_default` to your `server.cfg`:
-
-        ```cfg
-        ensure menu_default
         ```
       </Step>
       <Step title="Add the included items">
