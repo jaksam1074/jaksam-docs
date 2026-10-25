@@ -207,6 +207,32 @@
                 ]
               },
               {
+                "group": "Boosting Creator",
+                "icon": "car-burst",
+                "expanded": true,
+                "root": "boosting-creator/home",
+                "pages": [
+                  "boosting-creator/installation",
+                  "boosting-creator/faq",
+                  "boosting-creator/modules",
+                  {
+                    "group": "Guides",
+                    "icon": "book-open",
+                    "pages": [
+                      "boosting-creator/guides/how-it-works",
+                      "boosting-creator/guides/classes-and-vehicles",
+                      "boosting-creator/guides/locations",
+                      "boosting-creator/guides/fixers",
+                      "boosting-creator/guides/crews",
+                      "boosting-creator/guides/garages-and-car-carrier",
+                      "boosting-creator/guides/police",
+                      "boosting-creator/guides/minigames",
+                      "boosting-creator/guides/admin-panel"
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
@@ -944,6 +970,16 @@
                 ]
               },
               {
+                "group": "Boosting Creator",
+                "icon": "car-burst",
+                "expanded": true,
+                "pages": [
+                  "boosting-creator/editable-files",
+                  "boosting-creator/client/index",
+                  "boosting-creator/server/index"
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
@@ -1466,6 +1502,32 @@
                       "de/jaksam-identity/guides/settings-in-game",
                       "de/jaksam-identity/guides/commands",
                       "de/jaksam-identity/guides/roadphone-wallet"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Boosting Creator",
+                "icon": "car-burst",
+                "expanded": true,
+                "root": "de/boosting-creator/home",
+                "pages": [
+                  "de/boosting-creator/installation",
+                  "de/boosting-creator/faq",
+                  "de/boosting-creator/modules",
+                  {
+                    "group": "Anleitungen",
+                    "icon": "book-open",
+                    "pages": [
+                      "de/boosting-creator/guides/how-it-works",
+                      "de/boosting-creator/guides/classes-and-vehicles",
+                      "de/boosting-creator/guides/locations",
+                      "de/boosting-creator/guides/fixers",
+                      "de/boosting-creator/guides/crews",
+                      "de/boosting-creator/guides/garages-and-car-carrier",
+                      "de/boosting-creator/guides/police",
+                      "de/boosting-creator/guides/minigames",
+                      "de/boosting-creator/guides/admin-panel"
                     ]
                   }
                 ]
@@ -2208,6 +2270,16 @@
                 ]
               },
               {
+                "group": "Boosting Creator",
+                "icon": "car-burst",
+                "expanded": true,
+                "pages": [
+                  "de/boosting-creator/editable-files",
+                  "de/boosting-creator/client/index",
+                  "de/boosting-creator/server/index"
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
@@ -2730,6 +2802,32 @@
                       "es/jaksam-identity/guides/settings-in-game",
                       "es/jaksam-identity/guides/commands",
                       "es/jaksam-identity/guides/roadphone-wallet"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Boosting Creator",
+                "icon": "car-burst",
+                "expanded": true,
+                "root": "es/boosting-creator/home",
+                "pages": [
+                  "es/boosting-creator/installation",
+                  "es/boosting-creator/faq",
+                  "es/boosting-creator/modules",
+                  {
+                    "group": "Guías",
+                    "icon": "book-open",
+                    "pages": [
+                      "es/boosting-creator/guides/how-it-works",
+                      "es/boosting-creator/guides/classes-and-vehicles",
+                      "es/boosting-creator/guides/locations",
+                      "es/boosting-creator/guides/fixers",
+                      "es/boosting-creator/guides/crews",
+                      "es/boosting-creator/guides/garages-and-car-carrier",
+                      "es/boosting-creator/guides/police",
+                      "es/boosting-creator/guides/minigames",
+                      "es/boosting-creator/guides/admin-panel"
                     ]
                   }
                 ]
@@ -3472,6 +3570,16 @@
                 ]
               },
               {
+                "group": "Boosting Creator",
+                "icon": "car-burst",
+                "expanded": true,
+                "pages": [
+                  "es/boosting-creator/editable-files",
+                  "es/boosting-creator/client/index",
+                  "es/boosting-creator/server/index"
+                ]
+              },
+              {
                 "group": "Blips Creator",
                 "icon": "location-dot",
                 "expanded": true,
@@ -3994,6 +4102,32 @@
                       "fr/jaksam-identity/guides/settings-in-game",
                       "fr/jaksam-identity/guides/commands",
                       "fr/jaksam-identity/guides/roadphone-wallet"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Boosting Creator",
+                "icon": "car-burst",
+                "expanded": true,
+                "root": "fr/boosting-creator/home",
+                "pages": [
+                  "fr/boosting-creator/installation",
+                  "fr/boosting-creator/faq",
+                  "fr/boosting-creator/modules",
+                  {
+                    "group": "Guides",
+                    "icon": "book-open",
+                    "pages": [
+                      "fr/boosting-creator/guides/how-it-works",
+                      "fr/boosting-creator/guides/classes-and-vehicles",
+                      "fr/boosting-creator/guides/locations",
+                      "fr/boosting-creator/guides/fixers",
+                      "fr/boosting-creator/guides/crews",
+                      "fr/boosting-creator/guides/garages-and-car-carrier",
+                      "fr/boosting-creator/guides/police",
+                      "fr/boosting-creator/guides/minigames",
+                      "fr/boosting-creator/guides/admin-panel"
                     ]
                   }
                 ]
@@ -4733,6 +4867,16 @@
                       }
                     ]
                   }
+                ]
+              },
+              {
+                "group": "Boosting Creator",
+                "icon": "car-burst",
+                "expanded": true,
+                "pages": [
+                  "fr/boosting-creator/editable-files",
+                  "fr/boosting-creator/client/index",
+                  "fr/boosting-creator/server/index"
                 ]
               },
               {
